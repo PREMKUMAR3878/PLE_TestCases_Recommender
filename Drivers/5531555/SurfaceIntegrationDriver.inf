@@ -1,0 +1,109 @@
+;
+; SurfaceIntegrationDriver.inf
+;
+; Copyright (C) Microsoft Corporation.  All Rights Reserved.
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+CatalogFile=SurfaceIntegrationDriver.cat
+DriverVer = 05/06/2026,129.1.41.0
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir                = 13                            ; DriverStore
+ProvisioningPackage_CopyFiles = 13                            ; DriverStore
+
+; ================= Class section =====================
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+Surface.Power.Policy.23H2.Defaults.ppkg  = 1,,
+Surface.Power.Policy.Defaults.ppkg  = 1,,
+PPM_LNL_23H2.ppkg  = 1,,
+PPM_LNL.ppkg  = 1,,
+SurfaceIntegrationDriver.sys        = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64.10.0...22000
+
+[Standard.NTamd64.10.0...22000]
+%SurfaceIntegrationDriver.DeviceDesc%=SurfaceIntegrationDriver_Device, ACPI\MSHW0583
+
+[SurfaceIntegrationDriver_Device.NT]
+CopyFiles=DefaultDestDir,ProvisioningPackage_CopyFiles
+AddReg=SurfaceIntegrationDriver_Device_AddReg
+
+[DefaultDestDir]
+SurfaceIntegrationDriver.sys
+
+[ProvisioningPackage_CopyFiles]
+Surface.Power.Policy.23H2.Defaults.ppkg
+Surface.Power.Policy.Defaults.ppkg
+PPM_LNL_23H2.ppkg
+PPM_LNL.ppkg
+
+[SurfaceIntegrationDriver_Device.NT.HW]
+AddReg=SurfaceIntegrationDriver_Service_HWAddReg
+
+[SurfaceIntegrationDriver_Device_AddReg]
+;;HKLM,System\CurrentControlSet\Services\SurfaceIntegrationDriver\Parameters, "ImageNameSID", %REG_SZ%, "(Image.Name)" ; Updated with post processing
+HKLM,System\CurrentControlSet\Services\SurfaceService, "PlatformKipSupported",            %REG_DWORD%, 0x1        ; KIP is supported on this platform
+HKLM,System\CurrentControlSet\Services\SurfaceService, "SamHibernateNotificationEnabled", %REG_DWORD%, 0x1        ; Enable hibernate when triggered by SAM (battery RSOC < 3%)
+HKLM,SYSTEM\CurrentControlSet\Control\Power,           "UserBatteryDischargeEstimator",   %REG_DWORD%, 0xFFFFFFFF ; Hide estimated time to discharge remaining battery
+HKLM,SYSTEM\CurrentControlSet\Control\Power,"EnableScreenRefreshOnPowerButtonLongPress",  %REG_DWORD%, 0x00000001
+HKLM,SYSTEM\CurrentControlSet\Services\fvevol,         "MaxEncryptRequests",              %REG_DWORD%, 0x00000040 ; Set the Encrypt Request Limit to improve SSD perf under Bitlocker
+HKLM,SYSTEM\CurrentControlSet\Services\fvevol,         "MaxCryptoRequestsPerIo",          %REG_DWORD%, 0x00000040
+HKLM,SYSTEM\CurrentControlSet\Services\fvevol,         "MaxDecryptRequests",              %REG_DWORD%, 0x00000040
+;----- Setting Panel power to zero
+HKLM,System\CurrentControlSet\Control\Power\EnergyEstimation\Display, "DisplayPanelPowerFloor", %REG_DWORD%, 0x0
+HKLM,System\CurrentControlSet\Control\Power\EnergyEstimation\Display, "DisplayPanelPowerVsyncDelta", %REG_DWORD%, 0x0
+HKLM,System\CurrentControlSet\Control\Power\EnergyEstimation\Display, "DisplayPanelPowerDpiFactor", %REG_DWORD%, 0x0
+HKLM,System\CurrentControlSet\Control\Power\EnergyEstimation\Display, "DisplayPanelPowerAreaFactor", %REG_DWORD%, 0x0
+
+;-------------- Service installation
+[SurfaceIntegrationDriver_Device.NT.Services]
+;
+; %SPSVCINST_ASSOCSERVICE% should only be specified if this is a function driver.
+;
+AddService = SurfaceIntegrationDriver,%SPSVCINST_ASSOCSERVICE%, SurfaceIntegrationDriver_Service_Inst
+
+; -------------- SurfaceIntegrationDriver driver install sections
+[SurfaceIntegrationDriver_Service_Inst]
+DisplayName    = %SurfaceIntegrationDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\SurfaceIntegrationDriver.sys
+AddReg         = SurfaceIntegrationDriver_Service_AddReg
+
+[SurfaceIntegrationDriver_Service_AddReg]
+;;HKR,Parameters, "ImageNameSID", %REG_SZ%, "(Image.Name)" ; Updated with post processing
+
+[SurfaceIntegrationDriver_Service_HWAddReg]
+HKR,,surface_ppkg_updated,0x00010001,0x0
+HKR,,intel_ppkg_updated,0x00010001,0x0
+HKR,,win11_surface_23H2_ppkg,0x00000000, \DosDevices\%13%\Surface.Power.Policy.23H2.Defaults.ppkg
+HKR,,win11_surface_24H2_ppkg,0x00000000, \DosDevices\%13%\Surface.Power.Policy.Defaults.ppkg
+HKR,,win11_intel_23H2_ppkg, 0x00000000, \DosDevices\%13%\PPM_LNL_23H2.ppkg
+HKR,,win11_intel_24H2_ppkg, 0x00000000, \DosDevices\%13%\PPM_LNL.ppkg
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Surface"
+DiskName = "Surface Integration Driver Installation Disk"
+SurfaceIntegrationDriver.DeviceDesc = "Surface Integration"
+SurfaceIntegrationDriver.SVCDESC = "Surface Integration Driver"
+REG_EXPAND_SZ          = 0x00020000 
+REG_DWORD              = 0x00010001 
+REG_MULTI_SZ           = 0x00010000
+REG_BINARY             = 0x00000001
+REG_SZ                 = 0x00000000

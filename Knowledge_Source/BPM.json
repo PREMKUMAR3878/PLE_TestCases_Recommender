@@ -1,0 +1,2330 @@
+{
+  "testCases": [
+    {     
+      "Id": "BPM026",
+      "testName": "The system shall increment a counter every minute when RSOC >= 80% over a rolling 7-day period using the table",
+      "category": "BPM",
+      "subCategory": "BPM_1",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "The system shall increment a counter every minute when RSOC >= 80% over a rolling 7-day period using the table, Counter does not count when RSOC is 80% or lower",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify the timer increments as expected for each temperature range\nPSU connected, DUT active\nPSU connected, DUT in CS\nPSU connected, DUT hibernated\nNo PSU, DUT active\nNo PSU, DUT in CS\nNo PSU, DUT hibernated",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {   
+      "Id": "BPM027",
+      "testName": "Once the counter exceeds 3540 and RSOC>= 95% the system shall enter Battery Protection Mode (BPM).",
+      "category": "BPM",
+      "subCategory": "BPM_2",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Once the counter exceeds 3540 and RSOC>= 95% the system shall enter Battery Protection Mode (BPM).",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify each of the following:\nCounter = 3540, RSOC < 95%, BPM Does not engage\nCounter = 3540, RSOC > 95%, BPM engages\nCounter < 3540, RSOC < 95%, BPM Does not engage\nCounter < 3540, RSOC > 95%, BPM Does not engage\nWith PSU NOT connected, verify each of the following:\nCounter = 3540, RSOC < 95%, BPM Does not engage\nCounter = 3540, RSOC > 95%, BPM engages\nCounter < 3540, RSOC < 95%, BPM Does not engage\nCounter < 3540, RSOC > 95%, BPM Does not engage\nWith PSU connected, Counter_A = 3538, RSOC > 95%, Hibernate the DUT. Check in 30 minutes to make sure BPM turned on",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM028",
+      "testName": "When first entering BPM, the system shall discharge the battery to RSOC of 80%",
+      "category": "BPM",
+      "subCategory": "BPM_3",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When first entering BPM, the system shall discharge the battery to RSOC of 80%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify RSOC drops to 80% when BPM engages. Give it 30 minutes to make sure it stays at 80%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM029",
+      "testName": "While in BPM, the system shall maintain the battery at an RSOC level of 79%; with a float charge of 76-79% while attached to PSU",
+      "category": "BPM",
+      "subCategory": "BPM_4",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the system shall maintain the battery at an RSOC level of 79%; with a float charge of 76-79% while attached to PSU",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Run the CPU at high load. Verify RSOC stays in the range 76-79%\nUnplug PSU. Allow RSOC to drop < 70%. Plug PSU in. Verify RSOC climbs back to 76-79% range and holds there.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM030",
+      "testName": "While in BPM, if the battery RSOC drops below 50%, the devices shall exit BPM and the system shall keep track of the BPM exit count",
+      "category": "BPM",
+      "subCategory": "BPM_5",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, if the battery RSOC drops below 50%, the devices shall exit BPM and the system shall keep track of the BPM exit count",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, unplug PSU. Allow RSOC to drop below 50%.\nVerify BPM turns off.\nVerify BPM timer clears to 0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM031",
+      "testName": "",
+      "category": "BPM",
+      "subCategory": "BPM_6",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify BPM turns off. Verify BPM timer clears to 0.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify BPM turns off. Verify BPM timer clears to 0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM032",
+      "testName": "If the user exits BPM more than 2 times within a 7-day period, the device shall change the exit criteria from 50% to 20% until the condition is reversed",
+      "category": "BPM",
+      "subCategory": "BPM_7",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "If the user exits BPM more than 2 times within a 7-day period, the device shall change the exit criteria from 50% to 20% until the condition is reversed",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Exit BPM 2 times. Verify you exit when RSOC drops below 50%.\nEngage BPM again. Verify RSOC now has to drop to 20% before BPM turns off.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM033",
+      "testName": "While in BPM and RSOC between 50% and 80%, the system shall show the user a scaled SOC value per the graph below. No scaling below 50% RSOC",
+      "category": "BPM",
+      "subCategory": "BPM_8",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM and RSOC between 50% and 80%, the system shall show the user a scaled SOC value per the graph below. No scaling below 50% RSOC",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM Engaged, verify RSOC is 80% and reported battery level is 100%.\nUnplug PSU and discharge to 50%. Verify the real vs reported RSOC follows the graph.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM034",
+      "testName": "Upon exiting BPM, the user shall be shown the correct RSOC",
+      "category": "BPM",
+      "subCategory": "BPM_9",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7", "SL3-AMD", "SL3-Intel", "SB3", "SG2", "SPX"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Upon exiting BPM, the user shall be shown the correct RSOC",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "When BPM turns off, verify reported and real RSOC match.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM015",
+      "testName": "Counter_A: The system shall increment a counter every minute when RSOC >= 81% over a rolling 7-day period using the table",
+      "category": "BPM",
+      "subCategory": "BPM_31",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Counter_A: The system shall increment a counter every minute when RSOC >= 81% over a rolling 7-day period using the table. Counter_A does not count when RSOC is 80% or lower",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "The system shall increment a counter every minute when RSOC is >=81% over a rolling 7-day period using the table. Verify the timer increments as expected for each temperature range\nPSU connected, DUT active\nPSU connected, DUT in CS\nPSU connected, DUT hibernated\nNo PSU, DUT active\nNo PSU, DUT in CS\nNo PSU, DUT hibernated",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM016",
+      "testName": "When exiting BPM, Counter_A shall be set to 0",
+      "category": "BPM",
+      "subCategory": "BPM_32",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When exiting BPM, Counter_A shall be set to 0",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, allow RSOC to drop below 50%. Verify timer clears to 0",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM017",
+      "testName": "Counter_B: The system shall increment a counter every minute when RSOC > 95% and device is active/S0 power state.",
+      "category": "BPM",
+      "subCategory": "BPM_33",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Counter_B: The system shall increment a counter every minute when RSOC > 95% and device is active/S0 power state.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify Counter_B only counts when RSOC > 95%\nVerify Counter_B increments minute for minute, regardless of the temperature.\nCounter_B does not increment if DUT is in CS (Connected Standby)\nCounter_B does not increment if DUT is hibernated\nCounter_B increments with and without a PSU connected",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {     
+      "Id": "BPM018",
+      "testName": "When dropping below RSOC 93%, Counter B shall be set to 0",
+      "category": "BPM",
+      "subCategory": "BPM_34",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When dropping below RSOC 93%, Counter B shall be set to 0",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify Counter_B clears to 0 when RSOC drops below 93%.\nVerify Counter_A does not clear when RSOC drops below 93%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM019",
+      "testName": "Once either counter exceeds 3540 and RSOC>= 95% the system shall enter Battery Protection Mode (BPM).",
+      "category": "BPM",
+      "subCategory": "BPM_35",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Once either counter exceeds 3540 and RSOC>= 95% the system shall enter Battery Protection Mode (BPM).",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify each of the following:\nCounter_A = 3540, Counter_B < 3500, RSOC < 95%, BPM Does not engage\nCounter_A = 3540, Counter_B < 3500, RSOC > 95%, BPM engages\nCounter_A < 3500, Counter_B = 3540, RSOC < 95%, BPM Does not engage\nCounter_A < 3500, Counter_B = 3540, RSOC > 95%, BPM engages\nWith PSU NOT connected, verify each of the following:\nCounter_A = 3540, Counter_B < 3500, RSOC < 95%, BPM Does not engage\nCounter_A = 3540, Counter_B < 3500, RSOC > 95%, BPM engages\nCounter_A < 3500, Counter_B = 3540, RSOC < 95%, BPM Does not engage\nCounter_A < 3500, Counter_B = 3540, RSOC > 95%, BPM engages\nWith PSU connected, Counter_A = 3538, RSOC > 95%, Hibernate the DUT. Check in 30 minutes to make sure BPM turned on",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM020",
+      "testName": "When first entering BPM, the system shall discharge the battery to RSOC of 80%",
+      "category": "BPM",
+      "subCategory": "BPM_36",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When first entering BPM, the system shall discharge the battery to RSOC of 80%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify RSOC drops to 80% when BPM engages. Give it 30 minutes to make sure it stays at 80%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM021",
+      "testName": "While in BPM, the system shall maintain the battery at an RSOC level of 80%; with a float charge of 77-80% while attached to PSU",
+      "category": "BPM",
+      "subCategory": "BPM_37",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the system shall maintain the battery at an RSOC level of 80%; with a float charge of 77-80% while attached to PSU",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Run the CPU at high load (using CPU BOMB tool or any other). Verify RSOC stays in the range 77-80%\nUnplug PSU. Allow RSOC to drop < 70%. Plug PSU in. Verify RSOC climbs back to 77-80% range and holds there.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {     
+      "Id": "BPM022",
+      "testName": "While in BPM, if the battery RSOC drops below 50%, the devices shall exit BPM and the system shall keep track of the BPM exit count",
+      "category": "BPM",
+      "subCategory": "BPM_38",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, if the battery RSOC drops below 50%, the devices shall exit BPM and the system shall keep track of the BPM exit count",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, unplug PSU. Allow RSOC to drop below 50%.\nVerify BPM turns off.\nVerify BPM timer clears to 0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM023",
+      "testName": "If the user exits BPM more than 2 times within a 7-day period, the device shall change the exit criteria from BPM_38, 50% to 20% until the condition is reversed",
+      "category": "BPM",
+      "subCategory": "BPM_39",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "If the user exits BPM more than 2 times within a 7-day period, the device shall change the exit criteria from BPM_38, 50% to 20% until the condition is reversed",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Exit BPM 2 times.  Verify you exit when RSOC drops below 50%. Engage BPM again.  Verify RSOC now has to drop to 20% before BPM turns off.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM024",
+      "testName": "While in BPM and RSOC between 50% and 80%, the system shall show the user a scaled SOC value per the graph below. No scaling below 50% RSOC",
+      "category": "BPM",
+      "subCategory": "BPM_40",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM and RSOC between 50% and 80%, the system shall show the user a scaled SOC value per the graph below. No scaling below 50% RSOC",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM Engaged, verify RSOC is 80% and reported battery level is 100%. Unplug PSU and discharge to 50%.  Verify the real vs reported RSOC follows the graph",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {      
+      "Id": "BPM025",
+      "testName": "Upon exiting BPM, the user shall be shown the correct RSOC",
+      "category": "BPM",
+      "subCategory": "BPM_41",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP7+", "SP8", "SPX_H", "SL4-AMD", "SL4-Intel", "SLGo"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Upon exiting BPM, the user shall be shown the correct RSOC",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "When BPM turns off, verify reported and real RSOC match.(Windows reported battery % and RSOC)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM001",
+			"testName": "Counter_A: The system shall increment a counter every minute when RSOC >= 81% over a rolling 7-day period using the table",
+      "category": "BPM",
+      "subCategory": "BPM_42",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Counter_A: The system shall increment a counter every minute when RSOC >= 81% over a rolling 7-day period using the table. Counter_A does not count when RSOC is 80% or lower",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "The system shall increment a counter every minute when RSOC is >=81% over a rolling 7-day period using the table. Verify the timer increments as expected for each temperature range\nPSU connected, DUT active\nPSU connected, DUT in CS\nPSU connected, DUT hibernated\nNo PSU, DUT active\nNo PSU, DUT in CS\nNo PSU, DUT hibernated",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM002",
+			"testName": "When exiting BPM, Counter_A shall be set to 0",
+      "category": "BPM",
+      "subCategory": "BPM_43",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When exiting BPM, Counter_A shall be set to 0",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, allow RSOC to drop below 50%. Verify timer clears to 0\nVerify BPM is not engaged.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM003",
+			"testName": "Counter_B: The system shall increment a counter every minute when RSOC > 95% and device is active/S0 power state.",
+      "category": "BPM",
+      "subCategory": "BPM_44",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Counter_B: The system shall increment a counter every minute when RSOC > 95% and device is active/S0 power state.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify Counter_B only counts when RSOC > 95%\nVerify Counter_B increments minute for minute, regardless of the temperature.\nCounter_B does not increment if DUT is in CS (Connected Standby)\nCounter_B does not increment if DUT is hibernated\nCounter_B increments with and without a PSU connected",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM004",
+			"testName": "When dropping below RSOC 93%, Counter B shall be set to 0",
+      "category": "BPM",
+      "subCategory": "BPM_45",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When dropping below RSOC 93%, Counter B shall be set to 0",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify Counter_B clears to 0 when RSOC drops below 93%.\nVerify Counter_A does not clear when RSOC drops below 93%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM005",
+			"testName": "Once either counter exceeds 3540 and RSOC>= 95% the system shall enter Battery Protection Mode (BPM).",
+      "category": "BPM",
+      "subCategory": "BPM_46",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Once either counter exceeds 3540 and RSOC>= 95% the system shall enter Battery Protection Mode (BPM).",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify each of the following:\nCounter_A = 3540, Counter_B < 3540, RSOC < 81%, BPM Does not engage\nCounter_A = 3540, Counter_B < 3540, RSOC > 81%, BPM engages\nCounter_A < 3500, Counter_B = 3540, RSOC < 95%, BPM Does not engage\nCounter_A < 3540, Counter_B = 3540, BPM engages\nWith PSU NOT connected, verify each of the following:\nCounter_A = 3540, Counter_B < 3540, RSOC < 81%, BPM Does not engage\nCounter_A = 3540, Counter_B < 3540, RSOC > 81%, BPM engages\nCounter_A < 3500, Counter_B = 3540, RSOC < 95%, BPM Does not engage\nCounter_A < 3540, Counter_B = 3540, BPM engages\nWith PSU connected, Counter_A = 3538, RSOC > 81%, Hibernate the DUT. Check in 30 minutes to make sure BPM turned on",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM006",
+			"testName": "When first entering BPM, the system shall discharge the battery to RSOC of 80%",
+      "category": "BPM",
+      "subCategory": "BPM_47",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When first entering BPM, the system shall discharge the battery to RSOC of 80%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify RSOC drops to 80% when BPM engages. Give it 30 minutes to make sure it stays at 80% (+/- 2% is fine)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM007",
+			"testName": "While in BPM, the system shall maintain the battery at an RSOC level of 80%; with a float charge of 77-80% while attached to PSU",
+      "category": "BPM",
+      "subCategory": "BPM_48",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the system shall maintain the battery at an RSOC level of 80%; with a float charge of 77-80% while attached to PSU",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Run the CPU at high load (using CPU BOMB tool, or fishbowl or any other). Verify RSOC stays in the range 77-80%\nUnplug PSU. Allow RSOC to drop < 70%. Plug PSU in. Verify RSOC climbs back to 77-80% range and holds there.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM008",
+			"testName": "While in BPM, if the battery RSOC drops below 50%, the device shall exit BPM and the system shall keep track of the BPM exit count",
+      "category": "BPM",
+      "subCategory": "BPM_49",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, if the battery RSOC drops below 50%, the device shall exit BPM and the system shall keep track of the BPM exit count",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, unplug PSU. Allow RSOC to drop below 50%.\nVerify BPM turns off.\nVerify BPM timer clears to 0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM009",
+			"testName": "If the user exits BPM more than 2 times within a 7-day period, the device shall change the exit criteria from BPM_49, 50% to 20% until the condition is reversed",
+      "category": "BPM",
+      "subCategory": "BPM_50",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "If the user exits BPM more than 2 times within a 7-day period, the device shall change the exit criteria from BPM_49, 50% to 20% until the condition is reversed",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Exit BPM 2 times. Verify you exit when RSOC drops below 50%.\nEngage BPM again. Verify RSOC now has to drop to 20% before BPM turns off.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM010",
+			"testName": "While in BPM, the true RSOC shall be shown to the user. (no scaling).",
+      "category": "BPM",
+      "subCategory": "BPM_51",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the true RSOC shall be shown to the user. (no scaling).",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM Engaged, verify RSOC is 80% and reported battery level is 80%.\nUnplug PSU and discharge to 50%. Verify the real vs reported RSOC are identical. No scaling offset.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM011",
+			"testName": "While in BPM, a heart icon shall appear on the battery icon in the Windows OS.",
+      "category": "BPM",
+      "subCategory": "BPM_52",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, a heart icon shall appear on the battery icon in the Windows OS.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU or USB-C charger attached, verify there is a Heart icon over the battery symbol in the taskbar",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM012",
+			"testName": "While in BPM, the battery flyout page from Windows OS shall say “Fully Smart Charged.",
+      "category": "BPM",
+      "subCategory": "BPM_53",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the battery flyout page from Windows OS shall say 'Fully Smart Charged.'",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify the Windows battery flyout page displays 'Fully Smart Charged' while BPM is engaged.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM013",
+			"testName": "The user shall be able to temporarily exit BPM from the Surface App. ",
+      "category": "BPM",
+      "subCategory": "BPM_54",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "The user shall be able to temporarily exit BPM from the Surface App.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, the Surface App should have a battery page with a 'Charge to 100%' button to Pause Smart Charging. Verify pressing the button turns BPM off.\nVerify the 'Charge to 100%' button is not enabled if BPM is not engaged.\nVerify the 'Charge to 100%' button becomes enabled once BPM turns ON.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM014",
+			"testName": "When the user selects to temporarily exit BPM from the Surface App, the device shall exit BPM and set the Counter A and Counter B equal to 0. BPM counting should normally resume as conditions are reached.",
+      "category": "BPM",
+      "subCategory": "BPM_55",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SP9", "SG4", "SL5", "SLG2", "SLS"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When the user selects to temporarily exit BPM from the Surface App, the device shall exit BPM and set the Counter A and Counter B equal to 0. BPM counting should normally resume as conditions are reached.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "When you press 'Charge to 100%' in the Surface App, verify Counter_A and Counter_B are set to 0.\nOnce the RSOC is > 80%, verify Counter_A starts counting.\nOnce the RSOC is > 95%, verify Counter_B starts counting.\nVerify the bpmOptOutLifetimeCount is bumped by 1.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM035",
+			"testName": "Counter_A: The system shall increment a counter every minute when RSOC >= 81% over a rolling 7-day period using the table",
+      "category": "BPM",
+      "subCategory": "BPM_12",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Counter_A: The system shall increment a counter every minute when RSOC >= 81% over a rolling 7-day period using the table Counter_A does not count when RSOC is 80% or lower",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "The system shall increment a counter every minute when RSOC is >=81% over a rolling 7-day period using the table. Verify the timer increments as expected for each temperature range, PSU connected, DUT active, PSU connected, DUT in CS, PSU connected, DUT hibernated, No PSU, DUT active, No PSU, DUT in CS, No PSU, DUT hibernated",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM036",
+			"testName": "When exiting BPM, Counter_A shall be set to 0 (all time for rolling 7-day period).",
+      "category": "BPM",
+      "subCategory": "BPM_13",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When exiting BPM, Counter_A shall be set to 0",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, allow RSOC to drop below 50%.  Verify timer clears to 0, Verify BPM is not engaged.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM037",
+			"testName": "Counter_B: The system shall increment a counter every minute when RSOC > 95% and device is active/S0 power state. ",
+      "category": "BPM",
+      "subCategory": "BPM_14",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Counter_B: The system shall increment a counter every minute when RSOC > 95% and device is active/S0 power state.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify Counter_B only counts when RSOC > 95%, Verify Counter_B increments minute for minute, regardless of the temperature., Counter_B does not increment if DUT is in CS(Connected Standby), Counter_B does not increment if DUT is hibernated, Counter_B increments with and without a PSU connected",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM038",
+			"testName": "When dropping below RSOC 93% and BPM engaged, Counter B shall be set to 0.",
+      "category": "BPM",
+      "subCategory": "BPM_15",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When dropping below RSOC 93%, Counter B shall be set to 0",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify Counter_B clears to 0 when RSOC drops below 93%., Verify Counter_A does not clear when RSOC drops below 93%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM040",
+			"testName": "The system shall not enter BPM for the first time until the counter HvtLifeTime exceeds 10,620 minutes. (ignores first 3 BPM entries)",
+      "category": "BPM",
+      "subCategory": "BPM_16",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "System will ignore first 3 BPM entries.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "The system shall not enter BPM for the first time until the HvtLifeTime counter exceeds 10,620 minutes.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM039",
+			"testName": "Once either counter exceeds 3540 minutes and RSOC>= 81% the system shall enter Battery Protection Mode (BPM).",
+      "category": "BPM",
+      "subCategory": "BPM_17",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "Once either counter exceeds 3540 and RSOC>= 95% the system shall enter Battery Protection Mode (BPM).",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify each of the following: Counter_A = 3540, Counter_B < 3540, RSOC < 81%, BPM Does not engage, Counter_A = 3540, Counter_B < 3540, RSOC  > 81%, BPM engages, Counter_A < 3500, Counter_B = 3540, RSOC < 95%, BPM Does not engage, Counter_A < 3540, Counter_B = 3540,  BPM engages, With PSU NOT connected, verify each of the following: Counter_A = 3540, Counter_B < 3540, RSOC < 81%, BPM Does not engage, Counter_A = 3540, Counter_B < 3540, RSOC  > 81%, BPM engages, Counter_A < 3500, Counter_B = 3540, RSOC < 95%, BPM Does not engage, Counter_A < 3540, Counter_B = 3540,  BPM engages, With PSU connected, Counter_A = 3538, RSOC > 81%, Hibernate the DUT.  Check in 30 minutes to make sure BPM turned on",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM041",
+			"testName": "When first entering BPM, the system shall discharge the battery to RSOC of 80%.",
+      "category": "BPM",
+      "subCategory": "BPM_18",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When first entering BPM, the system shall discharge the battery to RSOC of 80%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU connected, verify RSOC drops to 80% when BPM engages.  Give it 30 minutes to make sure it stays at 80%  (+/- 2% is fine)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM042",
+			"testName": "While in BPM, the system shall maintain the battery at an RSOC level of 80%; with a float charge of 77-80% while attached to PSU.",
+      "category": "BPM",
+      "subCategory": "BPM_19",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the system shall maintain the battery at an RSOC level of 80%; with a float charge of 77-80% while attached to PSU",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Run the CPU at high load (using CPU BOMB tool, or fishbowl or any other).  Verify RSOC stays in the range 77-80%, Unplug PSU.  Allow RSOC to drop < 70%.  Plug PSU in.  Verify RSOC climbs back to 77-80% range and holds there.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM043",
+			"testName": "While in BPM, if the battery RSOC drops below 50%, the devices shall exit BPM.",
+      "category": "BPM",
+      "subCategory": "BPM_20",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, if the battery RSOC drops below 50%, the device shall exit BPM and the system shall keep track of the BPM exit count",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, unplug PSU.  Allow RSOC to drop below 50%. Verify BPM turns off. Verify BPM timer clears to 0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM044",
+			"testName": "While in BPM, the true RSOC % shall be shown to the user.",
+      "category": "BPM",
+      "subCategory": "BPM_21",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the true RSOC shall be shown to the user. (no scaling).",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM Engaged, verify RSOC is 80% and reported battery level is 80%. Unplug PSU and discharge to 50%.  Verify the real vs reported RSOC are identical.  No scaling offset.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM045",
+			"testName": "While in BPM, a heart icon shall appear on the battery icon in the Windows OS.",
+      "category": "BPM",
+      "subCategory": "BPM_22",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, a heart icon shall appear on the battery icon in the Windows OS.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With PSU or USB-C charger attached, verify there is a Heart icon over the battery symbol in the taskbar",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM046",
+			"testName": "While in BPM, the battery flyout page from Windows OS shall say “Fully Smart Charged.",
+      "category": "BPM",
+      "subCategory": "BPM_23",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in BPM, the battery flyout page from Windows OS shall say “Fully Smart Charged.”",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM047",
+			"testName": "The user shall be able to temporarily exit BPM from the Surface App.",
+      "category": "BPM",
+      "subCategory": "BPM_24",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "The user shall be able to temporarily exit BPM from the Surface App. ",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With BPM engaged, the Surface App should have a battery page with a \"Charge to 100%\" button to Pause Smart Charging.  Verify pressing the button turns BPM off. Verify the \"Charge to 100%\" button is not enabled if BPM is not engaged Verify the \"Charge to 100%\" button becomes enabled once BPM turns ON.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BPM048",
+			"testName": "When the user selects to temporarily pause BPM from the Surface App, the device shall exit BPM and set the Counter A and Counter B equal to 0. BPM counting should normally",
+      "category": "BPM",
+      "subCategory": "BPM_25",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["SLS2", "SLG3", "SL6"],
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "When the user selects to temporarily exit BPM from the Surface App, the device shall exit BPM and set the Counter A and Counter B equal to 0. BPM counting should normally resume as conditions are reached.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "When you press \"Charge to 100%\" in the Surface App, verify Counter_A and Counter_B are set to 0. Once the RSOC is > 80%, verify Counter_A starts counting. Once the RSOC is > 95%, verify Counter_B starts counting. Verify the bpmOptOutLifetimeCount is bumped by 1",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BLM001",
+			"testName": "The system shall have a setting in UEFI called “Battery Limit” that allows the maximum RSOC level to be set to 50%",
+      "category": "BPM",
+      "subCategory": "BL_1",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "The system shall have a setting in UEFI called “Battery Limit” that allows the maximum RSOC level to be set to 50%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify the Battery Limit switch exists in UEFI",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BLM002",
+			"testName": "The UI for this feature should look like the imbedded picture",
+      "category": "BPM",
+      "subCategory": "BL_2",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify the looks of the switch in UEFI",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BLM003",
+			"testName": "The battery limit setting shall be able to be turned on by SEMM (Surface Enterprise Management Mode)",
+      "category": "BPM",
+      "subCategory": "BL_3",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "The battery limit setting shall be able to be turned on by SEMM (Surface Enterprise Management Mode)",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify Battery Limit can be turned on via SEMM",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "BLM004",
+			"testName": "While in battery limit, the system shall show the correct SOC from the battery gas gauge. (no manipulation as with BPM)",
+      "category": "BPM",
+      "subCategory": "BL_4",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM","IPU"],
+      "testScenarios": [
+        {
+          "objective": "While in battery limit, the system shall show the correct SOC from the battery gas gauge. (no manipulation as with BPM)",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify when Battery Limit is enabled, Windows battery guage shows the correct RSOC. With RSOC > 80%, enable Battery Limit.  Verify RSOC drops to 50% and holds there. With RSOC < 30%, enable Battery Limit.  Verify RSOC climbs to 50% and holds there. With Battery Limit enabled, hibernate the DUT.  Wait 5 minutes.  Power back up.  Verify RSOC continues to hold at 50%.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "CTT001",
+			"testName": "The system shall reduce charge voltage for the 0-45°C charge voltage per the table",
+      "category": "BPM",
+      "subCategory": "CTT",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+        {
+          "objective": "The system shall reduce charge voltage for the 0-45°C charge voltage per the table",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify each voltage reduction happens at the correct HVT counter value.  Run ctt_chap_v1.0.bat and verify all cuts happen correctly.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "CTT002",
+			"testName": "The HVT counter shall increment a counter every minute when RSOC > 80% and record for lifetime of system.",
+      "category": "BPM",
+      "subCategory": "CTT",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+        {
+          "objective": "The HVT counter shall increment a counter every minute when RSOC > 80% and record for lifetime of system.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify the counter increments according to the temperature chart",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "HEA001",
+			"testName": "Dump and decode battery log 1",
+      "category": "BPM",
+      "subCategory": "Health Indicators",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+        {
+          "objective": "Dump and decode battery log 1",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify values seem reasonable Verify there is no corruption in the log",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "HEA002",
+			"testName": "Dump and decode health log 1 and 2",
+      "category": "BPM",
+      "subCategory": "Health Indicators",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+        {
+          "objective": "Dump and decode health log 1 and 2",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify the counter increments according to the temperature chart",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "HEA003",
+			"testName": "Verify logs are being sent to Cosmos.",
+      "category": "BPM",
+      "subCategory": "Health Indicators",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+        {
+          "objective": "Verify logs are being sent to Cosmos.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify the counter increments according to the temperature chart",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+    "Id": "BPMT078",
+    "testName": "BPMv4RsocBucketsHighTemp",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 46°C -60°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT077",
+    "testName": "BPMv4RsocBucketsMediumHighTemp",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 36°C -45°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT076",
+    "testName": "BPMv4RsocBucketsMediumLowTemp",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 21°C-35°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT075",
+    "testName": "BPMv4RsocBucketsLowTemp",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 0°C -20°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%- 100%.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT071",
+    "testName": "BPMv4TotalMinutesFromStart",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Todo: Need to check with Ryan.  Can't get this without a start date...",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT070",
+    "testName": "BPMv4StartDateInSeconds",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "No longer being used.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT069",
+    "testName": "CTTDeviceStartDateDetected",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Obsolete.  Verify this is no longer updated.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT068",
+    "testName": "CTTDeviceStartDateInSeconds",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Obsolete.  Verify this is no longer updated.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT067",
+    "testName": "CTTTotalMinutesFromStart",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Correct number of minutes since the DUT was first powered on.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT066",
+    "testName": "CTTReduction",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Current CTT reduction in mV",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT065",
+    "testName": "CTTEqvTimeat35CinBPM",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "This is a lifetime counter.  Every minute the RSOC is > 55% AND the device is in BPM.  Temperature adjusted based on the table to the side.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT064",
+    "testName": "CTTEqvTimeat35C",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify only time above 80% is counted",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT063",
+    "testName": "CTTMinSOC1day",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this value is the lowest RSOC value over the last 24 hours",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT062",
+    "testName": "CTTMinSOC3day",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the correct lowest RSOC value in the last 3 days.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT061",
+    "testName": "CTTMinSOC7day",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this value is the lowest RSOC value over the last 7 days",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT060",
+    "testName": "CTTMinSOC28day",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the correct lowest RSOC value in the last 28 days.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT059",
+    "testName": "CTTStartDateInSeconds",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the date and time the device first powered up",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT058",
+    "testName": "manufacturerName",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Correct manufacturer name of the battery",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT057",
+    "testName": "protectionPolicy",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "This should be '9' if Battery Limit is enabled.  '8' if it's not.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT056",
+    "testName": "newSnFruUpdateCount",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Number of times the device has updated the NVM stored serial number due to a FRU authentication message.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT055",
+    "testName": "newSnUpdateCount",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Number of times the device has updated the NVM stored serial number.  I think this should be 0 or 1, and shouldn’t change?",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT054",
+    "testName": "currentAuthenticationState",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "0x00 = Unknown 0x01 = Unauthenticated 0x02 = Authenticated",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT045",
+    "testName": "BPMKioskModeTotalEngagedMinutes",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Obsolete.  Verify this is no longer updated.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT044",
+    "testName": "BPMKioskModeStartDateInSeconds",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the date/time the device first enabled Battery Limit.  Once set, this value should never change",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT040",
+    "testName": "HVTOptOutLifetime",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "To verify this, you need the RSOC > 95% and BPM engaged. Use the Surface App to Pause BPM.  Keep the RSOC above 95%.Verify this value increments by 1 for every hour until BPM engages again. It should never clear, as this is a lifetime counter.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT039",
+    "testName": "OptOutLifetime",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this increments by 1 each time you Pause BPM with the Surface App",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT038",
+    "testName": "BPMv4HvtCountB",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Current HVT count for BPM counter B, in hours",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT037",
+    "testName": "BPMv4HvtCountA",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Current value for Counter_A.  Note, this is in hours, not minutes.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT036",
+    "testName": "BPMv4ExitCriteria",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is either 50%, or 20%, depending on the number of BPM exits in the past 7 days.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT035",
+    "testName": "BPMv4RsocBucketsHighTemp_Values",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 46°C -60°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT034",
+    "testName": "BPMv4RsocBucketsMediumHighTemp_Values",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 36°C -45°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT033",
+    "testName": "BPMv4RsocBucketsMediumLowTemp_Values",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 21°C-35°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT032",
+    "testName": "BPMv4RsocBucketsLowTemp_Values",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 0°C -20°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%- 100%.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT031",
+    "testName": "BPMv4CurrentlyEngaged",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Reflects correct state of BPM ",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT030",
+    "testName": "BPMv4TotalEntryEvents",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Increments by 1 each time BPM engages",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT029",
+    "testName": "BPMv4TotalEngagedMinutes",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Total time BPM has been engaged for lifetime of the device",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT028",
+    "testName": "ProductId",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify Product ID is correct",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT027",
+    "testName": "TimeStamp",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify the timestamp is correct",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT026",
+    "testName": "FwVersion",
+		"category": "BPM",
+    "subCategory": "v2",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify the firmware version is correct",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+	{
+    "_comment": "",
+    "Id": "BPMT025",
+    "testName": "BPMv4HvtCountB",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Current HVT count for BPM counter B, in hours",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT024",
+    "testName": "BPMv4HvtCountA",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Current HVT count for BPM counter A, in hours",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT023",
+    "testName": "BPMv4ExitCriteria",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is either 50%, or 20%, depending on the number of BPM exits in the past 7 days.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT022",
+    "testName": "BPMv4RsocBucketsHighTemp",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 46°C -60°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT021",
+    "testName": "BPMv4RsocBucketsMediumHighTemp  ",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 36°C -45°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT020",
+    "testName": "BPMv4RsocBucketsMediumLowTemp",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 21°C-35°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT019",
+    "testName": "BPMv4RsocBucketsLowTemp",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Time in temperature range 0°C -20°C and in the following true RSOC ranges: 0%-49%; 50%-79%; 80%-89%; 90%-94%; 95%-100%.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT018",
+    "testName": "BPMv4CurrentlyEngaged",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Reflects correct state of BPM",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT017",
+    "testName": "BPMv4TotalEntryEvents",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Total number of times device has entered BPM",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT016",
+    "testName": "BPMv4TotalEngagedMinutes ",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Total time BPM has been engaged for lifetime of the device Verify this doesn't reset unless you clear BPM Status",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT015",
+    "testName": "BPMv4TotalMinutesFromStart",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Todo: Need to check with Ryan.  Can't get this without a start date...",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT014",
+    "testName": "BPMv4StartDateInSeconds",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "No longer being used.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT013",
+    "testName": "CTTDeviceStartDateDetected",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Obsolete.  Verify this is no longer updated.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT012",
+    "testName": "CTTDeviceStartDateInSeconds",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Obsolete.  Verify this is no longer updated.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT011",
+    "testName": "CTTTotalMinutesFromStart",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Correct number of minutes since the DUT was first powered on.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT010",
+    "testName": "CTTReduction",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Current CTT reduction in mV Verify for all 4 cuts",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT009",
+    "testName": "CTTEqvTimeat35CinBPM",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify time above 55% is counted, but only when BPM is engaged Timer is temperature dependant, verify from the chart. Counter is in hours",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT008",
+    "testName": "CTTEqvTimeat35C",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify only time above 80% is counted Timer is temperature dependant, verify from the chart. Counter is in hours",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT007",
+    "testName": "CTTMinSOC1day",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the correct lowest RSOC today. Verify this updates every 5 minutes",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT006",
+    "testName": "CTTMinSOC3day",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the correct lowest RSOC value in the last 3 days. Verify this updates once per day",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT005",
+    "testName": "CTTMinSOC7day",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the correct lowest RSOC value in the last 7 days. Verify this   updates once per day",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "_comment": "",
+    "Id": "BPMT004",
+    "testName": "CTTMinSOC28day",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the correct lowest RSOC value in the last 28 days.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT003",
+    "testName": "CTTStartDateInSeconds",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Verify this is the day the DUT first powered up.  If it has already been set, use factoryreset to retest",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT002",
+    "testName": "manufacturerName",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Correct manufacturer name of the battery",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "BPMT001",
+    "testName": "protectionPolicy",
+		"category": "BPM",
+    "subCategory": "v1",
+    "priority": 0,
+    "osSpecific": "All",
+      "deviceSpecific": "",
+      "driverTags": ["SAM"],
+      "testScenarios": [
+      {
+        "objective": "Value is 08 if Battery Limit is off Value is 09 when Battery Limit is enabled",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  }
+
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [],
+    "deviceMatrix": []
+  }
+}

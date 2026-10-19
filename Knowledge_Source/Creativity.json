@@ -1,0 +1,446 @@
+{
+  "testCases": [
+    {
+      "Id": "CREA001",
+      "testName": "Manga Studio (Inking)",
+      "category": "Creativity",
+      "subCategory": "2D Drawing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience while using Clip Studio Paint with inking, playing with the UI and exporting a file.",
+          "expectedTime": "10 min",
+          "notes": "4.1.1 2DD - CLIP STUDIO PAINT TEST",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Download, Install and Launch latest version of Manga Studio (Clip Studio Paint): https://www.clipstudio.net/en\n3. Select “PAINT” from the left pane. If there is not a license available, a trial version can be used. Chose “EX” grade.\n4. Take the Surface Pen and ink on a new canvas. Make sure that the inking follows the pen as you write on the surface. Use different pencils and Brush size from the left pane.\n5. Try different Workspaces (Windows menu → Workspace → (comic, illustration, By Category)).\n6. Create different layers using the menu Layer.\n7. Make sure there are not any visual anomalies while using the app and/or pen that negatively might impact the customer experience.\n8. Export file as a TIFF file (Menu File → Export (single Layer) → .tif )\nNote: If a license is not available, you won’t be able to export files.\n9. View in Windows Photo viewer as well as Photos. There shouldn’t be any problem to see the exported file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA002",
+      "testName": "GIMP (Edit picture)",
+      "category": "Creativity",
+      "subCategory": "2D Drawing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with viewing and editing photos in GIMP.",
+          "expectedTime": "10 min",
+          "notes": "4.1.2 2DD - GIMP (EDIT PIUCTURE) TEST",
+          "detailedSteps": "1. Download and install GIMP from http://www.gimp.org\n2. Take a stock photo from Google Images and download it locally\n3. Open file using GIMP and use the tools in the left pane to edit the picture. Make sure you can change colors of certain areas, add words, deform and/or transform the image, etc.\n4. Export the modified image with the same format saved (but using different name) and verify the picture can be seen using photos or Windows viewer. a. File→Export As…\n5. There shouldn’t be any problem to see the exported file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA003",
+      "testName": "Sketchbook Pro",
+      "category": "Creativity",
+      "subCategory": "2D Drawing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with inking in Sketchbook Pro.",
+          "expectedTime": "10 min",
+          "notes": "4.1.3 2DD - SKETCHBOOK PRO TEST",
+          "detailedSteps": "1. Install and launch Sketchbook Pro from https://sketchbook.com/\n2. Go to Menu Window in the top of the interface and make sure that the following panes are checked: Toolbar, Lagoon, Color Puck, Brush Puck, Brush Palette.\n3. Take the Surface Pen and ink on a new canvas. Play with the tools available in the panes.\n4. Make sure that the inking follows the pen as you write on the surface.\n5. Send the system to sleep and wait for 2 minutes.\n6. Wakes up the system and verify the application is still responsive.\n7. Save file as a TIFF file. Go to Menu File→ Save As\n8. View in Windows viewer the file created. There shouldn’t be any problem to see the exported file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA004",
+      "testName": "Sketchpad",
+      "category": "Creativity",
+      "subCategory": "2D Drawing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with sketching online using the Surface Dial.",
+          "expectedTime": "5 min",
+          "notes": "4.1.5 2DD - SKETCHPAD TEST",
+          "detailedSteps": "1. Go to Sketchpad web page: https://sketch.io/sketchpad/\n2. Use the Surface Dial to draw. a. Use some of the tools available in the left pane. b. Make a drawing utilizing the available creative shortcuts of the wheel's function. c. Ensure all properties are functional.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA005",
+      "testName": "Blender",
+      "category": "Creativity",
+      "subCategory": "3D Rendering",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience creating objects on Blender.",
+          "expectedTime": "5 min",
+          "notes": "4.1.4 2DD - BLENDER TEST (Note: Blender does not work on ARM systems)",
+          "detailedSteps": "1. Download and install Blender: https://www.blender.org/\n2. Click to the left of the cube and click the “Create” tab on the upper left-hand side. Click Cylinder from the “Mesh” menu.\n3. Move the cursor to the bottom of the cube and left click. Now click Monkey from the Mesh menu.\n4. Click to the right of the cube and click Ico Sphere from the Mesh menu.\n5. Move the cursor above the cube and left click. Now click UV Sphere from the Mesh menu.\n6. There shouldn’t be any visual anomalies while adding objects.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA007",
+      "testName": "Photoshop (Edit Photo)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with cropping and straightening a photo in Adobe.",
+          "expectedTime": "10 min",
+          "notes": "4.3.1 ADB - PHOTOSHOP (EDIT PHOTO) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Photoshop[](https://www.adobe.com/)\n2. Load a stock photo available from Adobe stock images by selecting “Stock” in the Creative Cloud interface or directly from stock web[](https://stock.adobe.com/).\n3. Crop and straighten the image using the left pane in the Photoshop interface.\n4. Save the file as a PSD and JPG.\n5. View the JPG file using Windows Photo viewer as well as Photos. There shouldn’t be any problem to see the file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA008",
+      "testName": "Photoshop (Resize Image)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with resizing a photo in Adobe.",
+          "expectedTime": "10 min",
+          "notes": "4.3.2 ADB - PHOTOSHOP (RESIZE IMAGE) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Photoshop[](https://www.adobe.com/)\n2. Load a stock photo available from Adobe stock images by selecting “Stock” in the Creative Cloud interface or directly from stock web[](https://stock.adobe.com/).\n3. Resize the image by opening Image->Image Size.\n4. Change the new height and width dimensions and apply the changes.\n5. Save the file as a standard image format (PSD). Close Photoshop and open it again.\n6. Open the PSD file saved. There shouldn’t be any problem to see the file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA009",
+      "testName": "Photoshop (Text on existing photo)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with adding a text layer to a photo in Adobe.",
+          "expectedTime": "10 min",
+          "notes": "4.3.3 ADB - PHOTOSHOP (TEXT ON EXISTING PHOTO) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Photoshop[](https://www.adobe.com/)\n2. Load a stock photo available from Adobe stock images by selecting “Stock” in the Creative Cloud interface or directly from stock web[](https://stock.adobe.com/).\n3. Create a new layer on top of the base image. Layer → New → Layer…\n4. Place a text box using the “Horizontal Type Tool (T)” from the left pane. Type some text with relatively large font size.\n5. Save the file as a standard file format (TIFF, JPG).\n6. View the photo edited in Windows Photos app. There shouldn’t be any problem to see the file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA010",
+      "testName": "Photoshop (Filters)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with applying complex filters to a photo in Adobe.",
+          "expectedTime": "10 min",
+          "notes": "4.3.4 ADB - PHOTOSHOP (FILTERS) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Photoshop[](https://www.adobe.com/)\n2. Load a stock photo available from Adobe stock images by selecting “Stock” in the Creative Cloud interface or directly from stock web[](https://stock.adobe.com/).\n3. Choose an existing filter from the filter menu and apply it on photo and let it render.\n4. Save the file as a standard file format (TIFF, JPG).\n5. View the photo edited in Windows Photos app. There shouldn’t be any problem to see the file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA011",
+      "testName": "Photoshop (Sketch)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with sketching in Adobe.",
+          "expectedTime": "15 min",
+          "notes": "4.3.5 ADB - PHOTOSHOP (SKETCH) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Photoshop[](https://www.adobe.com/)\n2. Create a new document with default Photoshop Size (Click on File → New).\n3. Select a brush type from the brush palette (Brush Tool from left pane).\n4. Draw a basic image, color sections of image using the color palette.\n5. Use the Surface Dial to draw. a. Use some of the tools available in the left pane. b. Make a drawing utilizing the available creative shortcuts of the wheel's/Dial’s function. c. Ensure all properties are functional.\n6. Save the file as a standard file format (TIFF, JPG).\n7. View the image edited in Windows Photos app. There shouldn’t be any problem to see the file.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA012",
+      "testName": "Photoshop (Create Flayer)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with creating several layers for a flayer in Adobe.",
+          "expectedTime": "25 min",
+          "notes": "4.3.6 ADB - PHOTOSHOP (CREATE FLAYER) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Photoshop[](https://www.adobe.com/)\n2. Create a new document with default Photoshop Size (Click on File → New).\n3. Create 3. new layers. Layer → New → Layer…\n4. On the base layer sketch a basic design.\n5. Use the Surface Dial to draw. \na. Use some of the tools available in the left pane. \nb. Make a drawing utilizing the available creative shortcuts of the wheel's/Dial’s function. \nc. Ensure all properties are functional. \n6. On the second layer place some standard images. \n7. Create some text boxes on the top layer with difference font sizes. \n8. Save the file as a standard file format (TIFF, JPG).\n9. View the file edited in Windows Photos app.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA027",
+      "testName": "Fresco (Create Sketch)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with Fresco workflows and animations.",
+          "expectedTime": "25 min",
+          "notes": "4.3.8 ADB - FRESCO TEST",
+          "detailedSteps": "1.  Install Adobe Creative Suite and launch Fresco. (https://www.adobe.com/)  \na. “Start a new document” select document size (Square) \n3.  Select different brushes, brush sizes and colors and draw on background (Pixel layer) [hover over layers on center right if looking for correct layer]  \n4.  After drawing background, center right hand side you will see a “ + “ plus sign, this will add a new layer to your picture. Click this ‘plus’ and draw a short line or ‘dash’ (ensure that this new layer is highlighted/active).  \n5.  Look at 2 icons in bottom right corner, we will be using the 3 bubble looking icon for ‘animation’ [when you first click on this icon, it will offer tutorial if interested, click <ok> to bypass]  \na. In center bottom of picture, you will now have a couple of new menu items, on the upper menu, you should see a miniature of your latest layer with a 1/1 and a “ + “ plus sign, click the ‘plus’.  \nb. This will hide the background and give you a blank sheet. For now, draw a short line or ‘dash’ mark. You will alternate, clicking ‘plus’ and drawing a short ‘dash’ mark.  \nTry to continue placing the dash where the previous dash ended.  \nc. Continue until you roughly complete a circle   \nd. On the menu below (bottom center) you will see a ‘play all / pause’, ‘Path’, and ‘Settings’, click on ‘Play all’ and ensure that Fresco plays through all your layers.   \n6.  Select ‘Vector brushs (V)’ on left top tool and draw a geometric shape (triangle, square); locate the ‘touch shortcut’ this will be a white/gray circle to (if default) lower left of screen. \na. Double tap on ‘touch shortcut’ (center will turn blue) now when you draw using ‘vector brush’ it will erase the lines you previously drew. \nb. Double click on blue dot in center to unselect ‘touch shortcut’, and ensure that you can draw again using ‘vector brush’. \n7.   Next well export picture as an .Mp4 and verify it is viewable. \na.  Look along top right tool bar and to the left of the gear is a box with an arrow pointing up ( if you hover over with mouse, you will get toast saying 'share'). Click on this icon. \nb.  Select 'Publish & Export Social media, and other formats'. \nc.   Select 'Motion'. \nd.  Select 'Generate frames' ( Format should be 'MP4', and 'Automatic'). \ne.  Bottom right, select 'Export', select 'Desktop' and <Save>. \nf.  Play freshly generated <filename>.MP4 in 'Movies & TV' app and verify animation works, picture is viewable and issue doesn't hit any issues described in Pass/Fail Criteria.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA013",
+      "testName": "Lightroom",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with Photoshop and Lightroom combined workflows.",
+          "expectedTime": "25 min",
+          "notes": "4.3.7 ADB - LIGHTROOM TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Lightroom (https://www.adobe.com/). \n2. Create a new document with default Photoshop Size (Click on File → New). \n3. Download 3 photos from Adobe stock images by selecting “Stock” in the Creative Cloud interface or directly from stock web (https://stock.adobe.com/). \n4. Load the photos in Lightroom. \n5. Install Adobe Creative Suite and launch Lightroom. \n6. Load a set of images in Lightroom. \n7. Modify all the photos in Photoshop. Right click → Edit in Photoshop. \n8. Save the changes and make sure the changes are shown up in Lightroom viewer after editing the photos.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA014",
+      "testName": "After Effects",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with animating a video sequence in Adobe.",
+          "expectedTime": "30 min",
+          "notes": "4.3.8 ADB - AFTER EFFECTS TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch After Effects. (https://www.adobe.com/) \n2. Copy the folder “Project_AfterEffects” to the DUT from this location: \\desmo\\wds\\PLE\\Creativity\\Tools\\Project_AfterEffects Note: For external partners, please see your local share folder with a similar location: \\Creativity\\Tools\\Project_AfterEffects. \n3. Choose New Project and then go to File menu → Import → Files and select the location where Project_AfterEffects folder was copied locally. Import all the files. \n4. Drag and drop 1_UFO.mov file to the \"Timeline\" panel. \n5. Drag and drop 2_Corn Moon_CC.mp4 file below the 1_UFO.mov file. \n6. Drag and drop 3_Background 4K.mp4 file below the 2_Corn Moon_CC.mp4 file. \n7. Drag and drop 4_UFO Audio.wav file below the 3_Background 4K.mp4 file. \n8. In the left section of the \"Timeline\" panel, click the 2_Corn Moon_CC.mp4 file. \n9. In the \"Composition\" panel, drag and drop the \"moon\" object to the upper left-hand corner of the video. \n10. Press the Spacebar key to play the entire video sequences. Make sure that the entire video sequences (video and audio) play without issues from start to finish. \n11. Press the Spacebar key again to pause the video. \n12. In the left section of the \"Timeline\" panel, click the 1_UFO.mov file. \n13. In the \"Composition\" panel, drag and drop the \"UFO\" object a quarter of the way right. \n14. Press the Spacebar key again to continue the video sequences. Make sure that the \"UFO\" object trajectory has now changed.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA015",
+      "testName": "Premiere Pro (Color Adjustment)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with making color adjustments on a video sequence in Adobe.",
+          "expectedTime": "10 min",
+          "notes": "4.3.9 ADB - PREMIERE PRO (COLOR ADJUSTMENT) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Premier Pro (https://www.adobe.com/) \n2. Import a sample clip from http://www.red.com/sample-r3d-files (R3D format). \n3. On Premier Pro click on File → New → Project \n4. Import the file downloaded and then drag it to the timeline sequence. \n5. Select Color in the workspace toolbar (on the Top) to open the Lumetri Color panel. \n6. Adjust white balance and other color options. \n7. Export final sequence (File → Export → Media. Choose default format (AVI)). \n8. View changes in exported file using Movies & TV and Photos. Note: The file generated is saved on ..\\Documents\\Adobe\\Premier Pro\\<version>",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA016",
+      "testName": "Premiere Pro (Splice Video)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with splicing a video sequence in Adobe.",
+          "expectedTime": "10 min",
+          "notes": "4.3.10 ADB - PREMIERE PRO (SPLICE VIDEO) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Premier Pro (https://www.adobe.com/) \n2. Import a sample clip from http://www.red.com/sample-r3d-files (R3D format). \n3. On Premier Pro click on File → New → Project \n4. Import the file downloaded and then drag it to the timeline sequence. \n5. Use the Razor tool icon on the left of the timeline to splice the video in the timeline to half the length. \n6. Export the video with matching bitrate and H264 format. (File → Export → Media. Choose H264 format). \n7. View changes in exported file using Movies & TV and Photos. Note: The file generated is saved on ..\\Documents\\Adobe\\Premier Pro\\<version>",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA017",
+      "testName": "Premiere Pro (Edit Clips)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with editing several clips and exporting them to H264 format in Adobe.",
+          "expectedTime": "20 min",
+          "notes": "ADB - PREMIERE PRO (EDIT CLIPS) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Premier Pro (https://www.adobe.com/) \n2. Copy the folder “Project_PremierPro” to the DUT from this location: \\desmo\\wds\\PLE\\Creativity\\Tools\\Project_PremierePro Note: For external partners, please see your local share folder with a similar location: .\\Creativity\\Tools\\Project_PremierPro. \n3. Choose New Project and then go to File menu → Import → Files and select the location where Project_PremierPro folder was copied locally. Import all the files. \n4. In the \"Project\" panel, drag and drop 1_H264_8bit file to the \"Timeline\" panel. \n5. In the \"Project\" panel, drag and drop 2_4K-Taipei file to the \"Timeline\" panel overlapping the 1_H264_8bit file at the 16sec. mark. \n6. In the \"Project\" panel, drag and drop 3_StepYou.mp3 to the \"Timeline\" panel under the files of 1_H264_8bit and 2_4K-Taipei \n7. At the top Toolbar, select Effects \n8. In the \"Effects\" panel, click Video Transitions → Page Peel → Page Turn \n9. Drag and drop the Page Turn effect to the very beginning of 1_H264_8bit sequence (in the \"Timeline\" panel). \n10. In the \"Effects\" panel, click Video Transitions → Dissolve → Dip to White \n11. Drag and drop the Dip to White effect to the very beginning of 2_4K-Taipei sequence (in the \"Timeline\" panel). \n12. Press the Spacebar key to play sequences. (You may stop video after 1min.) \n13. Make sure that the following conditions occur without issues: \na. At the start of 1_H264_8bit sequence, the Page Turn effect is seen. \nb. At the start of 2_4K-Taipei sequence, the Dip to White effect is seen. \nc. Embedded audio for both videos is heard. \nd. The added 3_StepYou audio is heard throughout the video sequences. \n14. Export the video with matching bitrate and H264 format. (File → Export → Media. Choose H264 format). \n15. View changes in exported file using Movies & TV and Photos. Note: The file generated is saved on ..\\Documents\\Adobe\\Premier Pro\\<version>",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA018",
+      "testName": "Illustrator (Create Sketch)",
+      "category": "Creativity",
+      "subCategory": "Adobe",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with sketching in Adobe Illustrator.",
+          "expectedTime": "25 min",
+          "notes": "4.3.12 ADB - ILLUSTRATOR (CREATE SKETCH) TEST",
+          "detailedSteps": "1. Install Adobe Creative Suite and launch Illustrator (https://www.adobe.com/) \n2. Create a new document with default settings (Click on File → New). \n3. Use the pen to ink on the blank canvas. Use all the different tools from the left pane. \n4. Verify that the inking is not random and follows the pen. \n5. Save as .ai file and close the application. \n6. Make sure you can reopen the file within Illustrator.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA022",
+      "testName": "Handbrake (Import/Export)",
+      "category": "Creativity",
+      "subCategory": "Video Processing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with importing and exporting 4K videos.",
+          "expectedTime": "10 min",
+          "notes": "4.5.1 VID - HANDBRAKE (IMPORT/EXPORT) TEST",
+          "detailedSteps": "1. Download and Install Handbrake (https://handbrake.fr/) \n2. Using a smartphone with support for 4K videos, take a short video (4K) and import the video to the DUT. \n3. Open the file in Handbrake (you can drag it) \nNote: You can use other 4K videos if already have them. \n4. Make sure the video imported is 4K. Go to “Dimensions” tab and check that Source is at least 3840x2160. \n5. Export the video using a standard 720p template from the presets. Go to “Presets” menu → Presets → General → Very Fast 720p30. \n6. Set the destination path for the output file by clicking on Browse button and defining a name. \n7. Press “Start Encoding”. Wait for encoding to finish. \n8. Playback file in default application detected by the OS to see if encoding was successful.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual and/or Audio anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA023",
+      "testName": "Handbrake (Playback exported files)",
+      "category": "Creativity",
+      "subCategory": "Video Processing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with converting DVD format to MP4.",
+          "expectedTime": "10 min",
+          "notes": "4.5.2 VID - HANDBRAKE (PLAYBACK EXPORTED FILE) TEST",
+          "detailedSteps": "1. Download and Install Handbrake (https://handbrake.fr/) \n2. Copy “OfficeSpace_DVD” file to DUT from: \\desmo\\wds\\PLE\\Creativity\\Tools\\Media\\Video\\Movies  \nNote: For external partners, please see your local share folder with a similar location: .\\Creativity\\Tools\\Media\\Video\\Movies \n3. Open the file in Handbrake (you can drag it).  \nNote: You can use other DVD formats if already have them. \n4. Export the video using a standard 720p template from the presets. Go to “Presets” menu → Presets → General → Very Fast 720p30. \n5. Change the Format to “MKV”. \n6. Set the destination path for the output file by clicking on Browse button and defining a name. \n7. Press “Start Encoding”. Wait for encoding to finish. \n8. Playback file in default application detected by the OS to see if encoding was successful.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual and/or Audio anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA024",
+      "testName": "Handbrake (Downsampling files)",
+      "category": "Creativity",
+      "subCategory": "Video Processing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with downsampling high bitrate audio to a lower bit rate.",
+          "expectedTime": "10 min",
+          "notes": "4.5.3 VID - HANDBRAKE (DOWNSAMPLING FILES) TEST",
+          "detailedSteps": "1. Download and Install Handbrake (https://handbrake.fr/) \n2. Copy “[Ultra HD 4K] STAR WARS 7 Official Trailer 2160p (4k)” file to DUT from: \\desmo\\wds\\PLE\\Creativity\\Tools\\Media\\Video\\4K \nNote: For external partners, please see your local share folder with a similar location: .\\Creativity\\Tools\\Media\\Video\\4K \n3. Open the file in Handbrake (you can drag it). \nNote: You can use other High-resolution formats if already have them. \n4. Export the video using a standard 1080p template from the presets. Go to “Presets” menu → Presets → General → Very Fast 1080p30. \n5. Change the output file settings to down sample file to a lower bit rate. Go to “Audio” tab, change codec to mp3 and 96-bit rate. \n6. Press “Start Encoding”. Wait for encoding to finish. \n7. Playback file in default application detected by the OS to see if encoding was successful.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual and/or Audio anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA025",
+      "testName": "FreeCAD",
+      "category": "Creativity",
+      "subCategory": "Computer-Aided Design",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with creating a 3D model of a threaded part.",
+          "expectedTime": "20 min",
+          "notes": "4.6.1 CAD - FREECAD TEST (Note: Does not work on ARM)",
+          "detailedSteps": "1. Download and Install FreeCAD from https://www.freecadweb.org/ \n2. Click on Menu File → New \n3. Select “Part” from the list of benches in the top pane. \n4. Create a solid cube. \n5. Set to axonometric view icon. \n6. Select the top face and click on the Data tab at the bottom, and change values for Length, Width and Height. You should see the form of the cube updated based on the values. \n7. Select the top face and press on the icon to “Apply thickness”. Modify the values. \n8. Double click on the object to select all the faces and left click. \n9. Select Appearance → Change the material. \n10. Change the view of the object by pressing the different view icons in the top menu.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    },
+    {
+      "Id": "CREA026",
+      "testName": "SketchUp",
+      "category": "Creativity",
+      "subCategory": "Computer-Aided Design",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Graphics", "OEMPanel", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Evaluate customer experience with creating a simple landscape layout.",
+          "expectedTime": "20 min",
+          "notes": "4.6.2 CAD - SKETCHUP TEST",
+          "detailedSteps": "1. Download and Install SketchUp from https://www.sketchup.com/ \nNote: You need to create an account to use the free-trial version. \n2. Follow the tutorial at https://youtu.be/3DSmo_dLAmM to create a simple landscape layout.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: a) There are any visual anomalies or other issues that negatively impact the customer experience."
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [],
+    "deviceMatrix": []
+  }
+}

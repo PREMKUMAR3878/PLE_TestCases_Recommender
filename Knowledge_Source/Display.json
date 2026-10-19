@@ -1,0 +1,1235 @@
+{
+  "testCases": [
+    {
+      "Id": "DISP001",
+      "testName": "UEFI Variable Tool",
+      "category": "Display",
+      "subCategory": "Confirm Color Callibration",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Before beginning test execution, confirm color callibration by: In command prompt windows, type c:\\tools\\System\\UEFIVariableTool.exe -e. Send the result to reviewer (\"Type_1\" and \"Type_3\" should appear in the list)",
+          "passFailCriteria": "\"Type_1\" and \"Type_3\" should appear in the list *For devices >=Pro9 there only needs to be \"Type_2\""
+        }
+      ]
+    },
+    {
+      "Id": "DISP002",
+      "testName": "Device Manager Monitor",
+      "category": "Display",
+      "subCategory": "Enumeration and Control",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Confirm that in Device Manager->Monitor, the Surface Display Properties reflect the correct version number and friendly name. Note the friendly name on the Result. Open Device Manager: Select on “Monitors”, Right click on Monitors, Either \"Surface Panel Filter\" or \"Surface Calibrated Panel\"appears in the list under Monitors, RIght click and select Properties in the menu list, The version number is noted in the Driver tab",
+          "passFailCriteria": "This depends on the project. Note the result. 1) Either \"Surface Panel Filter\" or \"Surface Calibrated Panel\"appears in the list under Monitors 2) The version number is noted in the Driver tab of the Properties window"
+        }
+      ]
+    },
+    {
+      "Id": "DISP003",
+      "testName": "Unload Surface Display",
+      "category": "Display",
+      "subCategory": "Enumeration and Control",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Switch between the Generic Pnp Monitor and Surface Display driver in Device Manager Monitor to confirm that Display is adaptable and no issues occur: Open Device Manager, Select on “Monitors”, Right click on Monitors->Surface Panel Filter and select Properties in the drop down list, Go to Driver tab, Select “Update Driver button”, Select “Browse My Computer for drivers”, Select \"Let me pick from a list of available driver on my computer\"",
+          "passFailCriteria": "1) No crash occurs 2) Display settings (brightness, color profiles) are still working. 3) Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP004",
+      "testName": "First Party Inking App",
+      "category": "Display",
+      "subCategory": "Accelerated Ink Functionality for primary apps: Edgs, Snip & Sketch, Whiteboard, OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "With primary apps (Edge, Snip & Sketch, Whiteboard, OneNote - Use Surface Pen (Hasta) to start inking inside drawing areas and move outside without lifting the pen tip. A small tail following pen tip (\"super wet ink\" rendered by TCON) should be visible.",
+          "passFailCriteria": "There is no gap or overshooting in the drawing until pen is lifted. (Depending on the app, drawing area may have boundary)"
+        }
+      ]
+    },
+    {
+      "Id": "DISP005",
+      "testName": "Ink quality",
+      "category": "Display",
+      "subCategory": "Accelerated Ink Functionality for primary apps: Edgs, Snip & Sketch, Whiteboard, OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "In above apps, pen ink should appear smooth and consistent, without any gaps, overshoots, flickers or other discontinuities.",
+          "passFailCriteria": "There is no gap or overshooting in the drawing until pen is lifted. (Depending on the app, drawing area may have boundary)"
+        }
+      ]
+    },
+    {
+      "Id": "DISP006",
+      "testName": "Ink enable/disable reliability",
+      "category": "Display",
+      "subCategory": "Accelerated Ink Functionality for primary apps: Edgs, Snip & Sketch, Whiteboard, OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "In above apps, use the virtual ruler/protractor tool to place a ruler on drawing area, move pen across the ruler, ink should break over the ruler area (small overshoots beyond ruler edges are acceptable).",
+          "passFailCriteria": "There is no gap or overshooting in the drawing until pen is lifted. (Depending on the app, drawing area may have boundary)"
+        }
+      ]
+    },
+    {
+      "Id": "DISP007",
+      "testName": "Ink color & pressure consistency",
+      "category": "Display",
+      "subCategory": "Accelerated Ink Functionality for primary apps: Edgs, Snip & Sketch, Whiteboard, OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "In above apps, change pen color and thickness. Also use finger drawing option if available in the app.",
+          "passFailCriteria": "Pen color and thinkness should get reflected in the drawing"
+        }
+      ]
+    },
+    {
+      "Id": "DISP008",
+      "testName": "Ink around screen edges",
+      "category": "Display",
+      "subCategory": "Accelerated Ink Functionality for primary apps: Edgs, Snip & Sketch, Whiteboard, OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Set drawing area to full screen, draw small circles along screen edges. Ink quality should not be different from other areas.",
+          "passFailCriteria": "There is no gap or overshooting in the drawing until pen is lifted."
+        }
+      ]
+    },
+    {
+      "Id": "DISP009",
+      "testName": "Ink with palm & other noise",
+      "category": "Display",
+      "subCategory": "Accelerated Ink Functionality for primary apps: Edgs, Snip & Sketch, Whiteboard, OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Plug in power supply, place palm on the screen while inking. Ink quality should not be different from other conditions.",
+          "passFailCriteria": "When palm or fingers are pressed on the screen, no mura (or any marking)  should occur"
+        }
+      ]
+    },
+    {
+      "Id": "DISP010",
+      "testName": "Color Profile Enumeration",
+      "category": "Display",
+      "subCategory": "Color Profile Functionality and External Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics",
+        "Dock"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "In Settings->Display, confirm that the drop down list for Color Profile contains only the supported color profiles according to spec. Report any anomaly",
+          "passFailCriteria": "1) sRGB and Enhanced should show in the list (\"Adaptive\" may show if supported)"
+        }
+      ]
+    },
+    {
+      "Id": "DISP011",
+      "testName": "Color Profile Format Validation",
+      "category": "Display",
+      "subCategory": "Color Profile Functionality and External Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics",
+        "Dock"
+      ],      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "The following color profiles to be validated are \"SurfaceEnhanced.ICM\" and \"SurfacesRGB.ICM\" from  c:\\windows\\system32\\spool\\drivers\\color \n 1- Use https://exiftool.org  to validate the ICC/ICM color profile: Download and run both \"ICCProfileInspector\" Also install \"vcredist_x#\" Locate the color profiles to be tested (\"SurfaceEnhanced.ICM\" and \"SurfacesRGB.ICM\") in c:\\windows\\system32\\spool\\drivers\\color Example of command line to execite the tool:  exiftool.exe SurfaceRGB.ICM \n 2- Also, confirm using the ICC Profile inspector tool that ICC profile attributes are correct. Particularly, check that header size is correct: (Download the ICC Profile inspector from http://www.color.org/profileinspector.xalter) Run ICC Profile Inspector and select an ICC profile using the 'Browse' button. Drag and drop an ICC profile on to the ICC Profile Inspector icon. Right-click an ICC profile, click \"Send To\" and select ICC Profile Inspector from the list",
+          "passFailCriteria": "1) No warnings or errors should appear with the exif tool 2) The OFFSET+SIZE from the right pane is equals to the Total bytes in the Header Info in the left pane of the ICC Profile Inspector. 3) Report any anomalies or anything that not appearing normal in display"
+        }
+      ]
+    },
+    {
+      "Id": "DISP012",
+      "testName": "Color Profile Change with Quick Action Button",
+      "category": "Display",
+      "subCategory": "Color Profile Functionality and External Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics",
+        "Dock"
+      ],      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "In >=21H2 , Color Profile no longer appears in Action Center",
+          "detailedSteps": "1) Test all the different color profiles listed (sRGB or Enhanced  or Adaptive..)  in the Windows Action Center, which is located at the bottom right corner appearing as a message icon. Click and expand the message icon, and color modes should appear as an option). 2) Verify that the color profile appears to be updating as expected. Do this several times.",
+          "passFailCriteria": "1) The  Color Profile selected in Action Center, is reflected in Display Settings 2) Color profile changes accordingly 3) Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP013",
+      "testName": "Color Profile Change in Display Settings",
+      "category": "Display",
+      "subCategory": "Color Profile Functionality and External Monitor",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics",
+        "Dock"
+      ],      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "20 min",
+          "notes": "",
+          "detailedSteps": "Execute the following under : 1) local domain user account, 2) corpnet domain user account (created during OOBE, or from local account use Setting->Accounts->Access work or school->Connect to add corpnet account with Admin privilege) Select different color profiles (sRGB or Enhanced  ..) from dropdown menu in Windows Settings - Display page and verify that the color profile appears to be updating as expected. Do this several times. For Adaptive Color testing, turn off ALS, and use a complex test image with an array of color and has white border or white space in the image. Put the DUT under an ambient light color temperature whose color is encompassed in the test image (Repeat steps with ALS on):",
+          "passFailCriteria": "1) When Enhanced, the color (more visible with red, green, or blue)will become deep and rich.  (Test Image is in \\desmo\\wds\\Functional Areas\\Display\\Software\\SWDisplaySmokeTest\\TestImage) 2) For  adaptive color feature, the specific color in the image, which matches the ambient light color temperature, should stand out and the color should be more crisp and enhanced. The white color  in the image would reflect the color of the ambient light temperature (ie: cool or warm color shade) 3) Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP014",
+      "testName": "Color Profile Behavior with External Monitor Connected",
+      "category": "Display",
+      "subCategory": "Color Profile Functionality and External Monitor",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics",
+        "Dock"
+      ],      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "20 min",
+          "notes": "",
+          "detailedSteps": "Connect an external monitor s (through Surface Dock, USB-C or other display adapter cables (if applicable). , and switch between color profile: PC screen only - color profile should only apply on internal display Duplicate mode - color profile should NOT apply on either internal or external display, the quick button should be disabled Extend mode - color profile should only apply on internal display Second screen only - color profile should NOT apply on either internal or external display Report any anomaly",
+          "passFailCriteria": "1) No tearing in the still image and video, or any screen artifact should occur 2) No display anomalies should occur 3)  PC screen only - color profile should only apply on internal display Duplicate mode - color profile should NOT apply on either internal or external display, the quick button should be disabled Extend mode - color profile should only apply on internal display Second screen only - color profile should NOT apply on either internal or external display"
+        }
+      ]
+    },
+    {
+      "Id": "DISP015",
+      "testName": "Enable Driver Verifier",
+      "category": "Display",
+      "subCategory": "Driver Stability (Driver Verifier)",
+      "priority": 3,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "60 min",
+          "notes": "",
+          "detailedSteps": "Start menu, type in \"verifier\" and enter. In \"Driver Verifier Manager\", select \"Create standard settings\", \"Select driver names from a list\", find and check: \"surfacetcondriver.sys\",\"surfacelightsensor.sys\", \"monitor.sys\", \"Wdf01000.sys \", \"monitor.sys\", \"wudfrd.sys\", click Finish, then reboot when prompted. At commond prompt window with Administrative privelege, type \"verifier \/log c:\\display_ver.log\" (where \"c:\\folder\\display_ver.log\" is the desired name and location of the verifier log to be reviewed after executing the tests )Reboot the system. Go to the location of where the verifier log is specified and keep  a copy of this initial log <ie: copy c:\\folder\\display_ver.log c:\\folder\\display_original.log>. Note that this log file will get updated automatically . Execute Power Cycle tests for:- Nightlight \/ Battery Saver Report any anomaly. After executing the tests , compare the copy of the original log file with the current log file in c:\\folder\\display_ver.log. (Send these log files along with other test results) More Inf: https://msdn.microsoft.com/en-us/library/windows/hardware/ff556083(v=vs.85).aspx",
+          "passFailCriteria": "Confirm that no memory leak shows in the current log when compared to the copy of the initial log file created"
+        }
+      ]
+    },
+    {
+      "Id": "DISP016",
+      "testName": "Reset Driver Verifier and check log",
+      "category": "Display",
+      "subCategory": "Driver Stability (Driver Verifier)",
+      "priority": 3,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "In command prompt window, type \"verifier /reset\". Then, reboot the system",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DISP017",
+      "testName": "Settings->Ease of Access->High Contrast",
+      "category": "Display",
+      "subCategory": "Image Quality",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "Switching between high contrast on and off reflects the apprioriate color with Text, Gaming, Picture viewing(this test is also covered in other image quality tests) \nReport any anomaly",
+          "passFailCriteria": "1) No tearing in the still image and video, or any screen artifact should occur 2) No display anomalies should occur"
+        }
+      ]
+    },
+    {
+      "Id": "DISP018",
+      "testName": "Static Image Quality",
+      "category": "Display",
+      "subCategory": "Image Quality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "20 min",
+          "notes": "",
+          "detailedSteps": "For the static image test, use full screen slide show of all the files in the “...\\StaticImageTest” folder. WIth in D/C mode (power supply unplugged) and auto-brightness enabled in Setteings->Display, enable Battery Saver which renders a  dim screen.  While static image  is rendered in full screen, plug/unplug power cable.  Turn on/off e high contrast in Settings->Ease of Access->High Contrast. Note any defects or abnormalities in the displayed image such as incorrect colors, double image, scrambled image, unstable images, sudden breaks in gray ramps, geometric distortions, etc. Report any anomaly",
+          "passFailCriteria": "1) No tearing in the still image and video, or any screen artifact should occur 2) No display anomalies should occur"
+        }
+      ]
+    },
+    {
+      "Id": "DISP019",
+      "testName": "Video Streaming Playback Quality",
+      "category": "Display",
+      "subCategory": "Image Quality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "20 min",
+          "notes": "",
+          "detailedSteps": "For videos, view the files in the “VideoFiles” (4K contents) sub-folder using the Windows & TV app and Windows Media Player: 1-  WIth in D/C mode (power supply unplugged) and auto-brightness enabled in Setteings->Display, enable Battery Saver which renders a  dim screen. 2-  Pause and restart a few times. 3-  Scrub to different time positions in the file. 4-  Play the videos in full screen and non-full screen. 5- Move and resize  the video window around. 6- While static image  is rendered in full screen, plug/unplug power cable. 7- Adjust brightness while auto-brightness is disabled. 8- While in dark ambient light, enable auto-brightness and let video playback for at least 5 mins.9-  Note any problems such as frozen image, stuttering or jerky playback, dropped audio, broken up audio, scrambled image, etc. Report any anomaly",
+          "passFailCriteria": "1) No tearing in the still image and video, or any screen artifact should occur 2) No display anomalies should occur"
+        }
+      ]
+    },
+    {
+      "Id": "DISP020",
+      "testName": "Web Streaming Video Playback Quality",
+      "category": "Display",
+      "subCategory": "Image Quality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "Download NetFlix app and watch a 4K movie. 1-  WIth in D/C mode (power supply unplugged) and auto-brightness enabled in Setteings->Display, enable Battery Saver which renders a  dim screen. 2-  Pause and restart a few times. 3-  Scrub to different time positions in the file. 4-  Play the videos in full screen and non-full screen. 5- Move and resize  the video window around. 6- While static image  is rendered in full screen, plug/unplug power cable. 7- Adjust brightness while auto-brightness is disabled. 8- While in dark ambient light, enable auto-brightness and let video playback for at least 5 mins. 9-  Note any problems such as frozen image, stuttering or jerky playback, dropped audio, broken up audio, scrambled image, etc. Report any anomaly",
+          "passFailCriteria": "1) No tearing in the still image and video, or any screen artifact should occur 2) No display anomalies should occur. Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP021",
+      "testName": "Text Viewing",
+      "category": "Display",
+      "subCategory": "Image Quality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1-  WIth in D/C mode (power supply unplugged) and auto-brightness enabled in Setteings->Display, enable Battery Saver which renders a  dim screen. 2- Scroll through a text file with Notepad (e.g. \"VersionInfo.txt\") Note if there are any artifacts while scrolling. Report any anomaly",
+          "passFailCriteria": "1) No tearing in the still image and video, or any screen artifact should occur 2) No display anomalies should occur. Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP022",
+      "testName": "Screen Rotation",
+      "category": "Display",
+      "subCategory": "Image Quality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "Detach base (if applicable) and disable screen rotation lock. Load \"..\\Tools\\FishBowl\\Default.html\" and set to 10 fish. Also,  play in repeat mode a 4k movie from \"..\\Tools\\VideoFiles. Display in  fullscreen video for 10 min, rotating  the screen 90 degress in both directions. Look for abnormal image scaling or tearing. Report any anomaly",
+          "passFailCriteria": "1) Screen  rotation occurs accordingly. 3) No tearing in the still image and video, or any screen artifact should occur 4) No display anomalies should occur. Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP023",
+      "testName": "Screen Pooling",
+      "category": "Display",
+      "subCategory": "Image Quality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Use a Surface pen on WhiteBoard app with black background and look for any abnormal pooling. Report any anomaly",
+          "passFailCriteria": "1) No screen pooling should occur. An example of screen pooling is in ..\\Sample_Issues 2) No over shoot should occur when drawing or writing with pen or finger 3) No display anomalies should occur. Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP024",
+      "testName": "Power Cycle",
+      "category": "Display",
+      "subCategory": "Startup Behavior / State Transition",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1.5 hr",
+          "notes": "",
+          "detailedSteps": "Execute the following \"power_cycle\" tab for the following power state transition: 1)Shutdown (Cold-boot), 2)Re-Start (Warm boot), 3) Hibernate, 4)Connected Standby (Sleep), and 5) Sleep Idle Note: Warm boot is the same as Windows->Power->Restart; Cold boot is the same as Windows->Power->Shut Down;  Hibernate appears in Windows->Power after enabling it in Control Panel (Search in Control Panel for \"power options\" and select \"Change What the power buttons do\", click on \"Change settings that are currently unavailable\", then check \"Hibernate\")",
+          "passFailCriteria": "\"Expected\" results in Power_Cycle tab are passing"
+        },
+        {
+          "objective": "Auto-Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level persists after power transition under the same light condition",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "DUT under HIGH (>=100L) ambient light condition",
+              "expected": "brightness level should persist  after power cycle while DUT stays under the same lux light condition"
+            },
+            {
+              "subScenario": "DUT under LOW (<20) lux light condition",
+              "expected": "brightness level should persist  after power cycle while DUT stays under the same lux light condition"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Turn OFF/ON auto-brightness after changing light condition to HIGH lux by moving DUT",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While under LOW ambient light condition (<20L) , allow brightness to settle. Turn off auto-brightess then move DUT to a HIGH ambient light condition (>=50L) . Execute Power Cycle. Turn ON auto-brightness.",
+              "expected": "Brightness level is expected to move towards HIGH level under HIGH ambient light condition  within 10 secs."
+            },
+            {
+              "subScenario": "After brightness level has settled in the above scenario, tun off/on auto-brightness.",
+              "expected": "Brightness level is expected to remain the same"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Turn OFF/ON auto-brightness after changing light condition to LOW lux by moving DUT",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While under HIGH ambient light condition  (>=50L) , allow brigthness to settle. After brightness has settled, turn off auto-brightess then move DUT under LOW ambient light condition  (<20L). Execute Power Cycle.  Turn ON auto-brightness.",
+              "expected": "Brightness level is expected to move towards LOW level under LOW ambient light condition  within 10 secs."
+            },
+            {
+              "subScenario": "After brightness level has settled in the above scenario, tun off/on auto-brightness.",
+              "expected": "Brightness level is expected to remain the same"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: ALS is turned on after adjusting brigthess to HIGH",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While under LOW ambient light condition (<20L), allow brightness to settle. Take note of brightness level. Turn OFF auto-brightess. Move slider to HIGH level (>50). Execute Power Cycle. Turn ON auto-brightness.",
+              "expected": "When auto-brightness is turned on, brightness level should be where it was before turning off auto-brightness"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Turn off/on ALS while light condition is unchanged",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Immediately after above and brightness level has settled, turn off/on auto-brightness.",
+              "expected": "Brightness level is expected to remain the same"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: ALS is turned on after adjusting brigthess to LOW",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While in HIGH ambient light condition (>=100L), allow brightness to settle. Take note of brightness level. Turn OFF auto-brightess. Move slider to LOW level (<10%).  Execute Power Cycle. Turn ON auto-brightness.",
+              "expected": "When auto-brightness is turned on, brightness level should be where it was before turning off auto-brightness"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Turn off/on ALS while light condition is unchanged",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Immediately after above and brightness level has settled, turn off/on auto-brightness.",
+              "expected": "Brightness level is expected to remain the same"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level persists under the same HIGH lux light condition after power cycle",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Move DUT from LOW (< 20L) to HIGH  (>= 100L)   ambient light condition; Execute power cycle. Confirm brightness level is at last setting.",
+              "expected": "brightness level is at last use setting after power cycle."
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level changes accordingly when light condition is changed from HIGH to LOW lux",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "From above scenario AFTER power cycle and log-in, DUT is moved to LOW    ambient light condition. Wait till brightness settles",
+              "expected": "brightness level should move toward MIN"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level persists under the same LOW lux light condition after power cycle",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Move DUT from HIGH (>= 100L) to LOW   ambient light condition (< 20L ); Execute power cycle. Confirm brightness level is at last setting.",
+              "expected": "brightness level is at last use setting after power cycle."
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level changes accordingly when light condition is changed from LOW to HIGH lux",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "From above scenario AFTER power cycle and log-in, DUT is moved to HIGH   ambient light condition. Wait till brightness settles",
+              "expected": "brightness level should move toward HIGH"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level adjusts accordingly when light condition is changed from HIGH to LOW upon resume from power cycle",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "From above scenario while DUT is under HIGH   ambient light condition(>= 100L), execute power cycle.  DURING power cycle or before system resumes from power cycle move DUT to LOW  ambient light condition(<20L)",
+              "expected": "brightness level should move toward MIN  within 10 secs  when DUT resumes from power cycle"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level adjusts accordingly when light condition is changed from LOW to HIGH upon resume from power cycle",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "From above scenario while DUT is under LOW ambient light condition (<20L), execute power cycle.  DURING power cycle or before system resumes from power cycle move DUT to HIGH ambient light condition  (>=100L) .",
+              "expected": "brightness level should move toward HIGH  within 10 secs  when DUT resumes from power cycle"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level is adjusted to LOW and upon resume light condition has changed from HIGH to LOW",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While DUT is in HIGH ambient light condition(>=100L) move brightness  level towards MIN but above 10% (ie: 20%). Execute power cycle. DURING power cycle move DUT to LOW ambient light condition (ie: 0L ).",
+              "expected": "Brightness level is at < 10% within 5 secs upon resume from power cycle"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level persists at last user setting (HIGH) when light condition is unchanged",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While DUT is  under LOW ambient light condition (<20L) move brightness level toward MAX  (>50%). Execute  power cycle.",
+              "expected": "brightness is at last user setting"
+            }
+          ]
+        },
+        {
+          "objective": "Adjusting Brightness",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Brightness level persists at last user setting (LOW ) when light condition is unchanged",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While DUT is  under HIGH  ambient light condition (>=50L)move brightness level toward MIN (<10%). Execute  power cycle.",
+              "expected": "brightness is at last user setting"
+            }
+          ]
+        },
+        {
+          "objective": "NIGHT LIGHT and HIGH CONTRAST",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: MAX Night light persists when turned on manually",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Move Night Light manually to MAX . Turn on Night Light mannually while Auto-brightness is enabled. Execute power cycle",
+              "expected": "Night light should remain enabled at MAX after power cycle"
+            }
+          ]
+        },
+        {
+          "objective": "NIGHT LIGHT and HIGH CONTRAST",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: MAX Night light persists when turned on through scheduled night light setting",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Move Night Light manually to MAX . Schedule Night Light to turn on in night light setting. Leave Auto-brightness enabled. Execute power cycle",
+              "expected": "Night light should remain enabled at MAX after power cycle"
+            }
+          ]
+        },
+        {
+          "objective": "NIGHT LIGHT and HIGH CONTRAST",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: MIN Night light and high contrast persists when turned on through scheduled night light setting",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Turn on Night light manually, then move  slider to MIN . Auto-brightness is OFF. Enable high contrast in Ease of Access in Display Settings. Execute power cycle (Post-Condition: Turn on auto-brightess)",
+              "expected": "After power cycle, night light remains enabled, night light level, and screen brightness level should persist. Auto-brightness remained disabled. High-contrast should persist. After turning on auto-brightness under a different ambient light condition, the brightness level changes accordingly"
+            }
+          ]
+        },
+        {
+          "objective": "Battery Saver",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Battery saver mode persists",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Under LOW  ambient light condition(<20L)  and while A/C is unplugged, take note of brightness level. Enable battery saver (Adjust battery level saver to greater than current battery level to trigger battery saver. Turn on \"Battery saver status until next change\"). Take note of brightness level. Execute power cycle. Disable Battery Saver. Take note of brightness level.",
+              "expected": "Brightness dims (lower brightness level) when battery saver is enabled (?). After power cycle, battery saver mode persists as well as dimmed brightness level. When Battery Saver is disabled, brightness undims and returns to previous setting (while under the same lux light condition)"
+            }
+          ]
+        },
+        {
+          "objective": "Battery Saver",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Battery saver mode enabled and disabled",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "Under LOW  ambient light condition (>50L) and while A/C is un-plugged, take note of brightness level. Enable battery saver (Adjust battery level saver to greater than current battery level to trigger battery saver. Turn on \"Battery saver status until next change\"). Take note of brightness level. Disable Battery Saver. Take note of brightness level. And then enable battery saver again.  Execute power cycle. Take note of brightness level and battery saver mode.",
+              "expected": "Brightness dims (lower brightness level) when battery saver is enabled.  When Battery Saver is disabled, brightness undims and returns to previous setting (while under the same lux light condition). After power cycle, battery saver mode persists as well as dimmed brightness level."
+            }
+          ]
+        },
+        {
+          "objective": "Battery Saver",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Plug-in AC to disable battery saver",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "After the above scenario, plug-in A/C",
+              "expected": "When A/C is plugged-in, brightness level is undimmed and returns to previous setting"
+            }
+          ]
+        },
+        {
+          "objective": "Battery Saver",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Un-plug-in AC to enable battery saver",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "After the above scenario, unplug A/C",
+              "expected": "When A/C is un-plugged, brightness level is dimmed"
+            }
+          ]
+        },
+        {
+          "objective": "Battery Saver",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Enable Battery Saver after manually changing brightness level",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While under HIGH ambient light condition (>50L), move Brightness slider towards  MIN (ie: < 15%);   Enable battery saver (Adjust battery level saver to greater than current battery level to trigger battery saver. Turn on \"Battery saver status until next change\")). Take note of brightness level. Execute power cycle (Confirm that Brightness level is at last setting); Disable battery saver  (Confirm that Brightness level becomes higher );",
+              "expected": "Brightness dims (lower brightness level) when battery saver is enabled . After power cycle, last user brightness setting persists (or brightness level is dimmed ). After disabling battery saver mode, brightness level becomes higher, under HIGH ambient  light condition)"
+            }
+          ]
+        },
+        {
+          "objective": "Battery Saver",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Scenario: Enable/Disable Battery Saver by plug/unplug of AC",
+          "passFailCriteria": "",
+          "subScenarios": [
+            {
+              "subScenario": "While battery saver is enabled, plug/unplug power cable",
+              "expected": "Brightness level adjusts accordingly. When AC is plugged brightness  level becomes higher ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "DISP025",
+      "testName": "Brightness persistence from Idle",
+      "category": "Display",
+      "subCategory": "Startup Behavior / State Transition",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1- While auto-brightness is turned off, move brightness slider to max \n2- Let system idle to sleep (Note: Display luminosity dims before system goes to sleep) \n3- Wake up system from sleep \nExpected: Display luminosity at 100%",
+          "passFailCriteria": "1) Verify that luminosity stays at 100% after waking up the system"
+        }
+      ]
+    },
+    {
+      "Id": "DISP026",
+      "testName": "Image consistency",
+      "category": "Display",
+      "subCategory": "Startup Behavior / State Transition",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "30 min",
+          "notes": "",
+          "detailedSteps": "Execute the following power state transitions while auto-brightness is enabled: 1) restart  or warm boot, b) cold boot or shutdown/power on, c) resume from  hibernate \nNote: Warm boot is the same as Windows->Power->Restart; Cold boot is the same as Windows->Power->Shut Down;  Hibernate appears in Windows->Power after enabling it in Control Panel (Search in Control Panel for \"power options\" and select \"Change What the power buttons do\", click on \"Change settings that are currently unavailable\", then check \"Hibernate\")",
+          "passFailCriteria": "1) Verify that the four-square Windows logo comes on  when powering up the unit in < 500 ms. Note if it takes > 500 ms or if there is any anomaly in rendering the logo. \n2) The size, color and location of the four-square Windows logo should be consistent from its first appearance. Report if any glitch, flicker or brightness change is seen. \nReport any anomaly. \n3) Observe that system Instant On and image consistency during startup is satisfactory and as expected. Report any abnormalities in image quality. 4) No display anomalies should occur. Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP027",
+      "testName": "ALS Functionality",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "15 min",
+          "notes": "",
+          "detailedSteps": "Go to Settings/Display and make sure the “Change brightness automatically when lighting changes” button is set to “On”. Under HIGH (>50L) lux light condtion, allow brightness to settle to around 50% or higher. Take note of brightness level. Turn OFF auto-brightness. Move slider to  <10% or lower. Turn ON auto-brightnes",
+          "passFailCriteria": "1) After turning on auto-brightness, the brigthness level adjusts back accordingly to around 50% or higher. 2) The Brightness setting is reflected in the Action Center"
+        }
+      ]
+    },
+    {
+      "Id": "DISP028",
+      "testName": "ALS Plus Pen",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Open Microsoft Whiteboard, and while drawing with Surface Pen or Finger, change the ambient light condition (turn on/off light switch). \nOpen the Windows Action Center to see the brightness level adjusting while the ambient light condition is changing.",
+          "passFailCriteria": "1) Confirm that while pen is touching the display, the brightness level stops adjusting \n2)  Confirm that while pen is lifted up and not touching the display, the brightness level continues to adjust until it reaches the appropriate luminance for the light condition."
+        }
+      ]
+    },
+    {
+      "Id": "DISP029",
+      "testName": "Night Light (in Settings Display)",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "30 min",
+          "notes": "",
+          "detailedSteps": "1) Turn on Night Light, and adjust the Night Light slider to maximum strength. Execute power cycle - a)warm boot, b) cold boot, c) Sleep idle, d) connected stanby, e) hibernate \nNote: Warm boot is the same as Windows->Power->Restart; Cold boot is the same as Windows->Power->Shut Down; Hibernate appears in Windows->Power after enabling it in Control Panel (Search in Control Panel for \"power options\" and select \"Change what the power buttons do\"->click on \"Change settings that are currently unavailable\"->then check \"Hibernate\")\n2) Turn off Night Light after multiple (at least 5x) resumes from sleep or connected standby",
+          "passFailCriteria": "1) Night light takes effect after power cycle \n2) The Nightlight  setting is reflected in the Action Center \n3) Night light responds to turning off after resuming from sleep or connected standby"
+        }
+      ]
+    },
+    {
+      "Id": "DISP030",
+      "testName": "Night Light (Scheduled)",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Turn on Night Light, and adjust schedule for it to take effect.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DISP031",
+      "testName": "Night Light and ALS in Windows Action Center",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Adjusting Brightness and Nightlight in Windows Action Center is properly and visually refected on Display",
+          "passFailCriteria": "1) The Brightness and Nightlight settings are reflected in the Display Setting"
+        }
+      ]
+    },
+    {
+      "Id": "DISP032",
+      "testName": "Color Profile",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "Adjusting Color Profile is properly and visually refected on Display.",
+          "passFailCriteria": "1) Image is richer and deeper in color when in Enhanced mode 2) Swicthing between color profiles show change in image quality, accordingly"
+        }
+      ]
+    },
+    {
+      "Id": "DISP033",
+      "testName": "Windows HD Color Settings",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Adjusting Windows HD Color settings (HDR, Calibration Settings) is properly and visually refected on Display",
+          "passFailCriteria": "1)Image changes when HD is turned on/off and when callibration is changed"
+        }
+      ]
+    },
+    {
+      "Id": "DISP034",
+      "testName": "Ease of Access->Color Filter",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Adjusting Settings->Ease of Access->Color Filter displays correct image and color accordingly.  Also turn  HDR on and off and review playback while color filter is enabled",
+          "passFailCriteria": "1) Adjusting Settings->Ease of Access->Color Filter displays correct image and color accordingly. 2) HDR is also reflected correctly (color is enhanced and richer in preview))"
+        }
+      ]
+    },
+    {
+      "Id": "DISP035",
+      "testName": "Battery Saver Screen Brightness",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "20 min",
+          "notes": "DC is battery powered and power adapter is unplugged; AC is using power adapter",
+          "detailedSteps": "1- In Settings->Battery Saver setting, enable/check \"Turn battery saver on automatically if my battery falls below:\" (If an option \"always\" turn on battery saver is available, select this  option) \n2-  Battery saver level is set to above actual current battery level \n3- Check \"Lower Screen Brightness while in battery\" \n4- Enable \"Battery saver status until next charge\" \n5- Adjust brightness level to mid-high \n6- Plug-in power supply \n7- Unplug power supply",
+          "passFailCriteria": "1) Screen dims accordingly with battery saver enabled \n2) Dimmed screen when battery is enabled while in DC mode persists after power transition (resume from CS, resume from hibernate, warm re-start, cold boot)"
+        }
+      ]
+    },
+    {
+      "Id": "DISP036",
+      "testName": "Brightness vs. Slider Functionality",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "While auto-brightness is off, adjust brightness level incrementally from the lowest level, and vice versa from the highest level.",
+          "passFailCriteria": "1) Confirm that brightness adjusts accordingly, and granularity in luminosity is according to spec. \n2) Action Center Brightness slider is in synched with Settings Display  Brightness \n3) No display anomalies should occur. Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "DISP037",
+      "testName": "Keyboard brightness adjustment",
+      "category": "Display",
+      "subCategory": "User Adjustment",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": [
+        "OEMPanel", 
+        "CMF", 
+        "TCON", 
+        "Graphics"
+      ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Press F6 (for dim), F7 (for bright)",
+          "passFailCriteria": "1) Display luminance changes with keyboard brightness up/down. 2) Correct settings is reflected in the UI that appears on the top left corner"
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [],
+    "deviceMatrix": []
+  }
+}

@@ -1,0 +1,2079 @@
+{
+  "testCases": [
+    {
+      "Id": "FIRM001",
+      "testName": "Device Manager",
+      "category": "Firmware",
+      "subCategory": "Device Manager",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "Open “Device Manager” and verify all internal devices are enumerated and recognized by the system. (no '!' out devices)",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Start -> Run: devmgmt.msc\na. VERIFY - no devices have '!' or Yellow explanation point.\n2. Open Firmware device class\na. VERIFY - there are no 'Generic Firmware' devices present",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM002",
+      "testName": "Capsule Update - UEFI Update - Firmware Update - Capsule Update, Manual",
+      "category": "Firmware",
+      "subCategory": "Capsule Update",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. For this test you will likely be working with Prod_Signed capsules. Ensure BitLocker and Secure Boot have been disabled prior to starting manual Capsule Update and Rollback.\n2. Open registry editor\na. Navigate to HKLM\\SYSTEM\\CurrentContolSet\\Control\\FirmwareResources\\\nb. Add REG_DWORD “Policy” with the Value of 1 to the key of each capsule under test. You can find the correct firmware by the ID or arrowing down through the menu and identifying the correct file name.\n3. Create folders on Desktop with current and rollback capsules\na. Each folder should contain an .inf file, a .cat file, and a .bin file\n4. Open: “Current” folder\na. Right click the .inf file\nb. Select install\nc. Select Restart Now when prompt appears\nd. Blue loading bar will be present when installing the new UEFI capsule\n5. Enter UEFI Menu to verify FW version",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM003",
+      "testName": "Capsule Update - UEFI Update - Unsupported Firmware Update via Capsule is blocked",
+      "category": "Firmware",
+      "subCategory": "Capsule Update",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Install incorrect FW\na. Follow prompts for installation\nb. Installation progress bar will not be present upon restart\nc. Check FW version in UEFI (instruction at beginning of document)\nd. VERIFY - unsupported FW did not install",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM004",
+      "testName": "Capsule Update - UEFI Update - Blade/Keyboard enumeration following UEFI Capsule Update",
+      "category": "Firmware",
+      "subCategory": "Capsule Update",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Install Current UEFI FW Capsule\na. VERIFY - blade and keyboard are available in device list in Device Manager and no banged-out devices (!) are present",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM005",
+      "testName": "Capsule Update - UEFI Update - Blade/Keyboard functionality following UEFI Capsule Update",
+      "category": "Firmware",
+      "subCategory": "Capsule Update",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With current UEFI FW Capsule\na. VERIFY - blade and keyboard are fully functional - trackpad, keyboards, and so on",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM006",
+      "testName": "Capsule Update - UEFI Settings Persistence - Settings persist through capsule update",
+      "category": "Firmware",
+      "subCategory": "Capsule Update",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI menu\na. Select Devices\nb. Change devices to On/Off down the list\nc. Exit and Restart\nd. Update Capsule\ne. Enter UEFI\nf. VERIFY - settings have not changed during capsule update",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM007",
+      "testName": "UEFI Password - Apply Password Manually",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI menu\na. Select Security\nb. Add or Change UEFI Password\nc. Enter password: qwerty\nd. Re-enter password to confirm\ne. Press Ok\nf. Exit and Restart Now\ng. VERIFY - UEFI password applied",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM008",
+      "testName": "UEFI Password - Password Persistence - Capsule Upgrade",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Preform Capsule update from previous test passes\na. Enter UEFI menu\nb. VERIFY - blue loading bar is present upon restart\nc. VERIFY - UEFI password is still enabled and has not changed\nd. VERIFY - FW has updated to correct capsule",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM009",
+      "testName": "UEFI Password - Password Persistence - Capsule Rollback",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Preform Capsule rollback from previous test passes\na. Enter UEFI menu\nb. VERIFY - blue loading bar is present upon restart\nc. VERIFY - UEFI password is still enabled and has not changed\nd. VERIFY - FW has updated to current capsule",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM010",
+      "testName": "UEFI Password - Three Incorrect Entries",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter Pre-OS\na. Enter UEFI Menu\nb. Enter password incorrectly 3 times\nc. VERIFY - attempt limit reached\nd. VERIFY - limited UEFI menu\ne. Exit and restart now",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM011",
+      "testName": "UEFI Password - Touch Based Password Entry",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Password entry with touch screen keyboard\na. VERIFY - password can be entered using touch screen keyboard",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM012",
+      "testName": "UEFI Password - Blade Based Password Entry",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Password entry with attached blade\na. VERIFY - password can be entered using blade",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM013",
+      "testName": "UEFI Password - External Keyboard Based Password Entry",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Password entry with external keyboard\na. VERIFY - password can be entered connected keyboard",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM014",
+      "testName": "UEFI Password - External Mouse Based Password Entry",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Password entry with external mouse using onscreen keyboard\na. VERIFY - password can be entered using mouse",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM015",
+      "testName": "UEFI Password - Claim TPM",
+      "category": "Firmware",
+      "subCategory": "UEFI Password",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Update UEFI using instruction listed at the beginning of this section\n2. Start -> Run: tpm.msc\na. VERIFY - TPM is ready for use under Status.\nb. VERIFY - You may clear the TPM to remove ownership and reset the TPM to factory defaults under Available Options\n3. Clear TPM under Actions\na. VERIFY - Clear the TPM Restart prompt activates under “Manage the TPM security hardware window\nb. Restart\n4. Restart again, this time enter the UEFI menu\na. VERIFY - the UEFI password has not changed",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM016",
+      "testName": "BitLocker - Confirm Valid PIN",
+      "category": "Firmware",
+      "subCategory": "BitLocker",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "1. Configure unit as listed above and have type/touch kbd  connected \n2. Open manage bit locker and turn on bit locker  (must have thumbdrive to copy recovery key to) \n3. After Bitlocker is enabled and drive is encrypted open GPedit.MSC \n4. Navigate to: Computer configuration>Administrative Templates>Windows Components>Bitlocker drive Encryption>Operating System Drives \n5. Enable use of Bitlocker authentication requiring preboot keyboard input on slates. \n6. Double click on Require additional authentication at startup \n7. Uncheck Allow Bitlocker without compatible TPM \n8. Check Enabled box and under Configure TPM startup Pin  Select Require startup PIN with TPM \n9. Now launch an elevated cmd prompt \n10. Type: manage-bde -protectors -add c: -TPMAndPIN \n11. It will prompt to enter pin    Enter a 4 digit numerical pin that is easy to remember (*Note  what you enter will not show on screen \n12. It will ask you to enter the same pin again, do so \n13. Now Type manage-bde -status   (to check whether the TPMAndPin protector has been added. \n14. Close all windows and reboot machine",
+          "detailedSteps": "Procedure:\n1. Restart DUT\na. Enter PIN\nb. VERIFY - device boots to windows",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM017",
+      "testName": "BitLocker - Reset TPM",
+      "category": "Firmware",
+      "subCategory": "BitLocker",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Start -> Run: tpm.msc\na. VERIFY - TPM is ready for use under Status.\nb. VERIFY - You may clear the TPM to remove ownership and reset the TPM to factory defaults under Available Options\n2. Clear TPM under Actions\na. VERIFY - Clear the TPM Restart prompt activates under “Manage the TPM security hardware window\nb. Restart\n3. After completing reboot:\na. Restart the DUT\nb. VERIFY - That you are presented with the Bitlocker password prompt and that the password unlocks the DUT.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM018",
+      "testName": "BitLocker - Invalid BitLocker PIN",
+      "category": "Firmware",
+      "subCategory": "BitLocker",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Restart DUT\na. Enter invalid PIN\nb. VERIFY - re-enter pin prompt",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM019",
+      "testName": "BitLocker - PIN Entry - Blade",
+      "category": "Firmware",
+      "subCategory": "BitLocker",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Restart DUT\na. Enter valid PIN with blade\nb. VERIFY - device boots to windows",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM020",
+      "testName": "BitLocker - PIN Entry - External Keyboard connected to Side USB Port",
+      "category": "Firmware",
+      "subCategory": "BitLocker",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Restart DUT\na. Enter valid PIN with external keyboard\nb. VERIFY - device boots to windows",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM021",
+      "testName": "BitLocker - PIN Entry - On Screen Keyboard",
+      "category": "Firmware",
+      "subCategory": "BitLocker",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Restart DUT\na. Enter valid PIN with on screen keyboard\nb. VERIFY - device boots to windows",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM022",
+      "testName": "BitLocker - PIN Entry - External Keyboard connected to USB Hub",
+      "category": "Firmware",
+      "subCategory": "BitLocker",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Restart DUT\na. Attach external USB keyboard to Dock\nb. Enter valid PIN using keyboard\nc. VERIFY - device boots to windows",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM023",
+      "testName": "UEFI Menu Interaction Methods - Touch",
+      "category": "Firmware",
+      "subCategory": "UEFI Menu Interaction Methods",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI menu\na. Interact with UEFI options using touch\nb. VERIFY - UEFI menu items can be interacted with using touch gestures",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM024",
+      "testName": "UEFI Menu Interaction Methods - Blade",
+      "category": "Firmware",
+      "subCategory": "UEFI Menu Interaction Methods",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI menu\na. Interact with UEFI options using blade\nb. VERIFY - UEFI menu items can be interacted with using blade",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM025",
+      "testName": "UEFI Menu Interaction Methods - External Keyboard",
+      "category": "Firmware",
+      "subCategory": "UEFI Menu Interaction Methods",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI menu\na. Interact with UEFI options using connected keyboard\nb. VERIFY - UEFI menu items can be interacted with using external keyboard",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM026",
+      "testName": "UEFI Menu Interaction Methods - External Mouse",
+      "category": "Firmware",
+      "subCategory": "UEFI Menu Interaction Methods",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI menu\na. Interact with UEFI options using mouse\nb. VERIFY - UEFI menu items can be interacted with using mouse",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM027",
+      "testName": "UEFI Menu - Boot to USB",
+      "category": "Firmware",
+      "subCategory": "Advanced Startup",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Insert bootable USB drive\na. Boot to UEFI Menu\nb. Select Boot Configuration\nc. Swipe left on USB Storage\nd. VERIFY - DUT boots to USB\ne. *Kill application before re-imaging begins*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM028",
+      "testName": "One Time Boot - Verify One Time Boot USB - Side Port - Power + Vol Down",
+      "category": "Firmware",
+      "subCategory": "One Time Boot",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect Bootable USB to side port\na. Restart DUT\nb. Hold volume DOWN\nc. VERIFY - device boots from USB\nd. *Kill application before re-imaging begins*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM029",
+      "testName": "One Time Boot - One Time Boot - USB Network Adapter - Power + Vol Down",
+      "category": "Firmware",
+      "subCategory": "One Time Boot",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect Network cable to USB adapter\na. Connect USB into device port\nb. Restart DUT\nc. Hold volume DOWN\nd. VERIFY - device PXE boots from Network\ne. *ESC out of IPV4/IPV6 device boot*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM030",
+      "testName": "Thermal - Power and Thermal Management - Capsule Update Battery Safeguard at 25%",
+      "category": "Firmware",
+      "subCategory": "Thermal",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Run Fishbowl_1000 in 4 Internet Explorer Windows\na. Turn battery performance to “Best”\nb. Turn screen brightness to “Brightest”\nc. Monitor battery level lower than 25%\nd. Install capsule\ne. Follow prompts for installation\nf. Installation progress bar will not be present upon restart\ng. VERIFY - capsule does NOT update in UEFI",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM031",
+      "testName": "Thermal - Power and Thermal Management - Boot Thermal Safeguard",
+      "category": "Firmware",
+      "subCategory": "Thermal",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Run Pro-system Monitor\na. Select Thermal Tab\nb. Use heat gun on LOW at heat sensor location of DUT\nc. Monitor temperature for heat threshold\nd. VERIFY - DUT shuts down\ne. Tap power to turn DUT on\nf. VERIFY - temperature icon at start up",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM032",
+      "testName": "Capsule Update - Capsule Update and Rollback - AC",
+      "category": "Firmware",
+      "subCategory": "Capsule Update",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Start-> Device Manager\na. Expand Firmware\nb. Select Surface UEFI\nc. Under Driver tab select Uninstall Device\nd. Check “delete the driver software for this device” box\ne. Click uninstall\nf. Open RB folder\ng. Right click .inf file\nh. Select install\ni. Click OK when you see “Operation Completed Successfully” prompt\nj. Right click computer name in Device Manager\nk. Select Scan for Hardware Changes\nl. Surface UEFI should (!) bang out with a Code 14 - Restart for changes to take place\nm. Double click Surface UEFI\nn. Click “Restart Computer” under Device Status\no. “Restart the computer when I click finish” box should be check, if not check the box\np. Click finish\nq. VERIFY - blue loading bar is present upon restart\nr. VERIFY - firmware has rolled back to previous FW version in UEFI\n2. Follow instructions for Capsule Update in previous section\na. VERIFY - capsule updates to current FW version in UEFI",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM033",
+      "testName": "Capsule Update - Capsule Update and Rollback - DC",
+      "category": "Firmware",
+      "subCategory": "Capsule Update",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Repeat Capsule Update and Rollback steps in previous test pass\na. VERIFY - blue loading bar is present upon restart\nb. VERIFY - firmware has rolled back to previous FW version in UEFI\n2. Follow instructions for Capsule Update in previous section\na. VERIFY - capsule updates to current FW version in UEFI",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM034",
+      "testName": "Secure Boot - Test Signing",
+      "category": "Firmware",
+      "subCategory": "Secure Boot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI Menu (instructions listed at beginning of document)\n2. Open Security Tab\n3. Enable Secure Boot\na. VERIFY - NO red unlock bar upon restart\n4. Run cmd prompt as Administrator\na. Search cmd\nb. Right click cmd prompt\nc. Run as Administrator\nd. C:\\window\\system32>bcdedit -set testsigning on\ne. Enter\nf. Confirm test signing blocked\ng. Close cmd prompt\nh. Reboot\ni. VERIFY - DUT is not in testing mode",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM035",
+      "testName": "TPM",
+      "category": "Firmware",
+      "subCategory": "TPM",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Start -> Run: tpm.msc\na. VERIFY - TPM is ready for use under Status.\nb. VERIFY - You may clear the TPM to remove ownership and reset the TPM to factory defaults under Available Options\n2. Clear TPM under Actions\na. VERIFY - Clear the TPM Restart prompt activates under “Manage the TPM security hardware window\nb. Restart\n3. Start - > Run: tpm.msc\na. VERIFY - TPM is ready for use under Status\nb. VERIFY - You may clear the TPM to remove ownership and reset the TPM to Factory defaults under Available Options",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM036",
+      "testName": "Advanced Startup - Pre-OS HID - Boot to USB",
+      "category": "Firmware",
+      "subCategory": "Advanced Startup",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Insert bootable USB into USB port of DUT\na. Enter Pre-OS HID\nb. Select “Use a Device”\nc. Select USB Storage\nd. VERIFY - DUT boots to USB\ne. *Kill application before re-imaging begins*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM037",
+      "testName": "Advanced Startup - Pre-OS HID - Boot to UEFI",
+      "category": "Firmware",
+      "subCategory": "Advanced Startup",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter Pre-OS HID\na. Select Troubleshoot\nb. Select Advanced Options\nc. Select UEFI Firmware Settings\nd. Select Restart\ne. VERIFY - Entry to UEFI Menu",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM038",
+      "testName": "Advanced Startup - Pre-OS HID - Boot to Network - USB Adaptor",
+      "category": "Firmware",
+      "subCategory": "Advanced Startup",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect Network cable to USB adapter and connect adaptor into device USB port.\na. Enter Pre-OS HID\nb. Select “Use a Device”\nc. Select PXE Network\nd. VERIFY - DUT boots to PXE Network\ne. *ESC out of IPV4/IPV6 device boot*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM039",
+      "testName": "Advanced Startup - Pre-OS HID - Boot to Network - Onboard Ethernet (SStudio1 / 2)",
+      "category": "Firmware",
+      "subCategory": "Advanced Startup",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect Network cable to onboard ethernet port\na. Enter Pre-OS HID\nb. Select “Use a Device”\nc. Select PXE Network\nd. VERIFY - DUT boots to PXE Network\ne. *ESC out of IPV4/IPV6 device boot*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM040",
+      "testName": "UEFI Menu - Boot to Network - USB NET Adaptor",
+      "category": "Firmware",
+      "subCategory": "Advanced Startup",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect Network cable to USB adapter and connect adaptor into device USB port\na. Boot to UEFI Menu\nb. Select Boot Configuration\nc. Swipe left on PXE Network\nd. VERIFY - DUT boots to PXE Network\ne. *ESC out of IPV4/IPV6 device boot*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM041",
+      "testName": "UEFI Menu - Boot to Network - Onboard Ethernet Port (SStudio1 / 2)",
+      "category": "Firmware",
+      "subCategory": "Advanced Startup",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect Network cable to onboard ethernet port\na. Boot to UEFI Menu\nb. Select Boot Configuration\nc. Swipe left on PXE Network\nd. VERIFY - DUT boots to PXE Network\ne. *ESC out of IPV4/IPV6 device boot*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM042",
+      "testName": "One Time Boot - Verify One Time Boot - Onboard Ethernet Port (SStudio1 / 2)",
+      "category": "Firmware",
+      "subCategory": "One Time Boot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect Network cable directly to onboard ethernet port on SStudio\na. Restart DUT\nb. Hold volume DOWN\nc. VERIFY - device PXE boots from Network\nd. *ESC out of IPV4/IPV6 device boot*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM043",
+      "testName": "Boot Order - SSD Only - USB in Side Port - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI\na. Select Boot Configuration SSD Only\nb. Move Internal Storage to the top of the list\nc. Exit and Restart\nd. Insert bootable USB in side port\ne. Restart DUT without holding volume down\nf. VERIFY - device boots from SSD",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM044",
+      "testName": "Boot Order - Network->USB->SSD - USB Net Adaptor in Side Port - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Boot order stays the same as previous test\na. Attach Network cable with USB adapter to side port\nb. Exit and Restart\nc. Restart computer once Windows loads without holding volume down\nd. VERIFY - device boots from PXE Network\ne. *ESC out of IPV4/IPV6 device boot*\nf. Remove Network cable",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM045",
+      "testName": "Boot Order - Network->USB->SSD - USB Net Adaptor in Dock Port - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Boot order stays the same as previous test\na. Attach Network cable with USB adapter to dock port\nb. Exit and Restart\nc. Restart computer once Windows loads without holding volume down\nd. VERIFY - device boots from PXE Network\ne. *ESC out of IPV4/IPV6 device boot*\nf. Remove Network cable",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM046",
+      "testName": "Boot Order - USB->Network->SSD - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Boot order stays the same as previous test\na. Insert USB in side port\nb. Restart computer once Windows loads without holding volume down\nc. VERIFY - device boots from bootable USB\nd. *Kill application before re-imaging begins*\ne. *Remove USB before windows attempts to load or re-imaging will begin again*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM047",
+      "testName": "Boot Order - USB->Network->SSD - USB Net adaptor in Side Port - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Boot order stays the same as previous test\na. USB Net adaptor in side port\nb. Restart DUT without holding volume down\nc. VERIFY - device boots to SSD",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM048",
+      "testName": "Boot Order - USB-> SSD - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI\na. Select Boot Configuration\nb. Drag USB Storage to top of list\nc. Internal Storage is next on list\nd. PXE and Windows Boot Manager are turned off\ne. Exit and Restart\nf. Reboot DUT without holding volume down\ng. VERIFY - device boots from SSD",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM049",
+      "testName": "Boot Order - USB-> SSD - USB in Side Port - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Place bootable USB in side port\na. Enter UEFI\nb. Select Boot Configuration\nc. Same configuration as above test\nd. Exit and Restart\ne. Reboot DUT without holding volume down\nf. VERIFY - device boots from USB",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "FIRM050",
+      "testName": "Boot Order - USB Boot Disks - USB 3.0 Stick in Side Port - Boot without holding volume down",
+      "category": "Firmware",
+      "subCategory": "Boot Order",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["UEFI"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Enter UEFI\na. Select Boot Configuration\nb. Move USB to top of list\nc. Exit and Restart\nd. Insert Bootable USB 3.0 in side port\ne. Restart computer once Windows loads without holding volume down\nf. VERIFY - device boots from USB\ng. *Kill application before re-imaging begins*\nh. *Remove USB before windows attempts to load or re-imaging will begin again*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM001",
+      "testName": "Verify FW Update Driver Installs - Device manager",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Firmware updates to current capsule",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Create Firmware folder on Desktop\na. Create folder called Capsule\nb. Open Device Manager\nc. Confirm previous FW version\nd. Open capsule firmware folder\ne. Right click .inf file\nf. Select install\ng. Select “Yes” to allow app to make changes to your device\nh. Select “Restart Now” when prompted\ni. VERIFY - Install Bar for specific FW type (listed at beginning of Doc)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM002",
+      "testName": "Verify driver enumerates in Device Manager in correct location - Verify driver name is correct.",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Firmware updates to current capsule in Device Manager",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Run Device Manager\na. VERIFY - FW name is correct and not “Generic Firmware”\nb. VERIFY - No banged-out devices (!)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM003",
+      "testName": "Verify that no unexpected child nodes enumerate - no bang outs",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM004",
+      "testName": "Verify FW Updates from previous version - Performs Capsule Update",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Firmware updates to current capsule",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Capsule folder\na. Select current SAM.inf\nb. Install\nc. Restart at prompt\nd. VERIFY - SAM firmware installs (yellow bar)\ne. VERIFY - SAM firmware in UEFI Menu",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM005",
+      "testName": "Verify Firmware does not update if it is a current or newer version",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Update does not install over current capsule",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Confirm FW is current in Device Manager\na. Open FW folder on Desktop\nb. Select Capsule folder\nc. Right click .inf file and install\nd. Select OK after “Operation completed successfully” prompt, select OK\ne. Restart DUT\nf. VERIFY - Install bar is not present during reboot\ng. VERIFY - FW version has remained the most current in UEFI",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM006",
+      "testName": "Verify Capsule Rollback to previous version.",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Firmware Rollback",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Create CapsuleRB folder in previously created Firmware folder\na. Open Device Manager\nb. Select FW you are testing\nc. Uninstall Device\nd. Check “delete the driver software for this device”\ne. Select uninstall\nf. Open FW folder\ng. Select RB capsule\nh. Right click .inf file\ni. Select install\nj. Select “Yes” to allow app to make changes to your device\na. Select Ok at “The operation completed successfully” prompt\nb. In device manager select “Action” + Scan for hardware changes\nc. Firmware will “bang out (!)”\nd. Select Firmware\ne. Select “Restart Computer”\nf. Select “Restart when finish is selected”\ng. Select Finish\nh. VERIFY - Install Bar for specific FW type (listed at beginning of Doc)\ni. VERIFY - FW version in UEFI",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM007",
+      "testName": "Discharge battery to less then 20% - Verify Firmware update does not take place below 25% battery",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Update does not install below 20%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Confirm FW is previous version in UEFI\na. With battery below 20% install current firmware\nb. Restart Device\nc. Installation progress bar will not be present upon restart\nd. Check FW version in UEFI (instruction at beginning of document)\ne. VERIFY - firmware does not install",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM008",
+      "testName": "Charge device > 25% battery level - Reboot and Verify firmware update takes place",
+      "category": "Firmware",
+      "subCategory": "Capsule Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Update does not install below 20%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Confirm FW is previous version in UEFI\na. With battery at 30% or above install current firmware\nb. VERIFY - in UEFI current firmware installs",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM011",
+      "testName": "Battery icon shows in OS",
+      "category": "Firmware",
+      "subCategory": "General Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Battery Icon in OS",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Open windows\na. VERIFY - battery icon is present in lower right corner",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM012",
+      "testName": "Attach PSU - Battery shows charging when battery is not fully charged",
+      "category": "Firmware",
+      "subCategory": "General Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Battery charging icon appears to indicate DUT is charging when connected to PSU",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Connect PSU\na. Open power icon\nb. VERIFY - battery charge icon is present when DUT is charging when connected to PSU",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM013",
+      "testName": "No PSU - Battery shows discharged",
+      "category": "Firmware",
+      "subCategory": "General Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify battery discharge to indicate DUT is not connected to PSU",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Disconnect PSU\na. Open power icon\nb. VERIFY - battery charge icon is not present to indicate DUT is not charging on A/C",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM014",
+      "testName": "Clear BPM Status with a Hard Reset",
+      "category": "Firmware",
+      "subCategory": "General Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify percentage on status is cleared at 100%",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT On\na. Attach PSU??\nb. Hold power button for 20 seconds\nc. VERIFY - 100% BPM status cleared",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM019",
+      "testName": "DUT ON - Battery only to Battery + AC adapter state",
+      "category": "Firmware",
+      "subCategory": "Battery Charging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify device On Battery Charge",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Turn DUT on\na. Attach device specific PSU\nb. VERIFY - charging light is active when connected to DUT",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM023",
+      "testName": "Battery Critical action",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Start-> Power and sleep options\n1. Enter additional power settings\n2. Under Selected Plan, choose “Change plan settings”\n3. Select “Change advanced power settings”\n4. Maximize “Battery” dropdown\na. Set Critical battery action to HIBERNATE\nb. Set Critical battery level to 3%\nc. Set Low battery notification to - ON\n5. *RESET DEFAULTS ONCE TEST PASSES COMPLETE*",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM024",
+      "testName": "Battery drain",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Set Battery critical action level to 3%, Run FishBowl_1000 app, set display brightness to max, set performance to max. Disconnect Power and drain battery until machine shutsdown (hibernate).",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM025",
+      "testName": "Low battery reporting",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With system On, low battery should be reported at 6%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM026",
+      "testName": "Empty Battery Icon",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Battery shows Red X when battery is at or below 7%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM027",
+      "testName": "Empty Battery Icon - Red X removal",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify red X goes away when above 7%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM028",
+      "testName": "Soft shutdown at 3%",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "With system On, soft shutdown(HIBERNATE) occurs at 3%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM029",
+      "testName": "Boot without PSU",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Dead Battery",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT Off\na. Power on DUT\nb. VERIFY - device does not boot\nc. VERIFY - dead battery icon",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM030",
+      "testName": "Boot with PSU",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Boot up with PSU",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT Off\na. Attach PSU\nb. Boot DUT\nc. VERIFY - battery is charging",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM031",
+      "testName": "Boot with PSU - Remove PSU after 7%",
+      "category": "Firmware",
+      "subCategory": "Battery Discharging",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Device shut down at 3% from 7% (RSOC: Average of both batteries on Surface Books)",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Boot DUT\na. Attach PSU\nb. Charge to 7%\nc. Detach PSU\nd. VERIFY - DUT shut down at 3%",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM032",
+      "testName": "DEEPDOZE w/out PSU",
+      "category": "Firmware",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify DUT Boots to Windows from DeepDoze",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Power DUT off\na. Disconnect from PSU\nb. Keep DUT off for 5 minutes\nc. Power DUT on\nd. VERIFY - DUT boots to Window",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM033",
+      "testName": "Charger identification - 24W",
+      "category": "Firmware",
+      "subCategory": "Power Port",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify DUT charges with 24W charger",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Attach 24W charger to DUT forward facing power cord\na. VERIFY - DUT charges\n2. Attach 24W charger to DUT reverse facing power cord\na. VERIFY - DUT charges",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM034",
+      "testName": "Charger identification - 44W",
+      "category": "Firmware",
+      "subCategory": "Power Port",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify DUT charges with 44W charger",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Attach 44W charger to DUT forward facing power cord\na. VERIFY - DUT charges\n2. Attach 44W charger to DUT reverse facing power cord\na. VERIFY - DUT charges",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM035",
+      "testName": "Charger identification - 60W",
+      "category": "Firmware",
+      "subCategory": "Power Port",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify DUT charges with 60W charger",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Attach 60W charger to DUT forward facing power cord\na. VERIFY - DUT charges\n2. Attach 60W charger to DUT reverse facing power cord\na. VERIFY - DUT charges",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM036",
+      "testName": "Charger identification - 95W",
+      "category": "Firmware",
+      "subCategory": "Power Port",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify DUT charges with 95W charger",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Attach 95W charger to DUT forward facing power cord\na. VERIFY - DUT charges\n2. Attach 95W charger to DUT reverse facing power cord\na. VERIFY - DUT charges",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM037",
+      "testName": "Charger identification - EOS 60W",
+      "category": "Firmware",
+      "subCategory": "Power Port",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "Verify DUT charges with EOS Dock",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Attach EOS Dock to DUT forward facing power cord\na. VERIFY - DUT charges\n2. Attach EOS Dock to DUT reverse facing power cord\na. VERIFY - DUT charges",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM043",
+      "testName": "ON to Sleep - Start Menu",
+      "category": "Firmware",
+      "subCategory": "Battery + PSU",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT On\na. Start-> Power - Sleep\nb. VERIFY - Sleep transition in 30 seconds or less",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM044",
+      "testName": "ON to Sleep - Power Button",
+      "category": "Firmware",
+      "subCategory": "Battery + PSU",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT On\na. Press power button\nb. VERIFY - Sleep transition in 60 seconds or less",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM045",
+      "testName": "Sleep to ON - Power Button",
+      "category": "Firmware",
+      "subCategory": "Battery + PSU",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Place DUT in Sleep mode\na. Press power button\nb. VERIFY - DUT turns On in 5 seconds or less",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM048",
+      "testName": "ON to OFF - Start Menu",
+      "category": "Firmware",
+      "subCategory": "Battery ONLY",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Start -> Power - Shutdown\na. VERIFY - DUT shuts down",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM049",
+      "testName": "ON to OFF - Slider",
+      "category": "Firmware",
+      "subCategory": "Battery ONLY",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT On\na. Hold power button for 10 seconds to activate slide to shut down\nb. Slide to shut down\nc. VERIFY - DUT shuts down",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM050",
+      "testName": "ON to OFF - Emergency Shut Down",
+      "category": "Firmware",
+      "subCategory": "Battery ONLY",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT On\na. Hold power button for 15-20 seconds\nb. VERIFY - DUT shuts down",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM054",
+      "testName": "ON to Sleep - Lid Close/Open",
+      "category": "Firmware",
+      "subCategory": "Battery + PSU",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. DUT On\na. Close lid\nb. Open lid\nc. VERIFY - DUT transitions to Sleep Mode in 60 seconds or less",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM055",
+      "testName": "OFF to ON - Power Button",
+      "category": "Firmware",
+      "subCategory": "Battery ONLY",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": " Verify Power State Change",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Turn DUT Off\na. Hold power button\nb. VERIFY - DUT turns on",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM078",
+      "testName": "Fan speed",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "Objective: Ensure system fan is off (at 0 RPM) with no system load.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Close any running applications\na. Launch ProSystemMonitor or run SMonitor script\nb. VERIFY - Fan speed is at 0 when temp below 37C",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM079",
+      "testName": "Fan speed > 0 above cool target",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "Objective: Ensure system fan turns on while system is under stress.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Set system to max performance mode\na. Click the battery systray icon\nb. Drag the slider to \"Best Performance\"\n2. Run Fishbowl_1000 x4\na. Launch ProSystemMonitor or run SMonitor script\nb. VERIFY - Fan speed is greater than 0 when temp above 40C",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM080",
+      "testName": "Start FishBowl",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Run FishBowl_1000 verify PWM is increasing/decreasing according to the CPU temp",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM081",
+      "testName": "Stop FishBowl",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "Objective: Ensure system fan speed reduces back to 0 after system is no longer under stress.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Run Fishbowl_1000 x4 until system fans turn on\n2. Close any running applications\n3. Wait up to 3 minutes\n4. Launch ProSystemMonitor or run SMonitor script\na. VERIFY - Fan speed is at 0 when temp below 37C",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM082",
+      "testName": "CPU throttle due to heat",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "Objective: Ensure CPU speed is reduced when system is at high tempature.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Procedure:\n1. Set system to max performance mode\na. Click the battery systray icon\nb. Drag the slider to \"Best Performance\"\n2. Run Fishbowl_1000 x4\n3. Apply heat with Heat Gun on LOW\n3. Verify CPU speed with Task Manager\na. Launch Task Manager\nb. Locate CPU speed in the Performance Tab\nc. VERIFY - CPU speed is greatly reduced (<1.0GHz) before thermal shutdown occurs when temp is 45C-52C",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM083",
+      "testName": "Soft Shutdown due to heat",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Slowly apply heat until unit hibernates. Point heat to top right - back corner- of screen (54C)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM084",
+      "testName": "Hard Shutdown due to heat",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Quickly apply heat until unit turns off. Point heat to top right - back corner- of screen (56C)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM085",
+      "testName": "Wont turn on due to heat/Thermal ICON",
+      "category": "Firmware",
+      "subCategory": "Thermal Testing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "After Shutdown from heat, turning on should display temp icon and shut down",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM086",
+      "testName": "Power Button - S0 to CS",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Press Power Button from S0 brings system to CS",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM087",
+      "testName": "Power Button - CS to S0",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Press Power Button from CS brings system to S0",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM088",
+      "testName": "Power Button - S0 shutdown slider",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Press Power Button from S0 brings up system shutdown slider",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM089",
+      "testName": "Power Button - S4/S5 to S0",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Press Power Button from S4/S5 brings system to S0",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM090",
+      "testName": "Power Button - CS to S5",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Press Power Button from CS brings system to S5",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM091",
+      "testName": "Power Button - S0 to S5",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Press Power Button from S0 brings system to S5",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM092",
+      "testName": "Volume Up + Power Button on boot",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Volume Up + Power Button on boot enters UEFI",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM093",
+      "testName": "Volume Down + Power Button on boot",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Volume Down + Power Button on boot enumerates USB device",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM094",
+      "testName": "Volume Up button in S0",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Volume up button in S0 turns volume up and displays volume overlay",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM095",
+      "testName": "Volume Down button in S0",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": "",
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Volume down button in S0 turns volume up and displays volume overlay",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM096",
+      "testName": "Vol+ Button - Single press",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify pressing Vol+ Button increases the volume by one increment",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM098",
+      "testName": "Vol+ Button - Hold",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify press and hold Vol+ Button sec increases the volume repeatedly",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM099",
+      "testName": "Vol- Button - Hold",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify press and hold Vol- Button sec decreases the volume repeatedly",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM100",
+      "testName": "Surface Laptops - Windows + Printscreen",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Power Button + Vol+ = Screen Capture - Paste in MSPaint to verfify screen capture",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "SAM101",
+      "testName": "Power Button and Vol-",
+      "category": "Firmware",
+      "subCategory": "Button Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro", "Laptop", "Book", "Go"],
+      "driverTags": ["EC", "SAM", "DPTF"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Power Button and Vol- = Security UI screen (same as pressing Ctrl-Alt-Del)",
+          "passFailCriteria": ""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": []
+  }
+}

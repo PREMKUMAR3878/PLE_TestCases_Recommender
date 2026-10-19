@@ -1,0 +1,1743 @@
+{
+  "testCases": [
+    {
+      "Id": "GRAP001",
+      "testName": "Driver Update (Have disk)",
+      "category": "Graphics",
+      "subCategory": "Plug and Play",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver is updated correctly by using “have disk” method.",
+          "expectedTime": "5 min",
+          "notes": "Do not update driver over the same version. Make note of the previous graphics driver version installed on the DUT from the device manager.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Display Adapters → right click on the display adapter to be tested.\n3. Click on properties → Go to “Driver” tab and select “Update driver”.\n4. Click on “Browse my computer for driver software”.\n5. Click on “Let me pick from a list of available drivers on my computer” and then click on “Have disk”.\n6. Browse to the location of the graphics driver to be tested and chose the *.inf file. The driver should start to be installed.\n7. After the driver is installed, check if the correct version of graphics driver and audio driver are installed, reboot the system.\n8. Right click on desktop and see if there is any shortcut added in the menu (for Intel or Nvidia GFX drivers). There shouldn’t be any shortcut or add-on added.\n9. Click on “Start” and verify there are not any programs added for the GFX adapter(s) installed.\n10. Verify there are not icons added in the bottom right side of the taskbar.\n11. Check task manager is not showing new processes or services related with Nvidia/Intel GFX after installation.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen\nb) There are visual anomalies, BSOD, hangs while installing the GFX driver."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP002",
+      "testName": "Driver Update (PNPUTIL)",
+      "category": "Graphics",
+      "subCategory": "Plug and Play",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver is updated correctly by using “pnputil.exe”.",
+          "expectedTime": "5 min",
+          "notes": "Do not update driver over the same version. Make note of the previous graphics driver version installed on the DUT from the device manager.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Open a CMD as admin and go to the location of the GFX driver to be installed.\n3. Run “pnputil.exe -i -a *.inf”\n4. This will install the graphics driver along with all the components required. The driver should start to be installed.\n5. After the driver is installed, check if the correct version of graphics driver and audio driver are installed, reboot the system.\n6. Right click on desktop and see if there is any shortcut added in the menu (for Intel or Nvidia GFX drivers). There shouldn’t be any shortcut or add-on added.\n7. Click on “Start” and verify there are not any programs added for the GFX adapter(s) installed.\n8. Verify there are not icons added in the bottom right side of the taskbar.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen\nb) There are visual anomalies, BSOD, hangs while installing the GFX driver."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP003",
+      "testName": "Device Manager Detection",
+      "category": "Graphics",
+      "subCategory": "Plug and Play",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the device manager reports properly the Graphics driver version installed.",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters.\n4. Verify the driver installed does not have exclamation marks.\n5. Right click on the display adapter and select properties.\n6. Go to “Driver” tab and verify the Graphics driver version shown matches with the Graphics driver under test.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP004",
+      "testName": "Driver Uninstall",
+      "category": "Graphics",
+      "subCategory": "Plug and Play",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver under test is uninstalled properly without any issues.",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters.\n4. Verify the driver installed is not banged out.\n5. Right click on the display adapter and select “Uninstall device”. Make sure to check “Delete the driver software for this device” as well.\n6. Make sure the driver is uninstalled and there are not any visual anomalies.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Black screen is maintained after graphics driver is uninstalled.\nc) BSOD, Hang are seen after uninstalling the Graphics driver."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP005",
+      "testName": "Driver Disable/Enable",
+      "category": "Graphics",
+      "subCategory": "Plug and Play",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver boots successfully when driver verifier is enabled.",
+          "expectedTime": "5 min",
+          "notes": "This test is part of TOAST and is executed when running the TOAST shortcut from desktop.",
+          "detailedSteps": "To run this test as a stand-alone test: 1. Setup the DUT with the Base OS image, software and firmware required. 2. Install the Graphics driver under test by any method. 3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out. 4. Copy “GfxAutoTool” folder from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\HLK_Tests (or ASE equivelent) 5. Open a CMD as admin and run: \"GfxAutotool.exe -disableenable\" 6. The test will disable and enable the Graphics drivers detected and then generate a log file in the TestResults folder. 7. See the log file in GFXAutoTool\\TestResults\\disableenable-<timestamp>.xml, at the bottom of the results.",
+          "manualScenario": "If the automated test is unavailable, please run the test manually following the next steps: 1. Setup the DUT with the Base OS image, software and firmware required. 2. Enable driver verifier: Search “Verifier” on taskbar and click on the application → Create Standard Settings → Select driver from a list → choose the Graphics driver under test. Driver should be either Nvidia (nvlddmkm.sys) AMD (Unnnnnn.inf) Qualcomm (qcdxkm8180.inf) or Intel (igdkmd64.sys). Reboot the system. 3. Install the Graphics driver under test by any method. 4. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out. 5. Right click on the display adapter and select “Disable device”. Reboot the system if it is required. There shouldn’t be any BSOD/hangs/TDRs. 6. Enable the graphics driver again. Reboot the system if it is required. Make sure the driver is enabled and there are not any BSOD/hangs/TDRs. 7. Disable Driver Verifier: In Driver Verifier Manager select “Delete existing settings” and reboot the system.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The log file shows a fail.\n\nManual: a) The expected behavior mentioned in the procedure is not seen. b) BSOD, Hang are seen after disabling the Graphics driver."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP006",
+      "testName": "Driver verifier",
+      "category": "Graphics",
+      "subCategory": "Plug and Play",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver boots successfully when driver verifier is enabled.",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Enable driver verifier: Search “Verifier” on taskbar and click on the application → Create Standard Settings → Select driver from a list → choose the Graphics driver under test. Driver should be either Nvidia (nvlddmkm.sys) AMD (Unnnnnn.inf) Qualcomm (qcdxkm8180.inf) or Intel (igdkmd64.sys). Reboot the system.\n3. Install the Graphics driver under test by any method.\n4. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n5. Right click on the display adapter and select “Disable device”. Reboot the system if it is required. There shouldn’t be any BSOD/hangs/TDRs.\n6. Enable the graphics driver again. Reboot the system if it is required. Make sure the driver is enabled and there are not any BSOD/hangs/TDRs.\n7. Disable Driver Verifier: In Driver Verifier Manager select “Delete existing settings” and reboot the system.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, Hang are seen after disabling the Graphics driver."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP007",
+      "testName": "External Single Display support",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "Dock", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver change the screen to a single display support when an external monitor is connected.",
+          "expectedTime": "5 min",
+          "notes": "Using a Surface Dock, the External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Connect an external monitor (non-4K).\na. Using USB-C connector\nb. Using Surflink connector\n5. Right click on desktop → Display Settings and change the display configuration to show only the external monitor. Make sure the screen is changed to external monitor and no TDR/BSOD are seen.\n6. Unplug the external monitor. Make sure the image is back to the built-in monitor and there are not TDR/BSOD.\n7. Repeat step 4 to 6 using a 4K monitor.\n8. Repeat steps 4 to 7 using a Surface Dock.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, TDR, Hang are seen while changing display configurations."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP008",
+      "testName": "External Dual Display support (Clone)",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "Dock", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver can change the screen to Dual display clone configuration when an external monitor is detected.",
+          "expectedTime": "5 min",
+          "notes": "Using a Surface Dock, the External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Connect an external monitor (non-4K).\na. Using USB-C connector\nb. Using Surflink connector\n5. Right click on desktop → Display Settings and change the display configuration to duplicate the displays. Make sure the configuration is changed accordingly and no TDR/BSOD are seen.\n6. Unplug the external monitor. Make sure the image is back to the built-in monitor and there are not TDR/BSOD.\n7. Repeat step 4 to 6 using a 4K monitor.\n8. Repeat steps 4 to 7 using a Surface Dock.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, TDR, Hang are seen while changing display configurations."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP009",
+      "testName": "External Dual Display support (Extended)",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "Dock", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver can change the screen to Dual display extended configuration when an external monitor is detected.",
+          "expectedTime": "5 min",
+          "notes": "Using a Surface Dock, the External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Connect an external monitor (non-4K).\na. Using USB-C connector\nb. Using Surflink connector\n5. Right click on desktop → Display Settings and change the display configuration to extend the displays. Make sure the configuration is changed accordingly and no TDR/BSOD are seen.\n6. Unplug the external monitor. Make sure the image is back to the built-in monitor and there are not TDR/BSOD.\n7. Repeat step 4 to 6 using a 4K monitor.\n8. Repeat steps 4 to 7 using a Surface Dock.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, TDR, Hang are seen while changing display configurations."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP010",
+      "testName": "Brightness check",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics change brightness properly.",
+          "expectedTime": "5 min",
+          "notes": "This test is part of TOAST and is executed when running the TOAST shortcut from desktop.\nTo run this test as a stand-alone test, do the following:\n1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Copy “GfxAutoTool” folder from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\HLK_Tests (or ASE equivelent)\n5. Open a CMD as admin and run: \"GfxAutotool.exe -brightness\"\n6. The test will disable and enable the Graphics drivers detected and then generate a log file in the TestResults folder.\n7. See the log file in GFXAutoTool\\TestResults\\Brightness-<timestamp>.xml, at the bottom of the results.",
+          "detailedSteps": "",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The log file shows a fail."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP011",
+      "testName": "Ambient Light Sensor check",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics change brightness properly based on the light detected by the ALS (Intel GFX only).",
+          "expectedTime": "5 min",
+          "notes": "The ALS is on the right side next to the camera (the little hole).",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Locate 'Sensor' tool on Microsoft Store, some examples: 'Sensor List', 'Sensor Monitor' or 'Sensors' to name a few available.\n5. Run the sensor diagnostic tool, cover the ambient light sensor (ALS) and wait a couple seconds and verify that the SB% box is refreshed.\n6. Use the light of your cellphone to illuminate the sensor and make sure it goes up to 100%. (you want to see the increase in lumins or however the tool records data)\n7. Change power options to turn off the display and put the computer to sleep in 1 minute. Wait 2 minutes in sleep mode and wake up the system.\n8. Repeat step 3 to make sure the ALS goes up to 100%.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP012",
+      "testName": "Hot plug/unplug power states",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "Dock", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver can change the display configurations and detect/undetected the external display when the system comes back from Sleep/Hibernate.",
+          "expectedTime": "5 min",
+          "notes": "Using a Surface Dock, the External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Send the system to sleep.\n5. While the system is in sleep state, connect an external monitor.\n6. Wake up the system and verify the monitor has been detected and no visual anomalies are seen. If it is necessary, go to display settings and change the display configuration to make sure the monitor was detected.\n7. Send the system to sleep again but this time unplug the external display and wake up the system. Verify the display configuration has been changed to single display and the external display is not detected on Display settings.\n8. Repeat steps 4 to 7 but this time send the system to hibernate.\n9. Repeat steps 4 to 8 using a Surface Dock.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, TDR, Hang are seen while changing display configurations."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP013",
+      "testName": "Plug/Unplug Surface Dock",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "Dock", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the system is detecting properly a Surface Dock and the External displays are detected properly on Hot/Warm/Cold modes.",
+          "expectedTime": "10 min",
+          "notes": "Using a Surface Dock, the External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Cold dock system:\na. Turn off the system.\nb. Attach an external display to dock port and turn on the system.\nc. The external display will be detected and turned on as duplicate mode by default.\nd. Press Windows + P to toggle through Duplicate, extended, second screen only and PC screen only mode.\ne. Open Device Manager and verify there are not any drivers banged out (Yellow exclamation marks).\n5. Warm dock system:\na. Send the system to sleep.\nb. Attach an external display to dock port and wake up the system.\nc. The external display will be detected, and the last display configuration used should be set.\nd. Press Windows + P to toggle through Duplicate, extended, second screen only and PC screen only mode.\ne. Open Device Manager and verify there are not any drivers banged out (Yellow exclamation marks).\n6. Hot dock system:\na. With system turned on connect the dock.\nb. Attach an external display to dock port.\nc. The external display will be detected, and the last display configuration used should be set.\nd. Press Windows + P to toggle through Duplicate, extended, second screen only and PC screen only mode.\ne. Open Device Manager and verify there are not any drivers banged out (Yellow exclamation marks).",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, TDR, Hang are seen while changing display configurations."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP014",
+      "testName": "Display modes",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver is able to change between the different display resolutions on 32bit modes.",
+          "expectedTime": "15 min",
+          "notes": "This test is part of the TOAST tests that can be executed using the “GFX_Smoke_Test.cmd” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Copy “HLK_Tests_XXX” folder (based on the OS you are running) from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\HLK_Tests\n5. Open a CMD as admin and run: ChnDsp.exe -video -NoRawModes -only32bppModes -logAll\n6. The test will change between different display resolutions and a log file will be generated in the same folder.\n7. See the log file ChnDsp.wtl for a pass/fail.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The log file shows a fail."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP015",
+      "testName": "Rotation",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver is able to change between 0, 90, 180 and 270 display rotations.",
+          "expectedTime": "15 min",
+          "notes": "This test is part of the TOAST tests that can be executed using the “GFX_Smoke_Test.cmd” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Copy “HLK_Tests_XXX” folder (based on the OS you are running) from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\HLK_Tests\n5. Open a CMD as admin and run: ChnDsp.exe -rot -logAll\n6. The test will change between different rotations on different resolutions and a log file will be generated in the same folder.\n7. See the log file ChnDspr.wtl for a pass/fail.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The log file shows a fail."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP017",
+      "testName": "Miracast",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify Video and Audio through an External monitor is played as expected when an external monitor is connected via wireless.",
+          "expectedTime": "5 min",
+          "notes": "This test is exclusive to Intel GFX drivers.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Connect an external display through Miracast.\na. Press “Windows” key + K to open the Wireless Displays available.\nb. Look for the Monitor to be connected with Wireless support and click on it. The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.\n5. Play any video located in the folder “xSamples”: \\\\desmo\\wds\\PLE\\Graphics\\Tools\\xSamples\n6. There shouldn’t be any visual anomalies while playing the video.\n7. Change the Display configuration between single mode (built-in display), single mode (wireless display), dual clone mode and extended mode. NOTE: You can do this faster by clicking Win + P and a right bar will be opened with the options to project.\n8. Drag the video between the built-in display and wireless display (when display configuration is in extended mode).",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, TDR, Hang are seen while changing display configurations."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP018",
+      "testName": "AMD Freesync test",
+      "category": "Graphics",
+      "subCategory": "Display Configuration",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": ["SL4-AMD", "SL3-AMD"],
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that scene plays properly without frame stuttering or tearing.",
+          "expectedTime": "5 min",
+          "notes": "Please test this on Surface Laptop 3 with AMD processor only.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Install AMD_Freesync_setup from \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\AMD_FreeSync_setup_0_9_9_8.exe\n5. Turn Test Pattern to ‘ON’ to get red bar to travel across the screen\n6. Turn off AMD Free sync, notice frame stuttering\n7. If so Turn-on AMD Free sync, now there shouldn’t be any visual anomalies (corruption/flickering/TDR) while the scene is playing.\n8. Use <esc> to exit the program when complete",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP020",
+      "testName": "YouTube (Edge Chromium Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to https://www.youtube.com/\n5. Play any video.\n6. While the video is playing do the following:\na. Scroll up and down on the webpage.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n7. Connect an external monitor. Note: The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.\n8. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n9. Change display configuration to single external display and play again a video.\n10. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP021",
+      "testName": "YouTube (Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Google Chrome and go to https://www.youtube.com/\n5. Play any video.\n6. While the video is playing do the following:\na. Scroll up and down on the webpage.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n7. Connect an external monitor. Note: The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.\n8. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n9. Change display configuration to single external display and play again a video.\n10. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP022",
+      "testName": "Netflix (Edge Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to https://www.netflix.com/\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor. Note: The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP023",
+      "testName": "Netflix (Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to https://www.netflix.com/\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor. Note: The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP024",
+      "testName": "Amazon Prime Video (Edge Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to: https://www.amazon.com/Amazon-Video/b?ie=UTF8&node=2858778011\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP025",
+      "testName": "Amazon Prime Video (Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to: https://www.amazon.com/Amazon-Video/b?ie=UTF8&node=2858778011\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP026",
+      "testName": "HBO MAX (Edge Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to: https://play.hbogo.com/page/urn:hbo:page:home\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP027",
+      "testName": "HBO MAX (Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to: https://play.hbogo.com/page/urn:hbo:page:home\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP028",
+      "testName": "Disney+ (Edge Browser) ",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to: https://www.hulu.com/welcome\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP029",
+      "testName": "Disney+ (Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming works properly when different display configurations are used using web browsers.",
+          "expectedTime": "5 min",
+          "notes": "The External display should be set in clone mode by default if this is the first time the Display is connected, otherwise last configuration used will be set.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to: https://www.hulu.com/welcome\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing do the following:\na. Open Task Manager and observe the CPU utilization is ~25% or less during streaming.\nb. Toggle between window mode and full screen mode.\nc. Resize window during playback.\n8. Connect an external monitor.\n9. Change display configuration to extended mode and drag the browser to the external display. Play a video.\n10. Change display configuration to single external display and play again a video.\n11. There shouldn’t be any visual anomalies (corruption/flickering/TDR) while streaming.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP030",
+      "testName": "D3D Coexistence",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver is still working after several cycles of exit/enter Cold state using applications with different DirectX versions.",
+          "expectedTime": "35 min",
+          "notes": "This test is part of the TOAST tests that can be executed using the “GFX_Smoke_Test.cmd” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Copy the folder “TOAST” to DUT (\\\\desmo\\wds\\PLE\\Test Collateral\\Graphics\\Tools\\TOAST).\nNote: For external partners please see your local ..Graphics\\Tools folder.\n4. Verify that there are not minidumps created in C:\\Windows\\LiveKernelReports before running the test.\n5. Run “Pre_setup.cmd” and wait until the software is installed. Reboot the system.\n6. Go to Stress_3D_test folder and Run “Run_D3D_Coexistence.cmd”.\n7. After test finish, check the result of the test in the PowerShell window. Check on Device Manager that the graphics driver under test is still enabled without yellow bang.\n8. Go to C:\\Windows\\LiveKernelReports and verify there are not minidumps generated.\nIf there is a minidump, then it means a TDR was generated during the execution of the test and it should be considered failed.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter.\nc) No BSOD, TDR, Hangs are seen during the execution of the test."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP031",
+      "testName": "3DMark Benchmark (Time Spy - DX12)",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Download and install the latest version of 3DMark: https://benchmarks.ul.com/3dmark/whats-new\nNote: The link to download the complete installer is hidden in the section “How to get the latest version”.\n5. Open 3DMark and click on “Benchmarks” tab.\n6. Select “Time Spy” and click on “Details”.\n7. Click on Custom Run and make sure that Graphics Test 1 & 2 are enabled as well as CPU test. Do not modify any other value and click on “Run Custom”.\n8. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n9. The Benchmark should finish without problems and you should see the table score.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP032",
+      "testName": "3DMark Benchmark (Fire Strike Ultra) - Nvidia Only",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nThis test is exclusive for Nvidia Graphics drivers.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Download and install the latest version of 3DMark: https://benchmarks.ul.com/3dmark/whats-new\nNote: The link to download the complete installer is hidden in the section “How to get the latest version”.\n5. Open 3DMark and click on “Benchmarks” tab.\n6. Select “Fire Strike Ultra” and click on “Details”.\n7. Click on Custom Run and make sure that “Combined test” is enabled and the other tests are disabled. Do not modify any other value and click on “Run Custom”.\n8. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n9. The Benchmark should finish without problems and you should see the table score.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP033",
+      "testName": "3DMark Benchmark (CPU Profile)",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "OEMPanel", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nThis test is exclusive for Intel Graphics drivers.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Download and install the latest version of 3DMark: https://benchmarks.ul.com/3dmark/whats-new\nNote: The link to download the complete installer is hidden in the section “How to get the latest version”.\n5. Open 3DMark and click on “Benchmarks” tab.\n6. Select “Sky Diver” and click on “Details”.\n7. Click on Custom Run and make sure that “Combined test” is enabled and the other tests are disabled. Do not modify any other value and click on “Run Custom”.\n8. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n9. The Benchmark should finish without problems and you should see the table score.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP034",
+      "testName": "3DMark Benchmark (Night Raid)",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Download and install the latest version of 3DMark: https://benchmarks.ul.com/3dmark/whats-new\nNote: The link to download the complete installer is hidden in the section “How to get the latest version”.\n5. Open 3DMark and click on “Benchmarks” tab.\n6. Select “Night Raid” and click on “Details”.\n7. Click on Custom Run and make sure that Graphics Test 1 & 2 are enabled as well as Physics test. Do not modify any other value and click on “Run Custom”.\n8. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n9. The Benchmark should finish without problems and you should see the table score.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP035",
+      "testName": "3DMark Benchmark (Wild Life or Wild Life Extreme(ARM Only))",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "5 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Download and install the latest version of 3DMark: https://benchmarks.ul.com/3dmark/whats-new\nNote: The link to download the complete installer is hidden in the section “How to get the latest version”.\n5. Open 3DMark and click on “Benchmarks” tab.\n6. Select “Night Raid” and click on “Details”.\n7. Click on Custom Run and make sure that “Vulkan” is enabled and the other tests are disabled. Do not modify any other value and click on “Run Custom”.\n8. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n9. The Benchmark should finish without problems and you should see the table score.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP036",
+      "testName": "Unigine Heaven (DX11) Benchmark",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nNote2: Need to locate and install \"Visual C++ 2010 Service Pack 1 Redistributable Package MFC Security Update\" filename: vcredist_x86.exe for this to get past the MSVCP100.dll missing.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\nNote: For hybrid devices if Intel GFX driver is going to be tested, make sure to disable Nvidia GFX driver.\n4. Download and install the latest version of Unigine Heaven: https://benchmark.unigine.com/heav…\n5. Run the Benchmark with default settings and make sure to select API: “DirectX 11” and Tessellation enabled.\n6. When the Benchmark starts press “F9” to start Benchmarking.\n7. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n8. The Benchmark should finish without problems and you should see the table score.\n9. Close the Benchmark.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP037",
+      "testName": "Unigine Valley (DirectX 11) Benchmark",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "5 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nNote2: Need to locate and install \"Visual C++ 2010 Service Pack 1 Redistributable Package MFC Security Update\" filename: vcredist_x86.exe for this to get past the MSVCP100.dll missing.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\nNote: For hybrid devices if Intel GFX driver is going to be tested, make sure to disable Nvidia GFX driver.\n4. Download and install the latest version of Unigine Valley: https://benchmark.unigine.com/val…\n5. Run the Benchmark with default settings and make sure to select API: “DirectX 11”.\n6. When the Benchmark starts press “F9” to start Benchmarking.\n7. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n8. The Benchmark should finish without problems and you should see the table score.\n9. Close the Benchmark.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP039",
+      "testName": "DX9 Cold stress test",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver is still working after several cycles of exit/enter Cold state using DX9 apps.",
+          "expectedTime": "15 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Optional; if necessary to manual copy files: Copy the folder “rthdribl_1_2” to DUT (\\\\desmo\\WDS\\PLE\\Graphics\\Tools\\rthdribl_1_2).\n4. Go to graphictools\\rthdribl_1_2 Run “run.vbs”. The test will loop through cycles of exit/enter D3Cold state\na. Optional if manual copied the files: Run “run.vbs”. The test will loop through cycles of exit/enter D3Cold state.\n5. After test finish, a message box will pop up. Check on Device Manager that the graphics driver under test is still enabled without yellow bang.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP040",
+      "testName": "DX11/12 Cold stress test",
+      "category": "Graphics",
+      "subCategory": "DirectX",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver is still working after several cycles of exit/enter Cold state using DX11/DX12 apps.",
+          "expectedTime": "15 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Optional; if necessary to manual copy files: Copy the folder “Stress_3D_Test” to DUT (\\\\desmo\\wds\\PLE\\Graphics\\Tools\\Stress_3D_Test).\n4. Go to graphictools\\Stress_3D_Test “Run_DX12_Stress.ps1” and click on Run with PowerShell. The test will loop through cycles of exit/enter D3Cold state\na. Optional manual copy if needed: Right click on “Run_DX12_Stress.ps1” and click on Run with PowerShell. The test will loop through cycles of exit/enter D3Cold state\n5. After test finish, check the result of the test in the PowerShell window. Check on Device Manager that the graphics driver under test is still enabled without yellow bang.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP041",
+      "testName": "Furmark",
+      "category": "Graphics",
+      "subCategory": "OpenGL/OpenCL",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver supports OpenGL and no visual anomalies are seen while running Furmark benchmark.",
+          "expectedTime": "5 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Download and Install the latest version of FurMark: https://geeks3d.com/furmark/\na. If Nvidia is the GFX driver under test do the following preset:\ni. Check Fullscreen.\nii. Custom Resolution: Select the Highest resolution supported by the display.\niii. Anti-aliasing: 8X MSAA\niv. Press on Settings:\n1. GPU Temperature alarm: 100 (degC)\n2. Benchmark Duration: 180,000 (ms)\n3. Check “Log GPU Data”\nv. Run Benchmark by pressing “Custom Preset”.\nb. If Intel is the GFX driver under test, click on Preset: 1080 (FHD).\n4. While benchmark is running, look for visual anomalies, Corruptions, TDR, BSOD, Hangs.\n5. After finishing the benchmark, make sure to do not send the score online.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP042",
+      "testName": "Cinebench",
+      "category": "Graphics",
+      "subCategory": "OpenGL/OpenCL",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver supports OpenGL and no visual anomalies are seen while running Cinebench benchmark.",
+          "expectedTime": "5 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Download the latest version of Cinebench:\na. https://www.maxon.net/en/products/cinebench/\n4. Run CINEBENCH_Windows_64_Bit.exe\na. Click on “Run” button to execute OpenGL.\n5. Wait until the benchmark finishes and the score number is shown.\n6. While benchmark is running, look for visual anomalies, Corruptions, TDR, BSOD, Hangs.\n7. After finishing the benchmark, make sure to do not send the score online.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP043",
+      "testName": "Luxmark",
+      "category": "Graphics",
+      "subCategory": "OpenGL/OpenCL",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver supports OpenCL and no visual anomalies are seen while running LuxMark benchmark.",
+          "expectedTime": "5 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Download and Install the latest version of LuxMark:\na. www.luxmark.info/ then go to Downloads (wiki.luxcorerender.org/LuxMark#Binaries)\n4. Run luxmark.exe\na. Select GPUs and accelerators.\nb. From top menu select Scene and run:\ni. Hotel Lobby.\nii. Neumann TLM-102 SE\niii. LuxBall HDR\nNote: For each scene, make sure to select “Benchmark (OpenCL GPUs)” from Mode menu. Usually the Benchmark is paused when a previous benchmark is finished.\n5. Wait until each benchmark finishes and the score number is shown (The remaining time of the benchmark is seen in the bottom of the images).\n6. While benchmark is running, look for visual anomalies, Corruptions, TDR, BSOD, Hangs.\n7. After finishing the benchmark, make sure to do not send the score online.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP044",
+      "testName": "Unigine Heaven (OpenGL) Benchmark",
+      "category": "Graphics",
+      "subCategory": "OpenGL/OpenCL",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nTo run Unigine Heaven/Valley (on ARM) install; Microsoft Visual C++ 2010 SP1 Redistributable Package (x86) https://www.microsoft.com/en-US/download/details.aspx?id=8328",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\nNote: For hybrid devices if Intel GFX driver is going to be tested, make sure to disable Nvidia GFX driver.\n4. Download and install the latest version of Unigine Heaven: https://benchmark.unigine.com/heaven\n5. Run the Benchmark with default settings and make sure to select API: “OpenGL” and Tessellation enabled.\n6. When the Benchmark starts press “F9” to start Benchmarking.\n7. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n8. The Benchmark should finish without problems and you should see the table score.\n9. Close the Benchmark.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP045",
+      "testName": "Unigine Valley (OpenGL) Benchmark",
+      "category": "Graphics",
+      "subCategory": "OpenGL/OpenCL",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "5 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nTo run Unigine Heaven/Valley (on ARM) install; Microsoft Visual C++ 2010 SP1 Redistributable Package (x86) https://www.microsoft.com/en-US/download/details.aspx?id=8328",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\nNote: For hybrid devices if Intel GFX driver is going to be tested, make sure to disable Nvidia GFX driver.\n4. Download and install the latest version of Unigine Valley: https://benchmark.unigine.com/valley\n5. Run the Benchmark with default settings and make sure to select API: “OpenGL”.\n6. When the Benchmark starts press “F9” to start Benchmarking.\n7. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n8. The Benchmark should finish without problems and you should see the table score.\n9. Close the Benchmark.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP046",
+      "testName": "GFXBench Benchmark",
+      "category": "Graphics",
+      "subCategory": "OpenGL/OpenCL",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nNote2: If not testing with ver: 5.01 or 5.05 then you may have issues on AMD processors, Typically with \"Network Error:OK\" or \"Synchronization error\" but may encounter other failures. This is a known issue.\nIf you have concerns, please test with the above known good versions. If the above versions fail, please check for existing bugs and if none exist, raise as bug.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\nNote: For hybrid devices if Intel GFX driver is going to be tested, make sure to disable Nvidia GFX driver.\n4. Download and install the latest version of GFXBench: https://gfxbench.com/benchmark.jsp\n5. Open the Benchmark and click on “Start all” without modifying any settings.\n6. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n7. The Benchmark should finish without problems and you should see the table score.\n8. Close the Benchmark.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP047",
+      "testName": "CompuBench Benchmark",
+      "category": "Graphics",
+      "subCategory": "OpenGL/OpenCL",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphic driver executes the benchmark without any visual anomalies.",
+          "expectedTime": "10 min",
+          "notes": "This test can be executed automatically using the “GFXLauncher.exe” file. Please see section Automated Tools on this document for details how to run the tests.\nNote2: If not testing with ver: 1.5.8 or 1.5.9 then you may have issues on AMD processors, Typically with \"Network Error:OK\" or \"Synchronization error\" but may encounter other failures. This is a known issue.\nIf you have concerns, please test with the above known good versions. If the above versions fail, please check for existing bugs and if none exist, raise as bug.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\nNote: For hybrid devices if Intel GFX driver is going to be tested, make sure to disable Nvidia GFX driver.\n4. Download and install the latest version of CompuBench: https://compubench.com/benchmark.jsp\n5. Open the Benchmark and click on “Start all” without modifying any settings.\n6. While the Benchmark is running, look for visual anomalies TDRs, BSODs, etc.\n7. The Benchmark should finish without problems and you should see the table score.\n8. Close the Benchmark.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP048",
+      "testName": "Driver Verifier power states",
+      "category": "Graphics",
+      "subCategory": "Power Management",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver comes back from sleep successfully when driver verifier is enabled.",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Enable driver verifier: Search “Verifier” on taskbar and click on the application → Create Standard Settings → Select driver from a list → choose the Graphics driver under test.\nThis should be Nvidia (nvlddmkm.sys), AMD (Unnnnnn), Qualcomm (qcdxkm8180,inf) or Intel (igdkmd64.sys). Reboot the system.\n3. Install the Graphics driver under test by any method.\n4. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n5. Send the system to sleep and wait 1 min.\n6. Wake up the system and verify there is not any BSOD, hangs, TDRs.\n7. Repeat steps 4 and 5 but this time send the system to hibernate.\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n8. Disable Driver Verifier: In Driver Verifier Manager select “Delete existing settings” and reboot the system.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, Hang are seen after the system comes back from sleep/hibernate."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP049",
+      "testName": "Continuous Sleep state",
+      "category": "Graphics",
+      "subCategory": "Power Management",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver is not on the Top offenders when the system is on Modern Standby state.",
+          "expectedTime": "12 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Enable driver verifier: Search “Verifier” on taskbar and click on the application → Create Standard Settings → Select driver from a list → choose the Graphics driver under test .\nThis should be Nvidia (nvlddmkm.sys), AMD (Unnnnnn), Qualcomm (qcdxkm8180,inf) or Intel (igdkmd64.sys). Reboot the system.\n3. Install the Graphics driver under test by any method.\n4. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n5. Send the system to sleep and wait 10 min.\n6. Wake up the system and verify there is not any BSOD, hangs, TDRs.\n7. Open a CMD as admin and run the following command: Powercfg.exe /sleepstudy /output “C:\\Users\\<username>\\Desktop\\SleepStudy.html”.\nNote: Change the <username> to the name of the current user on the DUT.\n8. Look into the html file created that the graphics driver is not part of the Top Offenders in the “System Power state: Modern Standby” section.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD, Hang are seen after the system comes back from sleep."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP050",
+      "testName": "Power states (Netflix / Edge Chromium Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to https://www.netflix.com/\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP051",
+      "testName": "Power states (Netflix / Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to https://www.netflix.com/\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP052",
+      "testName": "Power states (Amazon Prime Video / Edge Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to: https://www.amazon.com/Amazon-Video/b?ie=UTF8&node=2858778011\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP053",
+      "testName": "Power states (Amazon Prime Video / Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to: https://www.amazon.com/Amazon-Video/b?ie=UTF8&node=2858778011\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP054",
+      "testName": "Power states (HBO MAX / Edge Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to: https://play.hbomax.com/page/urn:hbo:page:home\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP055",
+      "testName": "Power states (HBO MAX / Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to: https://play.hbomax.com/page/urn:hbo:page:home\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP056",
+      "testName": "Power states (Hulu / Edge Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to: https://www.hulu.com/welcome\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP057",
+      "testName": "Power states (Hulu / Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Chrome and go to: https://www.hulu.com/welcome\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a movie.\n7. While the movie is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP058",
+      "testName": "Video Formats Support (Smoke)",
+      "category": "Graphics",
+      "subCategory": "Video Processing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify video processing support on different formats.",
+          "expectedTime": "15 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Copy “xSamples” folder to the DUT from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\xSamples\n5. Go to Video folder and right-click on “Big_Buck_Bunny_1080p_h264.mov” → Open With → Movies & TV.\n6. Open Task Manager → Performance → and examine the CPU utilization, it should be lower than 10%. Most of the workload should be in the GPU.\n7. Toggle between full screen and window mode for each video clip. There shouldn’t be any TDR, flickering, tearing during playback.\n8. Ensure that all videos listed below play smoothly and without issues via Movies & TV.\na. Big_Buck_Bunny_1080p_h264.mov\nb. GoPro HERO4 The Adventure of Life in 4K 2160p (4k).mp4\nc. Vanilla Sky clip.mkvd. XVid.SouthPark.sample.avi\n9. Play the same videos on Windows Media Player and repeat steps 6 and 7. Make sure the videos are also played without any issues.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        },
+        {
+          "objective": "The test will verify video processing support on different formats.",
+          "expectedTime": "70 min",
+          "notes": "If VID - VIDEO FORMATS SUPPORT (SMOKE) TEST was previously executed using the same configuration, then the video clips used on the smoke test can be omitted for this test.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Copy “xSamples” folder to the DUT from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\xSamples\n5. Go to Video folder and right-click on “Big_Buck_Bunny_1080p_h264.mov” → Open With → Movies & TV → Click Settings icon (the 3 dots) → Autoplay, then click the Full Screen icon.\n6. Open Task Manager → Performance → and examine the CPU utilization, it should be lower than 10%. Most of the workload should be in the GPU.\n7. Toggle between full screen and window mode. There shouldn’t be any TDR, flickering, tearing during playback.\n8. Ensure that all videos play smoothly and without issues via Movies & TV.\na. Big_Buck_Bunny_1080p_h264.mov\nb. cff_tears_of_steel_1080p_24fps_10mbps_1min.mp4\nc. DivX5-Eric_Clapton_with_Mark_Knopfler-Layla.avi\nd. GoPro HERO4 The Adventure of Life in 4K 2160p (4k).mp4\ne. tears_of_steel_1080p_24fps_10mbps.mp4\nf. Tears_Of_Steel_1080p_30fps_10mbps.mp4\ng. Vanilla Sky clip.mkv\nh. XVid.SouthPark.sample.avi\n9. Select 3 random videos (.mp4, .mov, .avi) using Windows Media player, repeat steps 6 and 7 and verify the videos are played correctly.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP059",
+      "testName": "Video Formats Rotation",
+      "category": "Graphics",
+      "subCategory": "Video Processing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "Nvidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify video processing support on different formats.",
+          "expectedTime": "15 min",
+          "notes": "For this test it is not necessary play the whole video as long as all the testing mentioned is done for each video format.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Copy “xSamples” folder to the DUT from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\xSamples\n5. Go to Video folder and right-click on “Big_Buck_Bunny_1080p_h264.mov” → Open With → Movies & TV.\n6. Open Task Manager → Performance → and examine the CPU utilization, it should be lower than 10%. Most of the workload should be in the GPU.\n7. While videoclips are playing, do the following\na. Use mouse pointer and/or fingers to toggle between full screen and window mode.\nb. Rotate between 0°, 90°, 180°, 270°.\ni. Use display settings to rotate ( Landscape, Portrait, Landscape (flipped), Portrait (flipped)).\nii. Rotate physically the display (make sure to detach the base if you are using a Surface Book). Make sure to turn off “Rotation lock” on Display settings.\niii. Enable “Rotation lock” and make sure the screen is not changing when the Display is rotated.\nc. There shouldn’t be any TDR, flickering, tearing during playback.\n8. Ensure that all videos listed below play smoothly and without issues via Movies & TV.\na. Big_Buck_Bunny_1080p_h264.mov\nb. GoPro HERO4 The Adventure of Life in 4K 2160p (4k).mp4\nc. Vanilla Sky clip.mkvd. XVid.SouthPark.sample.avi",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP060",
+      "testName": "Video Stress",
+      "category": "Graphics",
+      "subCategory": "Video Processing",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "Audio", "OEMPanel", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify Graphics driver stability when running videoclips for a prolonged period of time.",
+          "expectedTime": "8 hrs",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Make sure the system is plugged in (AC mode).\n5. Right click on the battery icon in the bottom right side of the task bar and click on “Power options”\n6. Change plan settings → Change the values to “Never” on “Turn off the display” and “Put the computer to sleep” for both On Battery and Plugged in.\n7. Copy “xSamples” folder to the DUT from the following path: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\xSamples\n8. Go to Video folder and right-click on “Tears_Of_Steel_1080p_24fps_10mbps.mp4” → Open With → Movies & TV.\n9. Click Settings icon (the 3 dots) → Repeat, then click the Full Screen icon.\n10. Let the system running during 8 hrs.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The system is not running playing the videoclip after 8 hrs.\nb) BSOD, TDR, Corruptions, Hang are seen.\nc) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP061",
+      "testName": "TDRCheck",
+      "category": "Graphics",
+      "subCategory": "Error Support",
+      "priority": 2,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver support several interrupts without trigger a TDR.",
+          "expectedTime": "15 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Copy “CheckTDR.exe” to DUT (\\\\desmo\\WDS\\PLE\\Graphics\\Tools).\n4. Open a CMD as admin and run the following command: CheckTDR.exe 10\n5. Wait until completion and verify there are not errors shown in the application and there are not TDRs generated in C:\\Windows\\LiveKernelReports",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) BSOD/Hang/TDR are seen while running the test."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP071",
+      "testName": "Capability Check (Able to Run on SLS)",
+      "category": "Graphics",
+      "subCategory": "Hybrid Graphics",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Book", "SLS", "SS2+"],
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Graphics driver support several interrupts without trigger a TDR.",
+          "expectedTime": "3 min",
+          "notes": "This test applies to Surface Book form factor devices only ( Any model ).",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Copy “QueryAdapterInfo.exe” to DUT (\\\\desmo\\WDS\\PLE\\Graphics\\Tools).\n4. Open a CMD as admin and run the following command: QueryAdapterInfo.exe\n5. Examine NV Discrete GPU should have RenderSupported bit set to 1, HybridDiscrete bit set to 1.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) RenderSupported = 0 or HybridDiscrete = 0"
+        }
+      ]
+    },
+    {
+      "Id": "GRAP073",
+      "testName": "Graphics Performance preference (Able to Run on SLS)",
+      "category": "Graphics",
+      "subCategory": "Hybrid Graphics",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Book", "SLS", "SS2+"],
+      "driverTags": ["UEFI", "Graphics", "NVidia", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the NV control panel does not override the Graphics preferences set on Windows Graphics settings.",
+          "expectedTime": "15 min",
+          "notes": "This test applies to Surface Book form factor devices only ( Any model ).",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\nNote: If you do have DXSDK_Jun10 installed go to step 6.\n3. Copy the folder “D3DSamples” to DUT: \\\\desmo\\WDS\\PLE\\Graphics\\Tools\\D3DSamples\n4. Install “dotNetFx35Setup.exe”. Make sure you are connected to internet.\n5. Install “DXSDK_Jun10.exe” and reboot the system.\n6. Right click on desktop and from the menu select “Display settings”\n7. From Display settings go to the bottom and select “Graphics Settings”\n8. Click on browse and go to the following path:\nC:\\Program Files (x86)\\Microsoft DirectX SDK (June 2010)\\Samples\\C++\\Direct3D11\\Bin\\x64\n9. Select NBodyGravityCS11.exe.\n10. On Graphics settings, select application just added and click on “options”.\n11. Select “Power saving” and save.\n12. Using the search box in taskbar, type “DirectX Sample Browser” and Open it.\n13. From the upper left dropdown box select Direct3D 11\n14. Run NBodyGravityCS11 and make sure the Hardware used is: Intel Graphics.\n15. Close the application. Go to Nvidia control panel: Search Control Panel (Desktop App) → View by large icons → NVIDIA Control Panel.\n16. Select “Program Settings” tab → click on Add → Browse → Go to the same path mentioned above and add NBodyGravityCS11.exe\n17. Select application just added and choose “High-performance NVIDIA processor”\n18. Run NBodyGravityCS11 and make sure the Hardware used is: Intel Graphics. Close the application.\n19. Go to Graphics Settings and now select “High performance”\n20. Run NBodyGravityCS11 and make sure the Hardware used is: Nvidia Graphics. Close the application.\n21. Go to NVIDIA Control Panel and select “Integrated Graphics”\n22. Run NBodyGravityCS11 and make sure the Hardware used is: Nvidia Graphics. Close the application.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Any visual anomalies are seen when running the application using a specific GFX adapter."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP080",
+      "testName": "Power states (YouTube / Edge Chromium Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Microsoft Edge and go to https://www.youtube.com/\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a video.\n7. While the video is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "GRAP081",
+      "testName": "Power states (YouTube / Chrome Browser)",
+      "category": "Graphics",
+      "subCategory": "Streaming + PM",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["UEFI", "Graphics", "IPU"],
+      "testScenarios": [
+        {
+          "objective": "The test will verify that video streaming resumes properly after Sleep/Hibernate power states.",
+          "expectedTime": "10 min",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Install the Graphics driver under test by any method.\n3. Go to Device Manager and expand Display adapters. Verify the driver installed is not banged out.\n4. Open Google Chrome and go to https://www.youtube.com/\n5. Sign In using whatever account (if you have a test account, then use it).\n6. Play a video.\n7. While the video is playing send the system to sleep by pressing the physical power button or pressing the power button in the start menu of the bottom left side → Sleep.\n8. Wait 3 minutes and wake up the system. The system should wake up successfully and streaming resumes correctly without any problems.\n9. Now send the system to Hibernate by running the following command as Admin: “Shutdown /h”\nNote: To enable Hibernation, open a CMD as admin and run: “Powercfg.exe -h on”\n10. Wait 3 minutes and turn on the system. The system should resume successfully, and streaming resumes correctly without any problems.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) There are visual anomalies during the execution of the test. (BSOD, TDR, Corruptions, Hang).\nb) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "The following table shows the minimum HW requirements for Graphics testing. Graphics testing shall be executed on each different CPU SKU per device and OS required.",
+    "minimumHardware": [
+      {
+        "item": "4K Monitors",
+        "minimumAmount": 1,
+        "description": "1 per each vendor"
+      },
+      {
+        "item": "1080p monitors",
+        "minimumAmount": 2,
+        "description": "2 Per each vendor to cover scenarios with dual display and tri-display"
+      },
+      {
+        "item": "USB-Ethernet adapter",
+        "minimumAmount": 1,
+        "description": "The recommendation is one per each device to download content in parallel."
+      },
+      {
+        "item": "USB-C - Ethernet adapter",
+        "minimumAmount": 1,
+        "description": "The recommendation is one per each device to download content in parallel. (Used for Surface Go)"
+      },
+      {
+        "item": "Ethernet Cables",
+        "minimumAmount": 1,
+        "description": "The recommendation is one per each device."
+      },
+      {
+        "item": "Surface dock",
+        "minimumAmount": 1,
+        "description": "1 per each vendor"
+      },
+      {
+        "item": "External Non-Surface Keyboard and mouse",
+        "minimumAmount": 1,
+        "description": "1 bundle for each vendor"
+      },
+      {
+        "item": "Surface keyboard type cover",
+        "minimumAmount": 2,
+        "description": "The recommendation is at least two per each model (e.g. 2 for Surface Pro and 2 for Surface Go)"
+      },
+      {
+        "item": "USB 3.0 Hub",
+        "minimumAmount": 2,
+        "description": "The recommendation is at least two per vendor"
+      },
+      {
+        "item": "USB 3.0 Flash Drive",
+        "minimumAmount": 2,
+        "description": "The recommendation is at least two per vendor to install images, copy dump files and logs"
+      },
+      {
+        "item": "3DMark Advanced Edition",
+        "minimumAmount": 1,
+        "description": "1 license for testing purposes"
+      },
+      {
+        "item": "Netflix account",
+        "minimumAmount": 1,
+        "description": "1 account for testing purposes"
+      },
+      {
+        "item": "Hulu Account",
+        "minimumAmount": 1,
+        "description": "1 account for testing purposes"
+      },
+      {
+        "item": "Amazon Prime",
+        "minimumAmount": 1,
+        "description": "1 account for testing purposes. Included with Amazon prime membership"
+      },
+      {
+        "item": "HBO account",
+        "minimumAmount": 1,
+        "description": "1 account for testing purposes"
+      }
+    ],
+    "deviceMatrix": [
+      {
+        "device": "Surface Pro 5",
+        "cpu": "Intel m3-7Y30 @ 1.00GHz",
+        "gpu": "Intel HD Graphics 620",
+        "ram": "4GB",
+        "devId": "PCI\\VEN_8086&DEV_5916&SUBSYS_00261414"
+      },
+      {
+        "device": "Surface Pro 5",
+        "cpu": "Intel i5 - LTE",
+        "gpu": "Intel HD Graphics 620",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_5916&SUBSYS_00261414"
+      },
+      {
+        "device": "Surface Pro 5",
+        "cpu": "Intel i5-7300U @ 2.60GHz",
+        "gpu": "Intel Iris Plus Graphics 640",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_5926&SUBSYS_00261414"
+      },
+      {
+        "device": "Surface Pro 5",
+        "cpu": "Intel i7-7660U @ 2.50GHz",
+        "gpu": "Intel HD Graphics 615",
+        "ram": "4GB",
+        "devId": "PCI\\VEN_8086&DEV_591E&SUBSYS_00261414"
+      },
+      {
+        "device": "Surface Pro 6",
+        "cpu": "Intel i5-8250U @1.60GHz",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00261414"
+      },
+      {
+        "device": "Surface Pro 6",
+        "cpu": "Intel i5-8350U @ 1.70GHz",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00261414"
+      },
+      {
+        "device": "Surface Pro 6",
+        "cpu": "Intel i7-8650U @ 1.90GHz",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00261414"
+      },
+      {
+        "device": "Surface Pro 7",
+        "cpu": "Intel i3 - 1005G1",
+        "gpu": "Intel UHD Graphics",
+        "ram": "4GB",
+        "devId": "PCI\\VEN_8086&DEV_8A56&SUBSYS_00371414"
+      },
+      {
+        "device": "Surface Pro 7",
+        "cpu": "Intel i5 - 1035G4",
+        "gpu": "Intel Iris Plus Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_8A5A&SUBSYS_00371414"
+      },
+      {
+        "device": "Surface Pro 7",
+        "cpu": "Intel i7 - 1065G7",
+        "gpu": "Intel Iris Plus Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_8A52&SUBSYS_00371414"
+      },
+      {
+        "device": "Surface Pro 7+",
+        "cpu": "Intel i3-1115G4 @3.00GHz",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_9A78&SUBSYS_00441414"
+      },
+      {
+        "device": "Surface Pro 7+",
+        "cpu": "Intel i5-1135G7 @2.40GHz",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00441414"
+      },
+      {
+        "device": "Surface Pro 7+",
+        "cpu": "Intel i5-1135G7 LTE",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00441414"
+      },
+      {
+        "device": "Surface Pro 7+",
+        "cpu": "Intel i7-1165G7 @2.80GHz",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00441414"
+      },
+      {
+        "device": "Surface Pro 7+",
+        "cpu": "Intel i7-1165G7 @2.80GHz",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "32GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00441415"
+      },
+      {
+        "device": "Surface Pro 8",
+        "cpu": "Intel i3",
+        "gpu": "Intel UHD Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_9A78&SUBSYS_00461414"
+      },
+      {
+        "device": "Surface Pro 8",
+        "cpu": "Intel i5",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "8/16GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00461414"
+      },
+      {
+        "device": "Surface Pro 8",
+        "cpu": "Intel i7",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "16/32GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00461414"
+      },
+      {
+        "device": "Surface Pro 9",
+        "cpu": "Intel i5",
+        "gpu": "Intel Xe",
+        "ram": "8/16GB",
+        "devId": "PCI\\VEN_8086&DEV_46B3&SUBSYS_00631414"
+      },
+      {
+        "device": "Surface Pro 9",
+        "cpu": "Intel i7",
+        "gpu": "Intel Xe",
+        "ram": "16/32GB",
+        "devId": "PCI\\VEN_8086&DEV_46a8&SUBSYS_00631414"
+      },
+      {
+        "device": "Surface Laptop 2",
+        "cpu": "Intel i5-8250U",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00251414"
+      },
+      {
+        "device": "Surface Laptop 2",
+        "cpu": "Intel i7-8650U",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00251414"
+      },
+      {
+        "device": "Surface Laptop 2",
+        "cpu": "Intel i7-8650U",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00251414"
+      },
+      {
+        "device": "Surface Laptop 3",
+        "cpu": "AMD Ryzen 5 3580U",
+        "gpu": "Radeon™ Vega 9",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_1002&DEV_15D8&SUBSYS_00341414"
+      },
+      {
+        "device": "Surface Laptop 3",
+        "cpu": "AMD Ryzen 7 3780U",
+        "gpu": "Radeon™ RX Vega 11",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_1002&DEV_15D8&SUBSYS_00341414"
+      },
+      {
+        "device": "Surface Laptop 3",
+        "cpu": "Intel i5-1035G7",
+        "gpu": "Intel Iris Plus Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_8A52&SUBSYS_00351414"
+      },
+      {
+        "device": "Surface Laptop 3",
+        "cpu": "Intel i7-1065G7",
+        "gpu": "Intel Iris Plus Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_8A52&SUBSYS_00351414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "AMD Ryzen 5 @2.20GHz",
+        "gpu": "AMD Radeon™ Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_1002&DEV_1636&SUBSYS_00511414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "AMD Ryzen 7 @2.00GHz",
+        "gpu": "AMD Radeon™ Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_1002&DEV_1636&SUBSYS_00511414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "AMD Ryzen 7 @2.00GHz",
+        "gpu": "AMD Radeon™ Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_1002&DEV_1636&SUBSYS_00511414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "Intel i5-1145G7 @2.60GHz",
+        "gpu": "Intel(R) Iris(R) Xe Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00501414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "Intel i5-1135G7 @2.40GHz",
+        "gpu": "Intel(R) Iris(R) Xe Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00501414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "Intel i7-1185G7@3.00GHz",
+        "gpu": "Intel(R) Iris(R) Xe Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00501414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "Intel i7-1185G7@3.00GHz",
+        "gpu": "Intel(R) Iris(R) Xe Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00501414"
+      },
+      {
+        "device": "Surface Laptop 4",
+        "cpu": "Intel i7-1185G7@3.00GHz",
+        "gpu": "Intel(R) Iris(R) Xe Graphics",
+        "ram": "32GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00501414"
+      },
+      {
+        "device": "Surface Laptop 5",
+        "cpu": "13.5\" Intel i5",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "8/16GB",
+        "devId": "PCI\\VEN_8086&DEV_46A8&SUBSYS_00741414"
+      },
+      {
+        "device": "Surface Laptop 5",
+        "cpu": "13.5\" Intel i7",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_46A8&SUBSYS_00741414"
+      },
+      {
+        "device": "Surface Laptop 5",
+        "cpu": "15\" Intel i7",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "8/16/32GB",
+        "devId": "PCI\\VEN_8086&DEV_46A8&SUBSYS_00741414"
+      },
+      {
+        "device": "Surface Book 2",
+        "cpu": "13.5” Intel i5 - 7300U",
+        "gpu": "Intel HD Graphics 620",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_5916&SUBSYS_00271414"
+      },
+      {
+        "device": "Surface Book 2",
+        "cpu": "13.5” Intel i5 - 8350U",
+        "gpu": "Intel HD Graphics 620",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_5914&SUBSYS_20158086"
+      },
+      {
+        "device": "Surface Book 2",
+        "cpu": "13.5” Intel i7 - 8650U",
+        "gpu": "NVIDIA GeForce GTX 1050",
+        "ram": "8/16GB",
+        "devId": "PCI\\VEN_10DE&DEV_1C8D&SUBSYS_00241414"
+      },
+      {
+        "device": "Surface Book 2",
+        "cpu": "13.5” Intel i7 - 8650U",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "8/16GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00271414"
+      },
+      {
+        "device": "Surface Book 2",
+        "cpu": "15” Intel i7 - 8350U",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00281414"
+      },
+      {
+        "device": "Surface Book 2",
+        "cpu": "15” Intel i7 - 8650U",
+        "gpu": "NVIDIA GeForce GTX 1060",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_10DE&DEV_1C20&SUBSYS_00241414"
+      },
+      {
+        "device": "Surface Book 2",
+        "cpu": "15” Intel i7 - 8650U",
+        "gpu": "Intel UHD Graphics 620",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_5917&SUBSYS_00281414"
+      },
+      {         
+        "device": "Surface Book 3",         
+        "cpu": "Intel i5-1035G7",         
+        "gpu": "Intel Iris Plus",         
+        "ram": "8GB",         
+        "devId": "PCI\\VEN_8086&DEV_8A52&SUBSYS_00431414"       
+      },       
+      {         
+       "device": "Surface Book 3",         
+       "cpu": "Intel i7-1065G7",         
+       "gpu": "NVIDIA GeForce GTX 1650",         
+       "ram": "16GB",         
+       "devId": "PCI\\VEN_10DE&DEV_1F91&SUBSYS_00321414",         
+       "notes": "Hybrid - Paired with Intel Iris Plus Graphics (PCI\\VEN_8086&DEV_8A52&SUBSYS_00431414)"       
+      },       
+      {         
+       "device": "Surface Book 3",         
+       "cpu": "Intel i7-1065G7",         
+       "gpu": "Intel Iris Plus Graphics",         
+       "ram": "16GB",         
+       "devId": "PCI\\VEN_8086&DEV_8A52&SUBSYS_00431414",         
+       "notes": "iGPU for hybrid configuration"       
+      },       
+      {         
+        "device": "Surface Book 3",         
+        "cpu": "Intel i7-1065G7",         
+        "gpu": "NVIDIA GeForce GTX 1660 Ti",         
+        "ram": "32GB",         
+        "devId": "PCI\\VEN_10DE&DEV_2191&SUBSYS_00321414"       
+      },       
+      {         
+        "device": "Surface Book 3",         
+        "cpu": "Intel i7-1065G7",         
+        "gpu": "NVIDIA Quadro RTX 3000",         
+        "ram": "32GB",         
+        "devId": "PCI\\VEN_10DE&DEV_1F36&SUBSYS_00321414"
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "cpu": "Intel i5-11300H",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00451414"
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "cpu": "Intel i7-11370H",
+        "gpu": "NVIDIA GeForce RTX 3050 Ti",
+        "ram": "16/32GB",
+        "devId": "PCI\\VEN_10DE&DEV_25A0&SUBSYS_00541414"
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "cpu": "Intel i7-11370H",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00451414"
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "cpu": "Intel i7-11370H",
+        "gpu": "NVIDIA RTX A2000",
+        "ram": "32GB",
+        "devId": "PCI\\VEN_10DE&DEV_25B8&SUBSYS_00541414"
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "cpu": "Intel i7-11370H",
+        "gpu": "Intel Iris Xe Graphics",
+        "ram": "",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00451414"
+      },
+      {
+        "device": "Surface Studio 2",
+        "cpu": "Intel i7 - 7820HQ",
+        "gpu": "NVIDIA GeForce GTX 1060",
+        "ram": "16GB",
+        "devId": "PCI\\VEN_10DE&DEV_1C23&SUBSYS_00201414"
+      },
+      {
+        "device": "Surface Studio 2",
+        "cpu": "Intel i7 - 7820HQ",
+        "gpu": "NVIDIA GeForce GTX 1070",
+        "ram": "32GB",
+        "devId": "PCI\\VEN_10DE&DEV_1BA2&SUBSYS_00201414"
+      },
+      {
+        "device": "Surface Studio 2+",
+        "cpu": "Intel i7-11370H",
+        "gpu": "NVIDIA GeForce RTX 3060",
+        "ram": "32GB",
+        "devId": "PCI\\VEN_10DE&DEV_2521&SUBSYS_00621414"
+      },
+      {
+        "device": "Surface Go",
+        "cpu": "Intel 4415Y",
+        "gpu": "Intel HD Graphics 615",
+        "ram": "4GB",
+        "devId": "PCI\\VEN_8086&DEV_591E&SUBSYS_1182152D"
+      },
+      {
+        "device": "Surface Go",
+        "cpu": "Intel 4415Y",
+        "gpu": "Intel HD Graphics 615",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_591E&SUBSYS_1182152D"
+      },
+      {
+        "device": "Surface Go 2",
+        "cpu": "Intel 4425Y",
+        "gpu": "Intel UHD Graphics 615",
+        "ram": "4GB",
+        "devId": "PCI\\VEN_8086&DEV_591C&SUBSYS_1237152D"
+      },
+      {
+        "device": "Surface Go 2",
+        "cpu": "Intel Core m3-8100Y",
+        "gpu": "Intel UHD Graphics 615",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_591C&SUBSYS_1237152D"
+      },
+      {
+        "device": "Surface Go 3",
+        "cpu": "Intel Pentium Gold 6500Y",
+        "gpu": "Intel UHD Graphics 615",
+        "ram": "4/8GB",
+        "devId": "PCI\\VEN_8086&DEV_591C&SUBSYS_1339152D"
+      },
+      {
+        "device": "Surface Go 3",
+        "cpu": "Intel i3-10100Y",
+        "gpu": "Intel UHD Graphics 615",
+        "ram": "4/8GB",
+        "devId": "PCI\\VEN_8086&DEV_591C&SUBSYS_1339152D"
+      },
+      {
+        "device": "Surface Laptop Go",
+        "cpu": "Intel Core i5 - 1035G1",
+        "gpu": "Intel UHD Graphics",
+        "ram": "8GB",
+        "devId": "PCI\\VEN_8086&DEV_8A56&SUBSYS_00471414"
+      },
+      {
+        "device": "Surface Laptop Go 2",
+        "cpu": "Intel Core i5 - 1135G7",
+        "gpu": "Intel Iris Xe",
+        "ram": "4/8/16GB",
+        "devId": "PCI\\VEN_8086&DEV_9A49&SUBSYS_00601414"
+      },
+      {
+        "device": "Surface Laptop SE",
+        "cpu": "Intel Celeron",
+        "gpu": "Intel UHD Graphics",
+        "ram": "4/8GB",
+        "devId": "PCI\\VEN_8086&DEV_3185&SUBSYS_00591414"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+;
+; SurfaceUEFI
+; 18.104.143.0
+; Copyright (C) Microsoft Corporation. All Rights Reserved.
+;
+[Version]
+Signature="$WINDOWS NT$"
+Class=Firmware
+ClassGuid={f2e7dd72-6468-4e36-b6f1-6488f42c1b52}
+Provider=%Provider%
+DriverVer=06/25/2026,18.104.143.0
+PnpLockdown=1
+CatalogFile=SurfaceUEFI.cat
+
+[Manufacturer]
+%MfgName% = Firmware,NTamd64.10.0...17134
+
+[Firmware.NTamd64.10.0...17134]
+%Firmware0Desc% = Firmware0_Install,UEFI\RES_{6eabc40b-b04c-49e6-9f24-d0a64abee828}
+%Firmware1Desc% = Firmware1_Install,UEFI\RES_{463811be-2322-426d-8039-684d71983796}
+
+[Firmware0_Install.NT]
+CopyFiles = Firmware0_CopyFiles
+
+[Firmware0_CopyFiles]
+SurfaceUEFI_18.104.143_0.bin
+SurfaceUEFI_18.104.143_0_integrity.bin
+
+[Firmware0_Install.NT.Services]
+AddService=,2
+
+[Firmware0_Install.NT.Hw]
+AddReg = Firmware0_AddReg
+
+[Firmware0_AddReg]
+HKR,,FirmwareId,,{6eabc40b-b04c-49e6-9f24-d0a64abee828}
+HKR,,FirmwareVersion,%REG_DWORD%,0x1200688F
+HKR,,FirmwareFilename,,%13%\SurfaceUEFI_18.104.143_0.bin
+HKR,,FirmwareIntegrityFilename,,%13%\SurfaceUEFI_18.104.143_0_integrity.bin
+
+[Firmware1_Install.NT]
+CopyFiles = Firmware1_CopyFiles
+
+[Firmware1_CopyFiles]
+SurfaceUEFI_18.104.143_1.bin
+SurfaceUEFI_18.104.143_1_integrity.bin
+
+[Firmware1_Install.NT.Services]
+AddService=,2
+
+[Firmware1_Install.NT.Hw]
+AddReg = Firmware1_AddReg
+
+[Firmware1_AddReg]
+HKR,,FirmwareId,,{463811be-2322-426d-8039-684d71983796}
+HKR,,FirmwareVersion,%REG_DWORD%,0x1200688F
+HKR,,FirmwareFilename,,%13%\SurfaceUEFI_18.104.143_1.bin
+HKR,,FirmwareIntegrityFilename,,%13%\SurfaceUEFI_18.104.143_1_integrity.bin
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+SurfaceUEFI_18.104.143_0.bin = 1
+SurfaceUEFI_18.104.143_0_integrity.bin = 1
+SurfaceUEFI_18.104.143_1.bin = 1
+SurfaceUEFI_18.104.143_1_integrity.bin = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[Strings]
+; localizable
+DiskName      = "Firmware Update"
+Provider      = "Surface"
+MfgName       = "Microsoft"
+Firmware0Desc = "Surface UEFI"
+Firmware1Desc = "Surface UEFI"
+
+; non-localizable
+DIRID_WINDOWS = 10
+REG_DWORD     = 0x00010001

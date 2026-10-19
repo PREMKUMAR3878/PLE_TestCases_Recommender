@@ -1,0 +1,1454 @@
+{
+  "_comment": "objective,expectedTime,notes, passFailCriteria and priority not available",
+  "testCases": [
+    {
+      "Id": "Pen001",
+      "testName": "Pen Pairing LED - Pairing",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Verify pen is not paired to device.\n2. Press and hold the tail button for 5+ seconds.\nVerify: The pairing LED blinks slowly (Pairing Mode).",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen002",
+      "testName": "Settings Menu Pairing",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Go to Settings -> Devices -> Bluetooth and other devices.\n2. Select 'Add Bluetooth or other device'.\n3. Select Bluetooth.\n4. Select the pen to pair.\nVerify: The pen pairs.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen003",
+      "testName": "Bluetooth and Other Devices - Battery Percentages ",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pen paired.\nVerify: Battery is displayed with connected pen.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen004",
+      "testName": "Pen Pairing LED - Already Paired",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Use a pen that is already paired to the device. \n2. Press and hold the tail button for 5 seconds.\nVerify: Pairing mode not entered (LED does not continuously blink slowly)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen005",
+      "testName": "Pair a Second Pen",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect 2 pens to the same host.\\n2. Click the tail button of each pen.\\nVerify: Both pens open default application. (Settings\\Devices\\Pen & Windows Ink\\Pen shortcuts)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen006",
+      "testName": "Unpairing the Pen",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair a pen to the host.\n2. Go to Settings -> Devices -> Bluetooth and other devices.\n3. Select the Surface Pen under \"Mouse, Keyboard, Pen\".\n4. Select Remove Device.\nVerify: The pen is removed.\n5. Press the pen tail button.\nVerify: Inkspace does Not Open.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen007",
+      "testName": "First Run Experience",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Remove pen via Bluetooth menu.\n2. win+R to open Run and enter:  ms-surface-app:penfuse?reset\n3. Touch pen tip to screen.\nVerify: First Run Experience launches.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0078",
+      "testName": "Verify Pen Capabilites during setup",
+      "category": "Accessories",
+      "subCategory": "Pen Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "During the OOBE setup\nI. During the OOBE, you'll be using the Pen next.\nII. Another screen will come up.\nIII. Use your Pen and tap on an action button on the screen to follow the prompt.\nIV. Verify using Pen capabilities during OOBE setup responds correctly.\n(Pen pairing is not required during this step)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen008",
+      "testName": "Blade stays connected through sleep/wake (CS)",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "After wake from sleep.\nVerify: keyboard and touchpad functionality and that pen is still paired and charging in dock.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen009",
+      "testName": "Blade stays connected through hibernate/wake",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "After wake from hibernate.\nVerify: keyboard and touchpad functionality and that pen is still paired and charging in dock.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0010",
+      "testName": "Blade stays connected through restart",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "After system restart.\nVerify: keyboard and touchpad functionality and that pen is still paired and charging in dock.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0011",
+      "testName": "Blade stays connected through shutdown/bootup",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "After system bootup.\nVerify: keyboard and touchpad functionality and that pen is still paired and charging in dock.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0017",
+      "testName": "Screen Locked - No Loose coupling",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is not paired to host device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen -> Remove device.)\n1. Lock screen. (Start Menu -> Account symbol -> Lock. Or Win+L)\n2. Tap and drag on locked screen with pen tip.\n3. Enter password to unlock screen to desktop.\nVerify: Pen is still not connected to host device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0018",
+      "testName": "Screen Locked - No Pairing via WLC blade dock",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is not paired to host device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen -> Remove device.)\n1. Lock screen. (Start Menu -> Account symbol -> Lock. Or Win+L)\n2. Dock pen in keyboard WLC pocket. Wait 5 seconds.\n3. Remove pen from keyboard pocket.\n4. Unlock screen.\nVerify: Pen is still not paired to host device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0019",
+      "testName": "Pen WLC Blade Docked - Tail Button",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is paired to host device. (Settings -> Bluetooth and other device settings.)\n1. Single tail button press. Verify Whiteboard or chosen application opens.\n2. Dock Pen. (Place in keyboard's WLC pen pocket.)\n3. Single tail button press while docked.\nVerify: Application does not open while pen is docked.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0020",
+      "testName": "Screen Locked -  No Pairing via built in charger",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is not paired to host device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen -> Remove device.)\n1. Lock screen. (Start Menu -> Account symbol -> Lock. Or Win+L)\n2. Dock pen to built in charger. Wait 5 seconds.\n3. Remove pen from built in charger.\n4. Unlock screen.\nVerify: Pen is still not paired to host device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0079",
+      "testName": "Pen built in charger - Loose Coupling",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is not paired to host device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen -> Remove device.)\n2. Dock pen to built in charger. Wait 10 seconds.\n3. Remove pen from built in charger.\nVerify: Pen has paired to the device. (Settings -> Bluetooth and other device settings -> Bluetooth Pen.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0080",
+      "testName": "Pen built in charger Docked - Charging",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is paired to host device and note battery % of pen (must be less than 100%). (Settings -> Bluetooth and other device settings.)\n1. Dock Pen to built in charger.\n2. Wait 3-5 minutes.\n3. Remove pen from charging base, tail button to wake and refresh battery %.\nVerify: Pen battery % increased.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0021",
+      "testName": "Pen built in charger Docked - Tail Button",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is paired to host device. (Settings -> Bluetooth and other device settings.)\n1. Single tail button press. Verify Whiteboard or chosen application opens.\n2. Dock Pen to built in charger.\n3. Single tail button press while docked.\nVerify: Application does not open while pen is docked.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0022",
+      "testName": "Pen Docked USB-C charging base - Tail Button",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is paired to host device. (Settings -> Bluetooth and other device settings.)\n1. Single tail button press. Verify Whiteboard or chosen application opens.\n2. Dock Pen. (USB-C charging base.)\n3. Single tail button press while docked.\nVerify: Application does not open while pen is docked.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0023",
+      "testName": "Pen Docked USB-C charging base - Charging",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Verify: Pen is paired to host device and note battery % of pen (must be less than 100%). (Settings -> Bluetooth and other device settings.)\n1. Dock Pen. (USB-C charging base.)\n2. Wait 3-5 minutes.\n3. Remove pen from charging base, tail button to wake and refresh battery %.\nVerify: Pen battery % increased.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0024",
+      "testName": "Loosely Coupled (Pen tip on screen)",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Loosely couple pen to host device via pen tip to screen interaction. Verify pen is paired. (Settings -> Bluetooth and other device settings.)\\nVerify: Tail button press launches chosen application on host device. (Settings\\Devices\\Pen & Windows Ink\\Pen shortcuts)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0025",
+      "testName": "Loosely Coupled (Pen tip on screen) - Multiple devices",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Loosely couple pen to host device via pen tip to screen interaction. Verify pen is paired. (Settings -> Bluetooth and other device settings.)\\nVerify: Tail button press launches chosen application on host device. (Settings\\Devices\\Pen & Windows Ink\\Pen shortcuts)\\n2. On a second compatible host device, simple pair pen via pen tip to screen interaction. Verify pen is paired with second host device.\\nVerify: Tail button press launches chosen application on second host device.\\n3. Use pen tip to interact with screen of first host device.\\nVerify: Tail button press launches chosen application on first host device again.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0026",
+      "testName": "Loosely Coupled (WLC blade dock)",
+      "category": "Accessories",
+      "subCategory": "Loose Coupling & Pen Charging",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Attach Blade with WLC dock slot.\n2. Place Keyphus unpaired pen into charging dock.\nVerify: Pen loosely couples to host device within 5 seconds. (Settings -> Bluetooth and other device settings.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0027",
+      "testName": "Long Tail button press",
+      "category": "Accessories",
+      "subCategory": "Haptic Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With pen connected, hold tail button for 3 seconds\nVerify: Haptic vibration felt",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0028",
+      "testName": "Removing from charging pocket",
+      "category": "Accessories",
+      "subCategory": "Haptic Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With pen connected, seat pen in wlc charging pocket of blade (or usbc charger).\n2. Remove pen.\nVerify: Haptic vibration felt",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0029",
+      "testName": "Removing from built in charger",
+      "category": "Accessories",
+      "subCategory": "Haptic Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With pen connected, seat pen in built in charger.\n2. Remove pen.\nVerify: Haptic vibration felt",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0030",
+      "testName": "Tactile pressure sensitivity",
+      "category": "Accessories",
+      "subCategory": "Haptic Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Ink with various pressure in Whiteboard or Snippting tool app\nVerify: Haptics are felt stronger with more pen pressure while inking",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0031",
+      "testName": "Tactile On/Off",
+      "category": "Accessories",
+      "subCategory": "Haptic Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pen & Windows Ink Settings -> Tactile signal -> On\nVerify: Vibrations felt while actively drawing a line in Whiteboard & Snipping Tool\n2. Pen & Windows Ink Settings -> Tactile signal -> Off\nVerify: No Vibrations felt while actively drawing a line in Whiteboard & Snipping Tool",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0032",
+      "testName": "Tactile Intensity",
+      "category": "Accessories",
+      "subCategory": "Haptic Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pen & Windows Ink Settings -> Tactile signal -> Intensity slider set to minumum\nVerify: No vibrations felt while actively drawing a line in Whiteboard & Snipping Tool\n2. Pen & Windows Ink Settings -> Tactile signal -> Intensity slider set to minumum\nVerify: Strong vibrations felt while actively drawing a line in Whiteboard & Snipping Tool",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0033",
+      "testName": "Left Click - Single Tap",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Use the pen tip to single tap on some desktop items.\nVerify: The items tapped are left click selected.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0034",
+      "testName": "Right Click - Button",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Press and hold the button on the side of the pen.\n2. Tap the pen tip to the screen.\nVerify: The right click context menu appears.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0035",
+      "testName": "Right Click - Tap and Hold",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Press and hold pen tip on desktop.\nVerify: The right click context menu appears.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0036",
+      "testName": "Tracking - Pen Tip",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Move the pen tip everywhere on the screen.\n2. All edges, corners, through center, etc.\nVerify: Smooth, accurate tracking everywhere.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0037",
+      "testName": "Hover - Pen Tip",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Hover the pen tip 1-2 mm above the screen.\n2. Move the pen around maintaining the hovering distance.\nVerify: The on screen cursor tracks the pen tip.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0038",
+      "testName": "Tracking - Eraser",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Move the pen eraser everywhere on the screen.\n2. All edges, corners, through center, etc.\nVerify: Smooth, accurate tracking everywhere.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0039",
+      "testName": "Hover - Eraser",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Hover the pen eraser a couple of mm above the screen.\n2. Move the pen around maintaining the hovering distance.\nVerify: The on screen cursor tracks the pen tip.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0040",
+      "testName": "Surface App - Battery",
+      "category": "Accessories",
+      "subCategory": "Surface App",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the pen to the device.\n2. Open Surface App. \n3. Select Battery Level tab.\nVerify: The Pen, Battery Level and Serial Number are visible.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0041",
+      "testName": "Surface App - Pen Pressure - Ballpoint Pen Tool",
+      "category": "Accessories",
+      "subCategory": "Surface App",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Surface App.\n2. Select Pen Tab -> ballpoint pen tool and draw a line in the test area.\n3. Set pressure sensitivity slider to Light and draw in the test area.\nVerify: Lines drawn are thiner than the first line drawn, and become thicker with more pressure applied while drawing.\n4. Set Presure sensitivity slider to Heavy and draw in the test area\nVerify: Lines drawn are thicker than the first line drawn.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0042",
+      "testName": "Surface App - Pen Pressure - Pencil Tool",
+      "category": "Accessories",
+      "subCategory": "Surface App",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Surface App.\n2. Select Pen Tab -> pencil tool and draw a line in the test area.\n3. Set pressure sensitivity slider to Light and draw in the test area.\nVerify: Lines drawn are thiner than the first line drawn, and become darker with more pressure applied while drawing.\n4. Set Presure sensitivity slider to Heavy and draw in the test area\nVerify: Lines drawn are darker than the first line drawn.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0043",
+      "testName": "Surface App - Parallel Lines",
+      "category": "Accessories",
+      "subCategory": "Surface App",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Surface App.\n2. Select Pen Tab.\n3. Draw in test area many parrallel lines in quick succession.\nVerify: No missed or connected lines.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0044",
+      "testName": "Surface App - Ink and Hover",
+      "category": "Accessories",
+      "subCategory": "Surface App",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Surface App.\n2. Select Pen Tab.\n3. Draw in test area with force then hover over test area with pen.\nVerify: No inking while hovering.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0045",
+      "testName": "Surface App - Erasing",
+      "category": "Accessories",
+      "subCategory": "Surface App",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Surface App.\n2. Select pen tab.\n3. Draw several lines in test area.\n4. Erase the lines using the tail one line at a time.\nVerify: The eraser is precise and can erase single lines at a time.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0046",
+      "testName": "Surface App - Erase with screen pressure and not from hovering",
+      "category": "Accessories",
+      "subCategory": "Surface App",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Surface App.\n2. Select pen tab.\n3. Draw several lines in test area.\n4. Erase some of the lines using pressure on screen.\n5. Hover the eraser and move around drawing area.\nVerify: The eraser does not erase remaining lines while hovering.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0047",
+      "testName": "Snipping Tool - Drawing",
+      "category": "Accessories",
+      "subCategory": "Snipping Tool",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Snip & Sketch from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Fullscreen Snip.)\\n2. Draw some lines varying in length, pressure and speed they are drawn.\\nVerify: Drawing is smooth and accurate with no missing lines or other artifacts.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0048",
+      "testName": "Snipping Tool - Pen Pressure",
+      "category": "Accessories",
+      "subCategory": "Snipping Tool",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Select Pressure setting of 0% Light in the Surface app.\\n2. Open Snip & Sketch from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Fullscreen Snip.)\\n3. Select Pressure setting of 100% Heavy in Surface app.\\n4. Draw some more lines in Snip & Sketch.\\nVerify: The pressure setting is reflected while drawing lines in Snip & Sketch.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0049",
+      "testName": "Snipping Tool - Parallel Lines",
+      "category": "Accessories",
+      "subCategory": "Snipping Tool",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Snip & Sketch from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Fullscreen Snip.)\\n2. Draw many parrallel lines in quick succession.\\nVerify: No missed or connected lines.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0050",
+      "testName": "Snipping Tool - Ink and Hover",
+      "category": "Accessories",
+      "subCategory": "Snipping Tool",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Snip & Sketch from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Fullscreen Snip.)\\n2. Draw with force then hover over test area with pen.\\nVerify: No inking while hovering.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0051",
+      "testName": "Snipping Tool - Erasing",
+      "category": "Accessories",
+      "subCategory": "Snipping Tool",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Snip & Sketch from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Fullscreen Snip.)\\n2. Draw several lines.\\n3. Erase the lines using the tail one line at a time.\\nVerify: The eraser is precise.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0052",
+      "testName": "Snipping Tool - Inking at Window Edge",
+      "category": "Accessories",
+      "subCategory": "Snipping Tool",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Snip & Sketch from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Fullscreen Snip.)\\n2. Draw near the bottom, sides and top edges of the windowed app.\\nVerify: The ink is where it is supposed to be. No lines going off edge or other anomolies.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0053",
+      "testName": "Snipping Tool - Erase with force and Hover",
+      "category": "Accessories",
+      "subCategory": "Snipping Tool",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Snip & Sketch from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Fullscreen Snip.)\\n2. Draw several lines.\\n3. Erase the some of the lines using force.\\n4. Hover the eraser and move around drawing area.\\nVerify: The eraser does not erase while hovering.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0054",
+      "testName": "Concepts - Pencil Tilt Shading",
+      "category": "Accessories",
+      "subCategory": "Concepts",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Install Concepts app from Microsoft Store.\n2. Launch, click the + open a drawing page and select pencil tool.\n3. Draw with pen pointing straight out from the screen.\nVerify: Pencil line is drawn.\n4. Draw with pen at an angle.\nVerify: Pencil shading is drawn.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0055",
+      "testName": "Whiteboard - Pen Pressure",
+      "category": "Accessories",
+      "subCategory": "Whiteboard",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Select Pressure setting of 0% Light in the Surface app.\\n2. Open Whiteboard from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Whiteboard.)\\n3. Select Pressure setting of 100% Heavy in Surface app.\\n4. Draw some more lines in Whiteboard.\\nVerify: The pressure setting is reflected while drawing lines in Whiteboard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0056",
+      "testName": "Whiteboard - Parallel Lines",
+      "category": "Accessories",
+      "subCategory": "Whiteboard",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Whiteboard from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Whiteboard.)\\n2. Draw in test area many parallel lines in quick succession.\\nVerify: No missed or connected lines.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0057",
+      "testName": "Whiteboard - Ink and Hover",
+      "category": "Accessories",
+      "subCategory": "Whiteboard",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Whiteboard from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Whiteboard.)\\n2. Draw with force then hover over test area with pen.\\nVerify: No inking while hovering.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0058",
+      "testName": "Whiteboard - Erasing",
+      "category": "Accessories",
+      "subCategory": "Whiteboard",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Whiteboard from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Whiteboard.)\\n2. Draw several lines.\\n3. Erase the lines.\\nVerify: The eraser is precise.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0059",
+      "testName": "Whiteboard - Inking over app window edges",
+      "category": "Accessories",
+      "subCategory": "Whiteboard",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Whiteboard from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Whiteboard.)\\n2. From within the windowed app, ink continuously from in app to desktop and back.\\nVerify: The pen resumes drawing when back inside app window.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0060",
+      "testName": "Whiteboard - Erase with force and Hover",
+      "category": "Accessories",
+      "subCategory": "Whiteboard",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Whiteboard from Window's Ink Workspace. (Pen icon from System Tray on the bottom right of the screen\\Whiteboard.)\\n2. Draw several lines.\\n3. Erase the some of the lines using force.\\n4. Hover the eraser and move around drawing area.\\nVerify: The eraser does not erase while hovering.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0061",
+      "testName": "Pen Cap - Single Click",
+      "category": "Accessories",
+      "subCategory": "OS Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Settings -> Devices -> Pen and Windows Ink.\n2. Set Pen Shortcuts -> Click once to open\n3. Under drop down, select an installed app.\n4. Short press the pen tail button.\nVerify: Chosen app opens.\n5. Change setting to a different installed app.\n6. Short press the pen tail button.\nVerify: Chosen app opens.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0062",
+      "testName": "Pen Cap - Double Click",
+      "category": "Accessories",
+      "subCategory": "OS Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Settings -> Devices -> Pen and Windows Ink.\n2. Set Pen Shortcuts ->  Click twice to open\n3. Under drop down, select an installed app.\n4. Double clickthe pen tail button.\nVerify: Chosen app opens.\n5. Change setting to a different installed app.\n6. Double click the pen tail button.\nVerify: Chosen app opens.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0081",
+      "testName": "Pen Cap - Double Click - CTD",
+      "category": "Accessories",
+      "subCategory": "OS Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Settings -> Devices -> Pen and Windows Ink.\n2. Set Pen Shortcuts ->  Click twice to open\n3. Under drop down, select \"Click to Do\"\n4. Double click the pen tail button.\nVerify: Click to do feature activates\n5. Use click to do feature\nVerify: Click to do feature performs expected operation",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0082",
+      "testName": "Pen Charger Removal - Pen menu - CTD",
+      "category": "Accessories",
+      "subCategory": "OS Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Dock pen in charger.\n2. Remove pen from charger\nVerify: Pen menu appears at bottom of screen\n3. Select \"Click to do\" icon in pen menu\nVerify: Click to do feature activates\n4. Use click to do feature\nVerify: Click to do feature performs expected operation",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0063",
+      "testName": "Pen Cap - Press and Hold",
+      "category": "Accessories",
+      "subCategory": "OS Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Settings -> Devices -> Pen and Windows Ink.\n2. Set Pen Shortcuts ->  Press and Hold to open\n3. Under drop down, select an installed app.\n4. Press and hold the pen tail button.\nVerify: Chosen app opens.\n5. Change setting to a different installed app.\n6. Press and hold the pen tail button.\nVerify: Chosen app opens.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0064",
+      "testName": "Toggle Settings - Show Visual Effects",
+      "category": "Accessories",
+      "subCategory": "OS Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Settings -> Devices -> Pen and Windows Ink.\n2. Turn Off Show Visual Effects.\nVerify: Visual Effects are not shown. (Raindrop effect should not occur when the pen tip touches the screen.)\n3. Turn On Show Visual Effects.\nVerify: Visual Effects are shown.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0065",
+      "testName": "Toggle Settings - Turn Off Cursor",
+      "category": "Accessories",
+      "subCategory": "OS Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Settings -> Devices -> Pen and Windows Ink.\n2. Turn Off Show Cursor.\nVerify:  Cursor is not shown\n3. Turn On Show Cursor.\nVerify: Cursor is shown.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0066",
+      "testName": "Host Power States - Restart",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the pen to the Host.\n2. Restart the Host.\nVerify: The pen is still paired to the host, Inkspace opens on tail button press. (Or whichever app the tail button press is set to open).",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0067",
+      "testName": "Host Power States - Hibernate",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the pen to the Host.\n2. Place the Host into Hibernate, wait 30 seconds.\n3. Press the Power Button to return Host to S0.\nVerify: The pen is still paired to the host, Inkspace opens on tail button press. (Or whichever app the tail button press is set to open).",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0068",
+      "testName": "Host Power States - Shutdown",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the pen to the Host.\n2. Place the Host in S5 (Shutdown), wait 30 seconds.\n3. Press the Power Button to return Host to S0.\nVerify: The pen is still paired to the host, Inkspace opens on tail button press. (Or whichever app the tail button press is set to open).",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0069",
+      "testName": "Pen Power States - 1 Minute",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the pen to the Host.\n2. Don't use the Pen for 1 minute.\n3. Press the pen Cap to open Inkspace or whatever the pen Cap click selected app is from pen settings.\nVerify: The Pen is still paired to the host, Inkspace opens.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0071",
+      "testName": "Pen Power States - IDLE",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Use a Pen NOT paired to any device.\n2. Press an hold the Cap for > 2 minutes.\nVerify: The Pairing LED blinks after 5 seconds, then stops blinking after 2 minutes.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0072",
+      "testName": "Battery Removal",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the pen to the Host.\n2. Remove the Battery from the Pen.\n3. Replace the Battery in the Pen.\n4. Inkspace opens on tail button press (or whichever app the tail button press is set to open.)\nVerify: The Pen is still paired to the host, Inkspace opens.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0073",
+      "testName": "Low Battery Notification",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair a pen with 5% battery power or less to host device.\nVerify: User is notified of low battery state of pen in bottom right corner of device screen for 6 seconds.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0074",
+      "testName": "Low Battery LED",
+      "category": "Accessories",
+      "subCategory": "Power States",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have a pen with battery level of 5% or less. (Verify by pairing to host device).\n2. Seat pen in typecover charger or usb charger.\n3. Remove pen from typecover charger or usb charger.\nVerify: Red LED light appears near pen tail button.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0075",
+      "testName": "Position B - Lid open laptop position",
+      "category": "Accessories",
+      "subCategory": "SLS Screen Positions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With screen in position B, Ink in Whiteboard or Snipping Tool\nVerify: Pen inks normally",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0076",
+      "testName": "Position C - Screen angled covering KB only, not TP",
+      "category": "Accessories",
+      "subCategory": "SLS Screen Positions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With screen in position C, Ink in Whiteboard or Snipping Tool\nVerify: Pen inks normally",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Pen0077",
+      "testName": "Position D - Screen face up flat against base",
+      "category": "Accessories",
+      "subCategory": "SLS Screen Positions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "Touch", "PD Controller", "BT", "Pen", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With screen in position D, Ink in Whiteboard or Snipping Tool\nVerify: Pen inks normally",
+          "passFailCriteria": ""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [],
+    "deviceMatrix": []
+  }
+}

@@ -1,0 +1,439 @@
+[
+  {
+    "Id": "BVT-IMG-001",
+    "testName": "Receive kickoff payload and image build links",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify the payload component table and Azure ADO image build links are received for the targeted train and OS version.",
+        "expectedTime": "15 mins",
+        "notes": "This is the kickoff input for Stage 1 validation.",
+        "detailedSteps": "1. Receive the payload component table from kickoff.\n2. Review the Azure artifact or image build links.\n3. Confirm the OS version and target train for the build.",
+        "passFailCriteria": "Pass if the payload table, image links, and targeted OS train are available and correctly identified."
+      }
+    ]
+  },
+  {
+    "Id": "BVT-IMG-002",
+    "testName": "Validate payload components against image build folders",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that the inf file name, version, and date in the payload table match the corresponding image build driver folders.",
+        "expectedTime": "30 mins",
+        "notes": "This covers Step 1 payload comparison against driver folders.",
+        "detailedSteps": "1. Open the image links in a browser and navigate to the support folder.\n2. For each change-driver component, collect the inf file name, version, and date.\n3. Compare those values with the payload component table and image build driver folders.\n4. Record whether each item matches or differs.",
+        "passFailCriteria": "Pass if all compared inf files, versions, and dates match the payload table. Fail if any mismatch is found."
+      }
+    ]
+  },
+  {
+    "Id": "BVT-IMG-003",
+    "testName": "Escalate mismatches to Microsoft",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure that any mismatch found during payload comparison is documented and reported back to Microsoft with observations.",
+        "expectedTime": "10 mins",
+        "notes": "This is the required follow-up action when Step 1 fails.",
+        "detailedSteps": "1. Identify mismatches between payload table and image build folder values.\n2. Capture the affected components and the observed differences.\n3. Report the mismatch details to Microsoft with the observations.",
+        "passFailCriteria": "Pass if mismatches are clearly documented and escalated to Microsoft."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-004",
+    "testName": "Install the build image on DUT and validate UEFI firmware version",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify that the installed build boots correctly and that the firmware version matches the payload table values.",
+        "expectedTime": "20 mins",
+        "notes": "This validates the UEFI page in Step 2.",
+        "detailedSteps": "1. Install the build on the DUT.\n2. Boot into the UEFI menu using the Volume+ button.\n3. Open the Firmware tab.\n4. Compare the listed firmware versions with the payload component table.",
+        "passFailCriteria": "Pass if the DUT boots successfully and the firmware versions match the expected payload values."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-005",
+    "testName": "Validate Device Manager for errors and driver versions",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the installed build has no device manager errors and that driver versions and dates align with the payload table and UEFI firmware details.",
+        "expectedTime": "20 mins",
+        "notes": "This covers the Device Manager validation section.",
+        "detailedSteps": "1. Open Device Manager from the Start menu.\n2. Check for any bang-out or disabled device errors.\n3. Review firmware-related driver versions and dates.\n4. Compare them with the UEFI menu and payload table.",
+        "passFailCriteria": "Pass if no device manager errors are found and the driver versions and dates match the expected values."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-006",
+    "testName": "Generate and review Driver Verification Report",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that the driver verification report can be generated successfully and that it contains the expected driver data.",
+        "expectedTime": "20 mins",
+        "notes": "This uses verifyoemdrivers.cmd and the generated XML/HTML outputs.",
+        "detailedSteps": "1. Run verifyoemdrivers.cmd from C:\\Tools\\PLE\\VerifyVersions.\n2. Check that results_drivers1.xml and results_drivers1.html are created.\n3. Open the HTML report in a browser.\n4. Review the XML output in the style sheet view if needed.",
+        "passFailCriteria": "Pass if the report is generated successfully and contains the expected driver information."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-007",
+    "testName": "Check Driver Verification Report for red issues",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure there are no red errors reported in the driver verification report.",
+        "expectedTime": "15 mins",
+        "notes": "This validates the red-issue condition in the report.",
+        "detailedSteps": "1. Review the driver verification report for red entries.\n2. Confirm whether any issues are reported.\n3. Record the specific failing components if any are found.",
+        "passFailCriteria": "Pass if no red issues are reported. Fail if any red issue is present."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-008",
+    "testName": "Compare report driver details with payload table",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify that each inf file, driver version, and driver date in the verification report matches the payload component table.",
+        "expectedTime": "20 mins",
+        "notes": "This covers the payload verification step from the report.",
+        "detailedSteps": "1. Extract the inf file names, versions, and dates from the verification report.\n2. Compare each entry to the payload table from kickoff.\n3. Note any discrepancies for review.",
+        "passFailCriteria": "Pass if all report values match the payload table entries."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-009",
+    "testName": "Review yellow and light-blue warnings for waiver handling",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that warnings are assessed properly and that waiver handling is approved by the lead when applicable.",
+        "expectedTime": "15 mins",
+        "notes": "Yellow and light-blue entries are explicitly called out as waiver candidates.",
+        "detailedSteps": "1. Review the verification report for yellow and light-blue entries.\n2. Determine whether each warning is acceptable for one-time waiver.\n3. Escalate to the lead for confirmation if needed.",
+        "passFailCriteria": "Pass if warnings are evaluated and any waiver is approved through the proper channel."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-010",
+    "testName": "Validate payload release notes and new SC entries",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the release notes contain the new SCs and that the required files are available in the expected image folders.",
+        "expectedTime": "20 mins",
+        "notes": "This covers the ReleaseNotes.txt and image release notes validation.",
+        "detailedSteps": "1. Review ReleaseNotes.txt for the list of new SCs.\n2. Verify the content is added under the correct image path.\n3. Confirm the release notes exist in the expected OS image folder.",
+        "passFailCriteria": "Pass if the required new SCs are documented in the release notes at the expected location."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-011",
+    "testName": "Verify image install using USB method",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that the image installs successfully through the USB installation method.",
+        "expectedTime": "30 mins",
+        "notes": "This covers the USB Install validation step.",
+        "detailedSteps": "1. Prepare the USB installation media.\n2. Install the image using the USB method.\n3. Confirm the system completes the installation and reaches the desktop.",
+        "passFailCriteria": "Pass if the image installs successfully via USB and boots to the desktop."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-012",
+    "testName": "Verify desktop driver report and version checks",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the driver verification report is run successfully after the desktop boot and that the reported versions are correct.",
+        "expectedTime": "20 mins",
+        "notes": "This is the desktop-based repeat of the driver verification step.",
+        "detailedSteps": "1. Boot to desktop after install.\n2. Run the verify drivers report from the desktop icon if needed.\n3. Review the generated report and compare with the payload table.",
+        "passFailCriteria": "Pass if the desktop driver verification report is generated and its values align with expected versions."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-013",
+    "testName": "Validate Railcar.reg and related build metadata",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify that the Railcar.reg content matches the expected product name and that the build can be signed off as correct for the railcar.",
+        "expectedTime": "15 mins",
+        "notes": "This relies on the V2 dashboard Product Name comparison and the Railcar.reg file.",
+        "detailedSteps": "1. Open Railcar.reg from the build package.\n2. Compare the Railcar Name with the Product Name parameter in the V2 dashboard.\n3. If mismatched, report the failure and notify HCLO leads.",
+        "passFailCriteria": "Pass if the Railcar.reg name matches the V2 dashboard value. Fail if it does not and corrective action is required."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-014",
+    "testName": "Verify Winver and VersionInformation.txt",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm the installed OS version shown by Winver and the VersionInformation.txt content match the kickoff table for each image link.",
+        "expectedTime": "15 mins",
+        "notes": "This covers the Winver and VersionInformation.txt checks.",
+        "detailedSteps": "1. Open the Run command and execute winver.\n2. Capture the OS version from the DUT.\n3. Review VersionInformation.txt for the expected version details.\n4. Compare the values with the kickoff table.",
+        "passFailCriteria": "Pass if the displayed OS version and VersionInformation.txt values match the expected build information."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-015",
+    "testName": "Verify side-load of new SCs",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure all new SCs are loaded correctly during side-load validation.",
+        "expectedTime": "20 mins",
+        "notes": "This covers the side-load check described in the document.",
+        "detailedSteps": "1. Perform the side-load process on the DUT.\n2. Verify that all newly introduced SCs are loaded.\n3. Confirm the status and record any missing items.",
+        "passFailCriteria": "Pass if all new SCs load successfully. Fail if any required SC is missing or not loaded."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-016",
+    "testName": "Validate complete BVT sign-off readiness",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify that all stage 1, stage 2, and stage 3 validations have been completed successfully and the build is ready for sign-off.",
+        "expectedTime": "20 mins",
+        "notes": "This is the final end-to-end sign-off evaluation.",
+        "detailedSteps": "1. Review the results of payload comparison, DUT validation, and collateral testing.\n2. Confirm that all required checks have passed or have approved waivers.\n3. Determine whether the build is ready for sign-off.",
+        "passFailCriteria": "Pass if all required validations are completed successfully and the build is approved for sign-off."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-017",
+    "testName": "Validate Azure artifact link accessibility and support folder contents",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that the Azure artifact links and support folders are accessible and contain the expected build artifacts.",
+        "expectedTime": "15 mins",
+        "notes": "This complements the payload comparison step by validating the source link accessibility.",
+        "detailedSteps": "1. Open each Azure artifact image link.\n2. Navigate to the support folder.\n3. Verify that the expected files and directories are present.\n4. Record any inaccessible or missing artifacts.",
+        "passFailCriteria": "Pass if all required artifact links are accessible and the support folder contains the expected content."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-018",
+    "testName": "Verify payload table completeness for component metadata",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the kickoff payload table contains all required component metadata fields such as ID, title, inf name, and software build.",
+        "expectedTime": "10 mins",
+        "notes": "This helps prevent incomplete or ambiguous comparisons during Step 1 validation.",
+        "detailedSteps": "1. Review the payload component table.\n2. Confirm that each listed component has the required metadata fields.\n3. Verify that there are no missing or blank values that would block comparison.",
+        "passFailCriteria": "Pass if all required metadata fields are present for each payload row."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-019",
+    "testName": "Validate tester collateral coverage and execution readiness",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that each assigned collateral tester has the build and the required validation steps planned or completed.",
+        "expectedTime": "15 mins",
+        "notes": "This covers the concept that every tester validates their assigned collateral.",
+        "detailedSteps": "1. Review the list of assigned collateral testers.\n2. Confirm each tester has the correct build installed.\n3. Verify that the required validation activities are assigned and tracked.",
+        "passFailCriteria": "Pass if all assigned testers are covered and ready for collateral validation."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-020",
+    "testName": "Capture evidence screenshots for Winver and build metadata",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure evidence is captured for the installed build version and related metadata for audit and sign-off support.",
+        "expectedTime": "10 mins",
+        "notes": "The document explicitly mentions taking screenshots from the DUT for Winver.",
+        "detailedSteps": "1. Launch winver on the DUT.\n2. Capture a screenshot of the displayed OS version.\n3. Save the evidence with the corresponding build and test record.\n4. Attach or reference the screenshot during sign-off review.",
+        "passFailCriteria": "Pass if the required screenshots are captured and preserved for the build record."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-021",
+    "testName": "Verify stable desktop boot after installation",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the DUT reaches the desktop without unexpected errors after the image installation completes.",
+        "expectedTime": "15 mins",
+        "notes": "This is a practical validation step tied to the USB install and desktop checks.",
+        "detailedSteps": "1. Complete the build installation.\n2. Observe the first boot after installation.\n3. Confirm the device reaches the desktop successfully.\n4. Record any boot or startup anomalies.",
+        "passFailCriteria": "Pass if the DUT boots to the desktop without blocking errors or instability."
+      }
+    ]
+  },
+  {
+    "_comment": "Derived from BVT on Image build Sign off Process_V1.docx",
+    "Id": "BVT-IMG-022",
+    "testName": "Confirm follow-up for failed validations and escalation closure",
+    "category": "ImageBVT",
+    "subCategory": "Image Build Sign-off / BVT",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure that any failed validation or mismatch is followed up, tracked, and closed before the build is signed off.",
+        "expectedTime": "15 mins",
+        "notes": "This covers the closure of issues raised during payload comparison or Railcar validation.",
+        "detailedSteps": "1. Review failed validations, mismatches, or escalations.\n2. Confirm that follow-up actions were taken.\n3. Verify the issue status is closed or approved with a waiver.\n4. Document the final outcome for sign-off.",
+        "passFailCriteria": "Pass if all open validation issues are either resolved or formally accepted through the correct approval path."
+      }
+    ]
+  }
+]

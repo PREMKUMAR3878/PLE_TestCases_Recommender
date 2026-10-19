@@ -1,0 +1,1152 @@
+{
+  "_comment1": "catgeory is mismatched from CTQs latest sheet and single Dial Sheet",
+  "_comment2": "objective,expectedTime,notes, passFailCriteria and priority not available",
+  "_comment3": "detailedSteps collected from Dock Specific Sheet mentioned as TestSteps",
+  "testCases": [
+    {
+      "Id": "DK001",
+      "testName": "Dock: Verify Drivers",
+      "category": "Accessories",
+      "subCategory": "General",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Nothing connected to the dock except PSU. (No peripherals connected) \n3. Dock the device.\nVerify: Battery is charging.\nVerify: In device manager no drivers banged out (yellow triangle)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK002",
+      "testName": "Undock / Dock in S0",
+      "category": "Accessories",
+      "subCategory": "General",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Nothing connected to the dock except PSU. (No peripherals connected) \n3. Dock the device.\nVerify: Battery is charging.\n4. Undock the Device.\nVerify: No odd behavior, Bug Check, etc.\n5. Dock the Device.\nVerify: Battery is charging, no other odd behavior.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK003",
+      "testName": "Undock / Dock in CS",
+      "category": "Accessories",
+      "subCategory": "General",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Nothing connected to the dock except PSU. (No peripherals connected) \n3. Dock the device.\nVerify: Battery is charging.\n3. Place device in CS.\n4. Undock the Device.\nVerify: Device stays in CS. \nVerify: No odd behavior, Bug Check, etc.\n5. Dock the Device.\nVerify: Device stays in CS. (The Screen may or may not turn on for 5 seconds then off)\nVerify: No odd behavior, Bug Check, etc.\n6. Power device to S0.\nVerify: Battery is charging, no other odd behavior.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK004",
+      "testName": "Undock / Dock in Hibernate",
+      "category": "Accessories",
+      "subCategory": "General",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Nothing connected to the dock except PSU. (No peripherals connected) \n3. Dock the device.\nVerify: Battery is charging.\n4. Place device in Hibernate.\n5. Undock the Device.\nVerify: Device stays in Hibernate.\nVerify: No odd behavior, Bug Check, etc.\n6. Dock the Device.\nVerify: Device stays in Hibernate.\nVerify: No odd behavior, Bug Check, etc.\n7. Power device to S0.\nVerify: Battery is charging, no other odd behavior.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK005",
+      "testName": "Undock / Dock in Shutdown",
+      "category": "Accessories",
+      "subCategory": "General",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Nothing connected to the dock except PSU. (No peripherals connected) \n3. Dock the device.\nVerify: Battery is charging.\n4. Shutdown device.\n5. Undock the Device.\nVerify: Device stays in S5.\nVerify: No odd behavior, Bug Check, etc.\n6. Dock the Device.\nVerify: Device stays in S5.\nVerify: No odd behavior, Bug Check, etc.\n7. Power device to S0.\nVerify: Battery is charging, no other odd behavior.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK006",
+      "testName": "Undock / Dock in Reverse",
+      "category": "Accessories",
+      "subCategory": "General",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Nothing connected to the dock except PSU. (No peripherals connected) \n3. Dock the device.\nVerify: Battery is charging.\n4. Reverse the Dock-DUT connection. Turn the connector around so it is connected upside-down/backwards.\nVerify: Battery is Charging",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK007",
+      "testName": "Battery Removal",
+      "category": "Accessories",
+      "subCategory": "Dock: Verify Drivers w/peripherals",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. All peripherals connected \n3. Dock the device.\nVerify: Battery is charging.\nVerify: In device manager no drivers banged out (yellow triangle)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK008",
+      "testName": "Functionality Off Screen",
+      "category": "Accessories",
+      "subCategory": "Dock in S0",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0. Not connected to dock.\n2. Connect peripherals to the dock. (Unplug and replug peripherals) Includes Flash Drives, Headphones and Network cable. \n3. Dock the device.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK009",
+      "testName": "Dock in CS - To S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Docking",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0, Not connected to dock\n2. Place device in CS. Wait 30 seconds.\n3. Connect peripherals to the dock. (Unplug and replug peripherals)\n4. Dock the device. Device stays in CS. (The Screen may or may not turn on for 5 seconds then off)\n5. Device to S0.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0010",
+      "testName": "Dock in Hibernate - To S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Docking",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S4. Not connected to dock.\n2. Connect peripherals to the dock. (Unplug and replug peripherals)\n3. Dock the device.\n4. Device to S0.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0011",
+      "testName": "Dock in Shutdown - To S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Docking",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S5. Not connected to dock.\n2. Connect peripherals to the dock. (Unplug and replug peripherals)\n3. Dock the device.\n4. Device to S0.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0012",
+      "testName": "Dock in Restart - To S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Docking",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0. Not connected to dock.\n2. Connect peripherals to the dock. (Unplug and replug peripherals)\n3. Dock the device.\n4. Restart the Device. Verify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0013",
+      "testName": "Transition - S0 to CS to S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Power State Transitions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect peripherals to the dock. (Unplug and replug peripherals) Includes Flash Drives, Headphones and Network cable.\n4. Dock the device. \n5. Device to CS.\n6. Power device to S0.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0014",
+      "testName": "Transition - S0 to S4 to S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Power State Transitions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect peripherals to the dock. (Unplug and replug peripherals)\n4. Dock the device.\n5. Hibernate the Device.\n6. Power device to S0.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0015",
+      "testName": "Transition - S0 to S5 to S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Power State Transitions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect peripherals to the dock. (Unplug and replug peripherals)\n4. Dock the device.\n5. Shutdown the Device.\n6. Power device back to S0.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0016",
+      "testName": "Transition to Hard Shutdown - S0 to S5 to S0",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Power State Transitions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect peripherals to the dock. (Unplug and replug peripherals)\n4. Dock the device.\n5. Hold power 12+ to Shutdown the Device.\n6. Power device back to S0.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0017",
+      "testName": "Restart Device",
+      "category": "Accessories",
+      "subCategory": "Port Testing - Power State Transitions",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect peripherals to the dock. (Unplug and replug peripherals)\n4. Dock the device.\n5. Restart Device.\nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: USB is working. Connect USB Flash drive to dock and verify can read/write files to drive)\nVerify: Network working. Can download webpage through network connected through dock.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\nVerify: Audio Jack working. Using headphones connected to the dock audio can be heard.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0018",
+      "testName": "External Monitor Resolution",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect peripherals to the dock. (Unplug and replug peripherals). Peripherals include USB drives, headphones and network cable.\n4. Dock the device.\n5. Press Widows Key + P, Extend Monitor.\n6. Set external monitor resolution.\n7. Undock and redock device..\nVerify: External Monitor resolution does not change.\n8. Repeat with a different resolution.\nVerify: External monitor resolution does not change.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0019",
+      "testName": "Close Blade to CS to S0",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device Docked and in S0.\n2. Close the Cover.\nVerify: Device goes into CS\n3. Open the Cover.\n4. Press a key to wake device.\nVerify: Device wakes to S0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0020",
+      "testName": "Close Blade - Set To Do Nothing",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. System Settings -> Hardware and Sound -> Power Options -> System Settings -> When I close the lid \"Plugged in\" Set to Do Nothing and Save Changes\n2. Close lid\nVerify: Device doesn't go into CS, External display is visible.\n3. Open the Cover.\nVerify: Device wakes to S0 and screen is on.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0021",
+      "testName": "Two Monitors",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect to DP to mDP to each mDP port on the dock.\n4. Dock the device. \nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: Display Port working. Monitor connected to dock via Display Port is working.\n5.Unplug one monitor\nVerify: The monitor connected works.\n6. Plug monitor back in, then unplug the OTHER monitor\nVerify: The second monitor works.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0022",
+      "testName": "HDMI to mDP",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect to HDMI Monitor to mDP to each mDP port on the dock.\n4. Dock the device. \nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: Monitor(s) are working. \n5. Unplug one monitor\nVerify: The monitor connected works.\n6. Plug monitor back in, then unplug the OTHER monitor\nVerify: The second monitor works.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0023",
+      "testName": "USBC-USBC",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Device in S0.\n2. Dock is not connected to device.\n3. Connect to USBC Monitor to USBC to each USBC port on the dock.\n4. Dock the device. \nVerify: Battery Charging. Check battery indicator in the system tray and verify it is charging.\nVerify: Monitor(s) are working. \n5. Unplug one monitor\nVerify: The monitor connected works.\n6. Plug monitor back in, then unplug the OTHER monitor\nVerify: The second monitor works.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0024",
+      "testName": "Daisy Chain Monitors",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Daisy Chain monitors (mdp to DP) and connect the monitor cord to the dock.\n2. Device in S0.\n3. Dock is not connected to device.\n4. Connect the rest of the peripherals to the dock. \n5. Dock the device.\n6. Setup device to extend display to both monitors.\nVerify: Both monitors are working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0043",
+      "testName": "Monitors Thunderbolt",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect (2) thunderbolt cable from 2 different monitor to the dock.\n2. Device in S0.\n3. Dock is not connected to device.\n4. Connect the rest of the peripherals to the dock. \n5. Dock the device.\n6. Setup device to extend display to both monitors.\nVerify: Both monitors are working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0044",
+      "testName": "Daisy Chain Monitors Thunderbolt",
+      "category": "Accessories",
+      "subCategory": "Addition Functionality",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Daisy Chain monitors (USBC to USBC THUNDERBOLT CABLE) and connect the monitor cord to the dock.\n2. Device in S0.\n3. Dock is not connected to device.\n4. Connect the rest of the peripherals to the dock. \n5. Dock the device.\n6. Setup device to extend display to both monitors.\nVerify: Both monitors are working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0025",
+      "testName": "USBC Thumbdrive",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - Functional",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Disconnect everything from the dock\n2.Plug USB Type C thumb drive into USB-C Port on the dock.\nVerify: Drive is recognized and file can be read/write to.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0026",
+      "testName": "USBC Thumbdrive - Reverse",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - Functional",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Reverse Thumb Drive Orientation (Plug it in reverse)\nVerify: Drive is recognized and file can be read/write to.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0027",
+      "testName": "Peripherals Check",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - Functional",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect peripherals to all dock ports. USB, Audio, Network, Display.\nVerify: Device charging\nVerify: USB flash drives are enmerated. (Can be seen in Windows Explorer).\nVerify: Network is working. Can visit webpage or see network share.\nVerify: Display is working. Can see desktop on external monitor.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0028",
+      "testName": "USBC Thumbdrive - CS",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - USB Drive Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Nothing connected to Dock \n2. Connect Dock to device\n3. Plug USB Type C thumb drive into USB-C Port.\nVerify: Drive is recognized and file can be read/write to.\n4. Put host in CS.\n5. Wait 1 minute and wake. \nVerify: Drive is recognized and file can be read/write to.\n6. Disconnect USB-C Flash Drive.\n7. Reconnect USB-C Flash Drive.\nVerify: Drive is recognized and file can be read/write to.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0029",
+      "testName": "USBC Thumbdrive - CS 5 minutes",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - USB Drive Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Nothing connected to Dock \n2. Connect Dock via to device\n3. Plug USB Type C thumb drive into USB-C Port.\n4. Hibernate the device.\n5. Power the deviec back on. \nVerify: Drive is recognized and file can be read/write to.\n6. Disconnect USB-C Flash Drive.\n7. Reconnect USB-C Flash Drive.\nVerify: Drive is recognized and file can be read/write to.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0030",
+      "testName": "USBC thumbdrive - Hibernate",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - USB Drive Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Nothing connected to Dock \n2. Connect Dock via to device\n3. Plug USB Type C thumb drive into USB-C Port.\n4. Hibernate the device.\n5. Power the deviec back on. \nVerify: Drive is recognized and file can be read/write to.\n6. Disconnect USB-C Flash Drive.\n7. Reconnect USB-C Flash Drive.\nVerify: Drive is recognized and file can be read/write to.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0031",
+      "testName": "USBC thumbdrive - Shutdown",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - USB Drive Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Nothing connected to Dock \n2. Connect Dock via to device\n3. Plug USB Type C thumb drive into USB-C Port.\n4. Shutdown the device.\n5. Power the deviec back on. \nVerify: Drive is recognized and file can be read/write to.\n6. Disconnect USB-C Flash Drive.\n7. Reconnect USB-C Flash Drive.\nVerify: Drive is recognized and file can be read/write to.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0032",
+      "testName": "USBC thumbdrive - Restart",
+      "category": "Accessories",
+      "subCategory": "USB-C Dock - USB Drive Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Nothing connected to Dock \n2. Connect Dock via to device\n3. Plug USB Type C thumb drive into USB-C Port.\n4. Restart the device.\nVerify: Drive is recognized and file can be read/write to.\n5. Disconnect USB-C Flash Drive.\n6. Reconnect USB-C Flash Drive.\nVerify: Drive is recognized and file can be read/write to.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0033",
+      "testName": "USBC Monitor",
+      "category": "Accessories",
+      "subCategory": "Dock - USB-C Monitor Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have nothing connected to the Dock\n2. Connect USB Type C Monitor to USB-C port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0034",
+      "testName": "USBC Monitor - CS",
+      "category": "Accessories",
+      "subCategory": "Dock - USB-C Monitor Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have nothing connected to the Dock\n2. Connect USB Type C Monitor to USB-C port.\n3. Put host in CS.\n4. Wait 1 minute and wake device to S0.\nVerify: External monitor display is working.\nVerify: Audio through dock is working.\nVerify: USB ports on external monitor are working. \nVerify: Host device battery is charging.\n5. Disconnect and the reconnect monitor from USB-C port.\nVerify: External monitor display is working.\nVerify: Host device battery is charging.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0035",
+      "testName": "USBC Monitor - 5 minutes",
+      "category": "Accessories",
+      "subCategory": "Dock - USB-C Monitor Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have nothing connected to the Dock\n2. Connect USB Type C Monitor to USB-C port.\n3. Put host in CS.\n4. Wait 1 minute and wake device to S0.\nVerify: External monitor display is working.\nVerify: Audio through dock is working.\nVerify: USB ports on external monitor are working. \nVerify: Host device battery is charging.\n5. Disconnect and the reconnect monitor from USB-C port.\nVerify: External monitor display is working.\nVerify: Host device battery is charging.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0036",
+      "testName": "USBC Monitor - Hibernate",
+      "category": "Accessories",
+      "subCategory": "Dock - USB-C Monitor Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have nothing connected to the Dock\n2. Connect USB Type C Monitor to USB-C port.\n3. Put host in Hibernate.\n4. Power on device to S0.\nVerify: External monitor display is working.\nVerify: Audio through external monitor is working.\nVerify: USB ports on external monitor are working. \nVerify: Host device battery is charging.\n5. Disconnect and the reconnect monitor from USB-C port.\nVerify: External monitor display is working.\nVerify: Host device battery is charging.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0037",
+      "testName": "USBC Monitor - Shutdown",
+      "category": "Accessories",
+      "subCategory": "Dock - USB-C Monitor Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have nothing connected to the Dock\n2. Connect USB Type C Monitor to USB-C port.\n3. Shutdown host device.\n4. Power on device to S0.\nVerify: External monitor display is working.\nVerify: Audio through external monitor is working.\nVerify: USB ports on external monitor are working. \nVerify: Host device battery is charging.\n5. Disconnect and the reconnect monitor from USB-C port.\nVerify: External monitor display is working.\nVerify: Host device battery is charging.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0038",
+      "testName": "USBC Monitor - Restart",
+      "category": "Accessories",
+      "subCategory": "Dock - USB-C Monitor Only",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have nothing connected to the Dock\n2. Connect USB Type C Monitor to USB-C port.\n3. Restart host device.\nVerify: External monitor display is working.\nVerify: Audio through external monitor is working.\nVerify: USB ports on external monitor are working. \nVerify: Host device battery is charging.\n4. Disconnect and the reconnect monitor from USB-C port.\nVerify: External monitor display is working.\nVerify: Audio through external monitor is working.\nVerify: USB ports on external monitor are working. \nVerify: Host device battery is charging.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0039",
+      "testName": "Monitor USBC-DP",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0045",
+      "testName": "Monitor USBC-DP - Shutdown",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Shutdown host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0046",
+      "testName": "Monitor USBC-DP - Hibernate",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Hibernate host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0047",
+      "testName": "Monitor USBC-DP - Restart",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Restart host device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n3. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0040",
+      "testName": "Monitor USBC-HDMI",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0048",
+      "testName": "Monitor USBC-HDMI - Hibernate",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Hibernate host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0049",
+      "testName": "Monitor USBC-HDMI - Shutdown",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Shutdown host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0050",
+      "testName": "Monitor USBC-HDMI - Restart",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Restart host device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n3. Disconnect and the reconnect monitor from USB-C (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0055",
+      "testName": "Monitor HDMI-HDMI",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Disconnect and the reconnect monitor from HDMI (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0056",
+      "testName": "Monitor HDMI-HDMI - Hibernate",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Hibernate host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from HDMI (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0057",
+      "testName": "Monitor HDMI-HDMI - Shutdown",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Shutdown host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from HDMI (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0058",
+      "testName": "Monitor HDMI-HDMI - Restart",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to HDMI input on monitor. \nVerify: Monitor display is working.\n2. Restart host device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n3. Disconnect and the reconnect monitor from USB-C port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0059",
+      "testName": "Monitor HDMI-DP",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Disconnect and the reconnect monitor from HDMI (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0060",
+      "testName": "Monitor HDMI-DP - Hibernate",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Hibernate host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from HDMI (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0061",
+      "testName": "Monitor HDMI-DP - Shutdown",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Hibernate host device\n3. Power on device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n4. Disconnect and the reconnect monitor from HDMI (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0062",
+      "testName": "Monitor HDMI-DP - Restart",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect HDMI (Dock) to DP input on monitor. \nVerify: Monitor display is working.\n2. Restart host device\nVerify: Monitor display is working.\nVerify: Host device display is working.\n3. Disconnect and the reconnect monitor from HDMI (Dock) port.\nVerify: External monitor display is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0063",
+      "testName": "Wake on Lan - Sleep Dock 3/4",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect Ethernet cable to dock, make sure no other peripherals are connected to the dock.\n2. Connect Dock to DUT\n3. On DUT have an Admin user with a password. If has not been created, please create one. Make sure there is a password. Preferably, make a User with OUT using an email.\na. Creating User Profile:\ni. Settings -> Accounts -> Other user's\nii. Click\" I don’t have this persons sign-in info\"\niii. Click \"Add a user without a Microsoft account\"\niv. Who's Going to use this PC? : Enter name here\nv. Enter Password\nvi. Enter security questions (keep the answer the same, make it easy), hit Next\nvii. Once created it will show up under \"other users\", Click the down arrow and \"Change Account Type\" to Admin, click ok\n4. Write down, or have easy access to the NAME of your DUT (it is under About your PC)\n5. On DUT: Go to Remote Desktop Settings and make sure it's turned on\n6. Put your DUT to sleep using the power button, verify the screen goes black\n7. On your Work device open up \"Remote Desktop Connection\" App\n8. Computer: Write in the DUT name\n9. Click on the arrow \"Show Options\"\n10. Under \"User Name\" Type in the Admin User profile you created\n11. Hit Connect\n12. You should get a prompt asking for a Password, enter the password you created for the profile, hit enter\n13. Loading screen should appear. \na. An additional prompt may appear if this is the first time doing this asking you \"The Identity of the remote computer cannot be verified. Do you want to connect anyway\" Click Yes.\n14. Then a window should appear and show the desktop of the DUT you remoted into, from your work machine. \nVerify: Remote Desktop granted you access.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0051",
+      "testName": "Wake on Lan - Sleep",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Connect Ethernet cable to dock, make sure no other peripherals are connected to the dock.\n2. Connect Dock to DUT\n3. On DUT have an Admin user with a password. If has not been created, please create one. Make sure there is a password. Preferably, make a User with OUT using an email.\na. Creating User Profile:\ni. Settings -> Accounts -> Other user's\nii. Click\" I don’t have this persons sign-in info\"\niii. Click \"Add a user without a Microsoft account\"\niv. Who's Going to use this PC? : Enter name here \nv. Enter Password\nvi. Enter security questions (keep the answer the same, make it easy), hit Next\nvii. Once created it will show up under \"other users\", Click the down arrow and \"Change Account Type\" to Admin, click ok\n4. Write down, or have easy access to the NAME of your DUT (it is under About your PC)\n5. On DUT: Go to Remote Desktop Settings and make sure it's turned on\n6. Put your DUT to sleep using the power button, verify the screen goes black\n7. On your Work device open up \"Remote Desktop Connection\" App\n8. Computer: Write in the DUT name\n9. Click on the arrow \"Show Options\"\n10. Under \"User Name\" Type in the Admin User profile you created\n11. Hit Connect\n12. You should get a prompt asking for a Password, enter the password you created for the profile, hit enter\n13. Loading screen should appear. \na. An additional prompt may appear if this is the first time doing this asking you \"The Identity of the remote computer cannot be verified. Do you want to connect anyway\" Click Yes.\n14. Then a window should appear and show the desktop of the DUT you remoted into, from your work machine.\nVerify: Remote Desktop granted you access.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0064",
+      "testName": "Wake on Lan - Shutdown Dock 3/4",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "This CTQ is based on using Magic Packet “Wake on LAN” application.  Others can be used.\n\n1. With Surface device powered up and connected to docking station (DUT) Turn off the Wi-Fi connection of both the Surface device and the host computer (i.e. the one sending the magic packet) and turn off the firewall of the Surface device.\n2. Connect Ethernet cable to docking station and the host computer.\n3. Open device manager\n4.  Expand “Network adapters”. Right click on the Ethernet adapter for the DUT and select properties, Select the “Advanced” tab, scroll and ensure the following settings:   Wake on Magic Packet – Value = “Enabled” Wake on Pattern Match – Value = “Enabled”\n5. Select “OK” if you had to make any changes.  Otherwise, close the Device Manager windows.\n6. Statically assign the IP Address, Subnet and gateway\n7. On the host computer click Start Menu > Control Panel > Network and Sharing Center or Network and Internet > Network and Sharing Center.\n7a. Click Change adapter settings > Right-click on Ethernet >  Click Properties > Select Internet Protocol Version 4 (TCP/IPv4) then click Properties > Select Use the following IP address.\n7b. Enter the IP address (For example: 10.0.1.1), Subnet mask (For example: 255.255.255.0), Default gateway (For example: 10.0.1.2) Click OK.\n8. On the DUT (surface device connected the dock), repeat steps 4.a.to 4.f. then Enter the IP address (For example: 10.0.1.2), Subnet mask (For example: 255.255.255.0), Default gateway (For example: 10.0.1.1), click okay.\n9. Open Administrative Command window. Run “ipconfig /all”\tNote the MAC address of the ethernet connection.\n10. On the host compute, Open “Wake on LAN” application, Enter the DUT’s MAC and IP address.\n11. Shutdown the surface device connected to the docking station.\n12. On the host computer, select “Wake Up PC” button. Select “OK”\nVerify that the DUT enters S0.\n\nNote:  If testing multiple Surface Computers with the same docking station, the MAC and IP address will follow the docking station and not the PC it’s connected to.  So, you only need to change the MAC and IP address when changing docking stations.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "DK0065",
+      "testName": "Wake on Lan - Hibernate Dock 3/4",
+      "category": "Accessories",
+      "subCategory": "Dock - Monitor",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "Dock", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Ethernet", "TBT", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "This CTQ is based on using Magic Packet “Wake on LAN” application.  Others can be used.\n1. With Surface device powered up and connected to docking station (DUT) Turn off the Wi-Fi connection of both the Surface device and the host computer (i.e. the one sending the magic packet) and turn off the firewall of the Surface device.\n2. Connect Ethernet cable to docking station and the host computer.\n3. Open device manager\n4.  Expand “Network adapters”. Right click on the Ethernet adapter for the DUT and select properties, Select the “Advanced” tab, scroll and ensure the following settings:   Wake on Magic Packet – Value = “Enabled” Wake on Pattern Match – Value = “Enabled”\n5. Select “OK” if you had to make any changes.  Otherwise, close the Device Manager windows.\n6. Statically assign the IP Address, Subnet and gateway\n7. On the host computer click Start Menu > Control Panel > Network and Sharing Center or Network and Internet > Network and Sharing Center.\n7a. Click Change adapter settings > Right-click on Ethernet >  Click Properties > Select Internet Protocol Version 4 (TCP/IPv4) then click Properties > Select Use the following IP address.\n7b. Enter the IP address (For example: 10.0.1.1), Subnet mask (For example: 255.255.255.0), Default gateway (For example: 10.0.1.2) Click OK.\n8. On the DUT (surface device connected the dock), repeat steps 4.a.to 4.f. then Enter the IP address (For example: 10.0.1.2), Subnet mask (For example: 255.255.255.0), Default gateway (For example: 10.0.1.1), click okay.\n9. Open Administrative Command window. Run “ipconfig /all”\tNote the MAC address of the ethernet connection.\n10. On the host compute, Open “Wake on LAN” application, Enter the DUT’s MAC and IP address.\n11. Hibernate the surface device connected to the docking station.\n12. On the host computer, select “Wake Up PC” button. Select “OK”\nVerify that the DUT enters S0.\n\nNote:  If testing multiple Surface Computers with the same docking station, the MAC and IP address will follow the docking station and not the PC it’s connected to.  So, you only need to change the MAC and IP address when changing docking stations.",
+          "passFailCriteria": ""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [],
+    "deviceMatrix": []
+  }
+}

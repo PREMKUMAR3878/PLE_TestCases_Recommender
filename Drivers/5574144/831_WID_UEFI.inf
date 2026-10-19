@@ -1,0 +1,82 @@
+;
+; 831_WID_UEFI
+; 18.104.137.0
+; Copyright (C) Microsoft Corporation. All Rights Reserved.
+;
+[Version]
+Signature="$WINDOWS NT$"
+Class=Firmware
+ClassGuid={f2e7dd72-6468-4e36-b6f1-6488f42c1b52}
+Provider=%Provider%
+DriverVer=06/25/2026,18.104.137.0
+PnpLockdown=1
+CatalogFile=831_WID_UEFI.cat
+
+[Manufacturer]
+%MfgName% = Firmware,NTamd64.10.0...17134
+
+[Firmware.NTamd64.10.0...17134]
+%Firmware0Desc% = Firmware0_Install,UEFI\RES_{195f2c3a-8460-4e1b-9520-dce5571e4e4a}
+%Firmware1Desc% = Firmware1_Install,UEFI\RES_{ce410eb0-824e-4116-a500-4e3a2985bf2f}
+
+[Firmware0_Install.NT]
+CopyFiles = Firmware0_CopyFiles
+
+[Firmware0_CopyFiles]
+831_WID_UEFI_18.104.137_0.bin
+831_WID_UEFI_18.104.137_0_integrity.bin
+
+[Firmware0_Install.NT.Services]
+AddService=,2
+
+[Firmware0_Install.NT.Hw]
+AddReg = Firmware0_AddReg
+
+[Firmware0_AddReg]
+HKR,,FirmwareId,,{195f2c3a-8460-4e1b-9520-dce5571e4e4a}
+HKR,,FirmwareVersion,%REG_DWORD%,0x12006889
+HKR,,FirmwareFilename,,%13%\831_WID_UEFI_18.104.137_0.bin
+HKR,,FirmwareIntegrityFilename,,%13%\831_WID_UEFI_18.104.137_0_integrity.bin
+
+[Firmware1_Install.NT]
+CopyFiles = Firmware1_CopyFiles
+
+[Firmware1_CopyFiles]
+831_WID_UEFI_18.104.137_1.bin
+831_WID_UEFI_18.104.137_1_integrity.bin
+
+[Firmware1_Install.NT.Services]
+AddService=,2
+
+[Firmware1_Install.NT.Hw]
+AddReg = Firmware1_AddReg
+
+[Firmware1_AddReg]
+HKR,,FirmwareId,,{ce410eb0-824e-4116-a500-4e3a2985bf2f}
+HKR,,FirmwareVersion,%REG_DWORD%,0x12006889
+HKR,,FirmwareFilename,,%13%\831_WID_UEFI_18.104.137_1.bin
+HKR,,FirmwareIntegrityFilename,,%13%\831_WID_UEFI_18.104.137_1_integrity.bin
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+831_WID_UEFI_18.104.137_0.bin = 1
+831_WID_UEFI_18.104.137_0_integrity.bin = 1
+831_WID_UEFI_18.104.137_1.bin = 1
+831_WID_UEFI_18.104.137_1_integrity.bin = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[Strings]
+; localizable
+DiskName      = "Firmware Update"
+Provider      = "Surface 831_WID"
+MfgName       = "831_WID"
+Firmware0Desc = "831_WID UEFI"
+Firmware1Desc = "831_WID UEFI"
+
+; non-localizable
+DIRID_WINDOWS = 10
+REG_DWORD     = 0x00010001

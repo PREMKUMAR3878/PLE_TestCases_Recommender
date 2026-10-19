@@ -1,0 +1,713 @@
+{
+  "testCases": [
+    {
+      "Id": "Headsets001",
+      "testName": "Pairing Mode LED",
+      "category": "Accessories",
+      "subCategory": "Headsets - Bluetooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Press and hold pairing button for 5 seconds.Verify: LED is blinking white when the headphones are in pairing mode.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets002",
+      "testName": "Pairing LED -Timeout",
+      "category": "Accessories",
+      "subCategory": "Headsets - Bluetooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Observe the pairing LED on the headphones.Verify: Pairing LED is Off.2. Press and hold the pairing button for more than 5 seconds.Verify: The Pairing LED blinks slowly (Pairing Mode).3. Wait up to 10 minutes.Verify: The Pairing LED is no longer blinking.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets003",
+      "testName": "Bluetooth & Other Devices",
+      "category": "Accessories",
+      "subCategory": "Headsets - Bluetooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Press and hold power button to put headphones into Pairing Mode.Verify: Ready to pair audio plays through headphones.2. Go to Settings -> Devices -> Bluetooth and other devices.3. Select 'Add Bluetooth or other device'.4. Select Bluetooth.5. Select headphones to pair.Verify: The headphones pair.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets004",
+      "testName": "Swift Pairing",
+      "category": "Accessories",
+      "subCategory": "Headsets - Bluetooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Remove Device Surface Headhpones from BT menu if connected.\n2. Hold down pairing button from 5 seconds.\nVerify: DUT prompts Surface Headphones pairing option.\n3. Connect headphones via pairing prompt\nVerify: Headphones pair to DUT in BT menu",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets005",
+      "testName": "Unpairing",
+      "category": "Accessories",
+      "subCategory": "Headsets - Bluetooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Pair the audio device to the host.\n2. Go to Settings -> Devices -> Bluetooth and other devices.\n3. Select the audio device.\n4. Select Remove Device.\nVerify: The device is removed.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets006",
+      "testName": "Surface App - Device Information",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Pair the audio device to the host.\n2. Download and launch Surface App from MS Store, if not installed.\n3. Select Home tab.\nVerify: The audio device, Battery Level, Current Version, Volume and Noise Cancellation Levels are visible.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets007",
+      "testName": "Headsets - General Testing",
+      "category": "Accessories",
+      "subCategory": "Accelerated Ink Functionality for primary apps: Edgs, Snip & Sketch, Whiteboard, OneNote",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Download and launch Surface App from MS Store.\nVerify: DUT prompts LE connection for use with Office Apps. (If Surface App is already downloaded, launch and turn on Microsoft 365 integration from Device controls menu) \n2. Accept prompts to pair via LE Connection.\n3. Open BlueTooth menu.\nVerify: LE Surface Headphones are connected under Other devices and battery% is visible.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets008",
+      "testName": "Touch Commands",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Test touch commands on each side \n-Tap once/Play or Pause\n-Tap twice/Skip a song\n-Tap Three times/Previous song\nVerify: Touch commands work correctly on each headphone",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets009",
+      "testName": "Active Noise Cancellation Dial",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Rotate the left dial\nVerify: Noise cancellation activates when scrolling forwards/turning off backwards",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets010",
+      "testName": "Volume Dial",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. With audio playing through headphones, rotate the right headphone dial\nVerify: Turning dial forward increases volume/turning backwards lowers volume",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets011",
+      "testName": "Wired Connection Audio Cable",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Connect 3.5mm audio cable to Surface Headphones \n Verify: Audio playback through Headphones",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets012",
+      "testName": "Wired Connection USB",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Connect USB-C charging cable to Surface Headphones Verify: Headphones are charging Verify: Bluetooth/Audio cable playback while charging",
+          "passFailCriteria": "1) The  Color Profile selected in Action Center, is reflected in Display Settings 2) Color profile changes accordingly 3) Report any anomalies or anything not appearing normal"
+        }
+      ]
+    },
+    {
+      "Id": "Headsets013",
+      "testName": "Wear Detection",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Wear headphones and have audio playing through headphones.2. Remove heaphones.Verify: Playback pauses.3. Wear headphones.Verify: Playback resumes.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets015",
+      "testName": "Word-Dictation",
+      "category": "Accessories",
+      "subCategory": "Headsets - General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Wear Headphones and open Microsoft Word.2. In the Home tab select 'Dictate'3. Begin speaking.Verify: Text matches what you have said.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets018",
+      "testName": "Host in CS",
+      "category": "Accessories",
+      "subCategory": "Headsets - Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "20 min",
+          "notes": "",
+          "detailedSteps": "1. Pair headphones to the Host.2. Place the Host into CS.3. Wait for 30 seconds.4. Wake Host.Verify: Headphones are connected and respond to tap commands.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets019",
+      "testName": "Host in CS",
+      "category": "Accessories",
+      "subCategory": "Headsets - Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "2 min",
+          "notes": "",
+          "detailedSteps": "1. Pair the audio device to the Host.2. Place the Host into CS.3. Wait for 5 minutes.4. Wake Host.Verify: Audio device is connected and responds to tap commands.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets021",
+      "testName": "Host Restart",
+      "category": "Accessories",
+      "subCategory": "Headsets - Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Pair the audio device to the Host.2. Restart Host.3. Wait for 30 seconds.4. Wake Host.Verify: Audio device is connected and responds to tap commands.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets022",
+      "testName": "Host after Hibernate",
+      "category": "Accessories",
+      "subCategory": "Headsets - Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Pair the audio device to the Host.2. Hibernate Host..3. Wait for 30 seconds.4. Wake Host.Verify: Audio device is connected and responds to tap commands.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets023",
+      "testName": "Host after Shutdown",
+      "category": "Accessories",
+      "subCategory": "Headsets - Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "1. Pair the audio device to the Host.2. Shutdown Host.3. Wait for 30 seconds.4. Wake Host.Verify: Audio device is connected and responds to tap commands.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets024",
+      "testName": "USB Dongle Link LED",
+      "category": "Accessories",
+      "subCategory": "Headsets - USB Link & Teams Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Connect DUT to internet 2. Install Teams application installed from MS Store if not installed on DUT.3. If not already signed in to DUT using test work account: i. Run C:WindowsSystem32Sysprepsysprep.exe and sign in with test work account. Example: @onmicrosoft.com 4. Attach usb link dongle to DUT and power headphones on.5. Check Settings > Bluetooth & Devices > Devices - usb link > \"Reboot to finish setup\" required for full functionallity 6. Reboot DUT if needed Verify: White LED blinks and turns off (While headphones are powered off)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets025",
+      "testName": "USB Link Connect",
+      "category": "Accessories",
+      "subCategory": "Headsets - USB Link & Teams Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Connect DUT to internet\n2. Install Teams application installed from MS Store if not installed on DUT.\n3. If not already signed in to DUT using test work account:\n     i. Run C:\\Windows\\System32\\Sysprep\\sysprep.exe and sign in with test work account. Example: @onmicrosoft.com\n4. Attach usb link dongle to DUT and power headphones on.\n5. Check Settings > Bluetooth & Devices > Devices - usb link > \"Reboot to finish setup\" required for full functionallity\n6. Reboot DUT if needed\nVerify: Audio prompt through headphones verifies connected to usb link and DUT\nVerify: USB Link dongle LED remains solid white while headphones are ON\n7. Power button to turn Headphones 2+ OFF\nVerify: Audio prompt upon power off.\nVerify: USB Link dongle LED turns off while headhpones are OFF",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets026",
+      "testName": "Teams Launch",
+      "category": "Accessories",
+      "subCategory": "Headsets - USB Link & Teams Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Connect DUT to internet\n2. Install Teams application installed from MS Store if not installed on DUT.\n3. If not already signed in to DUT using test work account:\n     i. Run C:\\Windows\\System32\\Sysprep\\sysprep.exe and sign in with test work account. Example: @onmicrosoft.com\n4. Attach usb link dongle to DUT and power headphones on.\n5. Check Settings > Bluetooth & Devices > Devices - usb link > \"Reboot to finish setup\" required for full functionallity\n6. Reboot DUT if needed\n7. With Teams app window minimized or closed, press Teams button on headest.\nVerify: Teams meeting window is launched",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets027",
+      "testName": "Teams - In Meeting",
+      "category": "Accessories",
+      "subCategory": "Headsets - USB Link & Teams Interaction",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "2 min",
+          "notes": "",
+          "detailedSteps": "1. Connect DUT to internet\n2. Install Teams application installed from MS Store if not installed on DUT.\n3. If not already signed in to DUT using test work account:\n     i. Run C:\\Windows\\System32\\Sysprep\\sysprep.exe and sign in with test work account. Example: @onmicrosoft.com\n4. Attach usb link dongle to DUT and power headphones on.\n5. Check Settings > Bluetooth & Devices > Devices - usb link > \"Reboot to finish setup\" required for full functionallity\n6. Reboot DUT if needed\n7. Launch Teams, click \"...\" in the top right and open settings > devices > Make a test call\n2. While in a call, tap once on L headphone\nVerify: Microphone mutes and unmutes with one tap gesture\nVerify: USB Dongle is Red when microphone is muted and Green when unmuted\n3. While in a call, tap once on R headhpone\nVerify: Microphone mutes and unmutes with one tap gesture\nVerify: USB Dongle is Red when microphone is muted and Green when unmuted",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets028",
+      "testName": "Charging case LED - Timeout",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "2 min",
+          "notes": "",
+          "detailedSteps": "1. Pair earbuds to DUT.\n2. Place earbuds in charging case and leave lid open.\nVerify: Charging case LED turns off after 5 min.\n3. Remove earbuds from charging case and leave lid open.\nVerify: Charging case LED turns off after 5 min.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets029",
+      "testName": "Earbud placed in charging case",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Pair earbuds to DUT.\n2. Place one earbud in charging case.\nVerify: Case LED blinks white",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets030",
+      "testName": "Misplace in charging case",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Pair earbuds to DUT.\n2. Place one earbud in charging case rotated 180 degress from correct orientation.\nVerify: Case LED blinks red",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets031",
+      "testName": "Advanced Gestures R",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "With Earbuds paired, selected, and powered on:\n1. Wear Earbuds and have audio playing through earbuds.\n2. Swipe up on the right earbud.\nVerify: Volume increases.\n3. Swipe down on the right earbud.\nVerify: Volume decreases.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets032",
+      "testName": "Advanced Gestures L",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "With Earbuds paired, selected, and powered on:\n1. Wear Earbuds and have audio playing through earbuds.\n2. Swipe the left earbud forward.\nVerify: Next track is played.\n3. Swipe the left earbud backward.\nVerify: Previous track is played.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets033",
+      "testName": "Tones for tap and swipe",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "With Earbuds paired, selected, and powered on:\n1. Wear Earbuds and have audio playing through earbuds.\n2. perform tap and swipe gestures.\nVerify: Earbuds play a tone for each gesture performed.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets034",
+      "testName": "Disable touch control",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "1 min",
+          "notes": "",
+          "detailedSteps": "1. Open the Surface Audio App (Start Menu -> Surface Audio)\n2. Select 'Device controls'\n3. De-select 'Touch control.\nVerify: performing Gestures on the Earbuds no longer controls audio playback.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Headsets035",
+      "testName": "Automatic BT disconnect",
+      "category": "Accessories",
+      "subCategory": "Headsets - Earbud Specific",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "2 min",
+          "notes": "",
+          "detailedSteps": "With Earbuds paired, selected, and powered on:\n1. Place Earbuds in charging case.\nVerify: Device is shown as 'Disconnected' in the Surface App.\n2. Remove Eabuds from charging case.\nVerify: Device is shown as 'Connected' in the Surface App.",
+          "passFailCriteria": ""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [
+      {
+        "DeviceConfiguration": {
+          "devices": [
+            {
+              "deviceName": "Surface Headphones 2",
+              "fields": {
+                "DeviceType": {
+                  "description": "The Device SKU being tested (Type, Processor, HD Size).",
+                  "example": "Studio 2, i7, 512GB"
+                },
+                "DeviceName": {
+                  "description": "Tag/sticker name and serial number of the device.",
+                  "example": {
+                    "tag": "ACC-SP6i7-Wi-07",
+                    "serialNumber": "123456789100"
+                  }
+                },
+                "OSVersion": {
+                  "description": "Run 'winver' and note Version and OS Build.",
+                  "example": "Version 1809 Build 17763.253"
+                },
+                "OSImage": {
+                  "description": "Version of the image used to image the device.",
+                  "example": "6.2551.0"
+                },
+                "RailCarID": {
+                  "description": "RailCar ID from Version Report.",
+                  "example": "520"
+                },
+                "HeadphonesDriver": {
+                  "SurfaceBluetoothLE": {
+                    "description": "Check driver version from Device Manager → Bluetooth.",
+                    "status": "Applicable"
+                  },
+                  "SurfaceBluetooth": {
+                    "description": "Check driver version from Device Manager → Bluetooth.",
+                    "status": "Don't Run"
+                  }
+                },
+                "AdditionalDriversApps": {
+                  "SurfaceApplication": {
+                    "description": "Check version from Surface App → App settings → About.",
+                    "example": "2.20.200.0"
+                  },
+                  "TeamsApplication": {
+                    "description": "Check version from Teams → Settings → About Teams.",
+                    "example": "2.20.200.0"
+                  }
+                }
+              }
+            },
+            {
+              "deviceName": "Surface Headphones 2+ Teams",
+              "fields": {
+                "HeadphonesDriver": {
+                  "SurfaceBluetoothLE": {
+                    "description": "Check driver version.",
+                    "status": "Applicable"
+                  },
+                  "SurfaceBluetooth": {
+                    "description": "Check driver version.",
+                    "status": "Don't Run"
+                  }
+                }
+              }
+            },
+            {
+              "deviceName": "Surface Earbuds",
+              "fields": {
+                "EarbudsDriver": {
+                  "SurfaceBluetoothLE": {
+                    "description": "Check driver version.",
+                    "status": "Don't Run"
+                  },
+                  "SurfaceBluetooth": {
+                    "description": "Check driver version from Device Manager → Bluetooth → Surface Earbuds.",
+                    "status": "Don't Run"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "deviceMatrix": [
+      {
+        "FirmwareResults": {
+          "persons": [
+            "Amy",
+            "Kurt",
+            "Morrison"
+          ],
+          "fields": {
+            "HeadsetFWVersion": {
+              "description": "Check current version from Surface App (Download from Microsoft Store)",
+              "key": "MCUFwVer",
+              "results": {
+                "Amy": "Result",
+                "Kurt": "Result",
+                "Morrison": "Result"
+              }
+            },
+            "USBLinkFWVersion": {
+              "description": "Check current version from Surface App (Download from Microsoft Store)",
+              "key": "USBlinkFwVer",
+              "results": {
+                "Amy": "Don't Run",
+                "Kurt": "Don't Run",
+                "Morrison": "Don't Run"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

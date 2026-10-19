@@ -1,0 +1,56 @@
+;
+; SurfaceTpm_N
+; 7.2.4.1
+; Copyright (C) Microsoft Corporation. All Rights Reserved.
+;
+[Version]
+Signature="$WINDOWS NT$"
+Class=Firmware
+ClassGuid={f2e7dd72-6468-4e36-b6f1-6488f42c1b52}
+Provider=%Provider%
+DriverVer=06/16/2026,7.2.4.1
+PnpLockdown=1
+CatalogFile=SurfaceTpm_N.cat
+
+[Manufacturer]
+%MfgName% = Firmware,NTamd64.10.0...17134
+
+[Firmware.NTamd64.10.0...17134]
+%FirmwareDesc% = Firmware_Install,UEFI\RES_{4f5f70ff-de95-4972-a5ea-b9d719aab351}
+
+[Firmware_Install.NT]
+CopyFiles = Firmware_CopyFiles
+
+[Firmware_CopyFiles]
+SurfaceTpm_N_7.2.4.1.bin
+
+[Firmware_Install.NT.Services]
+AddService=,2
+
+[Firmware_Install.NT.Hw]
+AddReg = Firmware_AddReg
+
+[Firmware_AddReg]
+HKR,,FirmwareId,,{4f5f70ff-de95-4972-a5ea-b9d719aab351}
+HKR,,FirmwareVersion,%REG_DWORD%,0x7020401
+HKR,,FirmwareFilename,,%13%\SurfaceTpm_N_7.2.4.1.bin
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+SurfaceTpm_N_7.2.4.1.bin = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[Strings]
+; localizable
+DiskName     = "Firmware Update"
+Provider     = "Surface"
+MfgName      = "Nuvoton"
+FirmwareDesc = "Surface TPM"
+
+; non-localizable
+DIRID_WINDOWS = 10
+REG_DWORD     = 0x00010001

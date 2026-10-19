@@ -1,0 +1,1133 @@
+{
+  "testCases": [
+    {
+      "Id": "GAMI001",
+      "testName": "Setup Display Configuration",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "To verify that the Device Under Test (DUT) is successfully configured with the required display setup based on the device form factor before executing test scenarios.",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "1.Identify the device form factor (Pro, Go, Studio, Laptop, Laptop Studio, Book) \n2.Refer to the display configuration table\n3.Configure the display as per the required setup:\n   A. Built-in display\n   B. 2 Display Extended (Built-in + External 4K display)\n   C. 3 Display Extended (Built-in + External + External using dock)\n4.Apply and save display settings\n5.Verify if all displays are detected and working in extended mode",
+          "passFailCriteria": "1.Display configuration is successfully set based on the device form factor\n2.All configured displays are detected and functioning correctly in extended mode"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI002",
+      "testName": "Setup Display Configuration - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "To verify that the Device Under Test (DUT) is successfully configured with the required display setup based on the device form factor before executing test scenarios.",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "1.Identify the device form factor (Pro, Go, Studio, Laptop, Laptop Studio, Book) \n2.Refer to the display configuration table\n3.Configure the display as per the required setup:\n   A. Built-in display\n   B. 2 Display Extended (Built-in + External 4K display)\n   C. 3 Display Extended (Built-in + External + External using dock)\n4.Apply and save display settings\n5.Verify if all displays are detected and working in extended mode",
+          "passFailCriteria": "1.Display configuration is successfully set based on the device form factor\n2.All configured displays are detected and functioning correctly in extended mode"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI003",
+      "testName": "Display config game exprience",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "To verify that the game runs without issues when played under different display configurations (Single, Dual, and Tri-display in extended mode).",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "1.Launch the game on the DUT\n2.Play the game under the configured display mode\n3.Switch focus between displays (if multiple displays are configured)\n4.Observe gameplay behavior during interaction\n5.Note any graphical, performance, or functional issues",
+          "passFailCriteria": "1.Display configuration is successfully set based on the device form factor\n2.All configured displays are detected and functioning correctly in extended mode"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI004",
+      "testName": "Display config game exprience - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "To verify that the game runs without issues when played under different display configurations (Single, Dual, and Tri-display in extended mode).",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "1.Launch the game on the DUT\n2.Play the game under the configured display mode\n3.Switch focus between displays (if multiple displays are configured)\n4.Observe gameplay behavior during interaction\n5.Note any graphical, performance, or functional issues",
+          "passFailCriteria": "1.Display configuration is successfully set based on the device form factor\n2.All configured displays are detected and functioning correctly in extended mode"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI005",
+      "testName": "Audio output - Built-in speakers",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Validate that sound is audible through built-in speakers during game launch",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game application.\n1.Observe the initial game launch screens (cutscenes).\n2.Check if sound is playing during the cutscenes.\n3.Click on the speaker icon located on the right side of the taskbar.\n4.Verify the current audio output device.\n5.Select built-in speakers as the output sound source (if not already selected).\n",
+          "passFailCriteria": "1.Xbox app should be installed successfully.\n2.User should be able to sign in without errors.\n3.Game Pass account should be recognized and activated within the app.\n"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI006",
+      "testName": "Audio output - Built-in speakers - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Validate that sound is audible through built-in speakers during game launch",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game application.\n1.Observe the initial game launch screens (cutscenes).\n2.Check if sound is playing during the cutscenes.\n3.Click on the speaker icon located on the right side of the taskbar.\n4.Verify the current audio output device.\n5.Select built-in speakers as the output sound source (if not already selected).\n",
+          "passFailCriteria": "1.Xbox app should be installed successfully.\n2.User should be able to sign in without errors.\n3.Game Pass account should be recognized and activated within the app.\n"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI007",
+      "testName": "Touch Input Support",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify touch input behavior during gameplay and menu navigation",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "1.Launch the game and start gameplay.\n2.Navigate through game menus using touch input.\n3.Perform gameplay actions using touch gestures (tap, swipe, etc.).\n4.Observe system response for each touch interaction.\n5.Check for any delays, incorrect responses, or unresponsive areas.\n6.If the game does not support touch input, note the behavior.",
+          "passFailCriteria": "1.Touch inputs should work smoothly in both menu navigation and gameplay.\n2.All touch actions should respond accurately without lag or errors.\n3.If the game does not support touch input, no issues should be reported (expected behavior)."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI008",
+      "testName": "Game Pass Sign-in",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful installation of Xbox app and sign-in with Game Pass account",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Open Microsoft Store on the system.\nSearch for the Xbox app.\n1.Download and install the Xbox application.\n2.Launch the Xbox app after installation.\n3.Click on Sign-in.\n4.Enter valid Game Pass enabled account credentials.\n",
+          "passFailCriteria": "1.Xbox app should be installed successfully.\n2.User should be able to sign in without errors.\n3.Game Pass account should be recognized and activated within the app.\n"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI009",
+      "testName": "Game Pass Sign-in - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful installation of Xbox app and sign-in with Game Pass account",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Open Microsoft Store on the system.\nSearch for the Xbox app.\n1.Download and install the Xbox application.\n2.Launch the Xbox app after installation.\n3.Click on Sign-in.\n4.Enter valid Game Pass enabled account credentials.\n",
+          "passFailCriteria": "1.Xbox app should be installed successfully.\n2.User should be able to sign in without errors.\n3.Game Pass account should be recognized and activated within the app.\n"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI010",
+      "testName": "Game Launch Experience",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that a Game Pass game can be installed and launched successfully",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "1.Xbox app is installed\n2.User is signed in with a valid Game Pass account\n3.System meets minimum game requirements\n4.Internet connection is active",
+          "passFailCriteria": "1.Game should download and install without errors.\n2.Game should launch successfully after installation.\n3.No crashes, delays, or error messages should occur during launc"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI011",
+      "testName": "Game Launch Experience - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that a game can be launched successfully using Cloud Gaming",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Xbox app is installed\nUser is signed in with a valid Game Pass (Cloud-enabled) account\nStable internet connection is available\nDevice meets streaming requirements",
+          "passFailCriteria": "Game should start streaming without errors.\nGame should launch successfully without crashes or interruptions.\nInitial gameplay should load properly."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI012",
+      "testName": "Cutscene Playback",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Validate that game audio is played through the correct output device during launch",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game application.\nObserve the initial game startup (cutscenes).\nCheck whether any audio is heard during the cutscenes.\nClick on the speaker icon on the right side of the taskbar.\nVerify the selected audio output device.\nIf not selected, choose built-in speakers as the output source.\nReturn to the game and continue playback.\nObserve whether audio is now audible through the speakers.",
+          "passFailCriteria": "Audio should play clearly during game launch and cutscenes.\nSound should be output through the built-in speakers.\nNo audio issues such as silence, distortion, or incorrect device usage should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI013",
+      "testName": "Cutscene Playback - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Validate that game audio is played through the correct output device during launch",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game application.\nObserve the initial game startup (cutscenes).\nCheck whether any audio is heard during the cutscenes.\nClick on the speaker icon on the right side of the taskbar.\nVerify the selected audio output device.\nIf not selected, choose built-in speakers as the output source.\nReturn to the game and continue playback.\nObserve whether audio is now audible through the speakers.",
+          "passFailCriteria": "Audio should play clearly during game launch and cutscenes.\nSound should be output through the built-in speakers.\nNo audio issues such as silence, distortion, or incorrect device usage should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI014",
+      "testName": "Fullscreen toggling",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the game supports smooth toggling and running in full-screen mode (F11)",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game application.\nObserve the initial game startup (cutscenes).\nCheck whether any audio is heard during the cutscenes.\nClick on the speaker icon on the right side of the taskbar.\nVerify the selected audio output device.\nIf not selected, choose built-in speakers as the output source.\n",
+          "passFailCriteria": "Game should switch to full-screen mode smoothly without delay or distortion.\nGame should run properly in full-screen mode.\nSwitching back to windowed mode should work without issues.\nNo crashes, flickering, or resolution problems should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI015",
+      "testName": "Fullscreen toggling - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the game supports smooth toggling and running in full-screen mode (F11)",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game application.\nObserve the initial game startup (cutscenes).\nCheck whether any audio is heard during the cutscenes.\nClick on the speaker icon on the right side of the taskbar.\nVerify the selected audio output device.\nIf not selected, choose built-in speakers as the output source.\n",
+          "passFailCriteria": "Game should switch to full-screen mode smoothly without delay or distortion.\nGame should run properly in full-screen mode.\nSwitching back to windowed mode should work without issues.\nNo crashes, flickering, or resolution problems should occur"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI016",
+      "testName": "Playability",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify overall gameplay experience and identify any major issues affecting playability",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a sustained period.\nObserve responsiveness of controls during gameplay.\nMonitor for latency issues such as delays in input response.\nCheck for network-related issues like disconnections or buffering.\nObserve for visual anomalies (glitches, screen tearing, rendering issues).\n",
+          "passFailCriteria": "Game should run smoothly without major issues.\nNo significant visual anomalies or performance issues should be present.\nGameplay should be stable and responsive."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI017",
+      "testName": "Playability - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify gameplay experience under latency and network-related conditions",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a sustained period.\nObserve responsiveness of controls during gameplay.\nMonitor for latency issues such as delays in input response.\nCheck for network-related issues like disconnections or buffering.\nObserve for visual anomalies (glitches, screen tearing, rendering issues).\n",
+          "passFailCriteria": "Minor lag or delay may be observed depending on internet connection.\nNo major latency issues, frequent disconnections, or critical visual issues should occur.\nGameplay should remain stable and reasonably responsive."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI018",
+      "testName": "FPS",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify FPS data collection and performance analysis during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and ensure it is ready for testing.\nNavigate to the script location: \\desmowdsPLEGamingPillarFPSAuto_TestsTakeFPS.\nRun the TakeFPS.cmd script.\nConfigure the script with:\n\nGame executable name (e.g., game.exe)\n",
+          "passFailCriteria": "FPS data should be captured successfully without errors.\nScript should execute correctly and close the game after completion.\nGenerated data file should contain valid FPS metrics.\nFPS chart should be generated successfully with average performance values."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI019",
+      "testName": "Close game",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the game closes without issues during or after gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes using the attached base (keyboard).\nWhile the game is running, detach the base (keyboard) from the screen.\nObserve system behavior immediately after detachment.\nCheck whether the game continues running without interruption.\nAttempt to continue gameplay using available input methods (touch or controller if supported).\n(Optional) Reattach the base and verify system/game behavior.(Optional) Reattach the keyboard and verify system/game behavior.",
+          "passFailCriteria": "System should handle base detachment without errors.\nGame should continue running without crashes or freezes.\nInput should switch appropriately to available input methods.\nNo unexpected behavior or interruptions should occur during gameplay."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI020",
+      "testName": "Close game - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the game closes without issues during or after gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes using the attached base (keyboard).\nWhile the game is running, detach the base (keyboard) from the screen.\nObserve system behavior immediately after detachment.\nCheck whether the game continues running without interruption.\nAttempt to continue gameplay using available input methods (touch or controller if supported).\n(Optional) Reattach the base and verify system/game behavior.(Optional) Reattach the keyboard and verify system/game behavior.",
+          "passFailCriteria": "System should handle base detachment without errors.\nGame should continue running without crashes or freezes.\nInput should switch appropriately to available input methods.\nNo unexpected behavior or interruptions should occur during gameplay."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI021",
+      "testName": "Sleep/Resume Expereince",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify game behavior when the system is put to sleep during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes.\nPut the system into sleep mode using the power button.\nWake the system and observe game behavior.\nResume gameplay and verify stability.\nAgain, play the game and put the system to sleep by closing the lid (if applicable).\nWake the device and return to the game.\nObserve for any issues such as freezes, crashes, or disconnections.",
+          "passFailCriteria": "System should enter and resume from sleep mode successfully.\nGame should either:\n\nResume correctly without issues, OR\nHandle session pause/termination gracefully.\n"
+        }
+      ]
+    },
+    {
+      "Id": "GAMI022",
+      "testName": "Detach keyboard during gameplay",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify game behavior when detaching the base (keyboard) from the screen during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes using the attached base (keyboard).\nWhile the game is running, detach the base (keyboard) from the screen.\nObserve system behavior immediately after detachment.\nCheck whether the game continues running without interruption.\nAttempt to continue gameplay using available input methods (touch or controller if supported).\n(Optional) Reattach the base and verify system/game behavior.(Optional) Reattach the keyboard and verify system/game behavior.",
+          "passFailCriteria": "System should handle base detachment without errors.\nGame should continue running without crashes or freezes.\nInput should switch appropriately to available input methods.\nNo unexpected behavior or interruptions should occur during gameplay."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI023",
+      "testName": "Detach keyboard during gameplay - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify game behavior when detaching the base (keyboard) from the screen during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes using the attached base (keyboard).\nWhile the game is running, detach the base (keyboard) from the screen.\nObserve system behavior immediately after detachment.\nCheck whether the game continues running without interruption.\nAttempt to continue gameplay using available input methods (touch or controller if supported).\n(Optional) Reattach the base and verify system/game behavior.(Optional) Reattach the keyboard and verify system/game behavior.",
+          "passFailCriteria": "System should handle base detachment without errors.\nGame should continue running without crashes or freezes.\nInput should switch appropriately to available input methods.\nNo unexpected behavior or interruptions should occur during gameplay."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI024",
+      "testName": "Alt+Tab recover",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify game stability while switching between applications using Alt + Tab",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nOpen another application (e.g., browser, file explorer).\nPress Alt + Tab to switch from the game to another application.\nObserve system behavior during the switch.\nSwitch back to the game using Alt + Tab.\nRepeat the switching process multiple times.\nMonitor for any issues like lag, screen flicker, or unresponsiveness.\nContinue gameplay after switching and verify stability.",
+          "passFailCriteria": "Application switching should be smooth without delays.\nGame should resume properly after switching back.\nNo crashes, freezes, or graphical issues should occur.\nPerformance should remain stable during and after switching."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI025",
+      "testName": "Alt+Tab recover - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify game stability while switching between applications using Alt + Tab",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nOpen another application (e.g., browser, file explorer).\nPress Alt + Tab to switch from the game to another application.\nObserve system behavior during the switch.\nSwitch back to the game using Alt + Tab.\nRepeat the switching process multiple times.\nMonitor for any issues like lag, screen flicker, or unresponsiveness.\nContinue gameplay after switching and verify stability.",
+          "passFailCriteria": "Application switching should be smooth without delays.\nGame should resume properly after switching back.\nNo crashes, freezes, or graphical issues should occur.\nPerformance should remain stable during and after switching."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI026",
+      "testName": "Xbox Game Bar - Screenshots",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that screenshots can be captured using Xbox Game Bar during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes.\nPress Win + G to open the Xbox Game Bar.\nClick on the Capture widget.\nClick the Screenshot button (or use shortcut Win + Alt + PrtScn).\nCapture multiple screenshots during gameplay.\nNavigate to the saved screenshots location.\nOpen the captured screenshots and verify the content.\nObserve any delays, errors, or interruptions during the capture process.",
+          "passFailCriteria": "Xbox Game Bar should open without issues.\nScreenshots should be captured successfully.\nCaptured images should correctly reflect the gameplay screen.\nNo lag, crash, or interruption should occur during screenshot capture."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI027",
+      "testName": "Xbox Game Bar - Video",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify that gameplay video can be recorded using Xbox Game Bar without issues",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes.\nPress Win + G to open the Xbox Game Bar.\nClick on the Capture widget.\nClick the Screenshot button (or use shortcut Win + Alt + PrtScn).\nCapture multiple screenshots during gameplay.\nNavigate to the saved screenshots location.\nOpen the captured screenshots and verify the content.\nObserve any delays, errors, or interruptions during the capture process.",
+          "passFailCriteria": "Xbox Game Bar should open without issues.\nScreenshots should be captured successfully.\nCaptured images should correctly reflect the gameplay screen.\nNo lag, crash, or interruption should occur during screenshot capture."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI028",
+      "testName": "Audio output - BT headsets",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro"],
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify audio functionality and stability when using Bluetooth headsets during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Turn on the Bluetooth headset and pair it with the system.\nEnsure the headset is connected as the active audio output device.\nLaunch the game and start gameplay.\nVerify audio output through the Bluetooth headset.\nPlay the game for a few minutes and monitor audio clarity.\nCheck for issues such as audio delay, distortion, or disconnections.\n(Optional) Disconnect and reconnect the Bluetooth headset during gameplay.\nObserve system behavior and audio stability after reconnection.",
+          "passFailCriteria": "Bluetooth headset should connect successfully.\nAudio should be clear and synchronized with gameplay.\nNo major latency, distortion, or disconnection issues should occur.\nGame should continue running smoothly during headset connect/disconnect actions."
+        }
+      ]
+    },
+    {      
+      "Id": "GAMI029",
+      "testName": "Audio output - BT headsets - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Pro"],
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify audio functionality and stability when using Bluetooth headsets during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Turn on the Bluetooth headset and pair it with the system.\nEnsure the headset is connected as the active audio output device.\nLaunch the game and start gameplay.\nVerify audio output through the Bluetooth headset.\nPlay the game for a few minutes and monitor audio clarity.\nCheck for issues such as audio delay, distortion, or disconnections.\n(Optional) Disconnect and reconnect the Bluetooth headset during gameplay.\nObserve system behavior and audio stability after reconnection.",
+          "passFailCriteria": "Bluetooth headset should connect successfully.\nAudio should be clear and synchronized with gameplay.\nNo major latency, distortion, or disconnection issues should occur.\nGame should continue running smoothly during headset connect/disconnect actions."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI030",
+      "testName": "Keyboard support",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": ["Laptop", "Book"],
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify keyboard functionality and stability during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nUse the keyboard to perform game actions (movement, controls, shortcuts).\nObserve responsiveness of key inputs during gameplay.\nCheck for issues such as key lag, missed inputs, or incorrect mappings.\nContinue gameplay for a few minutes using the keyboard.\n(Optional) Disconnect and reconnect the keyboard if applicable.\n",
+          "passFailCriteria": "Keyboard inputs should be responsive and accurate.\nNo lag, missed inputs, or incorrect key behaviors should occur.\nGame should continue functioning without interruption during keyboard usage or reconnection."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI031",
+      "testName": "Mouse support",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify external mouse functionality and stability during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Connect the external mouse to the system.\nLaunch the game and start gameplay.\nUse the mouse to perform in-game actions (aiming, navigation, clicking).\nObserve pointer movement accuracy and responsiveness.\nCheck for issues such as lag, cursor jumping, or input delay.\nContinue gameplay for a few minutes using the mouse.\n(Optional) Disconnect and reconnect the mouse during gameplay.\nVerify whether the mouse continues to function correctly after reconnection.",
+          "passFailCriteria": "Mouse input should be smooth and responsive.\nCursor movement and clicks should be accurate.\nNo lag, disconnections, or erratic cursor behavior should occur.\nGame should remain stable during mouse usage and reconnection."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI032",
+      "testName": "Remove keyboard type cover",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify game behavior when the keyboard/type cover is removed during gameplay",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the game and start gameplay.\nPlay the game for a few minutes using the connected keyboard.\nWhile the game is running, detach/remove the keyboard type cover from the device.\nObserve the system and game response immediately after removal.\nContinue gameplay using alternate input (touch or controller if available).\nCheck if the game remains stable and responsive.\n(Optional) Reattach the keyboard and verify system/game behavior.",
+          "passFailCriteria": "System should detect keyboard removal without issues.\nGame should continue running without crashes or freezes.\nInput should switch smoothly to available alternatives (touch/controller).\nNo unexpected behavior or interruptions should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI033",
+      "testName": "Xbox Controller Setup",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful setup and pairing of Xbox controller via Bluetooth",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Press the Windows key and open Settings.\nNavigate to Bluetooth & Devices from the left panel.\nTurn on the Xbox controller.\nPress the pair button on the controller to enable pairing mode.\nClick on Add device in Bluetooth settings.\nSelect Bluetooth as the device type.\nWait for Xbox Wireless Controller (or similar device) to appear.\nSelect the controller from the list.\nVerify that the controller connects successfully (Xbox button light becomes steady).",
+          "passFailCriteria": "Controller should appear in the Bluetooth devices list.\nPairing should complete successfully without errors.\nController should be connected and ready for use."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI034",
+      "testName": "Xbox Controller Setup - Cloud",
+      "category": "Gaming",
+      "subCategory": "Device Funtionality for Gaming",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics",  "Nvidia", "BTTC"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful setup and pairing of Xbox controller via Bluetooth",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Press the Windows key and open Settings.\nNavigate to Bluetooth & Devices from the left panel.\nTurn on the Xbox controller.\nPress the pair button on the controller to enable pairing mode.\nClick on Add device in Bluetooth settings.\nSelect Bluetooth as the device type.\nWait for Xbox Wireless Controller (or similar device) to appear.\nSelect the controller from the list.\nVerify that the controller connects successfully (Xbox button light becomes steady).",
+          "passFailCriteria": "Controller should appear in the Bluetooth devices list.\nPairing should complete successfully without errors.\nController should be connected and ready for use."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI035",
+      "testName": "Minecraft MR Experience",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify gameplay stability and performance while interacting in Mixed Reality world using Minecraft",
+          "expectedTime": "2 min",
+          "notes": "",
+          "detailedSteps": "Launch Minecraft from the system.\nEnter the Mixed Reality environment.\nStart gameplay within the Mixed Reality world.\nInteract with the game using available inputs (controller, keyboard, or touch).\nMove around and perform in-game actions (building, navigation, interaction).\nObserve system behavior during gameplay.\nMonitor for any issues such as:\n\nLag or performance drops\nVisual glitches or rendering problems\nInput delays or tracking issues\nApplication crashes or freezes\n\n\nContinue gameplay for a few minutes and assess overall stability.",
+          "passFailCriteria": "Minecraft should run smoothly in the Mixed Reality environment.\nInteractions should be responsive and accurate.\nNo major lag, crashes, or visual issues should occur.\nOverall experience should be stable and immersive."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI036",
+      "testName": "Game Pass Sign-in",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful sign-in with a Game Pass enabled account in Microsoft Store",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Open the Microsoft Store application.\nClick on the Sign-in option.\nEnter valid Game Pass account credentials.\nComplete the authentication process.\nVerify that the account is successfully signed in.\nAccess Game Pass-related content (games/apps).\nConfirm access to games and applications associated with the account.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "GAMI037",
+      "testName": "Microsoft Edge",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify browsing functionality using Microsoft Edge in Mixed Reality environment",
+          "expectedTime": "12 min",
+          "notes": "",
+          "detailedSteps": "Launch the Mixed Reality environment.\nOpen Microsoft Edge within the Mixed Reality world.\nNavigate to a website using the browser.\nBrowse through multiple web pages.\nInteract with the browser (scrolling, clicking links, typing in address bar).\nObserve page load times and responsiveness.\n",
+          "passFailCriteria": "Microsoft Edge should open successfully in Mixed Reality.\nWeb pages should load properly without errors.\nNavigation and interactions should be smooth and responsive.\nNo crashes, freezes, or major performance issues should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI038",
+      "testName": "Video Experience",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify video playback functionality using Movies & TV app and YouTube in Mixed Reality",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the Mixed Reality environment.\nOpen the Movies & TV app and start playing any video.\nObserve video playback quality and audio output.\nPause, resume, and seek within the video.\nOpen Microsoft Edge and navigate to YouTube.\nPlay a video on YouTube.\nAdjust video quality (if available).\nPerform actions like pause, resume, seek, and full-screen.\nObserve for any issues such as:\n\nVideo buffering or lag\nAudio-video sync issues\nPlayback errors or crashes\nRendering or display problems\n\n\nContinue playback for a few minutes to verify stability.",
+          "passFailCriteria": "Videos should play smoothly in both Movies & TV and YouTube.\nAudio and video should be synchronized correctly.\nPlayback controls should work without issues.\nNo crashes, freezes, or major performance issues should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI039",
+      "testName": "Home Area Experience",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify user interaction, navigation, and stability within Mixed Reality home environment (Cliff House / Skyloft)",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Launch the Mixed Reality environment and enter the home space.\nNavigate through different areas (e.g., Cliff House / Skyloft).\nInteract with virtual objects (select, move, open items).\nMove between rooms or different spaces within the MR home.\nUse input devices (controller/touch/keyboard) for interaction.\nObserve responsiveness while interacting with objects.\nMonitor for issues such as:\n\nInteraction delays or missed inputs\nNavigation problems between areas\nVisual glitches or rendering issues\nSystem lag or instability\n\n\nStay within the MR home for a few minutes without launching any specific app/game.",
+          "passFailCriteria": "User should be able to navigate freely within MR home.\nObject interactions should be smooth and responsive.\nNo major lag, crashes, or rendering issues should occur.\nOverall experience should remain stable without entering any app/game."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI040",
+      "testName": "Mixed Reality Setup",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Laptop", "Book"],
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful setup of Mixed Reality environment without issues",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Follow the provided instructions to set up the Mixed Reality environment.\nConnect and configure the Mixed Reality headset.\nPair and configure the controllers (if applicable).\nComplete the initial calibration/setup process.\nLaunch the Mixed Reality portal and enter the environment.\nVerify that the system loads the MR home environment (Cliff House / Skyloft).\nCheck for any setup errors, warnings, or failures during the process.",
+          "passFailCriteria": "Mixed Reality environment should be set up successfully.\nHeadset and controllers should be detected and working properly.\nUser should be able to enter the MR home environment without errors.\nNo setup failures, crashes, or blocking issues should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI041",
+      "testName": "Motion Controller Setup",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Laptop", "Book"],
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "GAMI042",
+      "testName": "HMD sleep and play",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["Book"],
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify MR headset reconnection and Mixed Reality launch after system wake-up",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Launch the Mixed Reality environment and ensure it is working properly.\nPut the system into sleep mode.\nWake up the system after a few minutes.\nCheck if the MR headset reconnects automatically.\nAttempt to relaunch or resume the Mixed Reality portal.\nVerify if the MR environment loads successfully.\nObserve for any issues such as:\n\nFailure to detect headset\nReconnection delays\nApplication errors or crashes\n\n\nTry manual reconnection if automatic reconnection fails.",
+          "passFailCriteria": "MR headset should reconnect successfully after wake-up.\nMixed Reality environment should launch or resume without issues.\nNo major errors, crashes, or connectivity problems should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI043",
+      "testName": "MR Sound experience",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify continuous audio output through Mixed Reality headset during usage",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Launch the Mixed Reality environment.\nEnter the MR home (Cliff House / Skyloft) or any application/game.\nPlay content that generates sound (gameplay, video, or system audio).\nVerify that audio is output through the MR headset.\nMove between MR home and applications to check audio continuity.\nInteract with objects or perform actions that generate sound.\n",
+          "passFailCriteria": "Audio should be consistently audible through the MR headset.\nNo interruptions, distortions, or unexpected audio switching should occur.\nSound should remain synchronized with actions and content."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI044",
+      "testName": "Gaming Experience",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "GAMI045",
+      "testName": "Mirror MR screen",
+      "category": "Gaming",
+      "subCategory": "Mixed Reality Experience",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "GAMI046",
+      "testName": "Steam Setup",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful installation of Steam and ability to download and launch a game",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Navigate to the official Steam website.\nDownload the Steam client application.\nInstall the Steam application on the system.\nLaunch the Steam application.\nSign in using the Gaming Pillar account.\nAccess the Library section.\n",
+          "passFailCriteria": "Steam application should install successfully.\nUser should be able to sign in without issues.\nGame download and installation should complete successfully.\nGame should launch without errors."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI048",
+      "testName": "Blizzard Setup",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful installation of Battle.net and ability to download and launch a game",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Navigate to the official Blizzard website.\nDownload the Battle.net Desktop application.\nInstall the Battle.net application on the system.\nLaunch the Battle.net application.\nSign in using the Gaming Pillar account.\nBrowse the game library.\nSelect any available game from the library.\nDownload and install the selected game.\nLaunch the installed game.\nVerify that the game starts successfully (no need for extended gameplay).",
+          "passFailCriteria": "Battle.net application should install successfully.\nUser should be able to sign in without issues.\nGame download and installation should complete successfully.\nGame should launch without errors."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI049",
+      "testName": "EPIC Games Setup",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify successful installation of Epic Games launcher and ability to download and launch a game",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Navigate to the official Epic Games website.\nClick on the “Get Epic Games” button.\nDownload the Epic Games Launcher installer.\nInstall the Epic Games Launcher on the system.\nLaunch the Epic Games Launcher.\nSign in using the Gaming Pillar account.\n",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "GAMI050",
+      "testName": "Game Installation - Steam",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Steam platform is installed successfully without issues",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Navigate to the official Steam website.\nDownload the Steam installer.\nRun the installer and start the installation process.\nFollow on-screen instructions to complete installation.\nWait until installation finishes.\nLaunch the Steam application.\nObserve for any installation errors or issues.",
+          "passFailCriteria": "Steam should download and install successfully.\nApplication should launch without errors.\nNo installation failures, crashes, or interruptions should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI052",
+      "testName": "Game Installation - Blizzard",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": " Verify that the Blizzard (Battle.net) platform is installed successfully without issues",
+          "expectedTime": "5 min",
+          "notes": "",
+          "detailedSteps": "Navigate to the official Blizzard website.\nDownload the Battle.net installer.\nRun the installer and initiate the installation process.\nFollow the on-screen instructions to complete the installation.\nWait for the installation to finish.\nLaunch the Battle.net application.\nObserve for any installation errors or issues.",
+          "passFailCriteria": "Battle.net should download and install successfully.\nApplication should launch without errors.\nNo installation failures, crashes, or interruptions should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI053",
+      "testName": "Game Installation - EPIC",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the Epic Games Launcher is installed successfully without issues",
+          "expectedTime": "2 min",
+          "notes": "",
+          "detailedSteps": "Navigate to the official Epic Games website.\nClick on “Get Epic Games”.\nDownload the Epic Games Launcher installer.\nRun the installer and start the installation process.\nFollow on-screen instructions to complete installation.\nWait for the installation to finish.\n",
+          "passFailCriteria": "Epic Games Launcher should download and install successfully.\nApplication should launch without errors.\nNo installation failures, crashes, or interruptions should occur."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI054",
+      "testName": "Game Runnable - Steam",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Epic Games Launcher is installed and ready for use.",
+          "expectedTime": "2 min",
+          "notes": "",
+          "detailedSteps": "Launch the Steam application.\nNavigate to the Library section.\nSelect an installed game.\nClick on the Play button.\nWait for the game to launch.\nObserve the game startup behavior.\nVerify that the game reaches the main screen or initial load.\nCheck for any errors, crashes, or launch failures.",
+          "passFailCriteria": "The game should launch successfully without errors.\nNo crashes, freezes, or launch failures should occur.\nGame should reach a playable or startable state (no need to test performance)."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI056",
+      "testName": "Game Runnable - Blizzard",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["SS2", "SL3", "SL4-AMD", "SL4-Intel", "SB3"],
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the installed game from Blizzard (Battle.net) launches and runs without issues",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the Battle.net application.\nNavigate to the Games/Library section.\nSelect an installed game.\nClick on the Play button.\nWait for the game to launch.\nObserve the game startup behavior.\nVerify that the game reaches the main screen or initial load.\nCheck for any errors, crashes, or launch failures.",
+          "passFailCriteria": "The game should launch successfully without errors.\nNo crashes, freezes, or launch failures should occur.\nGame should reach a runnable/startable state (no need to validate performance)."
+        }
+      ]
+    },
+    {
+      "Id": "GAMI057",
+      "testName": "Game Runnable - EPIC",
+      "category": "Gaming",
+      "subCategory": "Third party platforms supportability",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": ["SS2", "SL3", "SL4-AMD", "SL4-Intel", "SB3"],
+      "driverTags": ["WIFI", "BT", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Verify that the installed game from Epic Games launches and runs without issues",
+          "expectedTime": "3 min",
+          "notes": "",
+          "detailedSteps": "Launch the Epic Games Launcher.\nNavigate to the Library section.\nSelect an installed game.\nClick on the Launch/Play button.\nWait for the game to start.\nObserve the game startup behavior.\n",
+          "passFailCriteria": "The game should launch successfully without errors.\nNo crashes, freezes, or launch failures should occur.\nGame should reach a runnable/startable state (no need to evaluate performance)."
+        }
+      ]
+    }	
+  ],
+  "hardwareRequirements": {
+    "description": "Hardware and software requirements for supported devices, display configurations, peripherals, and gaming platforms.",
+    "minimumHardware": [
+      "Intel Graphics i5 / Ryzen 5",
+      "8 GB RAM",
+      "128 GB Storage"
+    ],
+    "deviceMatrix": [
+      {
+        "deviceType": "Pro, Go",
+        "expectedConfiguration": "Built-in Display"
+      },
+      {
+        "deviceType": "Studio, Laptop",
+        "expectedConfiguration": "Built-in + External 4K Display (2 Display Extended)"
+      },
+      {
+        "deviceType": "Laptop Studio, Book",
+        "expectedConfiguration": "Built-in + External 4K Display (2 Display Extended)"
+      },
+      {
+        "deviceType": "Display Mode - Single",
+        "expectedConfiguration": "Built-in display only"
+      },
+      {
+        "deviceType": "Display Mode - Dual",
+        "expectedConfiguration": "Built-in + External display (Extended)"
+      },
+      {
+        "deviceType": "Display Mode - Tri",
+        "expectedConfiguration": "Built-in + 2 External displays (Extended via dock if applicable)"
+      },
+      {
+        "deviceType": "Device Speaker",
+        "expectedConfiguration": "Built-in speakers"
+      },
+      {
+        "deviceType": "Device Touch Component",
+        "expectedConfiguration": "Built-in touch screen"
+      },
+      {
+        "deviceType": "Xbox App",
+        "expectedConfiguration": "Game Pass access, Cloud Gaming"
+      },
+      {
+        "deviceType": "F11 Key",
+        "expectedConfiguration": "Full-screen mode"
+      },
+      {
+        "deviceType": "Keyboard",
+        "expectedConfiguration": "Available"
+      },
+      {
+        "deviceType": "Bluetooth Headset",
+        "expectedConfiguration": "Pair with the system"
+      },
+      {
+        "deviceType": "Mouse",
+        "expectedConfiguration": "Pair with the system"
+      },
+      {
+        "deviceType": "Keyboard Type Cover",
+        "expectedConfiguration": "Supported"
+      },
+      {
+        "deviceType": "Xbox Controller",
+        "expectedConfiguration": "Pair with the system"
+      },
+      {
+        "deviceType": "Supported Devices for Minecraft",
+        "expectedConfiguration": "Surface Studio 2, Surface Book 3, Surface Laptop Studio"
+      },
+      {
+        "deviceType": "Steam",
+        "expectedConfiguration": "Installed with at least one game installed and runnable"
+      },
+      {
+        "deviceType": "Battle.net",
+        "expectedConfiguration": "Installed with at least one game installed and runnable"
+      },
+      {
+        "deviceType": "Epic Games Launcher",
+        "expectedConfiguration": "Installed with at least one game installed and runnable"
+      },
+      {
+        "deviceType": "Steam Platform",
+        "expectedConfiguration": "Installed and ready for use"
+      },
+      {
+        "deviceType": "Blizzard Battle.net Platform",
+        "expectedConfiguration": "Installed and ready for use"
+      },
+      {
+        "deviceType": "Epic Games Platform",
+        "expectedConfiguration": "Installed and ready for use"
+      },
+      {
+        "deviceType": "Game Validation",
+        "expectedConfiguration": "Game runnable from Steam, Blizzard (Battle.net), and Epic Games"
+      }
+    ]
+  }
+
+}

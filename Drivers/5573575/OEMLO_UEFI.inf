@@ -1,0 +1,82 @@
+;
+; OEMLO_UEFI
+; 24.103.137.0
+; Copyright (C) Microsoft Corporation. All Rights Reserved.
+;
+[Version]
+Signature="$WINDOWS NT$"
+Class=Firmware
+ClassGuid={f2e7dd72-6468-4e36-b6f1-6488f42c1b52}
+Provider=%Provider%
+DriverVer=07/01/2026,24.103.137.0
+PnpLockdown=1
+CatalogFile=OEMLO_UEFI.cat
+
+[Manufacturer]
+%MfgName% = Firmware,NTamd64.10.0...17134
+
+[Firmware.NTamd64.10.0...17134]
+%Firmware0Desc% = Firmware0_Install,UEFI\RES_{f7fdf014-da8d-4efb-86df-a0bdf8351b03}
+%Firmware1Desc% = Firmware1_Install,UEFI\RES_{93514f49-054b-4045-85d1-b4cd03f7e977}
+
+[Firmware0_Install.NT]
+CopyFiles = Firmware0_CopyFiles
+
+[Firmware0_CopyFiles]
+OEMLO_UEFI_24.103.137_0.bin
+OEMLO_UEFI_24.103.137_0_integrity.bin
+
+[Firmware0_Install.NT.Services]
+AddService=,2
+
+[Firmware0_Install.NT.Hw]
+AddReg = Firmware0_AddReg
+
+[Firmware0_AddReg]
+HKR,,FirmwareId,,{f7fdf014-da8d-4efb-86df-a0bdf8351b03}
+HKR,,FirmwareVersion,%REG_DWORD%,0x18006789
+HKR,,FirmwareFilename,,%13%\OEMLO_UEFI_24.103.137_0.bin
+HKR,,FirmwareIntegrityFilename,,%13%\OEMLO_UEFI_24.103.137_0_integrity.bin
+
+[Firmware1_Install.NT]
+CopyFiles = Firmware1_CopyFiles
+
+[Firmware1_CopyFiles]
+OEMLO_UEFI_24.103.137_1.bin
+OEMLO_UEFI_24.103.137_1_integrity.bin
+
+[Firmware1_Install.NT.Services]
+AddService=,2
+
+[Firmware1_Install.NT.Hw]
+AddReg = Firmware1_AddReg
+
+[Firmware1_AddReg]
+HKR,,FirmwareId,,{93514f49-054b-4045-85d1-b4cd03f7e977}
+HKR,,FirmwareVersion,%REG_DWORD%,0x18006789
+HKR,,FirmwareFilename,,%13%\OEMLO_UEFI_24.103.137_1.bin
+HKR,,FirmwareIntegrityFilename,,%13%\OEMLO_UEFI_24.103.137_1_integrity.bin
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+OEMLO_UEFI_24.103.137_0.bin = 1
+OEMLO_UEFI_24.103.137_0_integrity.bin = 1
+OEMLO_UEFI_24.103.137_1.bin = 1
+OEMLO_UEFI_24.103.137_1_integrity.bin = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[Strings]
+; localizable
+DiskName      = "Firmware Update"
+Provider      = "Surface OEMLO"
+MfgName       = "OEMLO"
+Firmware0Desc = "OEMLO UEFI"
+Firmware1Desc = "OEMLO UEFI"
+
+; non-localizable
+DIRID_WINDOWS = 10
+REG_DWORD     = 0x00010001

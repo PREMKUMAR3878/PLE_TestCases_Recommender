@@ -1,0 +1,1298 @@
+{
+  "testCases": [
+    {
+      "Id": "PROD001",
+      "testName": "System Response",
+      "category": "Productivity",
+      "subCategory": "Office Document Generation - Report Creation",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "With two large Word documents and one large Excel document already open, open a second document in Excel",
+          "detailedSteps": "Steps:\n1. Open one large Excel document\n2. Open two large Word documents\n3. Open a second large Excel document",
+          "passFailCriteria": "Validation: The documents will load without issues. The system will function without performance issue."
+        }
+      ]
+    },
+    {
+      "Id": "PROD002",
+      "testName": "Scrolling",
+      "category": "Productivity",
+      "subCategory": "Office Document Generation - Report Creation",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "With two large Word documents and one large Excel document already open, open a second document in Excel",
+          "detailedSteps": "Steps:\n1. Open one large Excel document\n2. Open two large Word documents\n3. Open a second large Excel document\n4. Scroll thru the documents using mouse, touch, Pen",
+          "passFailCriteria": "Validation:\nThe user is able to scroll thru the documents with no issues using (mouse,pen,touch)\nThe documents will have no graphical tearing or other display issues"
+        }
+      ]
+    },
+    {
+      "Id": "PROD003",
+      "testName": "Navigation",
+      "category": "Productivity",
+      "subCategory": "Office Document Generation - Report Creation",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "With two large Word documents and one large Excel document already open, open a second document in Excel",
+          "detailedSteps": "Steps:\n1. Open one large Excel document\n2. Open two large Word documents\n3. Open a second large Excel document\n4. Navigate thru between all of the documents\n5. Navigate between different pages in the documents.",
+          "passFailCriteria": "Validation:\nThe user will be able to switch between documents with no issues\nThe user will be able to switch document pages with no issues.\nThe DUT will be reponsive and not crash or hang while performing these functions."
+        }
+      ]
+    },
+    {
+      "Id": "PROD004",
+      "testName": "Application on External Monitor",
+      "category": "Productivity",
+      "subCategory": "Office Document Generation - PowerPoint",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "PowerPoint presentation, DUT connected to external monitor (extended desktop mode)",
+          "detailedSteps": "Steps:\n1. Open application PowerPoint 2016 on external monitor",
+          "passFailCriteria": "Validation: Application will behave properly when being used on the external monitor.\nApplication will have no graphics issues being displayed."
+        }
+      ]
+    },
+    {
+      "Id": "PROD005",
+      "testName": "Full screen slideshow on External Monitor w/ Full screen on Primary",
+      "category": "Productivity",
+      "subCategory": "Office Document Generation - PowerPoint",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "PowerPoint presentation, DUT connected to external monitor (extended desktop mode)",
+          "detailedSteps": "Steps:\n1. Open a PowerPoint presentation in the DUT \n2. Click on slideshow .",
+          "passFailCriteria": "Validation: Application will show the user a full screen presentation on the external monitor, as well as a full screen on the primary device without any issues. \nBoth displays are showing the same content."
+        }
+      ]
+    },
+    {
+      "Id": "PROD006",
+      "testName": "IM - Start conversation",
+      "category": "Productivity",
+      "subCategory": "Microsoft Teams",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch application Microsoft Teams \n2. Start a coversation with another user \n3. Send back and forth messages",
+          "passFailCriteria": "Validation: User is able to connect with other users without issues. \nMessages are being transferred, and appearing the same on both end of the users."
+        }
+      ]
+    },
+    {
+      "Id": "PROD007",
+      "testName": "Share Desktop",
+      "category": "Productivity",
+      "subCategory": "Microsoft Teams",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\nLaunch application Microsoft Teams (must use Teams Desktop App Not Web App - does not support Share function) \nStart a call with another user \nOpen the share tray and select the screen \nBrowse thru multiple apps and media \nCustomer can change from audio call to video and vice versa and verify camera LED goes OFF when video call is disabled",
+          "passFailCriteria": "Validation: Both users can see the same content that is being shared in desktop. \nOnly the main user that is sharing the desktop can make any navigations within their device."
+        }
+      ]
+    },
+    {
+      "Id": "PROD008",
+      "testName": "Multitasking - Pen with shared OneNote",
+      "category": "Productivity",
+      "subCategory": "Microsoft Teams",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "Skype UWP app installed from Microsoft Store, account credentials ready.",
+          "detailedSteps": "Steps:\n1. With a shared desktop, launch OneNote \n2. Using the pen, markup and manipulate OneNote",
+          "passFailCriteria": "Validation: The user is able to see the shared onenote and markups are shared by both parties. \nThe presenter is able to markup and share the onenote with another party using shared desktop"
+        }
+      ]
+    },
+    {
+      "Id": "PROD009",
+      "testName": "High Load Metrics - Extended Video Call Session",
+      "category": "Productivity",
+      "subCategory": "Microsoft Teams - High Load Metrics",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "30min",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Using Teams application, configure a call to both send video to and receive video from a second device \n2. Remain in the call with the call in the foreground of the DUT until either the call ends via means not initiated by the user (crash, hang, or connection loss) or until minimum bar is met",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "PROD010",
+      "testName": "High Load Metrics - Meeting with Presentation",
+      "category": "Productivity",
+      "subCategory": "Microsoft Teams - High Load Metrics",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Using Teams application, schedule a meeting and present desktop to other members.  Meeting content such as viewing a PowerPoint, Word or web portal should be engaged and visible to other members in the meeting, as well as audio from presenter and other meeting members. \n2. Ensure there the experience on the presentation DUT is smooth without lag and device doesn’t thermally throttle.  Also ensure downstream members can hear clear audio and view presented content.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "PROD011",
+      "testName": "High Load Metrics - Create Team and Channels",
+      "category": "Productivity",
+      "subCategory": "Microsoft Teams - High Load Metrics",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Using Teams application, create a new team and add members to the team. \n2. Create channels within the team for various sub teams,  adding various tabs for functionality within that team. \n3. Ensure tabs include various resources including documents hosted within Sharepoint, Wiki, OneNote and also upload documents to channel discussions. \n4.  On a different DUT, ensure all added resources are accessible and experience is responsive while reading and editing resources.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "PROD012",
+      "testCaseId": "TC17",
+      "testName": "Notebook Navigation",
+      "category": "Productivity",
+      "subCategory": "OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "Large OneNote",
+          "detailedSteps": "Steps:\n1. Open one large OneNote 2016\n2. Navigate thru between all of the documents embedded in the OneNote\n3. Navigate between different onenote tabs",
+          "passFailCriteria": "Validation: The user will be able to switch between documents with no issues.\nThe user will be able to switch tab pages with no issues.\nThe DUT will be reponsive and not crash or hang while performing these functions."
+        }
+      ]
+    },
+    {
+      "Id": "PROD013",
+      "testCaseId": "TC18",
+      "testName": "Pen markup/deletion of notes",
+      "category": "Productivity",
+      "subCategory": "OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Open OneNote 2016\n2. Using pen make marks in the notes\n3. Using pen delete marks in the notes",
+          "passFailCriteria": "Validation: Accessory being used does not lose connection with the device.\nChanges are being saved while user is interacting with the device."
+        }
+      ]
+    },
+    {
+      "Id": "PROD014",
+      "testCaseId": "TC19",
+      "testName": "Add/Remove content (embed pictures and documents PDF)",
+      "category": "Productivity",
+      "subCategory": "OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Open OneNote 2016 with embedded files, and pictures\n2. Add documents and pictures to the onenote\n3. Remove a few embedded documents and pictures from the onenote",
+          "passFailCriteria": "Validation: User is able to remove content without issues.\nUser is able to add more content without issues.\nDevice will save any changes being made to the onenote."
+        }
+      ]
+    },
+    {
+      "Id": "PROD015",
+      "testCaseId": "TC20",
+      "testName": "External Monitor in OneNote - Surface Dock",
+      "category": "Productivity",
+      "subCategory": "OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Connect External monitor to DUT using Surface Dock\n2. Connect external monitor to DUT using Dock\n3. Open OneNote 2016\n4. Make simple edits to the app using note taking",
+          "passFailCriteria": "Validation: User can perform any changes on the app while being presented on another display.\nNo graphics issues are being shown in external display"
+        }
+      ]
+    },
+    {
+      "Id": "PROD016",
+      "testCaseId": "TC21",
+      "testName": "Split screen with OneNote",
+      "category": "Productivity",
+      "subCategory": "OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch Word 2016\n2. Launch OneNote 2016\n3. Split screen, for both apps to show side by side\n4. Navigate thru the app and make simple edits",
+          "passFailCriteria": "Validation: User is able to have two similar applications open/visible at the same time without issues.\nUI appears to be the same for both apps as if they were still in full screen."
+        }
+      ]
+    },
+    {
+      "Id": "PROD017",
+      "testCaseId": "TC22",
+      "testName": "Open OneNote in CS with Pen (Clicknote)",
+      "category": "Productivity",
+      "subCategory": "OneNote",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Put device in cs\n2. Using pen click, click once for OneNote to come up in the screen",
+          "passFailCriteria": "Validation: Device is still interacting with any bluetooth pair devices while asleep without issues."
+        }
+      ]
+    },
+    {
+      "Id": "PROD018",
+      "testCaseId": "TC25",
+      "testName": "Hosting a meeting while watching media",
+      "category": "Productivity",
+      "subCategory": "Zoom (Store App)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Play a YouTube video (but NOT in full screen mode) using any web browser\n2. Launch Zoom application and Login\n3. Start/Host a Zoom meeting with another user (Confirm same version of Zoom App on both devices)\n4. Join meeting.",
+          "passFailCriteria": "Pass Criteria:\nZoom meeting will be started with participants, and it will not affect YouTube being played.\nZoom meetings are not interfered with by the media playing in the background."
+        }
+      ]
+    },
+    {
+      "Id": "PROD019",
+      "testCaseId": "TC26",
+      "testName": "IM - Start Conversation",
+      "category": "Productivity",
+      "subCategory": "Zoom (Store App)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch Zoom application and login\n2. Add a Contact (User) to your Contacts list (the other User must accept your invite to be added) and then start Chat conversation (IM) with that user\n3. Send back and forth messages",
+          "passFailCriteria": "Pass Criteria:\nUsers can connect with other users without issues.\nMessages are being transferred and appear the same on both ends of the users."
+        }
+      ]
+    },
+    {
+      "Id": "PROD020",
+      "testCaseId": "TC27",
+      "testName": "Share Media(share screen-> advance->file->powerpoint file)",
+      "category": "Productivity",
+      "subCategory": "Zoom (Store App)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch Zoom application and Login.\n2. Start/Host a Zoom meeting with another user.\n3. Click Share desktop with the other user\n4. Browse through multiple apps and media. Share a specific file (ex. Powerpoint slide, OneNote, Excel spreadsheet, etc)\n5. Both Host and Client can change from audio call to video and vice versa and verify camera LED goes OFF when video call is disabled.",
+          "passFailCriteria": "Pass Criteria:\nBoth users can see the same content that is being shared on a desktop.\nOnly the main user that is sharing the desktop can make any navigation within their device."
+        }
+      ]
+    },
+    {
+      "Id": "PROD021",
+      "testCaseId": "TC28",
+      "testName": "Share Desktop",
+      "category": "Productivity",
+      "subCategory": "Zoom (Store App)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "PROD022",
+      "testCaseId": "TC29",
+      "testName": "Receiving call while watching media",
+      "category": "Productivity",
+      "subCategory": "Discord (Store App)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch Discord application and Login.\n2. Start streaming a high quality video in browser/locally.\n3. In another device, login with another discord account and give a call to the current device when media is playing.",
+          "passFailCriteria": "Pass Criteria:\nUser should be able to get the call pop up when watching media, should be able to answer and start conversation."
+        }
+      ]
+    },
+    {
+      "Id": "PROD023",
+      "testCaseId": "TC30",
+      "testName": "IM - Start Conversation",
+      "category": "Productivity",
+      "subCategory": "Discord (Store App)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch Discord application and Login two devices with different accounts and give a call to the current device.\n2. Create a server and invite the other account in it.\n3. Start a call directly in the server as well.",
+          "passFailCriteria": "Pass Criteria:\nUser should be able to get the call and should be able to answer and start conversation. User should be able to join in the server via shared link or invite and join the server voice chat for a conversation."
+        }
+      ]
+    },
+    {
+      "Id": "PROD024",
+      "testCaseId": "TC31",
+      "testName": "Share Desktop(Screen)/Media(Photos, videos)",
+      "category": "Productivity",
+      "subCategory": "Discord (Store App)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. During the call, click Share desktop with the other user\n2. Browse through multiple apps and media. Share a specific file (ex. Powerpoint slide, OneNote, Excel spreadsheet, etc)\n3. Both Host and Client can change from audio call to video and vice versa and verify camera LED goes OFF when video call is disabled.",
+          "passFailCriteria": "Pass Criteria:\nBoth users can see the same content that is being shared on a desktop.\nOnly the main user that is sharing the desktop can make any navigation within their device."
+        }
+      ]
+    },
+    {
+      "Id": "PROD025",
+      "testCaseId": "TC37",
+      "testName": "Open/Edit multiple large files from word, excel (3 Word, 3 Excel)",
+      "category": "Productivity",
+      "subCategory": "Office High Load Scenarios - Word/Excel",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "Word doc 200 KB, Excel file 10 MB",
+          "detailedSteps": "Steps:\n1. Open three large Excel files\n2. Open three large Word files\n3. Make simple edits to the six large files",
+          "passFailCriteria": "Validation: User is able to have multiple large files open at once.\nSystem is being responsive without issues.\nNo crash or hangs are happening to device."
+        }
+      ]
+    },
+    {
+      "Id": "PROD026",
+      "testCaseId": "TC40",
+      "testName": "Sync appointments",
+      "category": "Productivity",
+      "subCategory": "Windows Calendar",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch application Windows calendar\n2. Put the DUT in cs\n3. Using another device make an appointment, using the same account as the DUT",
+          "passFailCriteria": "Pass Criteria:\n• Appointments/meetings are being saved in calendar when device is in CS.\n• DUT, and Windows calendar are being responsive to these functions."
+        }
+      ]
+    },
+    {
+      "Id": "PROD027",
+      "testCaseId": "TC42",
+      "testName": "Sync Mail",
+      "category": "Productivity",
+      "subCategory": "Windows Mail",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "WIFI", "BT", "Ethernet", "Dock", "Graphics", "Audio", "Camera"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Launch application Windows Mail\n2. Put the DUT in cs\n3. Using another device send a mail to the DUT",
+          "passFailCriteria": "Pass Criteria:\n• User is able to receive mail during CS.\n• Mail is being saved in mailbox when device is in CS.\n• DUT, and Windows mail are being responsive to these functions."
+        }
+      ]
+    },
+    {
+      "_comment": "need to updated this",
+      "Id": "PROD028",
+      "testName": "Function: Get help from BingChat",
+      "category": "Productivity",
+      "subCategory": "Copilot in Browser - Access Copilot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "Verify Bing Chat capabilities inside Edge browser including code creation, summarization, UI alteration, and tab organization.",
+          "expectedTime": "Total CTX Test time: 20 minutes",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Left click Edge icon in task bar.\n2. Left click Copilot icon. Choose a conversation style (Note: Some of the answers might be unreliable if you choose the \"More Creative\" style).\n3. Create reference code:\n- Go to the chat tab at Bing Chat.\n- Choose the conversation style \"More Precise\".\n- Type the prompt: \"Create a personal website using HTML/Javascript/CSS with my biography, resume, and contact details.\"\n- Check the code in a CSS previewer to make sure the code works (Reference: HTML_CSS_Reference.png).\n4. Summary website page:\n- Find a WIKI page on Edge.\n- Ask Bing Chat to provide a summary by typing the prompt: \"Generate page summary\".\n5. Switch to vertical tab:\n- Ask Bing Chat to help change your tabs format by typing the prompt: \"Switched tabs to vertical tabs\".\n6. Organize my tab:\n- Open multiple tabs on Edge (at least over 6 tabs containing over 3 distinct categories).\n- Ask Copilot to help organize the tabs by typing the prompt: \"organize my tabs\".",
+          "passFailCriteria": "Description and Expected Result:\n- For code creation: Make sure the generated layout code compiles and works cleanly in a previewer environment.\n- For page summary: Check that the response accurately matches the real content of the loaded WIKI page.\n- For vertical tabs: Make sure the browser application UI layout transforms to vertical tabs correctly.\n- For tab organization: Make sure the multiple open tabs are cleanly organized and structured into accurate groups by their categories."
+        }
+      ]
+    },
+    {
+      "Id": "PROD029",
+      "testCaseId": "CoPilotTC2",
+      "testName": "Copilot in Microsoft 365  - Copilot in Word",
+      "category": "Productivity",
+      "subCategory": "Copilot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "Total CTX test time: 10 minutes",
+          "prerequisite": "Ask or type in the following questions",
+          "detailedSteps": "Steps:\n1. Start a draft with Copilot in Word:\n- Start a new blank document.\n- In the Draft with Copilot box, type or paste your prompt. For example, \"Write me a quick and easy recipe for chocolate chip cookies.\" or create a draft by reference selected document.\n- Select Generate.\n\n2. Transform your content with Copilot in Word [Rewrite Text]:\n- Select the text you want Copilot to rewrite.\n- In the left margin next to your text, select the Copilot icon.\n- From the left margin Copilot menu, select Rewrite with Copilot.\n- Select Replace to use the revised text, or try other options Copilot provides.\n\n3. Transform text to a table:\n- Select the text you want Copilot to turn into a table.\n- In the left margin next to your text, select the Copilot icon.\n- From the left margin Copilot menu, select Visualize as a table.\n- Select Keep it to insert the table.\n\n4. Create a summary of your document with Copilot:\n- Open an existing document.\n- Select Copilot from the ribbon to open the Copilot pane.\n- In the Copilot compose box, enter in \"summarize this document.\"\n- In Copilot's summary, select References to view citations.\n\n5. Chat with Copilot about your Word document:\n- Open the Copilot pane.\n- Ask questions about this document or Ask open-ended questions. You can also turn on Microphone to ask your questions.",
+          "passFailCriteria": "Description and Expected Result:\n- For Draft: Copilot will draft new content for you. Please check the answer is correct and behavior aligned with what your request and working smoothly.\n- For Rewrite: Copilot will show you rewritten options to choose from.\n- For Table: Copilot will show you what the table will look like.\n- For Summary: Review the results of Copilot generated. See if it's aligned.\n- For Chat: Check Copilot responded smoothly."
+        }
+      ]
+    },
+    {
+      "Id": "PROD030",
+      "testCaseId": "CoPilotTC3",
+      "testName": "Copilot in Microsoft 365  - Copilot in PowerPoint",
+      "category": "Productivity",
+      "subCategory": "Copilot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "Total CTX test time: 10 minutes",
+          "prerequisite": "Ask or type in the following questions",
+          "detailedSteps": "Steps:\n1. Create a new presentation with Copilot:\n- Start a new blank document.\n- Select the Copilot button in the Home tab of the ribbon.\n- Click or type Create presentation from file.\n- Navigate to Word file from local drive or copy the URL of the document you'd like to use by opening the share tray in Word and clicking Copy Link.\n- Paste the local file path or the URL to your Word document into Copilot.\n- Select Send.\n\n2. Summarize your presentation with Copilot for Microsoft 365 in PowerPoint:\n- Select the Copilot button from the ribbon. The Copilot pane opens on the right side of your screen.\n- Type Summarize this presentation in the prompt field and send it.\n\n3. Organize this presentation with Copilot for Microsoft 365 in PowerPoint:\n- In the ribbon, select the Copilot button. The Copilot pane opens on the right side of screen.\n- Type Organize this presentation into the prompt field at the bottom of the Copilot pane.\n- Select Send.",
+          "passFailCriteria": "Description and Expected Result:\n- For Creation: Copilot will draft a presentation for you!\n- For Summary: Review result Copilot generated also make sure it works smoothly.\n- For Organize: Review result Copilot generated also make sure it works smoothly."
+        }
+      ]
+    },
+    {
+      "Id": "PROD031",
+      "testCaseId": "CoPilotTC4",
+      "testName": "Copilot in Microsoft 365 - Copilot in Excel (TBD)",
+      "category": "Productivity",
+      "subCategory": "Copilot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "Total CTX test time: 10 minutes",
+          "prerequisite": "Ask or type in the following questions",
+          "detailedSteps": "Steps:\n1. Create a new presentation with Copilot:\n- Start a new blank document.\n- Select the Copilot button in the Home tab of the ribbon.\n- Click or type Create presentation from file.\n- Navigate to Word file from local drive or copy the URL of the document you'd like to use by opening the share tray in Word and clicking Copy Link.\n- Paste the local file path or the URL to your Word document into Copilot.\n- Select Send.\n\n2. Summarize your presentation with Copilot for Microsoft 365 in PowerPoint:\n- Select the Copilot button from the ribbon. The Copilot pane opens on the right side of your screen.\n- Type Summarize this presentation in the prompt field and send it.\n\n3. Organize this presentation with Copilot for Microsoft 365 in PowerPoint:\n- In the ribbon, select the Copilot button. The Copilot pane opens on the right side of screen.\n- Type Organize this presentation into the prompt field at the bottom of the Copilot pane.\n- Select Send.",
+          "passFailCriteria": "Description and Expected Result:\n- Note: Document text matches PowerPoint descriptions but labeled under Excel (TBD).\n- Verify Copilot drafts content, summarizes, and organizes smoothly according to prompts."
+        }
+      ]
+    },
+    {
+      "Id": "PROD032",
+      "testCaseId": "CoPilotTC5",
+      "testName": "Copilot in Microsoft Teams - Catch up",
+      "category": "Productivity",
+      "subCategory": "Copilot in Microsoft Teams",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user should start a meeting and then do a conversation for 30 min.\n2. The meeting should be recorded.\n3. After the meeting has ended, the user can click view recap in the meeting chat.\n4. Select the Copilot icon inside the recap screen.\n5. Ask questions regarding what was missed and ask for a recap of what happened in the meeting.",
+          "passFailCriteria": "Pass Criteria:\nThe copilot should correctly answer according to the given prompt. The given answer and the actual answer should be accurate."
+        }
+      ]
+    },
+    {
+      "Id": "PROD033",
+      "testCaseId": "CoPilotTC6",
+      "testName": "Copilot in Microsoft Teams  - 4 prompts with Copilot",
+      "category": "Productivity",
+      "subCategory": "Copilot in Microsoft Teams",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "• Where do we disagree on this topic?\n• How did [a meeting participant] respond to this proposal?\n• What questions can I ask to move the meeting forward?\n• Where are some holes in [a meeting participant's] argument?\n• Create a table with the ideas discussed and their pros",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to give a few prompts according to the conversation in the meeting.\n2. The prompts should be clear and the response needs to be accurate to the meeting.",
+          "passFailCriteria": "Pass Criteria:\nThe copilot should correctly answer according to the given prompt. The given answer and the actual answer should be accurate."
+        }
+      ]
+    },
+    {
+      "Id": "PROD034",
+      "testCaseId": "CoPilotTC6a",
+      "testName": "Copilot in Microsoft Teams - Recap/List Action Items/Suggest Follow up",
+      "category": "Productivity",
+      "subCategory": "Copilot in Microsoft Teams",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "• Recap the meeting so far.\n• List action items.\n• Suggest follow-up questions.\n• What questions are unresolved?\n• List different perspectives by topic.\n• List the main items we discussed.\n• Generate meeting notes.",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to give a few prompts according to the conversation in the meeting.\n2. The prompts should be clear and the response needs to be accurate to the meeting.",
+          "passFailCriteria": "Pass Criteria:\nThe copilot should correctly answer according to the given prompt. The given answer and the actual answer should be accurate."
+        }
+      ]
+    },
+    {
+      "Id": "PROD035",
+      "testCaseId": "CoPilotTC7",
+      "testName": "Create After a meeting, ask Copilot to recap",
+      "category": "Productivity",
+      "subCategory": "Copilot in Microsoft Teams",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to give a prompt to recap the meeting with copilot.\n2. The user will also be shown a copilot recap in the meeting screen itself.",
+          "passFailCriteria": "Pass Criteria:\nThe copilot should correctly answer according to the given prompt. The given answer and the actual answer should be accurate. The Recap screen should have the correct recap of the entire meeting."
+        }
+      ]
+    },
+    {
+      "Id": "PROD036",
+      "testCaseId": "CoPilotTC8",
+      "testName": "Draft an Outlook email message quickly with Copilot",
+      "category": "Productivity",
+      "subCategory": "Copilot in New Outlook only",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to launch outlook application and login.\n2. Once logged in, the user has to select the copilot icon in the top right.\n3. Draft a mail to the test user using copilot.\n4. Include a scheduled meeting and draft the complete mail according to the user prompt.",
+          "passFailCriteria": "Pass Criteria:\nThe mail should be drafted according to the user prompt and the mail should be sent according to the schedule."
+        }
+      ]
+    },
+    {
+      "Id": "PROD037",
+      "testCaseId": "CoPilotTC9",
+      "testName": "Summarize an email thread with Copilot",
+      "category": "Productivity",
+      "subCategory": "Copilot in New Outlook only",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to select a mail to read.\n2. Inside the mail window, ask the copilot to summarize the mail.",
+          "passFailCriteria": "Pass Criteria:\nThe copilot needs to summarize the whole email thread and give an accurate response according to the user prompt."
+        }
+      ]
+    },
+    {
+      "Id": "PROD038",
+      "testCaseId": "CoPilotTC10",
+      "testName": "Access Copilot via Copilot icon in the Taskbar",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Access Copilot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Access Copilot via Copilot icon in the Taskbar.\n2. Make sure Copilot works smoothly.\n3. Close the Copilot.",
+          "passFailCriteria": "Validation:\nCopilot opens smoothly from taskbar and interacts cleanly before closure."
+        }
+      ]
+    },
+    {
+      "Id": "PROD039",
+      "testCaseId": "CoPilotTC11",
+      "testName": "Access Copilot again by Win + C combination key",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Access Copilot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Access copilot again by Win + C combination key.\n2. Make sure Copilot works as well.\n3. Close the Copilot.",
+          "passFailCriteria": "Validation:\nCopilot accurately intercepts shortcut controls and closes reliably."
+        }
+      ]
+    },
+    {
+      "Id": "PROD040",
+      "testCaseId": "CoPilotTC12",
+      "testName": "Access Copilot with Keyboard supported Copilot hardware key",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Access Copilot",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Press Copilot hardware keystroke key on keyboard.\n2. Make sure you can access Copilot.\n3. Close the Copilot.",
+          "passFailCriteria": "Validation:\nDedicated hardware keyboard button correctly invokes and terminates the Copilot interface wrapper."
+        }
+      ]
+    },
+    {
+      "Id": "PROD041",
+      "testCaseId": "CoPilotTC13",
+      "testName": "Starting Copilot assistance with the Win+C keyboard shortcut",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Functional",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to press Win+C combination key.\n2. The copilot pop up needs to be shown.",
+          "passFailCriteria": "Pass Scenario:\nThe copilot pop up should appear, and needs to answer the user prompts."
+        }
+      ]
+    },
+    {
+      "Id": "PROD042",
+      "testCaseId": "CoPilotTC14",
+      "testName": "Applying command (change to dark mode, Turn on do not disturb, take a screenshot)",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Functional",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to press Win+C combination key and the copilot pop up needs to be shown.\n2. Give system commands to the prompt (e.g., change to dark mode, Turn on do not disturb, take a screenshot).",
+          "passFailCriteria": "Pass Scenario:\nThe copilot pop up should appear, and needs to answer the user prompts. The system should apply the command given by the user or give the functional steps to it."
+        }
+      ]
+    },
+    {
+      "Id": "PROD043",
+      "testCaseId": "CoPilotTC15",
+      "testName": "Chat with Copilot (using Voice Chat option)",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Functional",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to press Win+C combination key and the copilot pop up needs to be shown.\n2. Once it's shown, select the mic/voice icon.\n3. Start talking to the copilot.",
+          "passFailCriteria": "Pass Scenario:\nThe copilot voice chat should talk back according to the user questions and answer accurately."
+        }
+      ]
+    },
+    {
+      "Id": "PROD044",
+      "testCaseId": "CoPilotTC16",
+      "testName": "Upload Picture to get answer",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Functional",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to press Win+C combination key and the copilot pop up needs to be shown.\n2. Upload a good picture and ask the details or what it recognizes in the picture.",
+          "passFailCriteria": "Pass Scenario:\nThe copilot pop up should appear, and needs to answer the user prompts. The picture needs to be identified and given accurate response according to the image."
+        }
+      ]
+    },
+    {
+      "Id": "PROD045",
+      "testCaseId": "CoPilotTC17",
+      "testName": "Chat with Copilot (using Dictation option)",
+      "category": "Productivity",
+      "subCategory": "Copilot in Windows - Functional",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. The user has to press Win+C combination key and the copilot pop up needs to be shown.\n2. Select the dictation/mic icon.\n3. Start giving the prompt vocally.",
+          "passFailCriteria": "Pass Scenario:\nThe copilot pop up should appear, and needs to answer the user prompts. Copilot should recognize the prompt and enter the exact text data in its text box."
+        }
+      ]
+    },
+    {
+      "Id": "PROD046",
+      "testCaseId": "71",
+      "testName": "Recall 25H2 - Functional",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) - Functional",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "Enable PressAndHoldAndRelease mode with public API, Create New Fast path performance scenario to allow direct app invocation with windows messages instead of URI app invocation",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "",
+          "passFailCriteria": "Notes/Expected Result:\nNo Access to Link for details on this feature. CD Feature ID#: 50721722. Requirements handle Copilot hardware key adjustments."
+        }
+      ]
+    },
+    {
+      "Id": "PROD047",
+      "testCaseId": "72",
+      "testName": "Recall Flyout icon - Filter in system tray flyout",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) - Filters in Recall Flyout",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "Go to Search box on Taskbar, type Recall > select Recall (Preview) > Pin to Taskbar. Required to login with Windows Hello/PIN to use Recall. (use test account like Hotmail account and not your V- account)",
+          "detailedSteps": "Steps:\n1. Locate Recall Flyout icon (T-shaped circle icon at bottom right corner of Taskbar next to the WiFi icon).\n2. Access and interact with the system tray flyout menu.",
+          "passFailCriteria": "Expected Result / Notes:\n[Jenney] -Quinlan 26200.5751: Flyout work as expected - draft test case created in test collateral - PLE Dashboard V2"
+        }
+      ]
+    },
+    {
+      "Id": "PROD048",
+      "testCaseId": "TC17",
+      "testName": "User can access website and app filtering directly from within the privacy Recall flyout",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) - Filters in Recall Flyout",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. Click on the indicator to filter the app or website that you are currently on.\n2. If on a browser, verify the options to block both the specific website as well as the entire browser app itself.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. This filter will be a permanent filter and will apply for all future snapshots."
+        }
+      ]
+    },
+    {
+      "Id": "PROD049",
+      "testCaseId": "TC18",
+      "testName": "User knows when capture filtering is active via a badge on the privacy icon",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) - Filters in Recall Flyout",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "",
+          "detailedSteps": "Steps:\n1. View the privacy indicator badge under different states.\n- Active = T-shaped circle icon\n- Inactive = \"\\\" through the T-shaped circle icon\n2. Open a filtered app/website or private browsing session to make it visible on the screen.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. User can see an appropriate badge on the privacy indicator letting them know that some content on their screen is not being captured. This badge should be shown when the filtered app/website or private browsing session is visible on the screen."
+        }
+      ]
+    },
+    {
+      "Id": "PROD050",
+      "testCaseId": "TC**",
+      "testName": "Long Press Copilot Key - confirm Copilot voice mode is activated",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Copilot Key additional functionality",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "Need to download latest version of Microsoft 365 Copilot from MS Store. Labeled on DUT: SL7 Quilan 16GB/256GB on Windows Insider Program Build 26200.5742",
+          "detailedSteps": "Steps:\n1. Execute a Long Press on the Copilot hardware Key.\n2. Confirm if Copilot voice mode is activated (supports Walkie-Talkie mode).\n3. Check that no standard Copilot window takes the foreground.\n4. Manually repeat and try 3 separate times.",
+          "passFailCriteria": "Expected Result / Notes:\n[CURRENTLY NOT WORKING - John] When Long Press Copilot Key > I do not get the Copilot voice mode but only the M365 Copilot window (message chat box). This is not what you want to see: M365 Copilot Chat box appears saying, \"Hi [your name], I can help you recap and prep for meetings. Need to get Voice Mode.\"\nBug 5036381: [PLE] [25h2_FeatureTest] Copilot hardware key Long Press - Copilot Voice mode is not activated"
+        }
+      ]
+    },
+    {
+      "Id": "PROD051",
+      "testCaseId": "TC19",
+      "testName": "Short Press Copilot Key - Supports Copilot chords and no Copilot window takes foreground",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Copilot Key additional functionality",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "Copilot hardware key needs to work with a new native MAI app.",
+          "detailedSteps": "Steps:\n1. Perform a Short Press on the Copilot hardware Key.\n2. Verify system support for Copilot chords and that no standard window takes foreground.\n3. Manually repeat and try 3 separate times.",
+          "passFailCriteria": "Expected Result / Notes:\nNot able to check this as we are logged in using hotmail or normal mail accounts which don’t have Copilot 365 subscriptions. Passing after mail confirmation. Observed behavior: M365 Copilot Message Box appears."
+        }
+      ]
+    },
+    {
+      "Id": "PROD052",
+      "testCaseId": "TC20",
+      "testName": "Keyboard Shortcut: Win + C shortcut - to invoke MAI Copilot Launch without the Copilot Button",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Copilot Key additional functionality",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "To achieve compatibility with keyboards that do not have Copilot Button.",
+          "detailedSteps": "Steps:\n1. Trigger the Win + C keyboard shortcut combination.\n2. Verify the launch of MAI Copilot.\n3. Manually repeat and try 3 separate times.",
+          "passFailCriteria": "Expected Result / Notes:\nNot able to check this as we are logged in using hotmail or normal mail accounts which don’t have Copilot 365 subscriptions. Passing after mail confirmation. Observed behavior: M365 Copilot Message Box appears (same as previous test case but using keyboard shortcut instead of Copilot Key)."
+        }
+      ]
+    },
+    {
+      "Id": "PROD053",
+      "testCaseId": "TC21",
+      "testName": "Click to Do more with Text: Copy, Open with, Search the web",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Use Windows key + mouse click OR Windows key + Q to enable Click to Do.\n2. Take mouse, click and drag over a block of text to highlight it.\n3. Stop the dragging action and observe the onscreen response.\n4. Use Windows key + Q to disable when complete.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. You will see the DUT screen outlined in color and all the text in white box. When you stop dragging, you will see an Option Box appear with: Copy, Open with, and Search the web."
+        }
+      ]
+    },
+    {
+      "Id": "PROD054",
+      "testCaseId": "TC22",
+      "testName": "Click to Do Text: Highlight an email address: send email",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Go to Email app (Outlook).\n2. Invoke Click to Do interface.\n3. Highlight an email address structural pattern to trigger actions.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. Actions will process to send email mapping the captured address properties."
+        }
+      ]
+    },
+    {
+      "Id": "PROD055",
+      "testCaseId": "TC23",
+      "testName": "Click to Do Text: Highlight website: Open website in your selected browser",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Go to a webpage on the Edge browser (i.e. NFL page).\n2. Activate Click to Do context controls.\n3. Click on a website URL link structure on the page (i.e. www.nfl.com).",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. A Box with Options appears: Copy or Open website to load it inside your selected browser framework cleanly."
+        }
+      ]
+    },
+    {
+      "Id": "PROD056",
+      "testCaseId": "TC24",
+      "testName": "Click to Do more with Images: Select an image, copy and save image to a specified location",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Navigate to a target webpage containing rich graphic components and images.\n2. Invoke Click to Do controls framework.\n3. Select an image target layer, copy it, and paste it directly into an open Word document layout.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. Graphics block copies cleanly across environment bounds to target file directories."
+        }
+      ]
+    },
+    {
+      "Id": "PROD057",
+      "testCaseId": "TC25",
+      "testName": "Click to Do more with Images: Select an image, open with an app",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Go to a webpage containing structured images parameters.\n2. Invoke Click to Do routines tracking controls.\n3. Select an image and execute 'Open with' to choose Photos App or Paint App configurations.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. Core destination canvas applications capture and open target data safely."
+        }
+      ]
+    },
+    {
+      "Id": "PROD058",
+      "testCaseId": "TC26",
+      "testName": "Click to Do more with Images: Select an image. Blur background with Photos app",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Go to a webpage with images and use Click to Do.\n2. Select an image target layout and choose to open it with Paint App (or Photos App).\n3. Save the image, and then open image again.\n4. Select Rectangle or Select All function in Paint App (top left hand corner on task bar) to isolate the image.\n5. Choose a custom color palette configuration to manually blur background components.",
+          "passFailCriteria": "Expected Result / Notes:\nThe image selection is not up to the mark, it crops unevenly and the picture is not centered."
+        }
+      ]
+    },
+    {
+      "Id": "PROD059",
+      "testCaseId": "TC27",
+      "testName": "Click to Do more with Content: Highlight some content (at least 10 or more words): Request Summarize",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Highlight a block of textual content containing at least 10 or more words.\n2. Activate the interactive options menu using Click to Do triggers.\n3. Select 'Request Summarize' from the listing context prompts.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. [Jenney] -Quinlan 26200.5751 and Torrance ARM 26200.5751: Intelligent actions are showing up & working as expected - Summarize, Created a bulleted list, Rewrite, Ask Microsoft 365 Copilot."
+        }
+      ]
+    },
+    {
+      "Id": "PROD060",
+      "testCaseId": "TC28",
+      "testName": "Click to Do more with Content: Highlight some content. Create a bulleted list",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Select a block of unstructured context text paragraphs lines.\n2. Trigger Click to Do tracking menu options.\n3. Request transformation to create a structured bulleted list asset layout.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "PROD061",
+      "testCaseId": "TC29",
+      "testName": "Click to Do more with Content: Highlight some content. Rewrite (Casual), Rewrite (Formal), or Rewrite (Refine)",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Highlight a designated section of content formatting strings lines.\n2. Invoke Click to Do tracking selections tools.\n3. Execute rewriting triggers under different context parameters variations: Casual, Formal, or Refine.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working."
+        }
+      ]
+    },
+    {
+      "Id": "PROD062",
+      "testCaseId": "TC30",
+      "testName": "Disable Click to Do : Settings > Privacy & Security > Click to Do > Click Off to disable",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  Click to Do",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "By Default Click to Do is enabled for Copilot + PCs",
+          "expectedTime": "",
+          "prerequisite": "System requirement: 40 TOPS NPU, 16 GB RAM, 8 logical processors, & 256 GB storage capacity",
+          "detailedSteps": "Steps:\n1. Open system configuration panel by navigating to Settings > Privacy & Security > Click to Do.\n2. Click the toggle switch setting to 'Off' to completely disable functionality.\n3. Return to the desktop shell and attempt to use Windows Key + Mouse Click or Windows Key + Q shortcut parameters.\n4. Confirm that the Click to Do overlay screen mode won't open.",
+          "passFailCriteria": "Expected Result / Notes:\nCorrectly working. After Disabling Click to Do in Settings, you will not be able to use the Click to Do function."
+        }
+      ]
+    },
+    {
+      "Id": "PROD063",
+      "testCaseId": "TC31",
+      "testName": "Automatically runs Screenray to analyze snapshots",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  \"Now\" Privacy Options",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "Screenray analyzes everything on screen, so make sure to close anything you don’t want analyzed. No screenshots are saved.",
+          "expectedTime": "",
+          "prerequisite": "Requirements: Update Screenray",
+          "detailedSteps": "Steps:\n1. Open the Recall (Preview) app.\n2. Locate and press the 'Now' button on the Timeline Icon matrix layout.\n3. Confirm that a screenshot of the current active screen space is taken instantly and screenray runs to analyze elements.\n4. Observe if text string areas and target images highlight for user selection rules tracking.",
+          "passFailCriteria": "Expected Result / Notes:\nCurrently Working. [Jenney] -Quinlan 26200.5751: Works as expected in Recall (Preview) app > Timeline. Screenray is available that user can seek snapshots through scroll bar by dates. A button named \"Now\" is available that loads the most recent snapshot when clicked."
+        }
+      ]
+    },
+    {
+      "Id": "PROD064",
+      "testCaseId": "TC32",
+      "testName": "Option A: Remove 'Now' (for now)",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  \"Now\" Privacy Options",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "Every time the user invokes Recall they see the most recent snapshot. The Now button refreshes the timeline as well, so we perhaps may want to keep the button as a “refresh”.",
+          "expectedTime": "",
+          "prerequisite": "Requirements: Update Screenray",
+          "detailedSteps": "Steps:\n1. Invoke Recall configuration layouts states.\n2. Verify visibility behavior of the 'Now' timeline control tracking component across alternate module build options.",
+          "passFailCriteria": "Expected Result / Notes:\nButton displays differently in different versions - Now (Refresh Symbol) and Fastforward Symbol. Test case descriptions need to be changed as per the latest versions of the Recall; currently \"Now\" is used in recall to get the most recent snapshots but in the future, the \"Now\" icon might be renamed to something else as per the change."
+        }
+      ]
+    },
+    {
+      "Id": "PROD065",
+      "testCaseId": "TC33",
+      "testName": "Option B: Default to the most recent snapshot",
+      "category": "Productivity",
+      "subCategory": "Recall (25H2 Features) -  \"Now\" Privacy Options",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["NPU"],
+      "testScenarios": [
+        {
+          "objective": "When the user launches Recall, the user sees the most recent snapshot. If there is no history (e.g. MDM) go to ‘Now’ by default but surface an info bar before taking and presenting the screenshot.",
+          "expectedTime": "",
+          "prerequisite": "Requirements: Update Screenray",
+          "detailedSteps": "Steps:\n1. Launch the Recall environment on a target terminal testing machine.\n2. Observe behavior under standard conditions containing logged timeline entries blocks.\n3. Simulate a clear history state or empty record configuration (e.g., managed MDM configuration profiles) and launch Recall again.",
+          "passFailCriteria": "Expected Result / Notes:\nCurrently Working, but if there's no history, whenever the user launches the Recall app it gives a popup warning stating, \"Recall is currently taking some time to take the snapshots.\""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [],
+    "deviceMatrix": []
+  }
+}

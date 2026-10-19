@@ -1,0 +1,677 @@
+{
+  "_comment1": "catgeory is mismatched from CTQs latest sheet and single Dial Sheet",
+  "_comment2": "objective,expectedTime,notes, passFailCriteria and priority not available",
+  "_comment3": "detailedSteps collected from Dial Specific Sheet mentioned as TestSteps",
+  "testCases": [
+    {
+      "Id": "Dial001",
+      "testName": "Dial Pairing LED",
+      "category": "Accessories",
+      "subCategory": "BlueTooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Remove black bottom cap from the Dial.\nVerify: Pairing LED is Off.\n2. Press and hold the pairing button for more than 5 seconds.\nVerify: The pairing LED blinks slowly (Pairing Mode).",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial002",
+      "testName": "Dial Pairing LED - Timeout",
+      "category": "Accessories",
+      "subCategory": "BlueTooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Remove black bottom cap of the Dial.\n2. Observe the pairing LED on the Dial.\nVerify: Pairing LED is Off.\n3. Press and hold the pairing button for more than 5 seconds.\nVerify: The Pairing LED blinks slowly (Pairing Mode).\n4. Wait up to 5 minutes.\nVerify: The Pairing LED stops blinking.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial003",
+      "testName": "Bluetooth & Other Devices",
+      "category": "Accessories",
+      "subCategory": "BlueTooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Go to Settings -> Devices -> Bluetooth and other devices.\n2. Put testing dial into Pairing Mode.\n3. Select 'Add Bluetooth or other device'.\n4. Select Bluetooth.\n5. Select the Dial to pair.\nVerify: The Dial pairs.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial004",
+      "testName": "Bluetooth & Other Devices - Battery Percentages",
+      "category": "Accessories",
+      "subCategory": "BlueTooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Surface Dial is connected to host device.\nVerify: Battery Percentage listed with Accessory in bluetooth setting page.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial005",
+      "testName": "Dial Pairing LED - Already Paired",
+      "category": "Accessories",
+      "subCategory": "BlueTooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Use a Dial that is already paired to the device.\n2. Observe the Dial Pairing LED on the Dial.\nVerify: Pairing LED is off.\n3. Press and hold the pairing button for 5 seconds.\nVerify: The pairing LED blinks rapidly for less than 5 seconds, then turns Off.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial006",
+      "testName": "Unpairing the Dial",
+      "category": "Accessories",
+      "subCategory": "BlueTooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair a Dial to the host.\n2. Go to Settings -> Devices -> Bluetooth and other devices.\n3. Select the Surface Dial under \"Mouse, Keyboard, Dial\".\n4. Select Remove Device.\nVerify: The Dial is removed.\n1. Press and rotate the Dial.\nVerify: Dial functions are no longer working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial007",
+      "testName": "Battery Removal",
+      "category": "Accessories",
+      "subCategory": "BlueTooth Pairing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Remove the Battery from the Dial.\n3. Replace the Battery in the Dial.\n4. Click and rotate the Dial.\nVerify: The Dial is still paired to the host.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial008",
+      "testName": "Functionality Off Screen",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. With the Desktop active hold down the Dial to bring up the Function Menu.\n2. Rotate the Dial to select the Brightness Function.\n3. Single Click the Dial to select the Brightness Function.\n4. Rotate the Dial.\nVerify: The Brightness goes up and down with Dial rotation.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial009",
+      "testName": "Functionality On Screen",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Place the Dial on the Screen Desktop.\n2. Long Click the Dial to bring up the Function Menu.\n3. Rotate the Dial to select the Brightness Function.\n4. Single Click the Dial to select the Brightness Function.\n5. Rotate the Dial.\nVerify: The Brightness goes up and down with Dial rotation.\n6. Move Dial to different location on the screen.\nVerify: The function menu moves with the Dial.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial010",
+      "testName": "Rotation - Clean",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Set the Dial Function to adjust Brightness.\n2. Rotate the Dial.\nVerify: Rotation adjusts brightness smoothly.\nVerify: Rotation feels smooth with regular Haptic pulses.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial011",
+      "testName": "Rotation - Continuous",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Set the Dial Function to adjust Brightness.\n2. Rotate the Dial continuously for several rotations.\nVerify: Rotation adjusts brightness smoothly until reaches max.\nVerify: Rotation feels smooth with regular Haptic pulses.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial012",
+      "testName": "Rotation - Jagged",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Set the Dial Function to adjust Brightness.\n2. Rotate the Dial slowly back and forth continuously.\nVerify: Rotation adjusts brightness smoothly both directions.\nVerify: Rotation feels smooth with regular Haptic pulses both directions.\n3. Repeat above but rotate quickly back and forth.\nVerify: Rotation adjusts brightness smoothly both directions.\nVerify: Rotation feels smooth with regular Haptic pulses both directions.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial013",
+      "testName": "Rotation - Button Held",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Press and hold the Dial, then rotate several times back and forth.\nVerify: The Function Menu appears.\nVerify: Regular Haptic Pulses.\nVerify: No other unexpected behavior.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial014",
+      "testName": "Haptic Sensor - Deadband",
+      "category": "Accessories",
+      "subCategory": "General Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Place hand on Dial.\nVerify: No haptic vibration is felt after initial click vibration.\n2. Rotate very slightly remaining in the deadband. (It should pulse, not continously vibrate. Deadband is between the pulses.)\nVerify: No haptic vibration is felt in deadband.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial015",
+      "testName": "Active State",
+      "category": "Accessories",
+      "subCategory": "Dial Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Click and Rotate the Dial.\nVerify: Both Click and Rotate functions are working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial016",
+      "testName": "REST 1 State",
+      "category": "Accessories",
+      "subCategory": "Dial Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Rotate the dial then wait 3 seconds.\n2. Click and Rotate the Dial.\nVerify: Both click and rotate functions are working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial017",
+      "testName": "REST 2 BLE Connected State",
+      "category": "Accessories",
+      "subCategory": "Dial Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Rotate the dial then wait 1 minute.\n2. Click and Rotate the Dial.\nVerify: Both click and rotate functions are working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial018",
+      "testName": "REST 2 BLE Disconnected State",
+      "category": "Accessories",
+      "subCategory": "Dial Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Rotate the dial then wait 5 minutes.\n2. Click and Rotate the Dial.\nVerify: Both click and rotate functions are working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial019",
+      "testName": "Host in CS: OFF-screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Place the Host into CS.\n3. Wait for 30 seconds.\n4. Rotate the Dial Off-Screen.\nVerify: The Host remains in CS.\n5. Click the Dial Off Screen.\nVerify: The Host wakes to S0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial020",
+      "testName": "Host in CS:  ON-screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Place the Host into CS.\n3. Wait for 30 seconds.\n4. Rotate the Dial On Screen.\n5. Move Dial around screen.\n6. Move dial from On Screen to Off Screen and back.\nVerify: The Host remains in CS.\n7. Click the Dial On Screen.\nVerify: The Host wakes to S0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial021",
+      "testName": "Host in CS: OFF-screen -  5 Minutes",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Place the Host into CS.\n3. Wait for 5 minutes.\n4. Rotate the Dial Off-Screen.\nVerify: The Host remains in CS.\n5. Click the Dial Off Screen.\nVerify: The Host wakes to S0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial022",
+      "testName": "Host in CS: ON-screen - 5 Minutes",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Place the Host into CS.\n3. Wait for 5 Minutes.\n4. Rotate the Dial On Screen.\n5. Move Dial around screen.\n6. Move dial from On Screen to Off Screen and back.\nVerify: The Host remains in CS.\n7. Click the Dial On Screen.\nVerify: The Host wakes to S0.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial023",
+      "testName": "Host Restart - Off Screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Restart the Host.\n3. Click and Rotate the Dial.\nVerify: The Dial is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial024",
+      "testName": "Host Restart - On Screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Restart the Host.\n3. Click and Rotate the Dial.\nVerify: The Dial is working.\n4. Place the Dial On-Screen.\n5. Click and Rotate the Dial.\nVerify: The Dial is working.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial025",
+      "testName": "Host in Hibernate - Off Screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Dial selected Volume.\n3. Volume at 62.\n4. Put device in S4 and wait 30 seconds.\n5. Rotate Dial Off-Screen (on desk).\n6. Wake device to S0.\n7. Check volume is at 62.\nVerify: Dial is still selected in Volume, and Volume is at 62. (Verifying the dial fuction was not able to change the Host while in S4.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial026",
+      "testName": "Host in Hibernate: ON-screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Dial selected Volume.\n3. Volume at 62.\n4. Put device in S4 and wait 30 seconds.\n5. Rotate Device On-Screen.\n6. Wake device to S0.\n7. Verify volume is at 62.\nVerify: Dial is still selected in Volume, and Volume is at 62. (Verifying the dial fuction was not able to change the Host while in S4.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial027",
+      "testName": "Host in Shutdown: OFF-screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Dial selected Volume.\n3. Volume at 62.\n4. Put device in S5 (Shutdown), wait 5 minutes.\n5. Rotate Dial Off-Screen (on desk).\nVerify: The Dial does not vibrate.\n5. Wake device to S0.\n6. Verify volume is at 62.\nVerify: Dial is still selected in Volume, and Volume is at 62. (Verifying the Dial fuction was not able to change the Host while in S5.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial028",
+      "testName": "Host in Shutdown: ON-screen",
+      "category": "Accessories",
+      "subCategory": "Host Power State",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Pair the Dial to the Host.\n2. Dial selected Volume.\n3. Volume at 62.\n4. Put device in S5 (Shutdown), wait 30 seconds.\n5. Rotate Device On-Screen.\nVerify: The Dial does not vibrate.\n5. Wake device to S0.\n6. Verify volume is at 62.\nVerify: Dial is still selected in Volume, and Volume is at 62. (Verifying the Dial fuction was not able to change the Host while in S5.)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial029",
+      "testName": "Move Menu",
+      "category": "Accessories",
+      "subCategory": "User Scenarioes - Windows",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Long Click Campo Off Screen to open menu.\n2. Use Finger on Screen to move the Menu.\n3. Use the Mouse/Trackpad to move the Menu.\n4. Use the Pen move the Menu.\nVerify: The menu moves as expected in all cases.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial030",
+      "testName": "Wheel Settings - Default Menu",
+      "category": "Accessories",
+      "subCategory": "User Scenarioes - Windows",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Settings -> Devices -> Wheel.\n2. Select '+' to add the Default Tool to the Menu.\n3. Select 'Scroll' and change to 'Brightness'.\n4. Launch Microsoft Edge and left click in open window.\n5. Long Press the Dial to open the Menu.\nVerify: The Menu opens with 'Default Tool' and 'Brightness'.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial031",
+      "testName": "Invoke Menu - Finger",
+      "category": "Accessories",
+      "subCategory": "User Scenarioes - Windows",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Long Press the Dial.\n2. Select Volume with Finger Touch.\n3. Rotate the Dial.\nVerify: Volume changes up and down.\n4. Long Press the Dial.\n5. Select Brightness with Finger Touch.\n6. Rotate the Dial back and forth.\nVerify: Brightness changes.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial032",
+      "testName": "Invoke Menu - Mouse",
+      "category": "Accessories",
+      "subCategory": "User Scenarioes - Windows",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Long Press the Dial.\n2. Select Volume with the Mouse.\n3. Rotate the Dial.\nVerify: Volume changes up and down.\n4. Long Press the Dial.\n5. Select Brightness with the Mouse.\n6. Rotate the Dial back and forth.\nVerify: Brightness changes.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial033",
+      "testName": "Invoke Menu - Pen",
+      "category": "Accessories",
+      "subCategory": "User Scenarioes - Windows",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Long Press the Dial.\n2. Select Volume with the Pen.\n3. Rotate the Dial.\nVerify: Volume changes up and down.\n4. Long Press the Dial.\n5. Select Brightness with the Pen.\n6. Rotate the Dial back and forth.\nVerify: Brightness changes.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial035",
+      "testName": "Apps - Microsoft Edge",
+      "category": "Accessories",
+      "subCategory": "User Scenarioes - Windows",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Microsoft Edge. (Must be connected to internet to have an active webpage for this test.)\n2. Long press dial to switch menu to scroll. With webpage selected, rotate the Dial.\nVerify: The page scrolls up and down.\n3. Long Press Dial and select Zoom.\n4. With webpage selected, rotate the Dial back and forth.\nVerify: The page zooms in and out.\n5. Long Press and select Custom Tool. (See test notes)\n6. With webpage selected, short press the Dial.\nVerify: A new Browser Tab is created.\n7. Rotate the Dial.\nVerify: Browser switches between tabs.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "Dial036",
+      "testName": "Apps - Inkspace Sketchpad",
+      "category": "Accessories",
+      "subCategory": "User Scenarioes - Windows",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "BT", "Audio", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Open Inkspace - Sketchpad or Snip & Sketch.\n2. Use the Pen to draw several lines.\n3. Invoke Dial Menu and select Undo function.\n4. Rotate the Dial left and right.\nVerify: The lines undo and redo.",
+          "passFailCriteria": ""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "",
+    "minimumHardware": [],
+    "deviceMatrix": []
+  }
+}

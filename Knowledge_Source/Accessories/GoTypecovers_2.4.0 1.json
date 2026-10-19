@@ -1,0 +1,1866 @@
+{
+  "testCases": [
+  {
+    "Id": "KB001",
+    "testName": "Authentication",
+    "category": "Accessories",
+    "subCategory": "Authentication",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Keyboard Authenticates",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach the keyboard to the host\n2. Open device manager -> Keyboards\nVerify: The driver is present and not banged out.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB002",
+    "testName": "Authentication",
+    "category": "Accessories",
+    "subCategory": "Authentication",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Rapid Connections",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach and detach the keyboard rapidly.\n2. Open Device Manager -> Keyboards\nNote: Vary the number of times you rapidly detach/attach the keyboard for each iteration.\nVerify: No Bug Checks occur.\nVerify: The driver is present and not banged out.\nVerify: The keys and touchpad are working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB003",
+    "testName": "Authentication",
+    "category": "Accessories",
+    "subCategory": "Authentication",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Attach/Detach",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Open Device Manager and verify there are no banged out drivers.\n2. Detach and the attach the keyboard.\nVerify: Keyboard is working, touchpad is working, No banged out driver in device manager.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB005",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Keyboard Keys are Working",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an active position (Position B).\n2. Open Notepad or Wordpad.\nVerify: Normal keypresses are working - All letters and numbers are working. Check they appear in Notepad or Wordpad.\nVerify: Function keys are working. (F1 - F12)\nVerify: All special keys are working (ie Volume, Brightness, etc.). These are located at the top of the keyboard and the FN lock must be turned off to access them.\nVerify: Windows key is working. Pressing it should open the Start menu.\nVerify: Right click key is working.\nVerify: Modifier keys are working. The modifiers are the Shift, Ctrl, and Alt. Open Notepad or Wordpad and type Shift+A for capital A, Ctrl+S to save the document and Alt+F to open the file menu.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB006",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "3-Key Combination",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press Ctrl+Alt+Del\nVerify: Screen with Task Manger option populates.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB007",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Typematic",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press and hold down a QWERTY key.\nVerify: The character repeats when key is held (qqqqqqqqqqqqq)",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB008",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Spacebar 6-Point Check",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press spacebar in different locations along the bar.\nVerify: Spacebar reportes correctly wherever the key is pressed.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB009",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Keys and touchpad Use in All Positions",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. With keyboard attached move to all Positions (Positions A-E)\n2. In each position press some keys.\n3. In each position use the touchpad.\nVerify: The keys and touchpad work in Position B and upside down position B.\nVerify: The keys and touchpad do not work in all other positions.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB010",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+       {
+        "objective": "Keys and touchpad Use - Device Rotation",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. With keyboard attached and in an active position (Position B)\n2. Rotate device so it is in portrait mode - keyboard in an active position (Position E).\nVerify: The keys and touchpad are not working.",
+        "passFailCriteria": ""
+        }
+      ]
+  },
+  {
+    "Id": "KB011",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Keyboard Active Timing",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B. \n2. Move keyboard to Position C and then back to B. \nVerify: Keypresses working within 3 seconds.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB012",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Caps Lock LED is working",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an active position (Position B). \n2. Press the Caps Lock key several times. \nVerify: The Caps Lock LED turns on and off.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB013",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Caps Lock Keyboard Removal",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an active position (Position B). \n2. Open Notepad or Wordpad. \n3. Type characters with Caps Lock on and off. \nVerify: Capital and non-capital letters show correctly. \n4. With Caps Lock turned on detach and reattach the keyboard. \n5. Type some letters into Notepad or Wordpad. \nVerify: The letters typed are capital letters. \n6. With Caps Lock OFF, detach and reattach the keyboard. \n7. Type some letters into Notepad or Wordpad. \nVerify: The letters typed are lowercase letters.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB014",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Caps Lock State maintained during CS",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an Active position (Position B). \n2. Turn on Caps Lock. \n3. Press Power Button to go to CS. \n4. Wait 10 seconds and press Power Button to return to S0. \n5. Type a few characters into Notepad or Wordpad. \nVerify: The letters are capital letters. \n6. Repeat steps 1-5 with Caps Lock turned OFF. \nVerify: The letters typed are lower case.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB015",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Caps Lock State maintained during Hibernate",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an active position (Position B). \n2. Turn on Caps Lock. \n3. Hibernate the device. \n4. Wait 30 seconds and press Power Button to return to S0. \n5. Type a few characters into Notepad or Wordpad. \nVerify: The letters are capital letters. \n6. Repeat steps 1-5 with Caps Lock turned OFF. \nVerify: The letters typed are lower case.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB016",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Function Key LED is working",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an active position (Position B). \n2. Press Fn Key several times. \nVerify: The Fn key LED turns on and off.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB017",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Fn Lock State maintained during CS.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an active position (Position B). \n2. Turn on Fn Lock. \n3. Press Power Button to go to CS. \n4. Wait 10 seconds and press Power Button to return to S0. \n5. Press F1. \nVerify: Search Menu launches. \n6. Repeat steps with Fn Lock turned OFF. \nVerify: Search Menu does not launch.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB018",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Fn Lock State maintained during Hibernate.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an Active position (Position B). \n2. Turn on Fn Lock. \n3. Hibernate the device. \n4. Wait 30 seconds and press Power Button to return to S0. \n5. Press F1. \nVerify: Search Menu lanches. \n6. Repeat steps with Fn Lock turned OFF \nVerify: Seach Menu does not launch.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB019",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Modifier Keys",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. With Caps lock off, hold down the left Shift key and type some letter keys into Wordpad. \nVerify: The letters are uppercase. \n3. With Caps lock off, hold down the left Shift key for over 10 seconds and release, then type some letter keys Wordpad. \nVerify: The letters are lowercase.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB169",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Keyboard OOBE",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Launch OOBE \n2. Use Keyboard and Touchpad or Mouse to follow the prompts. \nVerify: Keyboard and Touchpad or Mouse work during OOBE setup.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB170",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Sticky Keys",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. In Settings, Turn ON Sticky Keys or press Shift key 5 times, consecutively. \nVerify: Sticky Keys function prompts  and is active by selecting Yes, then open File Explorer: Window key, then E key \n2. Turn Sticky Keys function OFF by selecting the On/Off slide icon in settings menu or pressing Shift key 5 times, consecutively \nVerify: Sticky Keys is NOT active by opening File Explorer: Window key, then E key",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB171",
+    "testName": "Keyboard Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Filter Keys",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. In Settings, Turn on Filter Keys or press & hold right Shift key for 8 seconds. \nVerify: Filter Keys function prompts and is active by selecting Yes, then scroll Up/Down cursor keys in MS Edge \n2. Turn Filter Keys function OFF by selecting the On/Off slide icon in settings menu or press & hold right Shift key for 8 seconds. \nVerify: Filter Keys function is NOT active by scrolling Up/Down cursor keys in MS Edge",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB023",
+    "testName": "Touchpad General Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Left and Right Mouse Click",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press down until hear a click on the touchpad in the lower left corner. \n2. Press down until hear a click on the touchpad in the lower right corner. \nVerify:  The left and right mouse buttons work when pressed.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB024",
+    "testName": "Touchpad General Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Single Finger Tracking",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Using a single finger, use the touchpad to move the cursor around the deskop. \nVerify: Single Finger Tracking - Works and tracks smoothly.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB025",
+    "testName": "Touchpad General Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Left Click and Drag",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Left Click and drag to make a selection. \nVerify: Left click and drag selection works smoothly.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB026",
+    "testName": "Touchpad General Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Touchpad Active Timing",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in Position B. \n2. Move keyboard to Position C and then back to B. (Close and then open for Laptops) \nVerify: Touchpad working within 3 seconds.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB027",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Touchpad On/Off",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB028",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Touchpad with Mouse Connected",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB029",
+    "testName": "Touchpad Sensitivity",
+    "category": "Accessories",
+    "subCategory": "Touchpad Sensitivity",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB030",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Single Finger Tap",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB031",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Two Finger Tap",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },    
+  {
+    "Id": "KB032",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Tap and Drag",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB033",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Right Click",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB034",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Two Finger Scrolling",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB035",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Scrolling Direction",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB036",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Pinch to Zoom",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB037",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Three Finger Gestures",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB038",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Three Finger Taps",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB039",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Four Finger Gestures",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB040",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Four Finger Taps",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB041",
+    "testName": "Touchpad Settings Testing",
+    "category": "Accessories",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Reset Touchpad Settings",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB042",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight On when Keyboard Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB043",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight Intensity",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB044",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight Ramp-up time",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB045",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight Timeout (20 Seconds)",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB046",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight On with Keypress",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB047",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight On/Off with Screen On/Off",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB048",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Caps Lock and Fn Lock LED",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB049",
+    "testName": "",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Active to Inactive Positions",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB050",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight Off when Connect Keyboard in Inactive Position.",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB051",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight During Shutdown and Power Up",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB052",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Backlight During a Restart",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB053",
+    "testName": "Backlight Testing",
+    "category": "Accessories",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Slowly Open and Close Lid",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB063",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Wake From CS with Keypress/Swipe",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press Power Button to enter CS. \n2. Press a Key. \nVerify:  The device wakes to S0. \n3. Press Power Button to enter CS. \n4. Swipe the touchpad. \nVerify: The device wakes to S0.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB065",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "CS - Close and Open Cover - Wake",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Place keyboard in position B. \n2. Press the power button to enter CS. \n3. Close the keyboard (position A). \n4. Open the keyboard to Position B. \nVerify: The device wakes.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB068",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Doesn't wake going to Position D and Back",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in active position (Position B). \n2. Press the Power Button to enter CS. \n3. Move the Keyboard to Position D then back to Position B. \nVerify: The device screen stays Off and device stays in CS.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB069",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Detach/ Reattach Stays in CS",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in active position (Position B). \n2. Press the Power Button to enter CS. \n3. Detach then reattach the Keyboard. \nVerify: The device screen stays Off and device stays in CS.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB070",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Screen Rotation",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyoard in Position B. \n2. Set Rotation Lock setting = Off \n3. Rotate device 90 degrees to portrait. \nVerify: The screen rotates to portrait.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB072",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Rotation Lock Option with Keyboard Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B. \nVerify: Rotation Lock is disabled (greyed out). \n2. Rotate to upside down Position B. \nVerify: Rotation Lock is disabled (greyed out). \n3. Change keyboard position to positions C, D, and E. \nVerify: Rotation lock is enabled in positions C, D, and E and locks screen rotation.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB073",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Rotation Lock Option with Keyboard Inactive",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position D. \n2. Rotate to all 4 orientations. In each orientation: \na. Enable Rotation Lock. \nb. Rotate device in all orientations and verify screen does not rotate. \nc. Disable Rotation Lock.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB074",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Rotation Lock ON With Keyboard Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach the Keyboard in Position B. \n2. Rotate device 90 degrees (Position E) and enable rotation lock. \n3. Rotate the device 90 degrees the other (Position E) direction with keyboard in active position and enable rotation lock. \nVerify: Screen remains locked in set portrait position.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB075",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Rotation Lock OFF No Keyboard",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Remove the keyboard. \n2. Turn Rotation Lock Off. \n3. Rotate the device to all 4 orientations. \nVerify: The screen rotates correctly in all orientations.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB076",
+    "testName": "General Testing",
+    "category": "Accessories",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Rotation Lock ON No Keyboard",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Remove the keyboard. \n2. Rotate to all for orientations. In each orientation: \na. Enable Rotation Lock. \nb. Rotate device in all orientations and verify screen does not rotate. \nc. Disable Rotation Lock.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB083",
+    "testName": "OSK",
+    "category": "Accessories",
+    "subCategory": "OSK",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "OSK Blade Inactive",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B. \n2. Tap on search bar once, and then again once it opens. \nVerify: OSK does not appear. \n3. Repeat above steps with keyboard in Position C. \nVerify: OSK does appear.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB084",
+    "testName": "OSK",
+    "category": "Accessories",
+    "subCategory": "OSK",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "OSK Blade Inactive",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B. \n2. Tap on search bar once, and then again once it opens. \nVerify: OSK does not appear. \n3. Repeat above steps with keyboard in Position C. \nVerify: OSK does appear.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB086",
+    "testName": "OSK",
+    "category": "Accessories",
+    "subCategory": "OSK",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "OSK Disappears when Blade Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Atach keyboard in Position C (Inactive). \n2. Tap search bar twice to get OSK to show. \n3. Change keyboard to Postion B (Active). \nVerify: The OSK disappears.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB087",
+    "testName": "Close Cover Power Options",
+    "category": "Accessories",
+    "subCategory": "Close Cover Power Options",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Close Lid - Do Nothing",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B (Active). \n2. Settings\\System\\Power and Sleep\\Additional Power Settings\\Choose what closing the lid does\\When I close the lid: Do Nothing - Save Changes. \n3. Close the Cover. Wait 30 seconds. \n4. Open the Cover. \nVerify: The device screen turns on to desktop (not the lock screen). \n5. Press some keys and use touchpad including PTP Gestures (2 finger). \nVerify: Touchpad (PTP) and Keys are working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB088",
+    "testName": "Close Cover Power Options",
+    "category": "Accessories",
+    "subCategory": "Close Cover Power Options",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Close Lid - Sleep",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B (Active). \n2. Settings\\System\\Power and Sleep\\Additional Power Settings\\Choose what closing the lid does\\When I close the lid: Sleep - Save Changes. \n3. Close the Cover. Wait 30 seconds. \n4. Open the Cover. \nVerify: The device wakes to lock screen. \n5. Press some keys and use touchpad including PTP Gestures (2 finger). \nVerify: Touchpad (PTP) and Keys are working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB089",
+    "testName": "Close Cover Power Options",
+    "category": "Accessories",
+    "subCategory": "Close Cover Power Options",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Close Lid - Hibernate",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B (Active). \n2. Settings\\System\\Power and Sleep\\Additional Power Settings\\Choose what closing the lid does\\When I close the lid: Hibernate - Save Changes. \n3. Close the Cover. Wait 30 seconds. \n4. Open the Cover. \nVerify: Key presses and touchpad do not wake the device. \n5. Press the Power Button to turn the device back On. \nVerify: Device turns on to S0. \nVerify: Touchpad (PTP) and Keys are working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB091",
+    "testName": "Close Cover Power Options",
+    "category": "Accessories",
+    "subCategory": "Close Cover Power Options",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Close Lid - Shutdown",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B (Active). \n2. Set Power Options -> Close Lid -> Shutdown. \n3. Close the Cover. Wait 30 seconds. \n4. Open the Cover. \n5. Press the Power Button to turn the device back On \nVerify: The device Shuts Down. \nVerify: Device turns on to S0. \nVerify: Touchpad (PTP) and Keys are working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB092",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State CS - Blade Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position B (Active). \n2. Go to CS. \n3. Wake to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB093",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State Restart - Blade Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position B (Active). \n2. Restart the device. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB094",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State Hibernate - Blade Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position B (Active). \n2. Hibernate, wait 30 seconds then turn On the device. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB095",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State Shutdown - Blade Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position B (Active). \n2. Shutdown, wait 30 seconds then turn On the device. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB096",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State CS - Blade Inactive",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position C (Inactive). \n2. Go to CS. \n3. Power button to wake to S0. \n4. Keyboard to Positin B (Active. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB097",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State Restart - Blade Inactive",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position C (Inactive). \n2. Restart the device and wait 30 seconds. \n3. Keyboard to Positin B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB098",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State Hibernate - Blade Inactive",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position C (Inactive). \n2. Hibernate, wait 30 seconds then turn On the device. \n3. Keyboard to Positin B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB099",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State Shutdown - Blade Inactive",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach Keyboard in Position C (Inactive). \n2. Shutdown, wait 30 seconds then turn On the device. \n3. Keyboard to Positin B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB100",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Detach to Powerstate, Active Attach - CS",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Detach the Keyboard. \n3. Enter CS. \n4. Attach the Keyboard in Position B. \n5. Wake the device with a keypress. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB101",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Detach to Powerstate, Active Attach - Hibernate",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Detach the Keyboard. \n3. Hibernate the device and wait 30 seconds. \n4. Attach the Keyboard in Position B. \n5. Press Power Button to turn on Device to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB102",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Detach to Powerstate, Active Attach - Shutdown",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Detach the Keyboard. \n3. Shutdown the Device and wait 30 seconds. \n4. Attach the Keyboard in Position B. \n5. Press Power Button to turn on Device to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB103",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Detach to Powerstate, Inactive Attach - CS",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Detach the Keyboard. \n3. Enter CS. \n4. Attach the Keyboard in Position C (Inactive). \n5. Press Power Button to turn on Device to S0. \n6. Move Keyboard to Position B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB104",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Detach to Powerstate, Inactive Attach - Hibernate",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Detach the Keyboard. \n3. Hibernate the Device, wait 30 seconds. \n4. Attach the Keyboard in Position C (Inactive). \n5. Press Power Button to turn on Device to S0. \n6. Move Keyboard to Position B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB105",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Detach to Powerstate, Inactive Attach - Shutdown",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Detach the Keyboard. \n3. Shutdown the Device, wait 30 seconds. \n4. Attach the Keyboard in Position C (Inactive). \n5. Press Power Button to turn on Device to S0. \n6. Move Keyboard to Position B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB106",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Blade Free Hang",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "Verify: Blade stays connected to the device when picking the device up off the table and allowing the blade to hang without support.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB107",
+    "testName": "Blade State Interactions",
+    "category": "Accessories",
+    "subCategory": "Blade State Interactions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Blade Spine Jiggle",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Hold device up with one hand, with the other hand jiggle the blade at the spine with a small amount of force for 15 seconds. \nVerify: The blade does not disconnect.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB108",
+    "testName": "Additional Positions",
+    "category": "Accessories",
+    "subCategory": "Additional Positions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Additional Positions CS",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Attach Keyboard Position A. \n3. Press Power Button to go to CS. \n4. Move keyboard to position B(Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB109",
+    "testName": "Additional Positions",
+    "category": "Accessories",
+    "subCategory": "Additional Positions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Additional Positions2 CS",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0 \n2. Attach Keyboard Position B. \n3. Press Power Button to go to CS. \n4. Move the keyboard to position A. \n5. Press the power button to go back to S0. \n6. Move keyboard to Position B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB110",
+    "testName": "Additional Positions",
+    "category": "Accessories",
+    "subCategory": "Additional Positions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Additional Positions Restart",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Attach Keyboard Position B. \n3. Restart the Device. \n4. Quickly close the keyboard to position A. \n5. Wait 30 seconds. \n6. Move keyboard to Position B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB111",
+    "testName": "Additional Positions",
+    "category": "Accessories",
+    "subCategory": "Additional Positions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Additional Positions Hibernate",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0 \n2. Attach Keyboard Position B. \n3. Hibernate the Device. \n4. Quickly close the keyboard to position A, wait 30 seconds. \n5. Power on the device and wait for 30 seconds. \n6. Move keyboard to Position B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB112",
+    "testName": "Additional Positions",
+    "category": "Accessories",
+    "subCategory": "Additional Positions",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Additional Positions Shutdown",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in S0. \n2. Attach Keyboard Position B. \n3. Shutdown the Device. \n4. Quickly close the keyboard to position A, wait 30 seconds. \n5. Power on the device and wait 30 seconds. \n6. Move keyboard to Position B (Active). \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB113",
+    "testName": "Keyboard Power State Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Power State Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State - 5 Second",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B (Active). \n2. Press power button to go to CS. \n3. Wait for 5 Seconds. \n4. Press a key. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working. \n1. Repeat using the touchpad to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB114",
+    "testName": "Keyboard Power State Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Power State Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State - Inactive -5 Second",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position C (Inactive). \n2. Wait for 20 Seconds. \n3. Power Button to go to CS. \n4. Wait 5 seconds. \n5. Move keyboard to Position B (Active). \n6. Press a key to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working. \n1. Repeat using the touchpad to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB115",
+    "testName": "Keyboard Power State Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Power State Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Power State - Active -30 Second",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B (Active). \n2. Press Power Button to go to CS. \n3. Wait 30 seconds. \n4. Press a key to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working. \n1. Repeat using the touchpad to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB116",
+    "testName": "Keyboard Power State Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Power State Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Close Lid - 5 Seconds - Open Lid",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach blade in Position B (Active). \n2. Close the Cover (Position A) to go to CS. \n3. Wait 5 seconds. \n4. Open the Cover (Position B). \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB118",
+    "testName": "Keyboard Power State Testing",
+    "category": "Accessories",
+    "subCategory": "Keyboard Power State Testing",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Close Lid - 30 Seconds - Open Lid",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in Position B (Active). \n2. Close the Cover (Position A) to go to CS. \n3. Wait 30 seconds. \n4. Open the Cover (Position B). \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB166",
+    "testName": "Cover Click",
+    "category": "Accessories",
+    "subCategory": "Cover Click",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "USB Connect Audio - S0",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Turn volume up to 100%. \n2. Connect the keyboard in Position B (Active). \nVerify: No USB connect sound is heard. \n3. Move keyboard to Position C, then back to A. \nVerify: No USB connect sound is heard. \n4. Disconnect and Reconnect the keyboard. \nVerify: No USB Connect sound is heard.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB167",
+    "testName": "",
+    "category": "Accessories",
+    "subCategory": "Cover Click",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "USB Connect Audio - CS",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Turn volume up to 100%. \n2. Put device into CS. \n3. Connect the keyboard in Position B (Active). \nVerify: No USB connect sound is heard. \n4. Disconnect and Reconnect the keyboard. \nVerify: No USB Connect sound is heard.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB168",
+    "testName": "Cover Click",
+    "category": "Accessories",
+    "subCategory": "Cover Click",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Cannot Eject Keyboard",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Connect keyboard in Position B (Active). \n2. Open the System Tray. (Bottom Right ^ icon). \n3. Click Safely Remove Hardware and Eject Media (if present) \nVerify: Cannot disconnect KB device",
+        "passFailCriteria": ""
+      }
+    ]
+  }
+  ]
+}

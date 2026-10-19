@@ -1,0 +1,688 @@
+{
+  "testCases": [
+    {
+      "Id": "TOUC001",
+      "testName": "FCN – Single/Multi Touch check test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that 10 fingers are recognized by Touch driver.",
+          "expectedTime": "8",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\\n 2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\\n 3. Copy DigiInfo to DUT (\\\\desmo\\WDS\\PLE\\Touch\\Tools\\DigiInfo64)\n4. Run DigiInfo.exe.\n5. Touch the display with one finger and start increasing and decreasing randomly the number of fingers\ntouching the display.6. Verify the “ActualCount” column is updated based on the fingers that are touching the display. Make sure the\nten fingers are recognized and not dropped.",
+          "passFailCriteria": " The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC002",
+      "testName": "FCN – Pen Functionality Check test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that pen is working on the most basic scenarios used by the user.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Open OneNote and use pen to write for about 10 minutes. Make sure the writing experience is not degraded.\n4. Verify that: \na. Pen inks smoothly.\nb. Pen strokes do not unexpectedly drop.\nc. Eraser works and is accurate.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {  
+      "Id": "TOUC003",
+      "testName": "FCN – Touch Functionality Check test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that touch is working on the most basic scenarios used by the user. ",
+          "expectedTime": "",
+          "notes": "Different expectations when swiping left and right from edge-Varies from Windows 10 & 11",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Single Tap icons on desktop and observe tapped icons are highlighted.\n4. Open Edge browser, go to different pages and verify (at least 10 minutes):\na. Pinch zoom gesture works (zoom in / zoom out) minimum twenty times.\nb. Scrolling with touch works.\n5. Open multiple applications (e.g., OneNote, File Explorer, Edge browser).\n6. (Windows 10 Expectations): Swipe Finger from left edge and then right edge 100 times. Verify that:\na. Left edge swipe activates application selection (95% of the time)\nb. Right edge swipe brings up the Action Center (95% of the time).\n7. (Windows 11 Expectations): Swipe Finger from left edge and then right edge 100 times. Verify that:\na. Left edge swipe activates Widget Mode (95% of the time)\nb. Right Edge swipe brings up the Notification Center and Calendar (95% of the time).",
+          "passFailCriteria": " The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC004",
+      "testName": "FCN – Single Touch Tracking test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that touch is working properly when drawing continuously without unexpectedly drops.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Using OneNote, place single finger in center of screen.\n4. Draw spirals outward without lifting the finger.\n5. Make sure the draw is smooth and not dotted lines are seen. Make sure the writing experience is not degraded. Repeat for 2 minutes.\n6. Repeat step 4 and 5 using Paint.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC005",
+      "testName": "FCN – Multi-Touch Tracking test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that touch is working properly when drawing continuously without unexpectedly drops using several fingers.\n",
+          "expectedTime": "",
+          "notes": "This test applies only in the paint application using with brush tool.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Use Paint application\n4. Select the brush and place 5 fingers in center of screen (a comfortable distance apart).\n5. Draw spirals outward without lifting the fingers.\n6. Make sure the draw is smooth and not dotted lines are seen. Repeat for 2 minutes.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC006",
+      "testName": "FCN – Pen Tracking test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that Pen is working properly when drawing continuously without unexpectedly drops.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Using OneNote, place pen in center of screen.\n4. Draw spirals outward without lifting the pen.\n5. Make sure the draw is smooth and not dotted lines are seen. Make sure the writing experience is not degraded. Repeat for 2 minutes.\n6. Repeat step 4 and 5 using Paint.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC007",
+      "testName": "FCN – Pen Shortcut Button test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that Pen button is working based on configuration set in “Pen & Windows Ink”.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Pair the pen via Bluetooth (Windows Settings → Devices → Bluetooth & other devices → Add Bluetooth)\n3. Go to “Pen Settings” (Windows settings → Devices → Pen & Windows Ink)\n4. Under “Pen shortcuts” do the following: a. Click once → “OneNote”\nb. Double click → “Windows Ink Workspace” / “Screen Sketch”\nc. Press and hold → “Launch a Universal App” / “(Choose one)”\n5. Verify that the shortcuts are working for each scenario and the settings are honored when using the pen.\n6. Repeat steps 4 & 5 setting up different values.",
+          "passFailCriteria": " The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC008",
+      "testName": "FCN – Pen Erase Functionality Check test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that Pen erase functionality works as expected.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Pair the pen via Bluetooth (Windows Settings → Devices → Bluetooth & other devices → Add Bluetooth)\n3. Open OneNote.\n4. Draw and/or erase alternately in extended periods of 1 minutes for 5 minutes. Erasing action should always work\n5. Draw and/or erase alternately in short periods of 5 seconds during other 5 minutes. Erasing action should always work.\n6. Make sure the writing/erasing experience is not degraded.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen. \nb) Erasing action is not working properly."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC009",
+      "testName": "FCN – Pen with Palm Interaction test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that Pen works properly when writing and having hand palm in contact with screen.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Pair the pen via Bluetooth (Windows Settings → Devices → Bluetooth & other devices → Add Bluetooth)\n3. Go to Settings → Devices → Pen & Windows Ink and Choose which hand you write with.\n4. Open OneNote.\n5. Write the alphabet and numerals 0-9. Writing hand should not create inking artifacts. Make sure the writing experience is not degraded.\n6. Use opposite hand and repeat steps 3 to 5.",
+          "passFailCriteria": " The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen.\nb) Writing is not distorted (it should look like pen on paper) and does not contain discontinuous lines (Pen track does not have losses)."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC010",
+      "testName": "FCN - Touch in UEFI mode test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that single Touch works properly in UEFI interface.",
+          "expectedTime": "",
+          "notes": "For this test, do not save any changes made in UEFI.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Shutdown the device.\n3. Turn on the device and go to UEFI interface.\n4. Use your finger to change between deferent options. Verify Touch functionality is working.\n5. Go to Security Tab and Add a password. Verify the onscreen keyboard appears and it is functional. Cancel the changes.\n6. Exit from UEFI without saving changes.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen.\nb) Touch is not responsive in UEFI mode."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC011",
+      "testName": "FCN – Touch in Widget Mode",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that single Touch works properly in Widget Mode.",
+          "expectedTime": "",
+          "notes": "For this test it applies to Windows 11(Swipe from the left edge)",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Swipe from the left side of the device. Verify Widget screen appears\n3. Use your finger to remove widgets by pressing “• • •” circle and press “Remove Widget”\n4. Use your finger to resize Widgets by pressing “• • •” circle and press medium or large. \n5. Use your finger to long-press on top of the widget to move around. Customize widget placement by moving 2 or more widgets around. \n6. Use your finger to add different widgets by pressing “add widgets”7. Verify clicking outside the widget box to close widget mode",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC012",
+      "testName": "FCN – Gestures on Surface Keyboard",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify Touch gestures on the keyboard.",
+          "expectedTime": "",
+          "notes": "Applies to only surface type covers",
+          "detailedSteps": "Apply various touch gestures on the surface Touchpad and verify each gestures works, you can use Edge, Office apps or any other application to test the following gestures.\n1. Select an item: Tap on the touchpad.\n2. Scroll: Place two fingers on the touchpad and slide horizontally or vertically to scroll. Repeat putting fingers on screen (Note: depend on the screen you are it might or might not work horizontal scroll).\n3. Zoom in or out: Place two fingers on the touchpad and pinch in or stretch out. Repeat putting fingers on screen.\n4. Show more commands (similar to right-clicking): Tap the touchpad with two fingers or press in the lower-right corner.\n5. See all open windows: Place three fingers on the touchpad and swipe them away from you. Repeat putting fingers on screen (Note: the movement of fingers on screen should be fast and short).\n6. Show the desktop: Place three fingers on the touchpad and swipe them towards yourself. Repeat putting fingers on screen (Note: the movement of fingers on screen should be fast and short).\n7. Switch between open windows: Place three fingers on the touchpad and swipe right or left.\n8. Open Search Window: Tap three fingers on the touchpad.\n9. Open action center: Tap four fingers on the touchpad.\n10. Switch virtual desktops: Place four fingers on the touchpad, swipe up, create a new virtual desktop. Then press four fingers again and swipe right or left to switch between desktops. Repeat putting fingers on screen (Note: Press four fingers until you see the window slightly reduced and then swipe right or left to switch between desktops.).",
+          "passFailCriteria": " The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen."
+        }
+      ]
+    },
+    {
+      "Id": "TOUC032",
+      "testName": "FCN – Touch Indicator on desktop Test",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "_comment": "testScenarios data not available and title name is diffrent in CTQs list",
+      "Id": "TOUC013",
+      "testName": "PM – Touch/Pen Power States Transition Test",
+      "category": "Touch",
+      "subCategory": "Power Management Responsiveness tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "_comment": "notes not available but it is mentioned in detailed steps so included note in notes section. expectedTime is also not available.",
+      "Id": "TOUC017",
+      "testName": "RAU – Orientation support test",
+      "category": "Touch",
+      "subCategory": "Responsiveness and Usability Tests",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that Touch and Pen is working properly on portrait and landscape.",
+          "expectedTime": "",
+          "notes": "By design OneNote does not support multi finger touch. (1178973 - [Touch] Multi Finger touch doesn't work in OneNote). Please do not fail the test due to this problem.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Set display on Portrait mode\n4. Using OneNote, do the following: \na. Use pen and draw on device. Make sure the writing experience is not degraded. \nb. Use single and multi-touch.  \nc. With finger: Draw slowly horizontally, vertically, and diagonally. \nd. With pen: Draw slowly horizontally, vertically, and diagonally. \n5. Repeat step 4 using Paint.\n6. Set display on landscape mode and repeat steps 4 & 5.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen. \nb) Draw is not smooth and/or dotted lines are seen. \nc) Unexpectedly drops are seen while drawing."
+        }
+      ]
+    },
+    {
+      "_comment": "expectedTime not available",
+      "Id": "TOUC018",
+      "testName": "RAU – Device modes support test",
+      "category": "Touch",
+      "subCategory": "Responsiveness and Usability Tests",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that Touch and Pen are working properly on different “Device modes”.",
+          "expectedTime": "",
+          "notes": "Windows 11 tablet mode has been deprecated. Do not test tablet mode in Windows 11. Windows 10 will still use Tablet mode test cases.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Using OneNote, do the following:\na. Use pen and draw on device. Draw slowly horizontally, vertically, and diagonally. \nb. Use single and multi-touch. Draw slowly horizontally, vertically, and diagonally. \nc. Make sure the writing experience is not degraded.\n4. Repeat step 4 using Paint.\n5. If using type cover or keyboard base, please remove it. (If DUT is Laptop or Studio the test is finished.)\n6. Set device on Tablet mode and repeat steps 3 and 4.\n7. Set display on Portrait mode and repeat steps 3 and 4.\n8. Note: By design OneNote does not support multi finger touch. (1178973 - [Touch] Multi Finger touch doesn't work in OneNote). Please do not fail the test due to this problem.",
+          "passFailCriteria": " The test will pass if the following conditions are not seen: \na) The expected behavior mentioned in the procedure is not seen.\nb) Draw is not smooth and/or dotted lines are seen.\nc) Unexpectedly drops are seen while drawing."
+        }
+      ]
+    },
+    {
+      "_comment": "notes not available but it is mentioned in detailed steps so included note in notes section. expectedTime is also not available.",
+      "Id": "TOUC019",
+      "testName": "RAU – Headphones interaction test",
+      "category": "Touch",
+      "subCategory": "Responsiveness and Usability Tests",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that headphones cable does not create instabilities on Touch and Pen.",
+          "expectedTime": "",
+          "notes": "If application does not support touch or pen, then use touch and pen outside the application.",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Plug in headphones to headphone jack.\n4. Purposefully drag headphone cable on screen in various orientations\n5. Perform touch and pen tasks while allowing cable on screen:\na. Draw using OneNote. Make sure the writing experience is not degraded. \nb. Open Edge and browse to different webpages (e.g.: YouTube, Netflix).\nc. Run a game from Microsoft Store (e.g.: Angry birds, Minion Rush, Candy Crush, etc.)  \nd. Use pen as well on all scenarios mentioned before (if supported).\nNote: If application does not support touch or pen, then use touch and pen outside the application.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen.\nb) Draw is not smooth and/or dotted lines are seen.\nc) Unexpectedly drops are seen while drawing."
+        }
+      ]
+    },
+    {
+      "_comment": "expectedTime and notes not available",
+      "Id": "TOUC020",
+      "testName": "RAU – Pen Usability (Mouse Pointer)",
+      "category": "Touch",
+      "subCategory": "Responsiveness and Usability Tests",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify that Pen works properly when is used as mouse pointer to open windows, shortcuts, menus, scaling windows and running apps.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Pair the pen via Bluetooth (Windows Settings → Devices → Bluetooth & other devices → Add Bluetooth)\n3. Using Pen do the following:\na. Keep pressing pen on desktop to show up the menu and open Display Settings or Personalize. Move through different settings using only Pen. \nb. Go to Microsoft Store and install an app.\nc. Open several Windows and try to scale up and down the size of the windows.\nd. Open Edge navigate on Internet and try to scroll up and down using Pen.\ne. Create several folders and dummy files (e.g. .txt files) and cut/copy/move files among the folders.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\nPen works all the time and the tasks mentioned in the procedure are done without issues."
+        }
+      ]
+    },
+    {
+      "_comment": "testScenarios data not available",
+      "Id": "TOUC034",
+      "testName": "RAU – Out-Of-Box Experience Test",
+      "category": "Touch",
+      "subCategory": "Responsiveness and Usability Tests",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "_comment": "expectedTime not available",
+      "Id": "TOUC035",
+      "testName": "APPS – Pen Menu",
+      "category": "Touch",
+      "subCategory": "Application Support Tests",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Verify Touch/Pen functionality on the application being running.",
+          "expectedTime": "",
+          "notes": "Windows 11 tablet mode has been deprecated. Do not test tablet mode in Windows 11. Windows 10 will still use Tablet mode test cases",
+          "detailedSteps": "1. Setup the DUT with the Base OS image, software and firmware required.\n2. Go to Device Manager → Firmware → and verify there are not banged out drivers.\n3. Run the application to be executed\n4. Use Pen to write/erase on screen without palm (If applicable)\n5. Use Pen to write/erase on screen with palm (if applicable)\n6. Repeat steps 4 and 5 for opposite hand (Go to Settings → Devices → Pen & Windows Ink and Choose which hand you write with).\na. Make sure Palm rejection works as expected and does not affect normal pen inking and touch. \nb. Make sure eraser functionality works as expected. (If applicable) \nNote: For some applications you should go into settings and change the handedness to match\n7. If finger drawing is supported, use finger to draw\n8. Use fingers to zoom-in and zoom-out, Scroll-up and Scroll-down, activate menu items and move elements. \na. Make sure Pinch Zoom gestures and scrolling gestures work (when implemented in the application).\n9. Close and open application using pen and touch.\na. Make sure Touch works on menus (if applicable)\n10. For games, play on Tablet mode and Desktop mode. Run the games for 10 minutes. Check for support using Touch and Pen. \n11. For primary apps (Edge, Snip & Sketch, Whiteboard, OneNote), do the following:\na. Use pen to start inking inside drawing areas and move outside without lifting the pen tip. An effect of a small tail following pen tip (known as “Super wet ink”) should be visible. (This effect is generated by Tcon driver).\nb. Change color and thickness. Make sure the super wet ink segments always match normal ink color and thickness.\nc. Use virtual ruler/protractor tool to place a ruler on drawing area, move pen across the ruler, ink should break over the ruler area (small overshoots beyond ruler edges are acceptable).\nd. Set drawing area to full screen, draw small circles along screen edges. Ink quality should not be different from other areas.\ne. Plug in power supply, place palm on the screen while inking. Ink quality should not be different from other conditions.\nNote: Depending on the app, drawing area may have boundaries.",
+          "passFailCriteria": "The test will pass if the following conditions are not seen:\na) The expected behavior mentioned in the procedure is not seen \nb) In step 11, Make sure the inking is smooth and consistent into the drawing areas of the app and there is no gap or overshooting in the drawing until pen is lifted.\nc) In step 11, When palm or fingers are pressed on the screen, any marking should not occur."
+        }
+      ]
+    },
+    {
+      "_comment": "testScenarios data not available",
+      "Id": "TOUC037",
+      "testName": "FCN – Click To Do (25H2)",
+      "category": "Touch",
+      "subCategory": "Functional Tests",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["TCON", "Touch", "Pen", "Graphics", "IPU", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "The following table shows the minimum HW requirements for Touch testing.",
+    "minimumHardware": [
+      {
+        "hardware": "Device under test (DUTs)",
+        "minimumAmount": 1,
+        "description": "That will be per SKU (M3, i5, i7, NV980, NV965, etc.)."
+      },
+      {
+        "hardware": "USB-Ethernet adapter",
+        "minimumAmount": 1,
+        "description": "The recommendation is one per each device to download content in parallel."
+      },
+      {
+        "hardware": "Ethernet Cables",
+        "minimumAmount": 1,
+        "description": "The recommendation is one per each device."
+      },
+      {
+        "hardware": "Surface keyboard type cover",
+        "minimumAmount": 2,
+        "description": "The recommendation is at least two per each model (e.g., 2 for Surface Pro and 2 for Surface Go)"
+      },
+      {
+        "hardware": "Surface Pro X keyboard with slim pen bundle",
+        "minimumAmount": 2,
+        "description": "The recommendation is at least two."
+      },
+      {
+        "hardware": "Surface Pen",
+        "minimumAmount": 2,
+        "description": "2 per each vendor for debug and rule out issues with the HW."
+      },
+      {
+        "hardware": "Surface Slim Pen",
+        "minimumAmount": 2,
+        "description": "2 per each vendor for debug and rule out issues with the HW. (This is required if Surface Pro X keyboard does not come with slim pen)"
+      },
+      {
+        "hardware": "USB 3.0 Flash Drive",
+        "minimumAmount": 2,
+        "description": "The recommendation is at least two per vendor to install images, copy dump files and logs"
+      }
+    ],
+    "deviceMatrix": [
+      {
+        "device": "Surface Pro 3",
+        "processor": "Intel i5",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 4",
+        "processor": "Intel i5 & i7",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 5",
+        "processor": "Intel i5, i7 & i5 (LTE)",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 6",
+        "processor": "Intel i5 & i7",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop",
+        "processor": "Intel i5 & i7",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop 2",
+        "processor": "Intel i5 & i7",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book",
+        "processor": "Intel i7 with Nvidia GeForce GTX 965 (Performance Base)",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book",
+        "processor": "Intel i7 with Nvidia GeForce",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book",
+        "processor": "Intel i5 with Nvidia GeForce",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book",
+        "processor": "Intel i5 without Nvidia GPU",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book 2",
+        "processor": "15” Intel i7 with Nvidia GeForce GTX 1060",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book 2",
+        "processor": "13.5” Intel i7 with Nvidia GeForce GTX 1050",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book 2",
+        "processor": "13.5” Intel i5 without Nvidia GPU",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Studio",
+        "processor": "Intel i7 with Nvidia GeForce GTX 965M",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Studio",
+        "processor": "Intel i7 with Nvidia GeForce GTX 980M",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Studio 2",
+        "processor": "Intel i7 with Nvidia GeForce GTX 1060",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Studio 2",
+        "processor": "Intel i7 with Nvidia GeForce GTX 1070",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Studio 2",
+        "processor": "Intel Processor 4415Y with eMMC 64GB",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Go",
+        "processor": "Intel Processor 4415Y with SSD 128GB",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 7",
+        "processor": "Intel i3 with 4GB RAM",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 7",
+        "processor": "Intel i5 with 8GB RAM",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 7",
+        "processor": "Intel i7 with 16GB RAM ",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro X",
+        "processor": "MSFT SQ1",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro X (H)",
+        "processor": "MSFT SQ2",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop 3",
+        "processor": "Intel i5",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop 3",
+        "processor": "Intel i7",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop 3",
+        "processor": "AMD Ryzen 5 with Vega 9",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop 3",
+        "processor": "AMD Ryzen 7 with Vega 11",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Go 2",
+        "processor": "M3-8100Y with 4GB RAM and any size of SSD",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Go 2",
+        "processor": "Pentium 4425Y with 8 GB and any size of SSD",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Go 2",
+        "processor": "Any M3 or Pentium with 64 GB HD (eMMc)",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book 3",
+        "processor": "13”, Intel i5 / No Nvidia GPU",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book 3",
+        "processor": "13”, Intel i7 / Nvidia GTX1650",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book 3",
+        "processor": "15”, Intel i7 / Nvidia GTX1660Ti",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Book 3",
+        "processor": "15”, Intel i7 / Nvidia RTX3000",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop Go",
+        "processor": "Intel i5",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop 4",
+        "processor": "Intel i5",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop 4",
+        "processor": "AMD Ryzen 5",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop Go",
+        "processor": "AMD Ryzen 7",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Go 3",
+        "processor": "Pentium 6500Y",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Go 3",
+        "processor": "Core i3",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 8",
+        "processor": "Intel i5",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Pro 8",
+        "processor": "Intel i7",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "processor": "Intel Core i5",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "processor": "Intel i7 with Nvidia GeForce RTX 3050Ti",
+        "comments": "RAM and SSD capacity are irrelevant."
+      },
+      {
+        "device": "Surface Laptop Studio",
+        "processor": "Intel i7 with Nvidia RTX A2000",
+        "comments": "RAM and SSD capacity are irrelevant."
+      }
+    ]
+  }
+}

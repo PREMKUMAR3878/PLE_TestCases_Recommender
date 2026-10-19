@@ -1,0 +1,992 @@
+{
+  "testCases": [
+    {
+      "Id": "KB005",
+      "testName": "KB005",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Keyboard Keys are Working",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an active position (Position B). \n2. Open Notepad or Wordpad.  \nVerify: Normal keypresses are working - All letters and numbers are working. Check they appear in Notepad or Wordpad. \nVerify: Function keys are working. (F1 - F12) \nVerify: All special keys are working (ie Volume, Brightness, etc.). These are located at the top of the keyboard and the FN lock must be turned off to access them. \nVerify: Windows key is working. Pressing it should open the Start menu. \nVerify: Right click key is working. \nVerify: Modifier keys are working. The modifiers are the Shift, Ctrl, and Alt. Open Notepad or Wordpad and type Shift+A for capital A, Ctrl+S to save the document and Alt+F to open the file menu.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB202",
+      "testName": "KB202",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Launch CoPilot button funtionality",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard BlueTooth connected to DUT. \n2. DUT connected to internet and test account logged in. \n3. Press Copilot button. \nVerify: Copilot button launches Copliot. \nNote: Download Microsoft Copilot from MS Store if needed. Check Settings -> Personalization -> Text Input -> Customize key on keyyboard to set Copilot as action for Copliot key",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB006",
+      "testName": "KB006",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "3-Key Combination",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Press Ctrl+Alt+Del \nVerify: Screen with Task Manger option populates.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB007",
+      "testName": "KB007",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Typematic",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Press and hold down a QWERTY key. \nVerify: The character repeats when key is held (qqqqqqqqqqqqq)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB008",
+      "testName": "KB008",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Spacebar 6-Point Check",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Press spacebar in different locations along the bar. \nVerify: Spacebar reportes correctly wherever the key is pressed.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB011",
+      "testName": "KB011",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Keyboard Active Timing",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in Position B. \n2. Move keyboard to Position A and then back to B. \nVerify: Keypresses working within 3 seconds. Type keys into Notepad or Wordpad app.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB012",
+      "testName": "KB012",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Keyboard Active Timing",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. Press the Caps Lock key several times. \nVerify: The Caps Lock LED turns on and off.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB014",
+      "testName": "KB014",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Caps Lock State maintained during CS",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. Turn on Caps Lock. \n3. Press Power Button to go to CS. \n4. Wait 10 seconds and press Power Button to return to S0. \n5. Type a few characters into Notepad or Wordpad. \nVerify: The letters are capital letters. \n6. Repeat with Caps Lock turned OFF. \nVerify: The letters typed are lower case.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB015",
+      "testName": "KB015",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Caps Lock State maintained during Hibernate",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. Turn on Caps Lock. \n3. Hibernate the device, wait 30 seconds. \n4. Press Power Button to return to S0. \n5. Type a few characters into Notepad or Wordpad. \nVerify: The letters are capital letters. \n6. Repeat with Caps Lock turned OFF. \nVerify: The letters typed are lower case.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB016",
+      "testName": "KB016",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Function Key LED is working",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. Press Fn Key several times. \nVerify: The Fn key LED turns on and off.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB017",
+      "testName": "KB017",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Fn Lock State maintained during CS.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. Turn on Fn Lock. \n3. Press Power Button to go to CS. \n4. Wait a few seconds and press Power Button to return to S0. \n5. Press F1. \nVerify: Help window launches. \n6. Repeat steps with Fn Lock turned OFF. \nVerify: Help window does not launch. \n(See Testing Notes to the right when testing SLSE)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB018",
+      "testName": "KB018",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Fn Lock State maintained during Hibernate.",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. Turn on Fn Lock. \n3. Hibernate the device, wait 30 seconds. \n4. Wait a few seconds and press Power Button to return to S0. \n5. Press F1. \nVerify: Help window launches. \n6. Repeat steps with Fn Lock turned OFF. \nVerify: Help window does not launch. \n(See Testing Notes to the right when testing SLSE)",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB019",
+      "testName": "KB019",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Modifier Keys",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Keyboard in an Active position (Position B). \n2. With Caps lock off, hold down the left Shift key and type some letter keys into Wordpad. \nVerify: The letters are uppercase. \n3. With Caps lock off, hold down the left Shift key for over 10 seconds and release, then type some letter keys Wordpad. \nVerify: The letters are lowercase.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB169",
+      "testName": "KB169",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Keyboard OOBE",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Launch OOBE \n2. Use Keyboard and Touchpad or Mouse to follow the prompts. \nVerify: Keyboard and Touchpad or Mouse work during OOBE setup.",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB170",
+      "testName": "KB170",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Sticky Keys",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. In Settings, Turn ON Sticky Keys or press Shift key 5 times, consecutively. \nVerify: Sticky Keys function prompts  and is active by selecting Yes, then open File Explorer: Window key, then E key \n2. Turn Sticky Keys function OFF by selecting the On/Off slide icon in settings menu or pressing Shift key 5 times, consecutively \nVerify: Sticky Keys is NOT active by opening File Explorer: Window key, then E key",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "KB171",
+      "testName": "KB171",
+      "category": "Accessories",
+      "subCategory": "Keyboard Testing",
+      "priority": 0,
+      "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+        {
+          "objective": "Filter Keys",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. In Settings, Turn on Filter Keys or press & hold right Shift key for 8 seconds. \nVerify: Filter Keys function prompts and is active by selecting Yes, then scroll Up/Down cursor keys in MS Edge \n2. Turn Filter Keys function OFF by selecting the On/Off slide icon in settings menu or press & hold right Shift key for 8 seconds. \nVerify: Filter Keys function is NOT active by scrolling Up/Down cursor keys in MS Edge",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+  {
+    "Id": "KB023",
+    "testName": "KB023",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+    "testScenarios": [
+      {
+        "objective": "Left and Right Mouse Click",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press down until hear a click on the touchpad in the lower left corner. \n2. Press down until hear a click on the touchpad in the lower right corner. \nVerify:  The left and right mouse buttons work when pressed.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB024",
+    "testName": "KB024",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Single Finger Tracking",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Using a single finger, use the touchpad to move the cursor around the deskop. \nVerify: Single Finger Tracking - Works and tracks smoothly.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB025",
+    "testName": "KB025",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Left Click and Drag",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Left Click and drag to make a selection. \nVerify: Left click and drag selection works smoothly.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB026",
+    "testName": "KB026",
+    "subCategory": "Touchpad General Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Touchpad Active Timing",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in Position B. \n2. Move keyboard to Position C and then back to B. (Close and then open for Laptops) \nVerify: Touchpad working within 3 seconds.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB165",
+    "testName": "KB165",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": ["SLS"],
+    "driverTags": ["SAM", "TCON", "PD Controller", "BT", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU"],
+    "testScenarios": [
+      {
+        "objective": "Touchpad Haptic Feedback settings Intensity",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press down on Touchpad. \nVerify: Click Vibration is felt. \n2. Go to Settings -> BlueTooth & devices -> Touchpad -> Touchpad feeback \n3. Set Intensity slider 0, 25, 75, 100 \nVerify: Click Vibration not felt at 0 and is felt is stronger as the slider increases.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB172",
+    "testName": "KB172",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "BT", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "CFU"],
+    "testScenarios": [
+      {
+        "objective": "Touchpad Haptic Feedback settings ON/OFF",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press down on Touchpad. \nVerify: Click Vibration is felt. \n2. Go to Settings -> BlueTooth & devices -> Touchpad -> Touchpad feeback \n3. Set to Off. \nVerify: Click Vibration not felt. \n4. Set to On \nVerify: Click Vibration is felt.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB027",
+    "testName": "KB027",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Touchpad On/Off",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Touchpad On/Off Setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB028",
+    "testName": "KB028",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Touchpad with Mouse Connected",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Leave touchpad on when mouse is connected setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB029",
+    "testName": "KB029",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Touchpad Sensitivity",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Touchpad Sensitivity setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB030",
+    "testName": "KB030",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Touchpad Sensitivity",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Tap with a single finger to single-click setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB031",
+    "testName": "KB031",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Two Finger Tap",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Tap with two fingers to right-click setting is working",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB032",
+    "testName": "KB032",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Tap and Drag",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Tap twice and drag to multi-select checkbox is working. \nNote: Only works with Tap with Single Finger to Click enabled.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB033",
+    "testName": "KB033",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Right Click",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Press the lower right corner of the toucU89:U92hpad to right click checkbox is working.",
+        "passFailCriteria": ""
+      }
+		]
+  },
+  {
+    "Id": "KB034",
+    "testName": "KB034",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Two Finger Scrolling",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Drag two fingers to scroll checkbox setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB035",
+    "testName": "KB035",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Scrolling Direction",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Scrolling direction down/up selector setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB036",
+    "testName": "KB036",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Pinch to Zoom",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Pinch to zoom checkbox setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB037",
+    "testName": "KB037",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Three Finger Gestures",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Three-finger gestures selection and directions setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB038",
+    "testName": "KB038",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Three Finger Taps",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Three-finger tap selections setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB039",
+    "testName": "KB039",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Four Finger Gestures",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Four-finger gestures selections and swipe directions setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB040",
+    "testName": "KB040",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Four Finger Taps",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Four-finger taps selections setting is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB041",
+    "testName": "KB041",
+    "subCategory": "Touchpad Settings Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Reset Touchpad Settings",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Go to Settings -> Devices -> Touchpad to change settings. \nVerify: Reset touchpad settings and gestures to defaults button is working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB042",
+    "testName": "KB042",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Backlight On when Keyboard Active",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in an active position (Position B). (Laptop move device from Pos A to Pos B and is turned on).  \nVerify: The backlight comes on.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB043",
+    "testName": "KB043",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Backlight Intensity",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in an active position. Position B (Laptop move device from Pos A to Pos B and is turned on). \n2. Use the backlight Intensity special key to adjust setting. \n3. Adjust to Max and minimum settings. \nVerify: The backlight has 4 settings (Off, 33%, 66%, 100%).",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB044",
+    "testName": "KB044",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Backlight Ramp-up time",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in an active position. Position B (Laptop move device from Pos A to Pos B and is turned on). \nVerify: The backlight should be fully on in less than 5 seconds.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB045",
+    "testName": "KB045",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Backlight Timeout (20 Seconds)",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Attach keyboard in an active position Position B). (Laptop move device from Pos A to Pos B and is turned on). \n2. Wait 20 seconds. \nVerify: The backlight goes Off by slowly dimming. \nVerify: The backlight turns off after 20 seconds.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB046",
+    "testName": "KB046",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Backlight On with Keypress",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. With the backlight Off after a timeout press a key. \nVerify: The backlight turns On instantly.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB047",
+    "testName": "KB047",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Backlight On/Off with Screen On/Off",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device is turned on and moved to Pos B. \n2. Press the Power Button to enter CS. \nVerify: The backlight turns off within 20 seconds. \n3. Press the Power Button to enter S0. \nVerify: The Backlight comes on instantly.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB048",
+    "testName": "KB048",
+    "subCategory": "Backlight Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Caps Lock and Fn Lock LED",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Turn on Caps Lock and Fn Lock so LED is On. \n2. Move device to inactive position (Position A) \n.Verify: The Caps Lock LED and Fn Lock LED turn off \n.3. Move device back to active position (Position B). \nVerify: The Caps Lock LED and Fn Lock LED both come back On.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB063",
+    "testName": "KB063",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Wake From CS with Keypress and Touchpad Swipe",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Press Power Button to enter CS. \n2. Press a Key. \nVerify: The device wakes to S0. \n3. Press Power Button to enter CS. \n4. Swipe the touchpad. \nVerify: The device wakes to S0.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB065",
+    "testName": "KB065",
+    "subCategory": "General Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Close and Open lid",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Close the keyboard (position A) to enter CS. \n2. Open the keyboard to Position B. \nVerify: The device wakes.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB087",
+    "testName": "KB087",
+    "subCategory": "Close Lid Power Options",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Close Lid - Do Nothing",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in Position B. \n2. Set Power Options -> Close Lid -> Do Nothing -> Save Changes. \n3. Close the lid. \nVerify: The device screen turns Off. \n4. Open the lid. \nVerify: The device returns to S0, Screen On. \n5. Press some keys and use touchpad including PTP Gestures (2 finger). \nVerify:  Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB088",
+    "testName": "KB088",
+    "subCategory": "Close Lid Power Options",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Close Lid - Sleep",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Device in Position B. \n2. Set Power Options -> Close Lid -> SLeep -> Save Changes. \n3. Close the lid. \nVerify: The device enters CS and the screen turns Off \n4. Open the lid. \nVerify: The device wakes to lock screen. \n5. Press some keys and use touchpad including PTP Gestures (2 finger). \nVerify: Device Wakes to welcome screen. \nVerify:  Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB090",
+    "testName": "KB090",
+    "subCategory": "Close Lid Power Options",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Close Lid - Hibernate2",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in Position B (Active). (Laptop move device from Pos A to Pos B and is turned on). \n2. Set Power Options -> Close Lid -> Hibernate -> Save Changes. \n3. Close the lid, wait 30 seconds. \n4. Open the lid. \nVerify: Device turns on to lock screen upon opening DUT. \n5. Unlock screen and sign in. \nVerify:  Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB091",
+    "testName": "KB091",
+    "subCategory": "Close Lid Power Options",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Close Lid - Shutdown",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Keyboard in Position B (Active). (Laptop move device from Pos A to Pos B and is turned on.)  \n2. Set Power Options -> Close Lid -> Shutdown -> Save Changes. \n3. Close the lid, wait 30 seconds. \n4. Open the lid. \n5. Press the Power Button to turn the device On. \nVerify: Device turns on to S0. \nVerify:  Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB113",
+    "testName": "KB113",
+    "subCategory": "Power State Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Power State - 5 Second",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Place keyboard in Position B (Active). \n2. Press power button to go to CS. \n3. Wait for 5 Seconds. \n4. Press a key. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working. \n5. Repeat using the touchpad swipe to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB115",
+    "testName": "KB115",
+    "subCategory": "Power State Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Power State - 30 Second",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Place keyboard in Position B (Active). \n2. Press Power Button to go to CS. \n3. Wait 30 seconds. \n4. Press a key to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working. \n5. Repeat using the touchpad swipe to wake the device. \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB116",
+    "testName": "KB116",
+    "subCategory": "Power State Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Close Lid - 5 Seconds - Open Lid",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Place keyboard in Position B (Active). \n2. Settings -> Power & Sleep -> Additional power settings -> Choose what closing the lid does -> When I close the lid - Sleep \n3. Close the lid (Position A) to go to CS. \n4. Wait 5 seconds. \n5. Open the lid (Position B). \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  },
+  {
+    "Id": "KB118",
+    "testName": "KB118",
+    "subCategory": "Power State Testing",
+    "priority": 0,
+    "osSpecific": "All",
+    "deviceSpecific": "All",
+    "driverTags": ["SAM", "TCON", "PD Controller", "OEMPanel", "SSH", "KIP", "SMF", "HID", "SID", "Type Cover", "CFU"],
+      "testScenarios": [
+      {
+        "objective": "Close Lid - 30 Seconds - Open Lid",
+        "expectedTime": "",
+        "notes": "",
+        "detailedSteps": "1. Place keyboard in Position B (Active). \n2. Settings -> Power & Sleep -> Additional power settings -> Choose what closing the lid does -> When I close the lid - Sleep \n3. Close the lid (Position A) to go to CS. \n4. Wait 30 seconds. \n5. Open the lid (Position B). \nVerify: The device wakes to S0. \nVerify: Keys, touchpad (PTP), Backlight, Pen on Touchscreen all working.",
+        "passFailCriteria": ""
+      }
+    ]
+  }
+ ]
+}

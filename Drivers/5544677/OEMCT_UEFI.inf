@@ -1,0 +1,56 @@
+;
+; OEMCT_UEFI
+; 33.106.137.0
+; Copyright (C) Microsoft Corporation. All Rights Reserved.
+;
+[Version]
+Signature="$WINDOWS NT$"
+Class=Firmware
+ClassGuid={f2e7dd72-6468-4e36-b6f1-6488f42c1b52}
+Provider=%Provider%
+DriverVer=06/30/2026,33.106.137.0
+PnpLockdown=1
+CatalogFile=OEMCT_UEFI.cat
+
+[Manufacturer]
+%MfgName% = Firmware,NTamd64.10.0...17134
+
+[Firmware.NTamd64.10.0...17134]
+%FirmwareDesc% = Firmware_Install,UEFI\RES_{dbb536c0-bd46-4804-9bf4-45b1e8dc981f}
+
+[Firmware_Install.NT]
+CopyFiles = Firmware_CopyFiles
+
+[Firmware_CopyFiles]
+OEMCT_UEFI_33.106.137.bin
+
+[Firmware_Install.NT.Services]
+AddService=,2
+
+[Firmware_Install.NT.Hw]
+AddReg = Firmware_AddReg
+
+[Firmware_AddReg]
+HKR,,FirmwareId,,{dbb536c0-bd46-4804-9bf4-45b1e8dc981f}
+HKR,,FirmwareVersion,%REG_DWORD%,0x21006A89
+HKR,,FirmwareFilename,,%13%\OEMCT_UEFI_33.106.137.bin
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+OEMCT_UEFI_33.106.137.bin = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[Strings]
+; localizable
+DiskName     = "Firmware Update"
+Provider     = "Surface OEMCT"
+MfgName      = "OEMCT"
+FirmwareDesc = "OEMCT UEFI"
+
+; non-localizable
+DIRID_WINDOWS = 10
+REG_DWORD     = 0x00010001

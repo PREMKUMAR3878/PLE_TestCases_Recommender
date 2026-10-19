@@ -1,0 +1,266 @@
+{
+  "testCases": [
+    {
+      "Id": "MSI_3.1",
+      "testName": "MSI installs",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that MSI correctly installs on all a supported OS",
+          "expectedTime": "",
+          "notes": "Requirement: Run on all supported OS of the MSI; this is the only functionality test case that has this requirement.",
+          "detailedSteps": "1. Setup the DUT with a Plain Image \n2. Copy MSI under test to DUT \n3. Install MSI by double clicking on the installer \n4. Reboot if prompted \n5. Open Device Manager and verify there are no banged out or missing drivers\\firmware",
+          "passFailCriteria": "The test will pass if the following conditions are met: \n1. Device Manger does not contain any banged-out drivers. \n2. Device Manger does not contain any missing drivers."
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.2",
+      "testName": "MSI install from command line",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that MSI correctly installs",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with a Plain Image \n2. Copy MSI under test to DUT \n3. Open a command prompt window (How to open elevated CMD) \n4. In the Command window navigate to where the MSI has been copied \n5. In the command window install the MSI with the following: msiexec.exe /i <MSI_NAME> /qn /L*V <MSI_NAME>.Log \n6. Device will reboot automatically once the MSI installs \n7. After Device reboots, Open Device Manager and verify there are no banged out or missing drivers\\firmware",
+          "passFailCriteria": "The test will pass if the following conditions are met: \n1. Device Manger does not contain any banged-out drivers. \n2. Device Manger does not contain any missing driver"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.3",
+      "testName": "MSI installs to Default location",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that MSI creates and installs to default installation location",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Set up DUT with a plain image \n2. Copy MSI under test to DUT \n3. Install MSI \n4. Reboot if Prompted \n5. Check Default install Location (ProX’s default location will be in *\\Program File (x86)) \na) C:\\Program Files\\SurfaceUpdate \nb) Verify directories and drivers were created under C:\\Program Files\\SurfaceUpdate",
+          "passFailCriteria": "The test passes if the following conditions met: \n1. The MSI extracts correctly to C:\\Program Files\\SurfaceUpdate"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.4",
+      "testName": "MSI can install to user defined location",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that MSI installs to location chosen by user",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with a Plain Image \n2. Copy MSI under test to DUT \n3. Install MSI \na) change default location to something other than C:\\Program Files\\SurfaceUpdate \n4. Reboot if required \n5. Check the location determined in 3.a \n6. Verify directories and drivers were correctly created",
+          "passFailCriteria": "The test will pass if the following conditions are met: \n1. The MSI extracts correctly to location determined by user"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.5",
+      "testName": "MSI displays correctly in “Apps and Feature” menu",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that the MSI entry under “Apps and Feature” correctly displays MSI release name",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with a Plain Image \n2. Copy MSI under test to DUT \n3. Install MSI \n4. Reboot if required \n5. Go to Windows Settings → Apps → and verify the MSI is correctly displayed",
+          "passFailCriteria": "The test will pass if the following conditions are met \n1. The entry should display Surface (device) Update (Major version)"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.6",
+      "testName": "MSI uninstalls from the device",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that the MSI will uninstall from the device and remove all files and directories created during the installation",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with a Plain Image \n2. Copy MSI under test to DUT \n3. Install MSI \n4. Reboot if required \n5. Run MSI launcher again \n6. Choose Remove \n7. Verify C:\\Program Files\\SurfaceUpdate and all Directories and files within have been removed",
+          "passFailCriteria": "The test will pass if the following conditions are met: \n1. The MSI package correctly removes C:\\Program Files\\Surfaceupdate and everything within"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.7",
+      "testName": "MSI installs over older MSI",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that MSI under test will install over MSI that are released to customers",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup the DUT with a Plain Image \n2. Download released MSI (where to find MSI released to Customers) \n3. Copy Released MSI to DUT \n4. Install Released MSI \n5. Reboot if required \n6. Go to Device Manager → Firmware → and verify there are no banged out drivers \n7. Copy MSI to be tested to DUT \n8. Reboot if required \n9. Go to Device Manager and verify there are no banged out drivers \n10. Validate all expected drivers and firmware have been installed",
+          "passFailCriteria": "The test will pass if the following conditions are met: \n1. MSI undertest uninstalls previously installed MSI. \n2. MSI undertest installs new payload correctly \n3. Verify there are no banged out drivers in Device Manager"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.8",
+      "testName": "MSI installs to supported OS",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that the MSI being tested will not install on targeted hardware but a lower OS then supported (Mark N/A for ProX line and those devices that do not have Win11 MSI). This is currently supported by installing Win11 MSI on Win10 OS",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Have Win10 installed on the DUT \n2. Copy MSI under test to DUT \n3. Install Win11 MSI",
+          "passFailCriteria": "The test will pass if the following conditions are met \n1. MSI fails to install \n2. MSI displays error message that the OS is not supported"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_3.9",
+      "testName": "MSI does not install on other products",
+      "category": "MSI",
+      "subCategory": "Functionality test",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that the MSI will only install on the product it is built for",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. Setup a DUT that the MSI is not intended for to with a Plain Image \n2. Copy MSI under test to DUT that is not the Product the MSI is intended for \n3. Install MSI",
+          "passFailCriteria": "The Test will pass if the following conditions are met \n1. MSI Fails to install \n2. MSI displays error message that the Device is not correct type and to install on correct Product"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_4.1",
+      "testName": "MSI Payload Validation",
+      "category": "MSI",
+      "subCategory": "Content Validation",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that the MSI contains the Expected firmware\\driver for release",
+          "expectedTime": "",
+          "notes": "Requirements: This is requirement on all supported OS. Rename the Result_drivers1.xml to signify which OS this was run on.",
+          "detailedSteps": "1. Setup the DUT with a Plain Image \n2. Copy MSI under test to DUT \n3. Install MSI \n4. Reboot if required \n5. Copy contents from C:\\Program Files\\SurfaceUpdate to C:\\Support \n6. Navigate to C:\\Tools\\PLE\\TOAST\\VerifyVersions\\ \n7. Run the tool as Admin: VerifyOEMDrivers.cmd \n8. Wait for script to finish and it will open Result_drivers1.xml \n9. Verify that all expected components are install and signed and no rollback settings exist \n10. Rename Results_drivers1.xml to Result_drivesr1_%MSIName%.xml along with the results_driverVer11.xsl to the test results. \n11. Include the 3 essential files when collecting the logs: \n1) Results_drivers1.html \n2) Results_drivers1.xml \n3) Results_driverVer12.xsl",
+          "passFailCriteria": "Test will pass if the following condition are met: \n1. All drivers expected successfully installed \n2. All drivers expected are WHQL signed \n3. No reference to rollback settings"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_4.2",
+      "testName": "Readme.txt Validation",
+      "category": "MSI",
+      "subCategory": "Content Validation",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Verify that MSI Readme.txt is formatted correctly and contains expected Firmware\\Drivers for release",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "1. On any device copy over the MSI to test. \n2. Extract MSI under test using the following Command: msiexec /a PathToMsiFile /qb TARGETDIR=DirectoryToExtractTo \n3. Go to location where the MSI was extracted and open Readme.txt \n4. Verify that the Readme.txt contains the following: a Correct Device being targeted",
+          "passFailCriteria": "The test will pass if the following conditions are met \n1. Readme.txt contains correct references to Device being targeted"
+        }
+      ]
+    },
+    {
+      "Id": "MSI_4.3",
+      "testName": "Offline BVT",
+      "category": "MSI",
+      "subCategory": "Content Validation",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "",
+          "passFailCriteria": ""
+        }
+      ]
+    },
+    {
+      "Id": "MSI_4.4",
+      "testName": "WU Validation",
+      "category": "MSI",
+      "subCategory": "Content Validation",
+      "priority": 1,
+      "osSpecific": "",
+      "deviceSpecific": "All",
+      "driverTags": [ "Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT" ],
+      "testScenarios": [
+        {
+          "objective": "Validate that only the expected drivers come down from Windows Update",
+          "expectedTime": "",
+          "notes": "Requirements: Run on all supported OS",
+          "detailedSteps": "1. After running functional test 3.1 \n2. Connect to the internet and run Windows Update \n3. Look if any drivers are pulled down. \na. Network drivers and dock drivers are expected as they are not included is the MSI \nb. Please look at the “known issues” document as there are a few places \n4. Save WU logs off",
+          "passFailCriteria": ""
+        }
+      ]
+    }
+  ],
+  "hardwareRequirements": {
+    "description": "The following table shows the minimum HW requirements for MSI testing. The DUT must be Retail or Retail provisioned; OEM named devices will NOT work for MSI testing.",
+    "minimumHardware": [
+      "Device under test (DUTs) – 1 per System SKU",
+      "USB-Ethernet adapter – 1",
+      "Ethernet Cables – 1",
+      "Pens – 1 per type",
+      "Surface dock – 1 per type",
+      "Surface keyboard type cover – 1",
+      "USB 3.0 Flash Drive – 1",
+      "USB C Flash Drive – 1",
+      "USB Keyboard/Mouse + USB Hub – 1"
+    ],
+    "deviceMatrix": []
+  }
+}

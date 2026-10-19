@@ -1,0 +1,1981 @@
+{
+  "testCases": [
+    {
+      "Id": "CONS001",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Manually resizing/adjusting Window size",
+          "expectedTime": "",
+          "notes": "For WIN11: Test new toggle feature by choosing one of the quadrants",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS002",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Toggle between window mode and full screen mode",
+	        "expectedTime": "",
+          "notes": "Toggle between window mode and full screen mode 3 times using Minimize/Maximize toggle button (see attached picture) on the top right-hand corner of the window OR IF AVAILABLE use the video streaming (WEB OR APP) \"full screen\" option to test full screen mode 3 times.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS003",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Screen Rotation",
+	        "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS004",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "AC/DC power",
+	        "expectedTime": "",
+          "notes": "Note: This does not apply to Surface Studio device",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS005",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "CS vs Hibernation Resume vs Active Desktop",
+	        "expectedTime": "",
+          "notes": "Note: for all CS & Hibernate test cases, refresh webpage to resume play.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS006",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Apply Close Caption overlay",
+	        "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS007",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Scrolling up/down",
+	        "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS008",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Zoom in/out",
+	        "expectedTime": "",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS009",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Miracast",
+	        "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS0010",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "10. Multiple Monitors (moving across, external monitor actions)",
+	        "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS011",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Manually resizing/adjusting Window size",
+          "expectedTime": "",
+          "notes": "For WIN11: Test new toggle feature by choosing one of the quadrants",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS012",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Toggle between window mode and full screen mode",
+          "expectedTime": "",
+          "notes": "Toggle between window mode and full screen mode 3 times using Minimize/Maximize toggle button (see attached picture) on the top right-hand corner of the window OR IF AVAILABLE use the video streaming (WEB OR APP) \"full screen\" option to test full screen mode 3 times.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS013",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Screen Rotation",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS014",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "AC/DC power",
+          "expectedTime": "",
+          "notes": "Note: This does not apply to Surface Studio device",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS015",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "CS vs Hibernation Resume vs Active Desktop",
+          "expectedTime": "",
+          "notes": "Note: for all CS & Hibernate test cases, refresh webpage to resume play.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS016",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Apply Close Caption overlay",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS017",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Scrolling up/down",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS018",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Zoom in/out",
+          "expectedTime": "",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS019",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Amazon Video (1hrs - The Grand Tour)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Miracast",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS020",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "1. Manually resizing/adjusting Window size",
+          "expectedTime": "",
+          "notes": "For WIN11: Test new toggle feature by choosing one of the quadrants",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS021",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "2. Toggle between window mode and full screen mode",
+          "expectedTime": "",
+          "notes": "Toggle between window mode and full screen mode 3 times using Minimize/Maximize toggle button (see attached picture) on the top right-hand corner of the window OR IF AVAILABLE use the video streaming (WEB OR APP) \"full screen\" option to test full screen mode 3 times. ",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS022",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "3. Screen Rotation",
+          "expectedTime": "",
+          "notes": "For WIN11: Test new toggle feature by choosing one of the quadrants",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS023",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "4. AC/DC power",
+          "expectedTime": "",
+          "notes": "Toggle between window mode and full screen mode 3 times using Minimize/Maximize toggle button (see attached picture) on the top right-hand corner of the window OR IF AVAILABLE use the video streaming (WEB OR APP) \"full screen\" option to test full screen mode 3 times.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS024",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "5. CS vs Hibernation Resume vs Active Desktop.",	
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS025",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "6. Apply Close Caption overlay",
+          "expectedTime": "",
+          "notes": "Note: This does not apply to Surface Studio device",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS026",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "7. Scrolling up/down",
+          "expectedTime": "",
+          "notes": "Note: for all CS & Hibernate test cases, refresh webpage to resume play.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS027",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "8. Zoom in/out",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS028",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Netflix (1hrs - The Office/Walking Dead)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "9. Miracast",
+          "expectedTime": "",
+          "notes": "",
+        "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS029",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Hulu  (1hrs - Modern Family)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "10. Multiple Monitors (moving across, external monitor actions)",
+          "expectedTime": "",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS030",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Manually resizing/adjusting Window size",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS0031",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Toggle between window mode and full screen mode",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS0032",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Screen Rotation",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS033",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "AC/DC power",
+          "expectedTime": "",
+          "notes": "For WIN11: Test new toggle feature by choosing one of the quadrants",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS034",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "CS vs Hibernation Resume vs Active Desktop.",
+          "expectedTime": "",
+          "notes": "Toggle between window mode and full screen mode 3 times using Minimize/Maximize toggle button (see attached picture) on the top right-hand corner of the window OR IF AVAILABLE use the video streaming (WEB OR APP) \"full screen\" option to test full screen mode 3 times.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS035",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Apply Close Caption overlay",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS036",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Scrolling up/down",
+          "expectedTime": "",
+          "notes": "Note: This does not apply to Surface Studio device",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS037",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Zoom in/out",
+          "expectedTime": "",
+          "notes": "Note: for all CS & Hibernate test cases, refresh webpage to resume play.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS038",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Miracast",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS039",
+      "testName": "Non-Stop (Web) Streaming",
+      "priority": 1,
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Multiple Monitors (moving across, external monitor actions)",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS040",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Manually resizing/adjusting Window size",
+          "expectedTime": "",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS041",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Toggle between window mode and full screen mode",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS0042",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Screen Rotation",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS0043",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "AC/DC power",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS0044",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "CS vs Hibernation Resume vs Active Desktop.",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS045",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Apply Close Caption overlay",
+          "expectedTime": "",
+          "notes": "For WIN11: Test new toggle feature by choosing one of the quadrants",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS046",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Scrolling up/down",
+          "expectedTime": "",
+          "notes": "Toggle between window mode and full screen mode 3 times using Minimize/Maximize toggle button (see attached picture) on the top right-hand corner of the window OR IF AVAILABLE use the video streaming (WEB OR APP) \"full screen\" option to test full screen mode 3 times.",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS047",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Zoom in/out",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS048",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Miracast",
+    "expectedTime": "Non-Stop (Web) Streaming",
+          "notes": "Note: This does not apply to Surface Studio device",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS049",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "HBO Max (1hrs - Game of Thrones)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Multiple Monitors (moving across, external monitor actions)",
+          "expectedTime": "",
+          "notes": "Note: for all CS & Hibernate test cases, refresh webpage to resume play.",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS050",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Manually resizing/adjusting Window size",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS051",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Toggle between window mode and full screen mode",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS052",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Screen Rotation",
+          "expectedTime": "",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS053",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "AC/DC power",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS0054",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "CS vs Hibernation Resume vs Active Desktop.",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS055",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Apply Close Caption overlay",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS056",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Scrolling up/down",
+          "expectedTime": "",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS057",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Zoom in/out",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS0058",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Miracast",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS0059",
+      "testName": "Non-Stop (Web) Streaming",
+      "category": "Consumption",
+      "subCategory": "Disney + (1hr -Spiderman)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Multiple Monitors (moving across, external monitor actions)",
+          "expectedTime": "",
+          "notes": "Note: After connecting to external monitor, REFRESH web page to resume play",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS078",
+      "testName": "Casual (Web) Browsing",
+      "category": "Consumption",
+      "subCategory": "Facebook (20min )",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Manually resizing/adjusting Window size",
+          "expectedTime": "",
+          "notes": "",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS079",
+      "testName": "Casual (Web) Browsing",
+      "category": "Consumption",
+      "subCategory": "Facebook (20min )",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Toggle between window mode and full screen mode",
+          "expectedTime": "",
+          "notes": "",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS080",
+      "testName": "Casual (Web) Browsing",
+      "category": "Consumption",
+      "subCategory": "Facebook (20min )",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio"],
+      "testScenarios": [
+        {
+          "objective": "Screen Rotation",
+          "expectedTime": "",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS081",
+      "testName": "Casual (Web) Browsing",
+      "category": "Consumption",
+      "subCategory": "Facebook (20min )",
+      "expectedTime": "",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Scrolling up/down",
+          "notes": "Known Issue on Edge: Bug 3712527/69584: [Consumption][SG3][22H2] Zooming into Hulu all way while streaming on Edge causes user to unable to play anymore videos unless user relaunches entire browser",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS082",
+      "testName": "Casual (Web) Browsing",
+      "category": "Consumption",
+      "subCategory": "Facebook (20min )",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "WoT"],
+      "testScenarios": [
+        {
+          "objective": "Zoom in/out",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS083",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Internal Speakers (IS)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS084",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB - Type C Headset (UC)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS085",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "3.5mm Headset (HS)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS086",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB Headset (UH)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS087",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS088",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Video(New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Internal Speakers (IS)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS089",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Video(New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB - Type C Headset (UC)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+        "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS090",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Video(New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "3.5mm Headset (HS)",
+          "expectedTime": "",
+          "notes": "Empty",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS091",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Video(New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB Headset (UH)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS092",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Video(New Microsoft Edge)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS093",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Video(New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Hulu(New Microsoft Edge)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS094",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Hulu(New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB - Type C Headset (UC)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS095",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Hulu(New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "3.5mm Headset (HS)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS096",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Hulu(New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB Headset (UH)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS097",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Hulu(New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS098",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "HBO Max (New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Hulu(New Microsoft Edge)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS099",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "HBO Max (New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB - Type C Headset (UC)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS100",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "HBO Max (New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "3.5mm Headset (HS)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {
+      "Id": "CONS101",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "HBO Max (New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB Headset (UH)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS102",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "HBO Max (New Microsoft Edge)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS103",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (Chrome)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Hulu(New Microsoft Edge)",
+          "expectedTime": "",
+          "notes": "Empty",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS104",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (Chrome)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB - Type C Headset (UC)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS105",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (Chrome)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "3.5mm Headset (HS)",
+          "expectedTime": "",
+          "notes": "Empty",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS106",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (Chrome)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "USB Headset (UH)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS107",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Netflix (Chrome)",
+      "priority": 0,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "PD Controller", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS108",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Disney + (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+  {
+      "Id": "CONS109",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Disney + (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS110",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Disney + (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS111",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Disney + (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS112",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Disney + (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+         "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS113",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Disney + (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Amazon Music (Chrome)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+  {  
+      "Id": "CONS114",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Music (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS115",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Music (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS116",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Music (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS117",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Amazon Music (Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    { 
+      "Id": "CONS118",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Pandora(Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Amazon Music (Chrome)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+  { 
+      "Id": "CONS119",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Pandora(Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS120",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Pandora(Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS121",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Pandora(Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    },
+    {  
+      "Id": "CONS122",
+      "testName": "Seamless Transition",
+      "category": "Consumption",
+      "subCategory": "Pandora(Chrome)",
+      "priority": 1,
+      "osSpecific": "All",
+      "deviceSpecific": "All",
+      "driverTags": ["Touch", "WIFI", "BT", "Ethernet", "Graphics", "Audio", "Nvidia"],
+      "testScenarios": [
+        {
+          "objective": "Bluetooth (BT)",
+          "expectedTime": "",
+          "notes": "Note: Use S0>CS>S0 for Surface Studio",
+          "detailedSteps": "Steps:\n1. Launch the appropriate website on the appropriate browser (update to latest version)\n2. Stream Video/Audio content for the time required as stated above",
+      "passFailCriteria": "Validate the quality of the video/audio.\n• Refresh web page or hit play button or fast forward/backward button to resume video play.\n• Check for crashes, hangs, and graphical errors.\n• Listen to the quality of each stream, listening for cracks, pops, skips and any other audio quality loss.\n• Verify Video quality of each stream, check for artifacts, discoloration, and other graphical anomalies."
+        }
+      ]
+    }
+  ]
+}

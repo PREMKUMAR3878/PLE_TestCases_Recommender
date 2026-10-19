@@ -1,0 +1,668 @@
+[
+  {
+    "Id": "WU-CTL-001",
+    "testName": "Validate Windows Update payload download on customer-like DUTs",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the correct Windows Update payload downloads to DUTs configured to mimic customer devices.",
+        "expectedTime": "45 mins",
+        "notes": "This is the foundational validation from the summary document.",
+        "detailedSteps": "1. Reimage the DUT to the current customer live state.\n2. Capture initial state logs.\n3. Start the WU automation and allow the updated drivers to be offered.\n4. Verify that the correct payload downloads to the DUT.",
+        "passFailCriteria": "Pass if the expected payload downloads successfully and no customer-facing download issue is observed."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-002",
+    "testName": "Verify initial publishing of drivers to Windows Insider Preview",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that newly published drivers to Windows Insider Preview are validated by hand before wider automation runs.",
+        "expectedTime": "60 mins",
+        "notes": "The summary calls out manual verification for the initial driver publication.",
+        "detailedSteps": "1. Publish the driver to the Windows Insider Preview environment.\n2. Manually validate the installation and download path.\n3. Record whether the update behaves as expected.\n4. Proceed to automation only after manual verification.",
+        "passFailCriteria": "Pass if the initial publication is manually verified and no functional issue is observed."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-003",
+    "testName": "Validate update integrity while the machine is updating",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure that the machine remains stable and the update integrity remains intact while the update is progressing.",
+        "expectedTime": "30 mins",
+        "notes": "The summary explicitly states that someone must watch the machine during the update.",
+        "detailedSteps": "1. Start the update process on the DUT.\n2. Observe the device during the update.\n3. Check for popups, errors, hangs, or unexpected behaviors.\n4. Record observations and stop conditions if issues appear.",
+        "passFailCriteria": "Pass if the update completes without integrity or user-experience issues."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-004",
+    "testName": "Compare pre-update and post-update logs and results",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify that pre-update and post-update logs are gathered and preserved for sign-off evidence.",
+        "expectedTime": "20 mins",
+        "notes": "The summary requires results to be maintained and uploaded with sign-off.",
+        "detailedSteps": "1. Capture initial state logs before the update.\n2. Capture updated state logs after the update.\n3. Compare the logs for anomalies or regressions.\n4. Save the results for sign-off packaging.",
+        "passFailCriteria": "Pass if both sets of logs are captured and available for review."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-005",
+    "testName": "Verify WU automation loop reimage and rerun flow",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure that the automation can reimage the DUT, collect fresh state logs, and rerun the WU flow repeatedly.",
+        "expectedTime": "45 mins",
+        "notes": "The summary describes a loop of reimage, capture logs, run automation, and repeat.",
+        "detailedSteps": "1. Reimage the DUT to the current customer live state.\n2. Capture initial logs.\n3. Run the WU automation flow.\n4. Capture updated logs and repeat the loop until the intended iteration count is reached.",
+        "passFailCriteria": "Pass if the automation flow can be repeated successfully and the DUT remains consistent across iterations."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-006",
+    "testName": "Validate ring progression and preview flighting behavior",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure payloads can be flighted through preview environments and validated for ring progression behavior.",
+        "expectedTime": "60 mins",
+        "notes": "The collateral document mentions flighting and ring progression validation.",
+        "detailedSteps": "1. Flight the release payload to the Preview environment.\n2. Validate the update experience and related UI elements.\n3. Confirm the progression requirements are met for the next ring.\n4. Record the observed behavior.",
+        "passFailCriteria": "Pass if the payload progresses correctly and the user experience remains acceptable."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-007",
+    "testName": "Verify test pool sizing and SKU coverage",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that the test pool is large enough and covers all required SKUs for the release train.",
+        "expectedTime": "20 mins",
+        "notes": "The summary says tests should run on all machines in the test pool across all SKUs.",
+        "detailedSteps": "1. Review the configured test pool size.\n2. Confirm coverage for the required SKUs.\n3. Validate that each required machine is available for the planned test run.\n4. Report any gap in coverage.",
+        "passFailCriteria": "Pass if the test pool covers the required SKUs and machine count."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-008",
+    "testName": "Validate hardware and accessory readiness for WU testing",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the required DUTs, keyboards, docks, cables, switches, and storage are available before WU testing begins.",
+        "expectedTime": "20 mins",
+        "notes": "The summary lists specific hardware and networking requirements.",
+        "detailedSteps": "1. Review the required hardware inventory.\n2. Confirm DUT availability for the required SKUs.\n3. Check keyboards, docks, Ethernet cables, switches, and storage readiness.\n4. Resolve any missing resource before test execution.",
+        "passFailCriteria": "Pass if all required hardware and network resources are available and operational."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-009",
+    "testName": "Validate daily progress reporting and issue escalation",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that testers report daily progress and escalate blockers or anomalies in a timely manner.",
+        "expectedTime": "10 mins",
+        "notes": "The collateral document mentions daily progress reporting and escalation to the pillar owner.",
+        "detailedSteps": "1. Review test execution progress for the day.\n2. Ensure blockers or anomalies are reported promptly.\n3. Confirm the WU pillar owner is notified when necessary.\n4. Capture the updated status for the next planning cycle.",
+        "passFailCriteria": "Pass if progress is reported on time and blockers are escalated appropriately."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-010",
+    "testName": "Verify bug submission and triage completeness for new issues",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure that any new issue discovered during validation is captured with sufficient detail for triage and bug tracking.",
+        "expectedTime": "20 mins",
+        "notes": "The collateral document requires testers to submit bugs for every new issue.",
+        "detailedSteps": "1. Detect a new issue or anomaly during testing.\n2. Collect relevant logs, screenshots, and reproduction details.\n3. Submit the bug via the appropriate tracking system.\n4. Attach the required evidence and note the issue in the test record.",
+        "passFailCriteria": "Pass if new issues are logged with sufficient evidence for follow-up triage."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-011",
+    "testName": "Validate completion of a test pass within the expected timeline",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure a test pass can be completed within the expected turnaround time for a given SKU and OS combination.",
+        "expectedTime": "30 mins",
+        "notes": "The summary indicates a test pass should be completed within one week for one SKU and two OSes.",
+        "detailedSteps": "1. Review the planned test pass scope.\n2. Track execution time across the required OS/SKU combinations.\n3. Monitor progress against the one-week target.\n4. Escalate delays if required.",
+        "passFailCriteria": "Pass if the test pass completes within the expected timeframe or any delay is explicitly escalated and tracked."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-012",
+    "testName": "Validate reboot and post-reboot behavior after the update",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure the device reboots correctly and resumes normal operation after the update finishes.",
+        "expectedTime": "30 mins",
+        "notes": "Reboot behavior is a common failure point in update validation.",
+        "detailedSteps": "1. Complete the update installation.\n2. Observe the reboot sequence.\n3. Confirm the device reaches the desktop and services are healthy.\n4. Record any boot or resume issues.",
+        "passFailCriteria": "Pass if the device reboots successfully and resumes normal operation without errors."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-013",
+    "testName": "Verify device health and telemetry after update completion",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that device health indicators and telemetry remain healthy after the update.",
+        "expectedTime": "20 mins",
+        "notes": "This helps catch regressions that may not show up immediately in the UI.",
+        "detailedSteps": "1. Wait for the update to complete.\n2. Check health indicators, services, and telemetry status.\n3. Compare findings against the pre-update baseline.\n4. Record any abnormal behavior.",
+        "passFailCriteria": "Pass if health and telemetry remain normal and no new device issues are observed."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-014",
+    "testName": "Validate rollback or mitigation handling for update failure",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure there is a clear rollback or mitigation path if an update fails or causes a blocker.",
+        "expectedTime": "25 mins",
+        "notes": "This adds coverage for recovery behavior and support readiness.",
+        "detailedSteps": "1. Simulate or trigger an update failure condition.\n2. Validate the rollback or mitigation path.\n3. Confirm the system can return to a known good state.\n4. Capture the recovery evidence.",
+        "passFailCriteria": "Pass if the device can recover cleanly and the failure path is documented for follow-up."
+      }
+    ]
+  },
+  {
+    "Id": "WU-CTL-015",
+    "testName": "Verify sign-off package completeness and upload readiness",
+    "category": "WU_DLC",
+    "subCategory": "WindowsUpdate",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure all required evidence, logs, and results are assembled and ready for sign-off submission.",
+        "expectedTime": "15 mins",
+        "notes": "This closes the loop from execution to formal sign-off packaging.",
+        "detailedSteps": "1. Gather the test logs and screenshots.\n2. Confirm the required results are attached.\n3. Validate the package for completeness.\n4. Prepare it for upload or handoff.",
+        "passFailCriteria": "Pass if the sign-off package is complete, consistent, and ready for submission."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-001",
+    "testName": "Verify Canary/Partner publishing appears in the driver results XML",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that newly published Canary/Partner drivers appear in the results XML after running the verification script.",
+        "expectedTime": "30 mins",
+        "notes": "This maps directly to section 3.2.1 and uses the WU_VerifyCWIP script.",
+        "detailedSteps": "1. Double click WU_VerifyCWIP in the WU folder.\n2. Wait for the test to finish.\n3. Allow results to be collected automatically.\n4. Open Results_drivers2.xml and verify that the newly published drivers appear in the XML.",
+        "passFailCriteria": "Pass if the expected newly published Canary/Partner drivers appear in the XML and no missing driver is observed."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-002",
+    "testName": "Verify Canary/Partner publishing does not leak to live",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure newly published Canary/Partner drivers do not appear in the live verification results.",
+        "expectedTime": "30 mins",
+        "notes": "This maps directly to section 3.2.2 and uses the WU_VerifyLive script.",
+        "detailedSteps": "1. Double click WU_VerifyLive in the WU folder.\n2. Wait for the test to finish.\n3. Allow results to be collected automatically.\n4. Open Results_drivers2.xml and verify that the newly published drivers do not appear in the XML.",
+        "passFailCriteria": "Pass if the newly published Canary/Partner drivers do not appear in the live verification results."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-003",
+    "testName": "Verify Canary/Partner publishing floor behavior below the published floor",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that drivers published with a floor do not appear below the published floor on an n-1 OS image.",
+        "expectedTime": "45 mins",
+        "notes": "This maps directly to section 3.2.3 and includes the floor and n-1 OS validation.",
+        "detailedSteps": "1. If a floor is published, perform the floor validation; otherwise mark the test as No Planned.\n2. Change the tested OS to n-1, such as setting up an RS5 image for an RS6 floor.\n3. Double click WU_VerifyCWIP in the WU folder.\n4. Wait for the test to finish and collect results automatically.\n5. Check Results_drivers2.xml and verify that newly published drivers do not appear in any OS below the published floor.",
+        "passFailCriteria": "Pass if no newly published drivers appear for any OS below the published floor."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-004",
+    "testName": "Verify Internal WIP publishing appears in the driver results XML",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that newly published Internal WIP drivers appear in the results XML after running the verification script.",
+        "expectedTime": "30 mins",
+        "notes": "This maps directly to section 3.2.4 and uses the WU_VerifyIWIP script.",
+        "detailedSteps": "1. Double click WU_VerifyIWIP in the WU folder.\n2. Wait for the test to finish.\n3. Allow results to be collected automatically.\n4. Open Results_drivers2.xml and verify that the newly published drivers appear in the XML.",
+        "passFailCriteria": "Pass if the expected newly published Internal WIP drivers appear in the XML."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-005",
+    "testName": "Verify Internal WIP publishing does not leak to live",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure newly published Internal WIP drivers do not appear in the live verification results.",
+        "expectedTime": "30 mins",
+        "notes": "This maps directly to section 3.2.5 and uses the WU_VerifyLive script.",
+        "detailedSteps": "1. Double click WU_VerifyLive in the WU folder.\n2. Wait for the test to finish.\n3. Allow results to be collected automatically.\n4. Open Results_drivers2.xml and verify that the newly published drivers do not appear in the XML.",
+        "passFailCriteria": "Pass if the newly published Internal WIP drivers do not appear in the live verification results."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-006",
+    "testName": "Verify Internal WIP publishing floor behavior below the published floor",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that Internal WIP drivers published with a floor do not appear below the published floor on an n-1 OS image.",
+        "expectedTime": "45 mins",
+        "notes": "This maps directly to section 3.2.6 and includes the floor and n-1 OS validation.",
+        "detailedSteps": "1. If a floor is published, perform the floor validation; otherwise mark the test as No Planned.\n2. Change the tested OS to n-1, such as pointing WU Automation Image to RS5.\n3. Double click WU_VerifyIWIP in the WU folder.\n4. Wait for the test to finish and collect results automatically.\n5. Check Results_drivers2.xml and verify that newly published drivers do not appear in any OS below the published floor.",
+        "passFailCriteria": "Pass if no newly published Internal WIP drivers appear for any OS below the published floor."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-007",
+    "testName": "Verify External WIP publishing appears in the driver results XML",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that newly published External WIP drivers appear in the results XML after running the verification script.",
+        "expectedTime": "30 mins",
+        "notes": "This maps directly to section 3.2.7 and uses the WU_VerifyEWIP script.",
+        "detailedSteps": "1. Double click WU_VerifyEWIP in the WU folder.\n2. Wait for the test to finish.\n3. Allow results to be collected automatically.\n4. Open Results_drivers2.xml and verify that the newly published drivers appear in the XML.",
+        "passFailCriteria": "Pass if the expected newly published External WIP drivers appear in the XML."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-008",
+    "testName": "Verify External WIP publishing does not leak to live",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure newly published External WIP drivers do not appear in the live verification results.",
+        "expectedTime": "30 mins",
+        "notes": "This maps directly to section 3.2.8 and uses the WU_VerifyLive script.",
+        "detailedSteps": "1. Double click WU_VerifyLive in the WU folder.\n2. Wait for the test to finish.\n3. Allow results to be collected automatically.\n4. Open Results_drivers2.xml and verify that the newly published drivers do not appear in the XML.",
+        "passFailCriteria": "Pass if the newly published External WIP drivers do not appear in the live verification results."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-009",
+    "testName": "Verify External WIP publishing floor behavior below the published floor",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that External WIP drivers published with a floor do not appear below the published floor on an n-1 OS image.",
+        "expectedTime": "45 mins",
+        "notes": "This maps directly to section 3.2.9 and includes the floor and n-1 OS validation.",
+        "detailedSteps": "1. If a floor is published, perform the floor validation; otherwise mark the test as No Planned.\n2. Change the tested OS to n-1, such as pointing WU Automation Image to RS5.\n3. Double click WU_VerifyEWIP in the WU folder.\n4. Wait for the test to finish and collect results automatically.\n5. Check Results_drivers2.xml and verify that newly published drivers do not appear in any OS below the published floor.",
+        "passFailCriteria": "Pass if no newly published External WIP drivers appear for any OS below the published floor."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-010",
+    "testName": "Verify Live publishing appears in the driver results XML",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that newly published Live drivers appear in the results XML after running the verification script.",
+        "expectedTime": "30 mins",
+        "notes": "This maps directly to section 3.2.10 and uses the WU_VerifyLive script.",
+        "detailedSteps": "1. Double click WU_VerifyLive in the WU folder.\n2. Wait for the test to finish.\n3. Allow results to be collected automatically.\n4. Open Results_drivers2.xml and verify that the newly published drivers appear in the XML.",
+        "passFailCriteria": "Pass if the expected newly published Live drivers appear in the XML."
+      }
+    ]
+  },
+  {
+    "Id": "WU-BVT-011",
+    "testName": "Verify Live publishing floor behavior below the published floor",
+    "category": "WU_DLC",
+    "subCategory": "BVT-BasicVerificationTests",
+    "priority": 0,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that Live drivers published with a floor do not appear below the published floor on an n-1 OS image.",
+        "expectedTime": "45 mins",
+        "notes": "This maps directly to section 3.2.11 and includes the floor and n-1 OS validation.",
+        "detailedSteps": "1. If a floor is published, perform the floor validation; otherwise mark the test as No Planned.\n2. Change the tested OS to n-1, such as pointing WU Automation Image to RS5.\n3. Double click WU_VerifyLive in the WU folder.\n4. Wait for the test to finish and collect results automatically.\n5. Check Results_drivers2.xml and verify that the floor behavior is correct.",
+        "passFailCriteria": "Pass if Live drivers do not appear below the published floor and the floor validation outcome is documented."
+      }
+    ]
+  },
+  {
+    "Id": "WU-DR-001",
+    "testName": "Validate all Surface and IHV drivers before customer delivery",
+    "category": "WU_DLC",
+    "subCategory": "DriverTesting",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure all Surface and IHV drivers are tested by WU before they are delivered to customers.",
+        "expectedTime": "45 mins",
+        "notes": "This is the core requirement stated for driver testing.",
+        "detailedSteps": "1. Identify the driver set intended for WU delivery.\n2. Review the full Surface and IHV driver scope.\n3. Run the required WU validation flow for each driver.\n4. Confirm no untested driver reaches the customer path.",
+        "passFailCriteria": "Pass if every relevant Surface and IHV driver has gone through WU validation before release."
+      }
+    ]
+  },
+  {
+    "Id": "WU-DR-002",
+    "testName": "Validate CHID-targeted protection for initial product release drivers",
+    "category": "WU_DLC",
+    "subCategory": "DriverTesting",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify that updateable drivers for an initial product release are protected behind a CHID-targeted Surface-published driver.",
+        "expectedTime": "30 mins",
+        "notes": "The document states this prevents third-party entities from targeting Surface devices.",
+        "detailedSteps": "1. Identify the initial-release driver set.\n2. Confirm the CHID-targeted protection is in place.\n3. Verify the driver is surfaced only through the intended Surface-published path.\n4. Confirm third-party entities cannot bypass the protected path.",
+        "passFailCriteria": "Pass if the updateable driver is properly protected behind the intended CHID-targeted path."
+      }
+    ]
+  },
+  {
+    "Id": "WU-DR-003",
+    "testName": "Validate preview flighting and telemetry review for drivers",
+    "category": "WU_DLC",
+    "subCategory": "DriverTesting",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that drivers can be flighted to Preview Environments and that telemetry and user sentiment are reviewed for quality.",
+        "expectedTime": "60 mins",
+        "notes": "The document calls out flighting as one of the two driver testing areas.",
+        "detailedSteps": "1. Flight the driver payload to a Preview Environment.\n2. Observe the update experience and any visible user-impacting behavior.\n3. Review telemetry and user sentiment signals.\n4. Decide whether to continue or block progression based on the results.",
+        "passFailCriteria": "Pass if the driver can be flighted successfully and no blocking quality issue is observed."
+      }
+    ]
+  },
+  {
+    "Id": "WU-DR-004",
+    "testName": "Validate driver stress testing by reimaging and offering new-release drivers",
+    "category": "WU_DLC",
+    "subCategory": "DriverTesting",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Verify that a release is stress tested by reimaging the device to the previous release image and then offering the new release's drivers through WU.",
+        "expectedTime": "90 mins",
+        "notes": "The document specifically describes this as the second driver testing area.",
+        "detailedSteps": "1. Reimage the DUT to the previous release image.\n2. Allow the WU service to offer the new release drivers.\n3. Observe the update flow and any failures.\n4. Record whether the new driver behavior is acceptable.",
+        "passFailCriteria": "Pass if the new-release drivers are offered and behave correctly without customer-facing issues during stress testing."
+      }
+    ]
+  },
+  {
+    "Id": "WU-DR-005",
+    "testName": "Validate WHQL certification gate before driver publication",
+    "category": "WU_DLC",
+    "subCategory": "DriverTesting",
+    "priority": 2,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Ensure drivers are not published to WU until they have passed the WHQL process and are signed.",
+        "expectedTime": "20 mins",
+        "notes": "The document says uncertified drivers are not tested by WU and should not reach customers.",
+        "detailedSteps": "1. Review the certification state of the driver.\n2. Confirm WHQL status and signing requirements.\n3. Verify the driver is not published until the certification gate passes.\n4. Record any exception handling if certification is pending.",
+        "passFailCriteria": "Pass if only WHQL-certified and signed drivers are allowed into the WU publication path."
+      }
+    ]
+  },
+  {
+    "Id": "WU-DR-006",
+    "testName": "Validate high-quality update experience for Inbox and WU-delivered drivers",
+    "category": "WU_DLC",
+    "subCategory": "DriverTesting",
+    "priority": 1,
+    "osSpecific": "",
+    "deviceSpecific": "",
+    "driverTags": "",
+    "testScenarios": [
+      {
+        "objective": "Confirm that both Inbox and WU-delivered drivers provide a high-quality update experience on Surface devices.",
+        "expectedTime": "45 mins",
+        "notes": "The document explicitly notes that Surface devices have both Inbox and WU-delivered drivers.",
+        "detailedSteps": "1. Identify the Inbox and WU-delivered drivers for the device.\n2. Validate the update experience for each path.\n3. Check for regressions, poor prompts, or unexpected behavior.\n4. Record the result for the driver validation report.",
+        "passFailCriteria": "Pass if both driver paths provide a high-quality and stable update experience without regressions."
+      }
+    ]
+  },
+  {
+  "Id": "WU001",
+  "testName": "WU Download Stress - Inmarket OS",
+  "category": "WU_DLC",
+  "subCategory": "WindowsUpdate",
+  "priority": 1,
+  "osSpecific": "All",
+  "deviceSpecific": "All",
+  "driverTags": ["Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT"],
+  "testScenarios": [
+    {
+      "objective": "WU Download Stress - Inmarket OS",
+      "expectedTime": "",
+      "notes": "",
+      "detailedSteps": "1. Reimage the DUT to the latest customer-live image and confirm the intended OS build is present.\n2. Connect the device to the required network and ensure Windows Update services are enabled.\n3. Start the Windows Update download stress flow and monitor the device for download progress, retries, or failures.\n4. Verify that the expected payloads download successfully and that the device remains responsive throughout the test.",
+      "passFailCriteria": "Pass if the expected payloads download successfully, the device remains stable, and no download-related failures or hangs are observed. Fail if downloads stall, fail repeatedly, corrupt the payload, or cause device instability."
+    }
+  ]
+},
+{
+  "Id": "WU002",
+  "testName": "WU Upgrade",
+  "category": "WU_DLC",
+  "subCategory": "WindowsUpdate",
+  "priority": 1,
+  "osSpecific": "All",
+  "deviceSpecific": "All",
+  "driverTags": ["Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT"],
+  "testScenarios": [
+    {
+      "objective": "WU Upgrade",
+      "expectedTime": "",
+      "notes": "",
+      "detailedSteps": "1. Prepare the DUT with the required baseline image and confirm the target update package is available.\n2. Start the Windows Update upgrade flow and monitor the device through the download, install, and reboot phases.\n3. Observe the device for hangs, unexpected prompts, rollback behavior, or service issues during the upgrade.\n4. Confirm that the device completes the upgrade successfully and returns to a healthy state.",
+      "passFailCriteria": "Pass if the upgrade completes successfully, the device reaches the desktop in a healthy state, and no critical update or reboot issues are observed. Fail if the upgrade fails, rolls back unexpectedly, or causes boot, stability, or service regressions."
+    }
+  ]
+},
+{
+  "Id": "WU003",
+  "testName": "WU Download Floor Validation",
+  "category": "WU_DLC",
+  "subCategory": "WindowsUpdate",
+  "priority": 1,
+  "osSpecific": "All",
+  "deviceSpecific": "All",
+  "driverTags": ["Audio", "BT", "Camera", "CFU", "CMF", "Dock", "DPTF", "EC", "Ethernet", "FPR", "Graphics", "HID", "IPU", "KIP", "NFC", "NPU", "Nvidia", "NVME", "OEMPanel", "PD Controller", "Pen", "Power Meter", "SAM", "SAR", "SID", "SIS", "SMF", "SSH", "Storage FW", "SurfaceME", "TBT", "TCON", "Telemetry", "Touch", "TPM", "Type Cover", "UEFI", "WIFI", "WoT"],
+  "testScenarios": [
+    {
+      "objective": "WU Download Floor Validation",
+      "expectedTime": "",
+      "notes": "",
+      "detailedSteps": "1. Place the DUT in the defined floor-validation state and confirm the required network and update settings are ready.\n2. Start the Windows Update download flow and monitor the device under the expected floor conditions.\n3. Verify that the required payload is downloaded without interruption and that the DUT remains responsive.\n4. Record whether the download completes successfully and whether any retries, delays, or failures occur.",
+      "passFailCriteria": "Pass if the download completes successfully under the defined floor conditions without missing payloads or critical failures. Fail if the download does not meet the expected floor behavior, stalls, fails repeatedly, or causes device instability."
+    }
+  ]
+}
+]
+
