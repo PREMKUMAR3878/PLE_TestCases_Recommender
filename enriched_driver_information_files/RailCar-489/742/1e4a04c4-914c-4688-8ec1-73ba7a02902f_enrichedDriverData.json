@@ -1,0 +1,41 @@
+{
+  "driverName": "SurfaceIntegrationDriver",
+  "driverClassName": "System",
+  "driverClassGuid": "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+  "releaseVersion": "120.8.4.0",
+  "releaseDate": "05/06/2026",
+  "provider": "Surface",
+  "driverSCItemNumber": "5531566",
+  "device": {
+    "description": "Surface Integration",
+    "hardwareId": "ACPI\\MSHW0530"
+  },
+  "service": {
+    "name": "SurfaceIntegrationDriver",
+    "displayName": "Surface Integration Driver",
+    "type": "SERVICE_KERNEL_DRIVER",
+    "startType": "SERVICE_DEMAND_START",
+    "errorControl": "SERVICE_ERROR_NORMAL",
+    "binary": "%13%\\SurfaceIntegrationDriver.sys"
+  },
+  "provisioningPackages": [
+    "Surface.Power.Policy.Defaults.ppkg",
+    "Surface.Power.Policy.WIN10.Defaults.ppkg",
+    "Surface.Power.Policy.WIN11-0.Defaults.ppkg"
+  ],
+  "configuration": {
+    "platformKipSupported": 1,
+    "userBatteryDischargeEstimator": 4294967295,
+    "enableScreenRefreshOnPowerButtonLongPress": 1,
+    "bitLockerMaxEncryptRequests": 64,
+    "bitLockerMaxCryptoRequestsPerIo": 64,
+    "bitLockerMaxDecryptRequests": 64,
+    "backlightPowerCurvePointCount": 14,
+    "displayPanelPowerSettings": {
+      "displayPanelPowerFloor": 0,
+      "displayPanelPowerVsyncDelta": 0,
+      "displayPanelPowerDpiFactor": 0,
+      "displayPanelPowerAreaFactor": 0
+    }
+  }
+}
