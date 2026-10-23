@@ -1,0 +1,91 @@
+{
+  "input_driver": {
+    "DriverName": "SurfaceIntegrationDriver",
+    "DriverClassName": "System",
+    "ReleaseVersion": "120.8.4.0",
+    "DriverClassGuid": "{4D36E97D-E325-11CE-BFC1-08002BE10318}",
+    "Provider": "%ManufacturerName%",
+    "Model": "",
+    "KnownPortalUrl": "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html, https://www.intel.com/content/www/us/en/download-center/home.html, https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "DriverSCItemNumber": "5531566",
+    "ReleaseDate": "05/06/2026",
+    "INFDescriptionData": "{\"Version\":{\"Signature\":\"$WINDOWS NT$\",\"Class\":\"System\",\"ClassGuid\":\"{4D36E97D-E325-11CE-BFC1-08002BE10318}\",\"Provider\":\"%ManufacturerName%\",\"CatalogFile\":\"SurfaceIntegrationDriver.cat\",\"DriverVer\":\"05/06/2026,120.8.4.0\",\"PnpLockdown\":\"1\"},\"DestinationDirs\":{\"DefaultDestDir\":\"13                            ; %WinDir%\\\\System32\\\\Drivers\",\"ProvisioningPackage_CopyFiles\":\"13                            ; DriverStore\"},\"SourceDisksNames\":{\"1\":\"%DiskName%,,,\\\"\\\"\"},\"SourceDisksFiles\":{\"Surface.Power.Policy.Defaults.ppkg\":\"1,,\",\"Surface.Power.Policy.WIN10.Defaults.ppkg\":\"1,,\",\"Surface.Power.Policy.WIN11-0.Defaults.ppkg\":\"1,,\",\"SurfaceIntegrationDriver.sys\":\"1,,\"},\"Manufacturer\":{\"%ManufacturerName%\":\"Standard,NTamd64.10.0...19041\"},\"Standard.NTamd64.10.0...19041\":{\"%SurfaceIntegrationDriver.DeviceDesc%\":\"SurfaceIntegrationDriver_Device, ACPI\\\\MSHW0530\"},\"SurfaceIntegrationDriver_Device.NT\":{\"CopyFiles\":\"DefaultDestDir,ProvisioningPackage_CopyFiles\",\"AddReg\":\"SurfaceIntegrationDriver_AddBrightnessCurve_AddReg\"},\"DefaultDestDir\":{\"SurfaceIntegrationDriver.sys\":\"\"},\"ProvisioningPackage_CopyFiles\":{\"Surface.Power.Policy.Defaults.ppkg\":\"\",\"Surface.Power.Policy.WIN10.Defaults.ppkg\":\"\",\"Surface.Power.Policy.WIN11-0.Defaults.ppkg\":\"\"},\"SurfaceIntegrationDriver_Device.NT.HW\":{\"AddReg\":\"SurfaceIntegrationDriver_Service_HWAddReg\"},\"SurfaceIntegrationDriver_Device_AddReg\":{\"HKLM,System\\\\CurrentControlSet\\\\Services\\\\SurfaceService, \\\"PlatformKipSupported\\\",            %REG_DWORD%, 0x1        ; KIP is supported on this platform (it enables power saving features in KIP)\":\"\",\"HKLM,SYSTEM\\\\CurrentControlSet\\\\Control\\\\Power,           \\\"UserBatteryDischargeEstimator\\\",   %REG_DWORD%, 0xFFFFFFFF ; Hide estimated time to discharge remaining battery\":\"\",\"HKLM,SYSTEM\\\\CurrentControlSet\\\\Control\\\\Power,\\\"EnableScreenRefreshOnPowerButtonLongPress\\\",  %REG_DWORD%, 0x00000001\":\"\",\"HKLM,SYSTEM\\\\CurrentControlSet\\\\Services\\\\fvevol,         \\\"MaxEncryptRequests\\\",              %REG_DWORD%, 0x00000040 ; Set the Encrypt Request Limit to improve SSD perf under Bitlocker\":\"\",\"HKLM,SYSTEM\\\\CurrentControlSet\\\\Services\\\\fvevol,         \\\"MaxCryptoRequestsPerIo\\\",          %REG_DWORD%, 0x00000040\":\"\",\"HKLM,SYSTEM\\\\CurrentControlSet\\\\Services\\\\fvevol,         \\\"MaxDecryptRequests\\\",              %REG_DWORD%, 0x00000040\":\"\"},\"SurfaceIntegrationDriver_AddBrightnessCurve_AddReg\":{\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve, \\\"PointCount\\\", %REG_DWORD%, 0xE\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\0, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x00\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\0, \\\"BacklightPower\\\", %REG_DWORD%, 0x29D\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\1, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x18\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\1, \\\"BacklightPower\\\", %REG_DWORD%, 0x351\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\2, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x24\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\2, \\\"BacklightPower\\\", %REG_DWORD%, 0x40B\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\3, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x2C\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\3, \\\"BacklightPower\\\", %REG_DWORD%, 0x4B0\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\4, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x32\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\4, \\\"BacklightPower\\\", %REG_DWORD%, 0x548\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\5, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x38\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\5, \\\"BacklightPower\\\", %REG_DWORD%, 0x5F5\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\6, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x41\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\6, \\\"BacklightPower\\\", %REG_DWORD%, 0x738\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\7, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x45\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\7, \\\"BacklightPower\\\", %REG_DWORD%, 0x7E0\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\8, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x4C\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\8, \\\"BacklightPower\\\", %REG_DWORD%, 0x926\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\9, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x52\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\9, \\\"BacklightPower\\\", %REG_DWORD%, 0xA71\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\10, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x57\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\10, \\\"BacklightPower\\\", %REG_DWORD%, 0xBAD\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\11, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x5C\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\11, \\\"BacklightPower\\\", %REG_DWORD%, 0xD10\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\12, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x60\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\12, \\\"BacklightPower\\\", %REG_DWORD%, 0xE42\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\13, \\\"BrightnessPercent\\\", %REG_DWORD%, 0x64\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display\\\\BacklightPowerCurve\\\\13, \\\"BacklightPower\\\", %REG_DWORD%, 0xF83\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display, \\\"DisplayPanelPowerFloor\\\", %REG_DWORD%, 0x0\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display, \\\"DisplayPanelPowerVsyncDelta\\\", %REG_DWORD%, 0x0\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display, \\\"DisplayPanelPowerDpiFactor\\\", %REG_DWORD%, 0x0\":\"\",\"HKLM,System\\\\CurrentControlSet\\\\Control\\\\Power\\\\EnergyEstimation\\\\Display, \\\"DisplayPanelPowerAreaFactor\\\", %REG_DWORD%, 0x0\":\"\"},\"SurfaceIntegrationDriver_Device.NT.Services\":{\"AddService\":\"SurfaceIntegrationDriver,%SPSVCINST_ASSOCSERVICE%, SurfaceIntegrationDriver_Service_Inst\"},\"SurfaceIntegrationDriver_Service_Inst\":{\"DisplayName\":\"%SurfaceIntegrationDriver.SVCDESC%\",\"ServiceType\":\"1               ; SERVICE_KERNEL_DRIVER\",\"StartType\":\"3               ; SERVICE_DEMAND_START\",\"ErrorControl\":\"1               ; SERVICE_ERROR_NORMAL\",\"ServiceBinary\":\"%13%\\\\SurfaceIntegrationDriver.sys\"},\"SurfaceIntegrationDriver_Service_HWAddReg\":{\"HKR,,ppkg_updated,0x00010001,0x0\":\"\",\"HKR,,last_known_os_version_major,0x00010001,0x0\":\"\",\"HKR,,last_known_os_version_minor,0x00010001,0x0\":\"\",\"HKR,,win11_ppkg, 0x00000000, \\\\DosDevices\\\\%13%\\\\Surface.Power.Policy.Defaults.ppkg\":\"\",\"HKR,,win10_ppkg, 0x00000000, \\\\DosDevices\\\\%13%\\\\Surface.Power.Policy.WIN10.Defaults.ppkg\":\"\",\"HKR,,win110_ppkg, 0x00000000, \\\\DosDevices\\\\%13%\\\\Surface.Power.Policy.WIN11-0.Defaults.ppkg\":\"\"},\"Strings\":{\"SPSVCINST_ASSOCSERVICE\":\"0x00000002\",\"ManufacturerName\":\"Surface\",\"DiskName\":\"Surface Integration Driver Installation Disk\",\"SurfaceIntegrationDriver.DeviceDesc\":\"Surface Integration\",\"SurfaceIntegrationDriver.SVCDESC\":\"Surface Integration Driver\",\"REG_EXPAND_SZ\":\"0x00020000\",\"REG_DWORD\":\"0x00010001\",\"REG_MULTI_SZ\":\"0x00010000\",\"REG_BINARY\":\"0x00000001\",\"REG_SZ\":\"0x00000000\"}}"
+  },
+  "status": "success",
+  "extracted_details": {
+    "driver_package_name": "Surface Integration Driver",
+    "version": "120.8.4.0",
+    "release_date": "2026-05-06",
+    "supported_models": [
+      "Surface devices exposing ACPI\\MSHW0530 and running Windows 10 build 19041 or later (the INF does not identify specific Surface models)"
+    ],
+    "driver_class_category": "System — Surface platform integration and power-policy configuration",
+    "component_list": [
+      "SurfaceIntegrationDriver.sys kernel driver, installed as a demand-start service",
+      "Surface.Power.Policy.Defaults.ppkg",
+      "Surface.Power.Policy.WIN10.Defaults.ppkg",
+      "Surface.Power.Policy.WIN11-0.Defaults.ppkg",
+      "SurfaceService KIP-supported platform setting",
+      "Windows display backlight power-estimation curve and display panel power-estimation settings",
+      "Windows battery discharge-estimator visibility setting",
+      "BitLocker volume-encryption request and per-I/O crypto request settings"
+    ],
+    "feature_keywords": [
+      "Surface platform integration",
+      "Surface power policy",
+      "KIP power-saving support",
+      "backlight power estimation",
+      "display energy estimation",
+      "battery discharge estimate visibility",
+      "power-button long-press screen refresh",
+      "BitLocker encryption request concurrency",
+      "Windows 10 and Windows 11 provisioning packages"
+    ],
+    "associated_tags": [
+      "SID"
+    ],
+    "firmware_flag": false,
+    "description_text": "Version 120.8.4.0, dated 2026-05-06, is the exact version supplied in the input and INF. INFDescriptionData was semantically analyzed: it identifies a Surface system-class package matching ACPI\\MSHW0530 on Windows 10 build 19041 or later, installs SurfaceIntegrationDriver.sys, and references Surface power-policy provisioning packages for Windows 10 and Windows 11. The INF describes KIP support, display backlight power-estimation points, power-related registry settings, a long-press screen-refresh setting, and BitLocker request limits; these are package configuration details, not confirmed release-note changes. Exact-version release notes and official product-page details could not be retrieved in this session, and the provided Intel Management Engine links do not identify this Surface package, so no previous, latest, or family-version notes are claimed.",
+    "key_components": [
+      "SurfaceIntegrationDriver.sys, registered as the SurfaceIntegrationDriver kernel service with demand start",
+      "Three referenced power-policy provisioning packages: defaults, Windows 10 defaults, and Windows 11-0 defaults",
+      "A 14-point backlight power curve, with brightness-percentage and backlight-power values configured for Windows energy estimation",
+      "Display panel energy-estimation values for power floor, VSync delta, DPI factor, and area factor",
+      "SurfaceService PlatformKipSupported registry value enabling platform KIP support",
+      "Windows power settings affecting battery discharge-time estimate visibility and screen refresh after a long power-button press",
+      "BitLocker fvevol request-limit registry values for encryption, decryption, and crypto requests per I/O"
+    ],
+    "key_functionalities": [
+      "Associates the package with ACPI\\MSHW0530 on eligible 64-bit Windows installations starting at build 19041.",
+      "Provides OS-specific Surface power-policy provisioning package paths for Windows 10 and Windows 11.",
+      "Enables the KIP-supported platform setting, which the INF describes as enabling KIP power-saving features.",
+      "Configures display backlight power-estimation data for Windows energy estimation.",
+      "Sets power-management behavior to hide the estimated remaining battery discharge time and enable screen refresh following a long power-button press.",
+      "Raises BitLocker encryption, decryption, and per-I/O crypto request limits to 0x40; the INF comment associates the encryption-request limit with SSD performance under BitLocker.",
+      "The INF supplies configuration content only; it does not document version-specific fixes or changes."
+    ],
+    "major_components_functionalities_description": "The enrichment is based on the exact supplied version 120.8.4.0 and the complete INFDescriptionData, which was semantically analyzed. The INF matches the Surface integration device ID ACPI\\MSHW0530 on 64-bit Windows 10 build 19041 or later and installs a demand-start kernel driver. It references default, Windows 10, and Windows 11 power-policy packages and configures KIP support and display backlight energy-estimation data. It also sets battery-estimate visibility and power-button screen-refresh behavior, plus BitLocker request limits that the INF says are intended to improve SSD performance under BitLocker. No exact-version, previous-version, latest-version, or family release notes were available to confirm changes beyond the INF configuration.",
+    "impact_details": [
+      "Power consumption and platform power-saving behavior may be affected by the KIP-supported setting and installed power-policy packages.",
+      "Windows display energy estimates may be affected by the configured 14-point backlight power curve and display panel estimation values.",
+      "The displayed estimated time remaining until battery discharge is hidden by the configured registry value.",
+      "The configured power-button long-press setting enables screen refresh behavior.",
+      "BitLocker I/O throughput may be affected by the configured encryption, decryption, and per-I/O crypto request limits; the INF specifically comments that the encryption-request limit is intended to improve SSD performance under BitLocker.",
+      "The INF does not establish specific model names beyond the ACPI\\MSHW0530 hardware ID, or confirm firmware changes."
+    ],
+    "download_url": "",
+    "release_notes_url": ""
+  },
+  "categories": [],
+  "rejected_categories": [],
+  "related_drivers": [],
+  "sources": [
+    "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html",
+    "https://www.intel.com/content/www/us/en/download-center/home.html",
+    "https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html"
+  ],
+  "confidence": {
+    "level": "Low",
+    "justification": "The supplied INF is detailed and directly supports the device match, files, services, registry settings, and stated capabilities. The provided official Intel links do not identify this Surface driver, and no version-specific or family release notes could be retrieved, so no release-note changes are asserted. The requested DriverAcronyms.json and Categories.json content could not be retrieved: direct file paths were not found and code search returned no matching content before rate limiting, so SID is based on the task's stated mapping example and no category mapping or exact driver-tag match could be verified."
+  }
+}
