@@ -1,0 +1,131 @@
+{
+  "input_driver": {
+    "DriverName": "SurfaceSAM",
+    "DriverClassName": "Firmware",
+    "ReleaseVersion": "10.401.139.0",
+    "DriverClassGuid": "{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}",
+    "Provider": "%Provider%",
+    "Model": "",
+    "KnownPortalUrl": "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html, https://www.intel.com/content/www/us/en/download-center/home.html, https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "DriverSCItemNumber": "5551121",
+    "ReleaseDate": "05/19/2026",
+    "INFDescriptionData": "{\"Version\":{\"Signature\":\"$WINDOWS NT$\",\"Class\":\"Firmware\",\"ClassGuid\":\"{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}\",\"Provider\":\"%Provider%\",\"DriverVer\":\"05/19/2026,10.401.139.0\",\"PnpLockdown\":\"1\",\"CatalogFile\":\"SurfaceSAM.cat\"},\"Manufacturer\":{\"%MfgName%\":\"Firmware,NTamd64.10.0...17134\"},\"Firmware.NTamd64.10.0...17134\":{\"%FirmwareDesc%\":\"Firmware_Install,UEFI\\\\RES_{9490CA71-6A2C-498B-8D5B-15943CA084B8}\"},\"Firmware_Install.NT\":{\"CopyFiles\":\"Firmware_CopyFiles\"},\"Firmware_CopyFiles\":{\"SurfaceSAM_10.401.139.bin\":\"\"},\"Firmware_Install.NT.Hw\":{\"AddReg\":\"Firmware_AddReg\"},\"Firmware_Install.NT.Services\":{\"AddService\":\",%NULL_DRIVER%     ; NULL function driver\"},\"Firmware_AddReg\":{\"HKR,,FirmwareId,,{9490CA71-6A2C-498B-8D5B-15943CA084B8}\":\"\",\"HKR,,FirmwareVersion,%REG_DWORD%,0x0A01918B\":\"\",\"HKR,,FirmwareFilename,,%13%\\\\SurfaceSAM_10.401.139.bin\":\"\"},\"SourceDisksNames\":{\"1\":\"%DiskName%\"},\"SourceDisksFiles\":{\"SurfaceSAM_10.401.139.bin\":\"1\"},\"DestinationDirs\":{\"DefaultDestDir\":\"%DIRID_DRIVER_STORE% ; driver store\"},\"Strings\":{\"Provider\":\"Surface\",\"MfgName\":\"Microsoft Corporation\",\"FirmwareDesc\":\"Surface System Aggregator\",\"DiskName\":\"Surface Firmware Update\",\"DIRID_DRIVER_STORE\":\"13\",\"NULL_DRIVER\":\"2\",\"REG_DWORD\":\"0x00010001\"}}"
+  },
+  "status": "success",
+  "extracted_details": {
+    "driver_package_name": "SurfaceSAM",
+    "version": "10.401.139.0",
+    "release_date": "2026-05-19",
+    "supported_models": [
+      "Microsoft Surface devices using the Surface System Aggregator firmware package; exact retail SKU list not specified in the INF"
+    ],
+    "driver_class_category": "Firmware",
+    "component_list": [
+      "Surface System Aggregator firmware payload",
+      "FirmwareId registry value: {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "FirmwareVersion registry value: 0x0A01918B",
+      "FirmwareFilename value: %13%\\SurfaceSAM_10.401.139.bin",
+      "Windows driver-store deployment path for the firmware image"
+    ],
+    "feature_keywords": [
+      "Surface System Aggregator",
+      "SAM",
+      "Firmware",
+      "Surface",
+      "Embedded Controller",
+      "Firmware update",
+      "Driver store",
+      "Windows Update"
+    ],
+    "associated_tags": [
+      "SAM",
+      "Surface System Aggregator",
+      "Firmware",
+      "Surface",
+      "Embedded Controller",
+      "Device firmware"
+    ],
+    "firmware_flag": true,
+    "description_text": "This enrichment uses the exact INF metadata for SurfaceSAM version 10.401.139.0 and release date 05/19/2026, then cross-checks the same driver family using the closest Surface release-note record for surfacesam.inf (41.4.139.0, 11/13/2024) and the official Microsoft Update Catalog family search for Surface System Aggregator. The INF semantically identifies the package as 'Surface System Aggregator' and registers a firmware payload (FirmwareId, FirmwareVersion, FirmwareFilename) under the Firmware class, which is the strongest evidence of a System Aggregator firmware update package. The product page was not a version-specific fixed changelog, so the description relies on the family-level servicing pattern and the exact INF payload structure instead of inventing a fix list.",
+    "key_components": [
+      "Surface System Aggregator (SAM) firmware payload",
+      "Firmware registry metadata (FirmwareId, FirmwareVersion, FirmwareFilename)",
+      "Windows driver-store deployment path for the firmware image",
+      "Firmware installation and version-tracking mechanism for the device"
+    ],
+    "key_functionalities": [
+      "Installs a Surface System Aggregator firmware image into the device firmware store",
+      "Registers a unique firmware identifier and version for the update payload",
+      "Enables firmware version tracking and payload validation during servicing",
+      "Supports device-level firmware update flows and platform integration with Surface hardware",
+      "Maintains the SAM component state and compatibility for platform aggregation features"
+    ],
+    "major_components_functionalities_description": "The package is a Surface System Aggregator (SAM) firmware image for version 10.401.139.0 dated 2026-05-19, with the exact build metadata coming from the INF's DriverVer and AddReg entries. The same-family release-note record in the repo shows a prior surfacesam.inf package at 41.4.139.0 on 2024-11-13, which confirms the driver family and component semantics even though the public version-specific changelog for 10.401.139.0 was not found. The INF explicitly defines 'Surface System Aggregator' as the firmware description and registers FirmwareId, FirmwareVersion, and FirmwareFilename, which indicates a device firmware payload rather than a conventional OS driver. In practical terms, this package is used to deploy and track the SAM firmware image, so it affects platform-level hardware aggregation and device-state management. Because the package does not expose a generic OS-driver feature set, the functionality is best described as firmware servicing and version management for the Surface SAM component.",
+    "impact_details": [
+      "Firmware servicing for Surface System Aggregator: may affect platform-level aggregation, sensor coordination, and hardware state reporting",
+      "Power and device-state behavior: firmware update may change initialization or coordination of embedded controllers and connected Surface components",
+      "System reliability: update can improve device stability during boot, resume, or hardware initialization transitions",
+      "Deployment and compatibility: changes can affect device inventory, update tracking, and firmware validation workflows",
+      "Security and integrity: firmware updates may include security hardening or trust-related changes for the SAM component, but no specific fix list was published in the data provided"
+    ],
+    "download_url": "https://www.catalog.update.microsoft.com/Search.aspx?q=Surface%20System%20Aggregator",
+    "release_notes_url": "https://support.microsoft.com/surface"
+  },
+  "categories": [
+    {
+      "category": "Firmware",
+      "sub_categories": [
+        "System Firmware",
+        "Firmware Update"
+      ],
+      "reason": "The INF explicitly identifies the package as 'Surface System Aggregator' and sets FirmwareId, FirmwareVersion, and FirmwareFilename under a Firmware class installation. The semantic driver tag is SAM (Surface System Aggregator), which matches a firmware component focused on system aggregation and device firmware servicing; the selected sub-categories reflect the actual functionality of firmware update and firmware-level platform servicing rather than unrelated test classes."
+    }
+  ],
+  "rejected_categories": [
+    {
+      "category": "Power Management",
+      "SubCategory": [
+        "Battery Management",
+        "Thermal Management"
+      ],
+      "reason": "The INF contains no ACPI power-policy or PMIC registry entries, no thermal or battery management driver tags, and the package is a SAM firmware payload rather than a power-management driver."
+    },
+    {
+      "category": "Input / Human Interface",
+      "SubCategory": [
+        "Touch",
+        "Pen",
+        "Keyboard"
+      ],
+      "reason": "The package is not a HID, touch, pen, or input-device driver; the INF identifies a firmware image for Surface System Aggregator and not an input-class component."
+    }
+  ],
+  "related_drivers": [
+    {
+      "name": "Surface Embedded Controller / SAM (Surface Aggregator Module) Firmware",
+      "version": "Family-specific / co-serviced with Surface firmware",
+      "driver_class": "Firmware",
+      "relationship": "Related firmware component in the same Surface platform stack",
+      "reason": "The INF and the Surface SAM naming clearly point to the same embedded-controller/system-aggregation firmware domain, and Surface firmware update bundles often service SAM and related platform components together."
+    },
+    {
+      "name": "Intel Management Engine Interface (HECI/MEI)",
+      "version": "Driver family version varies by chipset and platform",
+      "driver_class": "Driver",
+      "relationship": "Dependent platform/firmware interface commonly associated with Intel-based Surface devices",
+      "reason": "The provided portal URLs point to Intel Management Engine drivers, and Intel ME/HECI is frequently paired with the firmware layer on systems that use the SAM/embedded-controller platform stack."
+    }
+  ],
+  "sources": [
+    "https://www.catalog.update.microsoft.com/Search.aspx?q=Surface%20System%20Aggregator",
+    "https://support.microsoft.com/surface",
+    "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html",
+    "https://www.intel.com/content/www/us/en/download-center/home.html",
+    "https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "C:\\Users\\msft-admin\\source\\repos\\PLE_TestCases_Recommender\\Docs\\Driver_Data_Test_Cases\\ReleaseNotes_2447.txt"
+  ],
+  "confidence": {
+    "level": "High",
+    "justification": "The version and release date were taken directly from the INF metadata, and the package description identifies this as Surface System Aggregator firmware. The same-family Surface release-note record confirms the SAM component family, and the INF’s FirmwareId/FirmwareVersion/FirmwareFilename registry values give strong proof of a real firmware update payload. The local knowledge-base DriverAcronyms.json and Categories.json files were not present in this workspace, so the acronym mapping relied on the INF’s canonical 'Surface System Aggregator' naming and the SAM acronym rather than those files."
+  }
+}
