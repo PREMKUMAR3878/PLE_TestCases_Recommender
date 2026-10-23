@@ -1,0 +1,134 @@
+{
+  "input_driver": {
+    "DriverName": "SurfaceSAM",
+    "DriverClassName": "Firmware",
+    "ReleaseVersion": "10.401.139.0",
+    "DriverClassGuid": "{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}",
+    "Provider": "%Provider%",
+    "Model": "",
+    "KnownPortalUrl": "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html, https://www.intel.com/content/www/us/en/download-center/home.html, https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "DriverSCItemNumber": "5551121",
+    "ReleaseDate": "05/19/2026",
+    "INFDescriptionData": "{\"Version\":{\"Signature\":\"$WINDOWS NT$\",\"Class\":\"Firmware\",\"ClassGuid\":\"{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}\",\"Provider\":\"%Provider%\",\"DriverVer\":\"05/19/2026,10.401.139.0\",\"PnpLockdown\":\"1\",\"CatalogFile\":\"SurfaceSAM.cat\"},\"Manufacturer\":{\"%MfgName%\":\"Firmware,NTamd64.10.0...17134\"},\"Firmware.NTamd64.10.0...17134\":{\"%FirmwareDesc%\":\"Firmware_Install,UEFI\\\\RES_{9490CA71-6A2C-498B-8D5B-15943CA084B8}\"},\"Firmware_Install.NT\":{\"CopyFiles\":\"Firmware_CopyFiles\"},\"Firmware_CopyFiles\":{\"SurfaceSAM_10.401.139.bin\":\"\"},\"Firmware_Install.NT.Hw\":{\"AddReg\":\"Firmware_AddReg\"},\"Firmware_Install.NT.Services\":{\"AddService\":\",%NULL_DRIVER%     ; NULL function driver\"},\"Firmware_AddReg\":{\"HKR,,FirmwareId,,{9490CA71-6A2C-498B-8D5B-15943CA084B8}\":\"\",\"HKR,,FirmwareVersion,%REG_DWORD%,0x0A01918B\":\"\",\"HKR,,FirmwareFilename,,%13%\\\\SurfaceSAM_10.401.139.bin\":\"\"},\"SourceDisksNames\":{\"1\":\"%DiskName%\"},\"SourceDisksFiles\":{\"SurfaceSAM_10.401.139.bin\":\"1\"},\"DestinationDirs\":{\"DefaultDestDir\":\"%DIRID_DRIVER_STORE% ; driver store\"},\"Strings\":{\"Provider\":\"Surface\",\"MfgName\":\"Microsoft Corporation\",\"FirmwareDesc\":\"Surface System Aggregator\",\"DiskName\":\"Surface Firmware Update\",\"DIRID_DRIVER_STORE\":\"13\",\"NULL_DRIVER\":\"2\",\"REG_DWORD\":\"0x00010001\"}}"
+  },
+  "status": "success",
+  "extracted_details": {
+    "driver_package_name": "SurfaceSAM",
+    "version": "10.401.139.0",
+    "release_date": "2026-05-19",
+    "supported_models": [
+      "Windows 10/11 x64 Surface device class (generic Surface firmware applicability; no explicit model IDs are present in the INF)"
+    ],
+    "driver_class_category": "Firmware",
+    "component_list": [
+      "Surface System Aggregator",
+      "SurfaceSAM firmware payload",
+      "FirmwareId {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "FirmwareVersion registry value",
+      "FirmwareFilename SurfaceSAM_10.401.139.bin",
+      "Windows Driver Store firmware staging"
+    ],
+    "feature_keywords": [
+      "Surface System Aggregator",
+      "SurfaceSAM",
+      "Firmware",
+      "UEFI",
+      "FirmwareId",
+      "FirmwareVersion",
+      "FirmwareFilename",
+      "Surface Firmware Update",
+      "driver store",
+      "Windows 10/11 x64"
+    ],
+    "associated_tags": [
+      "SAM",
+      "UEFI",
+      "Firmware"
+    ],
+    "firmware_flag": true,
+    "description_text": "This enrichment was based on the exact INF metadata in the supplied INFDescriptionData for SurfaceSAM version 10.401.139.0 (DriverVer 05/19/2026,10.401.139.0) and the closest official vendor family pages available from Intel/Microsoft. The package is a firmware payload named SurfaceSAM_10.401.139.bin, classified under Firmware and identified as the Surface System Aggregator component. In the INF, the provider is Microsoft, the firmware class is Firmware, and the registry entries explicitly identify FirmwareId {9490CA71-6A2C-498B-8D5B-15943CA084B8}, FirmwareVersion 0x0A01918B, and FirmwareFilename %13%\\SurfaceSAM_10.401.139.bin. No exact release-notes page for this exact SurfaceSAM version was found, so the nearest official family and INF-based analysis were used together for enrichment.",
+    "key_components": [
+      "Surface System Aggregator firmware (SAM)",
+      "SurfaceSAM_10.401.139.bin firmware payload",
+      "FirmwareId {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "FirmwareVersion registry metadata",
+      "Firmware file staged in the Windows Driver Store"
+    ],
+    "key_functionalities": [
+      "Installs and records a Surface System Aggregator firmware payload for supported Surface devices",
+      "Persists firmware identity and version metadata to the system registry",
+      "Tracks the firmware blob file name and pointer in the driver store for update/validation",
+      "Enables firmware update servicing for the platform-level Surface System Aggregator component"
+    ],
+    "major_components_functionalities_description": "The package is the SurfaceSAM firmware update for version 10.401.139.0, identified by the INF metadata as a Firmware-class package with DriverVer 05/19/2026,10.401.139.0. The INF explicitly calls the component 'Surface System Aggregator' and installs the file SurfaceSAM_10.401.139.bin, with registry values for FirmwareId, FirmwareVersion, and FirmwareFilename. This indicates a platform-level firmware component rather than a user-facing driver package. The likely functional role is servicing the Surface System Aggregator subsystem, which coordinates low-level platform state and device management on Surface hardware. Because no exact public release notes for this package were found, the enrichment uses the official family pages plus the supplied INFDescriptionData as the primary basis for interpretation.",
+    "impact_details": [
+      "May affect platform firmware health and Surface device enumeration when the Surface System Aggregator firmware is not installed or is out of date.",
+      "May influence low-level platform coordination and device management because the INF identifies the component as Surface System Aggregator, which is a core Surface platform controller.",
+      "May affect firmware update validation and version reporting on x64 Surface devices because the package registers a FirmwareId and FirmwareVersion in the system registry.",
+      "May influence power and subsystem coordination behavior in a broader platform sense, but this is inferred from the role of SAM and the firmware class, not from a specific fix list."
+    ],
+    "download_url": "",
+    "release_notes_url": ""
+  },
+  "categories": [
+    {
+      "category": "Firmware",
+      "sub_categories": [
+        "Device Manager"
+      ],
+      "reason": "The INFDescriptionData explicitly identifies the component as 'Surface System Aggregator' and the file name SurfaceSAM_10.401.139.bin. In DriverAcronyms.json, the exact acronym match is SAM = 'Surface Aggregator Module'. Categories.json maps SAM to the Firmware category and specifically to the sub-category 'Device Manager', whose description states it validates firmware and platform devices in Device Manager, including Surface platform components such as SAM. This is a direct semantic match to the actual package under analysis."
+    }
+  ],
+  "rejected_categories": [
+    {
+      "category": "Firmware",
+      "SubCategory": [
+        "TPM",
+        "Secure Boot",
+        "Capsule Update",
+        "Battery Charging",
+        "Battery Discharging",
+        "Modern Standby"
+      ],
+      "reason": "These sub-categories are broadly firmware-related, but the INF does not show TPM, Secure Boot, capsule update, battery charging, or modern-standby behavior. The package is a single Surface System Aggregator firmware blob and its registry metadata, so the driver is specifically aligned to SAM and not to generic firmware security or power-management tasks."
+    },
+    {
+      "category": "Commercial",
+      "SubCategory": [
+        "BatteryLimit",
+        "AutopilotDFCI",
+        "BitLocker",
+        "UEFIPages"
+      ],
+      "reason": "These are policy, enterprise-management, or UEFI configuration scenarios that share the general firmware tag set, but there is no evidence in the INF of UEFI policy management, BitLocker, DFCI, or battery-limit configuration. The package is a compact SAM firmware payload, so these categories are too broad and not directly supported by the driver content."
+    }
+  ],
+  "related_drivers": [
+    {
+      "name": "Surface Integration Driver",
+      "version": "Not specified",
+      "driver_class": "Driver",
+      "relationship": "Platform companion driver in the Surface stack",
+      "reason": "The Surface System Aggregator firmware is part of the broader Surface platform stack and is commonly associated with the Surface Integration Driver (SID) and Surface Integration Service (SIS) ecosystem. The INF and acronym mapping indicate a platform-level Surface component rather than a standalone external device driver."
+    },
+    {
+      "name": "Surface Management Engine",
+      "version": "Not specified",
+      "driver_class": "Firmware",
+      "relationship": "Adjacent Surface firmware / platform management component",
+      "reason": "The acronym list includes SurfaceME as a related Surface platform management component, and the package is a firmware payload for a central Surface platform controller. This relationship is architectural and is inferred from the Surface platform subsystem context, not from a direct package dependency declaration in the INF."
+    }
+  ],
+  "sources": [
+    "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html",
+    "https://www.intel.com/content/www/us/en/download-center/home.html",
+    "https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "Supplied INFDescriptionData for SurfaceSAM 10.401.139.0",
+    "Knowledge_Source/Others/DriverAcronyms.json",
+    "Knowledge_Source/Others/Categories.json"
+  ],
+  "confidence": {
+    "level": "High",
+    "justification": "This is a high-confidence enrichment because the main evidence comes from the official vendor family pages and the supplied INFDescriptionData, which directly identifies the package as Surface System Aggregator firmware version 10.401.139.0. The acronym mapping and category selection were anchored to exact driver-tag matches: SAM from DriverAcronyms.json and the Firmware->Device Manager entry from Categories.json. No exact public release-notes page was found for this exact package, so the enrichment used the closest official family-level pages plus the exact INF metadata, which is a standard and reliable fallback."
+  }
+}
