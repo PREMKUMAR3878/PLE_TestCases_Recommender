@@ -1,0 +1,74 @@
+{
+  "input_driver": {
+    "DriverName": "SurfaceSAM",
+    "DriverClassName": "Firmware",
+    "ReleaseVersion": "10.401.139.0",
+    "DriverClassGuid": "{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}",
+    "Provider": "%Provider%",
+    "Model": "",
+    "KnownPortalUrl": "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html, https://www.intel.com/content/www/us/en/download-center/home.html, https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "DriverSCItemNumber": "5551121",
+    "ReleaseDate": "05/19/2026",
+    "INFDescriptionData": "{\"Version\":{\"Signature\":\"$WINDOWS NT$\",\"Class\":\"Firmware\",\"ClassGuid\":\"{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}\",\"Provider\":\"%Provider%\",\"DriverVer\":\"05/19/2026,10.401.139.0\",\"PnpLockdown\":\"1\",\"CatalogFile\":\"SurfaceSAM.cat\"},\"Manufacturer\":{\"%MfgName%\":\"Firmware,NTamd64.10.0...17134\"},\"Firmware.NTamd64.10.0...17134\":{\"%FirmwareDesc%\":\"Firmware_Install,UEFI\\\\RES_{9490CA71-6A2C-498B-8D5B-15943CA084B8}\"},\"Firmware_Install.NT\":{\"CopyFiles\":\"Firmware_CopyFiles\"},\"Firmware_CopyFiles\":{\"SurfaceSAM_10.401.139.bin\":\"\"},\"Firmware_Install.NT.Hw\":{\"AddReg\":\"Firmware_AddReg\"},\"Firmware_Install.NT.Services\":{\"AddService\":\",%NULL_DRIVER%     ; NULL function driver\"},\"Firmware_AddReg\":{\"HKR,,FirmwareId,,{9490CA71-6A2C-498B-8D5B-15943CA084B8}\":\"\",\"HKR,,FirmwareVersion,%REG_DWORD%,0x0A01918B\":\"\",\"HKR,,FirmwareFilename,,%13%\\\\SurfaceSAM_10.401.139.bin\":\"\"},\"SourceDisksNames\":{\"1\":\"%DiskName%\"},\"SourceDisksFiles\":{\"SurfaceSAM_10.401.139.bin\":\"1\"},\"DestinationDirs\":{\"DefaultDestDir\":\"%DIRID_DRIVER_STORE% ; driver store\"},\"Strings\":{\"Provider\":\"Surface\",\"MfgName\":\"Microsoft Corporation\",\"FirmwareDesc\":\"Surface System Aggregator\",\"DiskName\":\"Surface Firmware Update\",\"DIRID_DRIVER_STORE\":\"13\",\"NULL_DRIVER\":\"2\",\"REG_DWORD\":\"0x00010001\"}}"
+  },
+  "status": "success",
+  "extracted_details": {
+    "driver_package_name": "Surface System Aggregator (SurfaceSAM) firmware",
+    "version": "10.401.139.0",
+    "release_date": "2026-05-19",
+    "supported_models": [],
+    "driver_class_category": "Firmware",
+    "component_list": [
+      "Surface System Aggregator firmware",
+      "UEFI firmware resource {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "Firmware payload SurfaceSAM_10.401.139.bin"
+    ],
+    "feature_keywords": [
+      "Surface System Aggregator",
+      "SurfaceSAM",
+      "UEFI firmware",
+      "firmware resource",
+      "firmware version registration",
+      "Windows x64"
+    ],
+    "associated_tags": [
+      "SAM"
+    ],
+    "firmware_flag": true,
+    "description_text": "The supplied INF identifies Microsoft Corporation's Surface System Aggregator firmware package, version 10.401.139.0, dated 2026-05-19. INFDescriptionData was semantically analyzed: it declares UEFI resource {9490CA71-6A2C-498B-8D5B-15943CA084B8}, installs SurfaceSAM_10.401.139.bin into the driver store, and registers that resource's firmware ID, version, and payload filename. The INF targets the NTamd64.10.0...17134 installation section and declares a null function driver service. The exact package version and INF are the basis for these details; no applicable official Surface release notes or version-specific change list could be verified. The supplied Intel Management Engine links concern a different driver family and were not used as evidence for SurfaceSAM functionality.",
+    "key_components": [
+      "Firmware payload file SurfaceSAM_10.401.139.bin",
+      "UEFI firmware resource ID {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "Firmware version value 0x0A01918B",
+      "Surface System Aggregator, named in the INF's FirmwareDesc string",
+      "SurfaceSAM.cat catalog file"
+    ],
+    "key_functionalities": [
+      "Provides a firmware payload for the Surface System Aggregator UEFI resource identified by the INF.",
+      "Registers the firmware resource ID, firmware version, and payload filename in the device's firmware installation settings.",
+      "Copies the firmware binary through the firmware installation section to the Windows driver store.",
+      "Declares a null function driver service rather than a conventional functional device-driver service."
+    ],
+    "major_components_functionalities_description": "The exact version basis is 10.401.139.0, as specified by the input and the INF DriverVer field dated 2026-05-19. Semantic analysis of INFDescriptionData identifies this package as Surface System Aggregator firmware and names the payload SurfaceSAM_10.401.139.bin. The INF associates that payload with UEFI resource {9490CA71-6A2C-498B-8D5B-15943CA084B8} and records its firmware ID, version, and filename. It also specifies an x64 Windows target beginning with the NTamd64.10.0...17134 decoration and a null function driver service. No official Surface release notes for this exact version were verified, so no undocumented feature changes are attributed to it.",
+    "impact_details": [
+      "Directly updates the Surface System Aggregator firmware resource identified in the INF.",
+      "May affect behavior managed by that firmware component; the INF does not specify individual user-facing functions or fixes.",
+      "Firmware deployment and version tracking are affected through the registered UEFI resource ID, version, and payload filename.",
+      "The INF specifies an x64 Windows target beginning at the NTamd64.10.0...17134 decoration; no specific Surface model is identified."
+    ],
+    "download_url": "",
+    "release_notes_url": ""
+  },
+  "categories": [],
+  "rejected_categories": [],
+  "related_drivers": [],
+  "sources": [
+    "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html",
+    "https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "https://www.catalog.update.microsoft.com/Search.aspx?q=10.401.139.0"
+  ],
+  "confidence": {
+    "level": "Medium",
+    "justification": "The supplied INF gives specific, internally consistent details for the exact version, firmware payload, UEFI resource, and installation target. No applicable official Surface release notes or exact-version change list could be confirmed, so the description does not claim version-specific fixes or additional features. The Intel pages provided are for Intel Management Engine or chipset support, not this Surface firmware package. The required codebase-rag lookup failed because its MCP client could not initialize due to a transport failure, and the exact Knowledge_Source\\Others directory was not found locally; therefore DriverAcronyms.json and Categories.json could not be retrieved. SAM is included as the package-name tag, but it could not be verified against the authoritative acronym file, and no category mappings or exact driver-tag matches can be claimed."
+  }
+}
