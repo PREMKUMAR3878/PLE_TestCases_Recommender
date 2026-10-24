@@ -1,0 +1,284 @@
+{
+  "input_driver": {
+    "DriverName": "SurfaceSAM",
+    "DriverClassName": "Firmware",
+    "ReleaseVersion": "10.401.139.0",
+    "DriverClassGuid": "{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}",
+    "Provider": "%Provider%",
+    "Model": "",
+    "KnownPortalUrl": "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html, https://www.intel.com/content/www/us/en/download-center/home.html, https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "DriverSCItemNumber": "5551121",
+    "ReleaseDate": "05/19/2026",
+    "INFDescriptionData": "{\"Version\":{\"Signature\":\"$WINDOWS NT$\",\"Class\":\"Firmware\",\"ClassGuid\":\"{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}\",\"Provider\":\"%Provider%\",\"DriverVer\":\"05/19/2026,10.401.139.0\",\"PnpLockdown\":\"1\",\"CatalogFile\":\"SurfaceSAM.cat\"},\"Manufacturer\":{\"%MfgName%\":\"Firmware,NTamd64.10.0...17134\"},\"Firmware.NTamd64.10.0...17134\":{\"%FirmwareDesc%\":\"Firmware_Install,UEFI\\\\RES_{9490CA71-6A2C-498B-8D5B-15943CA084B8}\"},\"Firmware_Install.NT\":{\"CopyFiles\":\"Firmware_CopyFiles\"},\"Firmware_CopyFiles\":{\"SurfaceSAM_10.401.139.bin\":\"\"},\"Firmware_Install.NT.Hw\":{\"AddReg\":\"Firmware_AddReg\"},\"Firmware_Install.NT.Services\":{\"AddService\":\",%NULL_DRIVER%     ; NULL function driver\"},\"Firmware_AddReg\":{\"HKR,,FirmwareId,,{9490CA71-6A2C-498B-8D5B-15943CA084B8}\":\"\",\"HKR,,FirmwareVersion,%REG_DWORD%,0x0A01918B\":\"\",\"HKR,,FirmwareFilename,,%13%\\\\SurfaceSAM_10.401.139.bin\":\"\"},\"SourceDisksNames\":{\"1\":\"%DiskName%\"},\"SourceDisksFiles\":{\"SurfaceSAM_10.401.139.bin\":\"1\"},\"DestinationDirs\":{\"DefaultDestDir\":\"%DIRID_DRIVER_STORE% ; driver store\"},\"Strings\":{\"Provider\":\"Surface\",\"MfgName\":\"Microsoft Corporation\",\"FirmwareDesc\":\"Surface System Aggregator\",\"DiskName\":\"Surface Firmware Update\",\"DIRID_DRIVER_STORE\":\"13\",\"NULL_DRIVER\":\"2\",\"REG_DWORD\":\"0x00010001\"}}"
+  },
+  "status": "success",
+  "extracted_details": {
+    "driver_package_name": "Surface System Aggregator firmware (SurfaceSAM)",
+    "version": "10.401.139.0",
+    "release_date": "05/19/2026",
+    "supported_models": [],
+    "driver_class_category": "Firmware",
+    "component_list": [
+      "Surface System Aggregator firmware resource",
+      "Firmware resource ID {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "Firmware payload SurfaceSAM_10.401.139.bin",
+      "Firmware registry metadata: FirmwareId, FirmwareVersion, and FirmwareFilename"
+    ],
+    "feature_keywords": [
+      "Surface System Aggregator",
+      "SurfaceSAM",
+      "firmware update payload",
+      "firmware resource identification",
+      "firmware version registration",
+      "Windows Driver Store staging"
+    ],
+    "associated_tags": [
+      "SAM"
+    ],
+    "firmware_flag": true,
+    "description_text": "The supplied INFDescriptionData was semantically analyzed in full. It identifies a Microsoft Corporation Firmware-class package, version 10.401.139.0 dated 05/19/2026, installing SurfaceSAM_10.401.139.bin for the Surface System Aggregator resource with ID {9490CA71-6A2C-498B-8D5B-15943CA084B8}. The INF registers the firmware ID, version value 0x0A01918B, and filename in the registry, and stages the payload in the driver store. No relevant official release notes or Microsoft package page for this exact version were found; the supplied Intel portal URLs concern Intel Management Engine/chipset material and do not substantiate this Surface firmware package. No previous, latest, or relevant family-version release notes were available to use as a fallback, so functional details are limited to the INF-supported installation and identification behavior.",
+    "key_components": [
+      "Surface System Aggregator firmware resource named in the INF description",
+      "SurfaceSAM_10.401.139.bin firmware payload",
+      "Firmware resource identifier {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "FirmwareVersion registry value 0x0A01918B",
+      "FirmwareFilename registry value pointing to the driver-store payload",
+      "Firmware-class INF with a NULL function driver service entry"
+    ],
+    "key_functionalities": [
+      "Stages the named Surface System Aggregator firmware binary in the Windows Driver Store.",
+      "Associates the firmware package with the resource identifier {9490CA71-6A2C-498B-8D5B-15943CA084B8}.",
+      "Registers firmware identity, version, and payload filename through INF registry settings.",
+      "Provides package metadata for servicing the targeted firmware resource; the INF does not state specific firmware fixes or changed end-user features."
+    ],
+    "major_components_functionalities_description": "This package is identified by the supplied INFDescriptionData as Surface System Aggregator firmware version 10.401.139.0, dated 05/19/2026. The INF installs SurfaceSAM_10.401.139.bin and associates it with firmware resource ID {9490CA71-6A2C-498B-8D5B-15943CA084B8}. It registers the firmware ID, version value, and filename, and directs the payload into the Windows Driver Store. These details support firmware resource servicing and identification, but do not establish specific behavior changes or fixes in the firmware itself. No applicable official exact-version release notes or matching family-version notes were found, so this summary relies on the fully analyzed INF rather than release-note claims.",
+    "impact_details": [
+      "Directly affects servicing and identification of the Surface System Aggregator firmware resource named in the INF.",
+      "May affect whether the firmware payload is correctly staged and its firmware ID, version, and filename are reported or matched during servicing.",
+      "May affect platform behavior dependent on the Surface System Aggregator firmware, but the INF does not identify specific dependent devices or functions.",
+      "No specific performance, battery, thermal, security, reliability, or user-experience improvement is stated in the supplied INF or verified official release notes.",
+      "The INF specifies the Firmware.NTamd64.10.0...17134 applicability decoration but does not identify individual Surface SKU models."
+    ],
+    "download_url": "",
+    "release_notes_url": ""
+  },
+  "categories": [
+    {
+      "category": "Firmware",
+      "sub_categories": [
+        "Capsule Update"
+      ],
+      "reason": "The INF names the Surface System Aggregator and SurfaceSAM firmware payload, supporting the semantically relevant SAM tag; Categories.json contains an exact SAM driverTag match for Capsule Update. That sub-category describes firmware capsule installation, upgrades, rollbacks, and version reporting, which is relevant to this firmware payload and its registered identity/version. The exact SAM acronym expansion could not be retrieved from DriverAcronyms.json: scoped searches returned neighboring entries but not the matching SAM record, so the acronym-file lookup failure is noted rather than presenting an unverified expansion. UEFI was not selected as a tag because, although the INF has a UEFI\\RES resource identifier, the acronym mapping could not be verified and the package’s relevant category match is supported by SAM."
+    },
+    {
+      "category": "WU_DLC",
+      "sub_categories": [
+        "WindowsUpdate"
+      ],
+      "reason": "The INF identifies a firmware package with a staged binary, firmware identity, and version metadata, making the WindowsUpdate sub-category's firmware/driver package servicing and version-targeting scope relevant. The retrieved Categories.json entry for WindowsUpdate includes an exact SAM driverTag match. The SAM acronym expansion lookup in DriverAcronyms.json could not be retrieved, as scoped searches returned nearby records rather than the exact entry; this limitation is recorded explicitly."
+    }
+  ],
+  "rejected_categories": [
+    {
+      "category": "Firmware",
+      "SubCategory": [
+        "Advanced Startup",
+        "One-Time Boot",
+        "Boot Order",
+        "BitLocker",
+        "UEFI Menu Interaction Methods",
+        "Capsule Stress & Recovery",
+        "Platform Stability & Recovery",
+        "Battery Charging",
+        "Battery Discharging",
+        "Power Port"
+      ],
+      "reason": "Although retrieved Firmware entries include SAM among their driverTags, their test scopes concern boot controls, encryption, UEFI interaction, repeated/interrupted update recovery, platform stability, batteries, or power ports. The INF specifies a firmware payload and metadata but does not describe those behaviors, so a shared tag alone is insufficient."
+    },
+    {
+      "category": "WU_DLC",
+      "SubCategory": [
+        "BasicVerificationTests",
+        "DriverTesting"
+      ],
+      "reason": "The retrieved Categories.json entries have empty driverTags, so they do not meet the required exact tag-match condition even though their general package-validation descriptions sound applicable."
+    },
+    {
+      "category": "Accessories",
+      "SubCategory": [
+        "Accessory testing sub-categories"
+      ],
+      "reason": "The INF does not identify an accessory, accessory-specific hardware, or accessory behavior; SAM's presence as a possible shared tag does not make those test scopes relevant."
+    },
+    {
+      "category": "Camera",
+      "SubCategory": [
+        "Camera and imaging sub-categories"
+      ],
+      "reason": "The INF does not identify camera hardware, image processing, Windows Hello, or camera behavior."
+    },
+    {
+      "category": "MSI",
+      "SubCategory": [
+        "Installation and Servicing Functionality",
+        "Package Content and Applicability Validation",
+        "MSI",
+        "Post MSI"
+      ],
+      "reason": "The supplied package is an INF and firmware binary, not an MSI installer; the retrieved broad entries without driverTags fail exact matching, and the MSI-specific test scopes do not apply."
+    },
+    {
+      "category": "Image BVT",
+      "SubCategory": [
+        "Image Build Verification and Sign-off"
+      ],
+      "reason": "This package could be included in a device image, but the input does not describe image composition, deployment, first boot, or release sign-off. The package-specific firmware update scope is more directly represented by the selected firmware and WindowsUpdate sub-categories."
+    }
+  ],
+  "related_drivers": [],
+  "sources": [
+    "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html",
+    "https://www.intel.com/content/www/us/en/download-center/home.html",
+    "https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "https://www.google.com/search?q=site%3Asupport.microsoft.com+SurfaceSAM+10.401.139.0",
+    "https://www.google.com/search?q=site%3Asupport.microsoft.com+%22Surface+System+Aggregator%22+firmware+10.401",
+    "https://www.bing.com/search?q=site%3Asupport.microsoft.com%2Fen-us%2Fsurface+%22SurfaceSAM%22+10.401.139.0",
+    "https://www.bing.com/search?q=site%3Asupport.microsoft.com%2Fen-us%2Fsurface+%22Surface+System+Aggregator%22+firmware",
+    "https://support.microsoft.com/en-us/surface/updates",
+    "https://github.com/PREMKUMAR3878/PLE_TestCases_Recommender/blob/main/Knowledge_Source/Others/DriverAcronyms.json",
+    "https://github.com/PREMKUMAR3878/PLE_TestCases_Recommender/blob/main/Knowledge_Source/Others/Categories.json"
+  ],
+  "confidence": {
+    "level": "Medium",
+    "justification": "The supplied INF is detailed and directly supports the package class, version, firmware file, resource identifier, and registry metadata. No relevant official exact-version release notes or matching package page were found, and no previous, latest, or family-version release-note fallback was available; the provided Intel pages are for unrelated Intel software. Category mapping used exact SAM driverTag matches retrieved from Categories.json and a semantic relevance check, but the matching SAM acronym entry could not be retrieved from DriverAcronyms.json; scoped searches returned neighboring entries only, so that retrieval failure is explicitly recorded."
+  }
+}{
+  "input_driver": {
+    "DriverName": "SurfaceSAM",
+    "DriverClassName": "Firmware",
+    "ReleaseVersion": "10.401.139.0",
+    "DriverClassGuid": "{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}",
+    "Provider": "%Provider%",
+    "Model": "",
+    "KnownPortalUrl": "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html, https://www.intel.com/content/www/us/en/download-center/home.html, https://www.intel.com/content/www/us/en/support/articles/000005533/software/chipset-software.html",
+    "DriverSCItemNumber": "5551121",
+    "ReleaseDate": "05/19/2026",
+    "INFDescriptionData": "{\"Version\":{\"Signature\":\"$WINDOWS NT$\",\"Class\":\"Firmware\",\"ClassGuid\":\"{f2e7dd72-6468-4e36-b6f1-6488f42c1b52}\",\"Provider\":\"%Provider%\",\"DriverVer\":\"05/19/2026,10.401.139.0\",\"PnpLockdown\":\"1\",\"CatalogFile\":\"SurfaceSAM.cat\"},\"Manufacturer\":{\"%MfgName%\":\"Firmware,NTamd64.10.0...17134\"},\"Firmware.NTamd64.10.0...17134\":{\"%FirmwareDesc%\":\"Firmware_Install,UEFI\\\\RES_{9490CA71-6A2C-498B-8D5B-15943CA084B8}\"},\"Firmware_Install.NT\":{\"CopyFiles\":\"Firmware_CopyFiles\"},\"Firmware_CopyFiles\":{\"SurfaceSAM_10.401.139.bin\":\"\"},\"Firmware_Install.NT.Hw\":{\"AddReg\":\"Firmware_AddReg\"},\"Firmware_Install.NT.Services\":{\"AddService\":\",%NULL_DRIVER%     ; NULL function driver\"},\"Firmware_AddReg\":{\"HKR,,FirmwareId,,{9490CA71-6A2C-498B-8D5B-15943CA084B8}\":\"\",\"HKR,,FirmwareVersion,%REG_DWORD%,0x0A01918B\":\"\",\"HKR,,FirmwareFilename,,%13%\\\\SurfaceSAM_10.401.139.bin\":\"\"},\"SourceDisksNames\":{\"1\":\"%DiskName%\"},\"SourceDisksFiles\":{\"SurfaceSAM_10.401.139.bin\":\"1\"},\"DestinationDirs\":{\"DefaultDestDir\":\"%DIRID_DRIVER_STORE% ; driver store\"},\"Strings\":{\"Provider\":\"Surface\",\"MfgName\":\"Microsoft Corporation\",\"FirmwareDesc\":\"Surface System Aggregator\",\"DiskName\":\"Surface Firmware Update\",\"DIRID_DRIVER_STORE\":\"13\",\"NULL_DRIVER\":\"2\",\"REG_DWORD\":\"0x00010001\"}}"
+  },
+  "status": "success",
+  "extracted_details": {
+    "driver_package_name": "Surface System Aggregator firmware (SurfaceSAM)",
+    "version": "10.401.139.0",
+    "release_date": "05/19/2026",
+    "supported_models": [],
+    "driver_class_category": "Firmware",
+    "component_list": [
+      "Surface System Aggregator firmware resource",
+      "UEFI firmware resource ID {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "Firmware payload SurfaceSAM_10.401.139.bin",
+      "FirmwareId, FirmwareVersion, and FirmwareFilename registry metadata"
+    ],
+    "feature_keywords": [
+      "Surface System Aggregator",
+      "SurfaceSAM",
+      "firmware resource",
+      "UEFI",
+      "firmware payload staging",
+      "firmware identity and version registration"
+    ],
+    "associated_tags": [
+      "SAM",
+      "UEFI"
+    ],
+    "firmware_flag": true,
+    "description_text": "The supplied INFDescriptionData was semantically analyzed in full. It identifies a Microsoft Corporation Firmware-class package, version 10.401.139.0 dated 05/19/2026, installing SurfaceSAM_10.401.139.bin for firmware resource {9490CA71-6A2C-498B-8D5B-15943CA084B8}. The INF copies the binary into the Windows Driver Store and registers the firmware ID, version value 0x0A01918B, and filename. No applicable official release notes or package page for this exact version, or relevant previous/latest version notes, were found. The provided Intel pages concern Intel Management Engine and chipset software and do not substantiate this Surface package; the fallback context is Microsoft’s general Surface driver and firmware update guidance, not version-specific change information. The INF specifies an x64 Windows applicability decoration but does not name supported Surface models.",
+    "key_components": [
+      "Surface System Aggregator firmware resource",
+      "SurfaceSAM_10.401.139.bin payload",
+      "UEFI resource identifier {9490CA71-6A2C-498B-8D5B-15943CA084B8}",
+      "FirmwareVersion registry value 0x0A01918B",
+      "FirmwareFilename registry value pointing to the staged binary",
+      "Firmware-class INF with a NULL function driver service entry"
+    ],
+    "key_functionalities": [
+      "Stages the Surface System Aggregator firmware binary in the Windows Driver Store.",
+      "Associates the package with the firmware resource ID {9490CA71-6A2C-498B-8D5B-15943CA084B8}.",
+      "Registers firmware identity, version, and payload filename through INF registry settings.",
+      "Provides package metadata for servicing the targeted firmware resource; the INF and available official family guidance do not specify version-specific fixes or feature changes."
+    ],
+    "major_components_functionalities_description": "The supplied INFDescriptionData identifies this as Surface System Aggregator firmware version 10.401.139.0, dated 05/19/2026. It installs SurfaceSAM_10.401.139.bin and associates it with firmware resource ID {9490CA71-6A2C-498B-8D5B-15943CA084B8}. The INF registers the firmware ID, version value, and filename, and stages the payload in the Windows Driver Store. Microsoft’s general Surface firmware update guidance identifies the System Aggregator Module (SAM) as a Surface update component, but it does not establish changes specific to this release. No exact-version or relevant previous/latest release notes were found, so the functional details here come from the analyzed INF and family-level guidance.",
+    "impact_details": [
+      "Directly affects servicing and identification of the Surface System Aggregator firmware resource named in the INF.",
+      "May affect firmware update targeting and version reporting through the registered resource ID, version, and filename.",
+      "May affect platform behavior that depends on this firmware resource; the INF does not identify specific dependent devices or functions.",
+      "The supplied INF and available official family guidance do not state performance, battery, thermal, security, reliability, or user-experience improvements.",
+      "The INF specifies an x64 Windows applicability decoration but does not identify individual Surface models."
+    ],
+    "download_url": "",
+    "release_notes_url": ""
+  },
+  "categories": [
+    {
+      "category": "Firmware",
+      "sub_categories": [
+        "Capsule Update"
+      ],
+      "reason": "The INF explicitly names Surface System Aggregator firmware and a UEFI firmware resource, supporting the semantically relevant SAM and UEFI tags. Categories.json has an exact SAM driverTag match for Capsule Update; its description covers firmware capsule installation, upgrades, rollbacks, and version reporting, which fits this firmware payload and its registered resource/version metadata. The scoped DriverAcronyms.json searches returned the UEFI entry but did not retrieve a SAM entry, so no SAM expansion from that file is asserted; Microsoft’s family guidance identifies the System Aggregator Module (SAM)."
+    },
+    {
+      "category": "WU_DLC",
+      "sub_categories": [
+        "WindowsUpdate"
+      ],
+      "reason": "The INF establishes a firmware package with a staged binary, identity, and version metadata, which is relevant to Windows Update servicing and package/version targeting. Categories.json contains an exact SAM driverTag match for WindowsUpdate, whose stated scope includes driver and firmware packages, supported-device targeting, version requirements, and deployment channels. The scoped acronym lookup did not retrieve a SAM entry from DriverAcronyms.json; the tag is supported by the SurfaceSAM name and the INF’s Surface System Aggregator description."
+    }
+  ],
+  "rejected_categories": [
+    {
+      "category": "Firmware",
+      "SubCategory": [
+        "Advanced Startup",
+        "One-Time Boot",
+        "Boot Order",
+        "BitLocker",
+        "UEFI Menu Interaction Methods",
+        "Thermal",
+        "Capsule Stress & Recovery",
+        "Platform Stability & Recovery",
+        "Battery Charging",
+        "Battery Discharging",
+        "Power Port",
+        "Hardware Buttons",
+        "AC Power States",
+        "Battery Power States",
+        "Firmware Management",
+        "Modern Standby"
+      ],
+      "reason": "These sub-categories share SAM driverTags in Categories.json, but their test scopes cover boot controls, encryption, user interaction, thermal and battery behavior, power states, enterprise policy, or repeated/interrupted update recovery. The INF only establishes a firmware payload and resource metadata; it does not show that these behaviors are implemented or changed by this package."
+    },
+    {
+      "category": "WU_DLC",
+      "SubCategory": [
+        "BasicVerificationTests",
+        "DriverTesting"
+      ],
+      "reason": "These entries have empty driverTags in Categories.json, so they do not satisfy the required exact driverTag match."
+    },
+    {
+      "category": "Accessories",
+      "SubCategory": [],
+      "reason": "Although some accessory sub-categories carry SAM tags, the INF identifies no accessory, accessory hardware, or accessory-specific behavior; their test scopes are not justified by this package."
+    }
+  ],
+  "related_drivers": [],
+  "sources": [
+    "https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html",
+    "https://learn.microsoft.com/en-us/surface/manage-surface-driver-and-firmware-updates",
+    "https://github.com/PREMKUMAR3878/PLE_TestCases_Recommender/blob/main/Knowledge_Source/Others/DriverAcronyms.json",
+    "https://github.com/PREMKUMAR3878/PLE_TestCases_Recommender/blob/main/Knowledge_Source/Others/Categories.json"
+  ],
+  "confidence": {
+    "level": "High",
+    "justification": "The supplied INF clearly identifies the package version, firmware file, resource ID, and registry metadata. Microsoft’s official Surface update guidance provides family-level context for SAM, but no exact-version or applicable previous/latest release notes were found, so no release-specific changes are claimed. Category mapping used exact SAM driverTag matches in Categories.json and then checked each selected sub-category’s scope; the scoped acronym lookup returned UEFI but did not retrieve a SAM entry from DriverAcronyms.json."
+  }
+}
